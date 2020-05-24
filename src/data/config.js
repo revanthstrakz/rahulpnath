@@ -14,7 +14,7 @@ module.exports = {
     youtube: 'https://www.youtube.com/user/smakoshthegamer',
     google: 'https://plus.google.com/u/0/+IsmailSmakoshGhallou',
   },
-  googleAnalyticsID: 'UA-88875900-1',
+  googleAnalyticsID: '',
   themeColor: '#00c6ff',
   backgroundColor: '#00c6ff',
   siteRss: '/rss.xml',
