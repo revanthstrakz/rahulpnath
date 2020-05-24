@@ -32,6 +32,9 @@ export const postQuery = graphql`
       html
       description: excerpt(pruneLength: 105)
       timeToRead
+      fields {
+        slug
+      }
       frontmatter {
         normalDate: date
         date(formatString: "MMMM DD, YYYY")

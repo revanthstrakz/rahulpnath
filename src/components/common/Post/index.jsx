@@ -4,12 +4,13 @@ import { ThemeContext } from 'providers/ThemeProvider'
 import React, { useContext } from 'react'
 import { ArticleDate, ArticleWrapper, Comments, Content, Tags } from './styles'
 
-export const Post = ({ html, frontmatter, timeToRead }) => {
+export const Post = ({ html, frontmatter, timeToRead, fields }) => {
   const { theme } = useContext(ThemeContext)
   const disqusShortName = 'rahulpnath'
+  const postIdentifier = `https://rahulpnath.com${fields.slug}`
   const disqusConfig = {
-    url: `https://rahulpnath  .com${frontmatter.path}`,
-    identifier: frontmatter.id,
+    url: postIdentifier,
+    identifier: postIdentifier,
     title: frontmatter.title,
   }
   return (
