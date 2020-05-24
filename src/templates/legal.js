@@ -22,8 +22,10 @@ export const legalQuery = graphql`
       frontmatter: { path: { eq: $path }, type: { eq: "legal" } }
     ) {
       html
+      fields {
+        slug
+      }
       frontmatter {
-        path
         title
       }
     }

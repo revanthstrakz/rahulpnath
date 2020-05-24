@@ -2,6 +2,29 @@ const path = require('path')
 const Queries = require('./queries')
 const createPaginatedPages = require('gatsby-paginate')
 
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  // Sometimes, optional fields tend to get not picked up by the GraphQL
+  // interpreter if not a single content uses it. Therefore, we're putting them
+  // through `createNodeField` so that the fields still exist and GraphQL won't
+  // trip up. An empty string is still required in replacement to `null`.
+  // eslint-disable-next-line default-case
+  switch (node.internal.type) {
+    case 'MarkdownRemark': {
+      const { relativeDirectory } = getNode(node.parent);
+      
+      const slug = "/" + relativeDirectory;
+      // Used to generate URL to view this content.
+      createNodeField({
+        node,
+        name: 'slug',
+        value: slug || '',
+      });
+    }
+  }
+};
+
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   try {
     const postTemplate = path.resolve('./src/templates/post.js')
@@ -20,17 +43,17 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     })
 
     // Create posts pages
-    data.posts.edges.forEach(({ node: { frontmatter: { path } } }) => {
+    data.posts.edges.forEach(({ node: { fields: { slug } } }) => {
       createPage({
-        path: path,
+        path: slug,
         component: postTemplate,
       })
     })
 
     // Create legal pages
-    data.legal.edges.forEach(({ node: { frontmatter: { path } } }) => {
+    data.legal.edges.forEach(({ node: { fields: { slug } } }) => {
       createPage({
-        path: path,
+        path: slug,
         component: legalTemplate,
       })
     })

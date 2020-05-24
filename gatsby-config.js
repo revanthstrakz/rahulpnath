@@ -87,10 +87,12 @@ module.exports = {
 								edges {
 									node {
 										excerpt
-										html
+                    html
+                    fields {
+                      slug
+                    }
 										frontmatter {
 											title
-											path
 											date
 										}
 									}

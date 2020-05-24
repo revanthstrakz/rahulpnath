@@ -33,7 +33,8 @@ export default ({ pageContext }) => {
                 id,
                 description,
                 timeToRead,
-                frontmatter: { title, date, path, thumbnail, tags },
+                fields : {slug},
+                frontmatter: { title, date, thumbnail, tags },
               },
             }) => (
               <CardPost
@@ -42,7 +43,7 @@ export default ({ pageContext }) => {
                 timeToRead={timeToRead}
                 title={title}
                 date={date}
-                path={path}
+                path={slug}
                 thumbnail={thumbnail}
                 tags={tags}
               />

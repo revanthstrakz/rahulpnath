@@ -1,6 +1,6 @@
-import React from 'react'
+import { Layout, Post, SEO, SmallerContainer } from 'components/common'
 import { graphql } from 'gatsby'
-import { Layout, SmallerContainer, SEO, Post } from 'components/common'
+import React from 'react'
 import './highlight.css'
 
 export default ({ data: { post } }) => (
@@ -17,7 +17,7 @@ export default ({ data: { post } }) => (
             : post.frontmatter.date
         }
         cover={post.frontmatter.thumbnail.childImageSharp.fluid.originalImg}
-        location={post.frontmatter.path}
+        location=''
         description={post.description}
         readTime={post.timeToRead}
       />
@@ -28,7 +28,7 @@ export default ({ data: { post } }) => (
 
 export const postQuery = graphql`
   query($path: String!) {
-    post: markdownRemark(frontmatter: { path: { eq: $path } }) {
+    post: markdownRemark(fields: { slug: { eq: $path } }) {
       html
       description: excerpt(pruneLength: 105)
       timeToRead
@@ -36,9 +36,7 @@ export const postQuery = graphql`
         normalDate: date
         date(formatString: "MMMM DD, YYYY")
         edited(formatString: "MMMM DD, YYYY")
-        path
         title
-        next
         id
         tags
         thumbnail {

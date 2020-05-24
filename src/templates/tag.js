@@ -56,10 +56,12 @@ export const postQuery = graphql`
           description: excerpt(pruneLength: 260)
           id
           timeToRead
+          fields {
+            slug
+          }
           frontmatter {
             title
             date(formatString: "MMM DD, YYYY")
-            path
             tags
             thumbnail {
               childImageSharp {
