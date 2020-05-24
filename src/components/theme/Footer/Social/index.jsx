@@ -1,47 +1,34 @@
+import { GithubIcon, Instagram, Linkedin, Twitter } from 'components/common'
 import React from 'react'
-import {
-  Twitter,
-  GithubIcon,
-  Instagram,
-  Unsplash,
-  Linkedin,
-} from 'components/common'
-import { Social, Grow } from './styles.js'
+import { Grow, Social } from './styles.js'
 
 export default () => {
   const social = [
     {
       id: 0,
       name: 'Twitter',
-      link: 'https://twitter.com/smakosh',
+      link: 'https://twitter.com/rahulpnath',
       icon: Twitter,
       last: false,
     },
     {
       id: 1,
       name: 'Github',
-      link: 'https://github.com/smakosh',
+      link: 'https://github.com/rahulpnath',
       icon: GithubIcon,
       last: false,
     },
     {
       id: 2,
       name: 'Instagram',
-      link: 'https://instagram.com/smakosh19',
+      link: 'https://instagram.com/rahulpnath',
       icon: Instagram,
-      last: false,
-    },
-    {
-      id: 3,
-      name: 'Unsplash',
-      link: 'https://unsplash.com/smakosh',
-      icon: Unsplash,
       last: false,
     },
     {
       id: 4,
       name: 'Linkedin',
-      link: 'https://linkedin.com/in/ismail-ghallou-630149122',
+      link: 'https://linkedin.com/in/rahulpnath',
       icon: Linkedin,
       last: false,
     },

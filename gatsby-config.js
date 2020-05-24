@@ -98,7 +98,7 @@ module.exports = {
 							}
 						}`,
             output: config.siteRss,
-            title: 'Smakosh | Blog',
+            title: 'Rahul Nath',
           },
         ],
       },
