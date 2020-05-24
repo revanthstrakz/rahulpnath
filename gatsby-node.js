@@ -7,6 +7,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     const postTemplate = path.resolve('./src/templates/post.js')
     const legalTemplate = path.resolve('./src/templates/legal.js')
     const tagTemplate = path.resolve('./src/templates/tag.js')
+    const tagPrefix = '/blog/tag/';
 
     const { data, errors } = await graphql(Queries)
 
@@ -37,7 +38,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     // Create tags pages
     data.tags.edges.forEach(({ node: { title } }) => {
       createPage({
-        path: `/${title}/`,
+        path: `${tagPrefix}${title}/`,
         component: tagTemplate,
         context: {
           slug: title,

@@ -2,6 +2,7 @@ import React from 'react'
 import { StyledTag } from './styles'
 
 export const Tag = ({ tag, link }) => {
+  const tagPrefix = '/blog/tag/';
   // const {
   //   tags: { edges },
   // } = useStaticQuery(graphql`
@@ -22,7 +23,7 @@ export const Tag = ({ tag, link }) => {
   //   node: { bg, color, title },
   // } = edges.find(({ node: { title } }) => title === tag)
   return (
-    <StyledTag bg={'#263238'} color={'#fff'} to={link}>
+    <StyledTag bg={'#263238'} color={'#fff'} to={`${tagPrefix}${link}`}>
       {tag}
     </StyledTag>
   )
