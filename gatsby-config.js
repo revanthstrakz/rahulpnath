@@ -10,7 +10,7 @@ module.exports = {
     rssMetadata: {
       site_url: 'https://smakosh.com',
       feed_url: `${config.url}${config.siteRss}`,
-      title: 'Smakosh | Blog',
+      title: 'Rahul Nath',
       description: config.defaultDescription,
       image_url: 'https://smakosh.com/static/favicon/logo-512.png',
       author: config.author,
