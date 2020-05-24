@@ -6,9 +6,9 @@ import { ArticleDate, ArticleWrapper, Comments, Content, Tags } from './styles'
 
 export const Post = ({ html, frontmatter, timeToRead }) => {
   const { theme } = useContext(ThemeContext)
-  const disqusShortName = 'https-smakosh-com'
+  const disqusShortName = 'rahulpnath'
   const disqusConfig = {
-    url: `https://smakosh.com${frontmatter.path}`,
+    url: `https://rahulpnath  .com${frontmatter.path}`,
     identifier: frontmatter.id,
     title: frontmatter.title,
   }
