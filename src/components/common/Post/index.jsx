@@ -1,16 +1,8 @@
-import React, { useContext } from 'react'
+import { PageTitle, SocialShare, Tag } from 'components/common'
 import Disqus from 'disqus-react'
-import { Link } from 'gatsby'
-import { SocialShare, PageTitle, Tag } from 'components/common'
 import { ThemeContext } from 'providers/ThemeProvider'
-import {
-  ArticleWrapper,
-  Back,
-  Content,
-  Comments,
-  ArticleDate,
-  Tags,
-} from './styles'
+import React, { useContext } from 'react'
+import { ArticleDate, ArticleWrapper, Comments, Content, Tags } from './styles'
 
 export const Post = ({ html, frontmatter, timeToRead }) => {
   const { theme } = useContext(ThemeContext)
@@ -36,9 +28,6 @@ export const Post = ({ html, frontmatter, timeToRead }) => {
       </ArticleDate>
       <Content dangerouslySetInnerHTML={{ __html: html }} />
       <SocialShare {...frontmatter} />
-      <Back>
-        <Link to={frontmatter.next}>Previous article</Link>
-      </Back>
       <Comments>
         <Disqus.DiscussionEmbed
           shortname={disqusShortName}
