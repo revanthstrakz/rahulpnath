@@ -1,5 +1,4 @@
 ---
-id: 26
 title: "2016: What Went Well, What Didn't and Goals"
 thumbnail: './happy_new_year.png'
 date: 2020-01-03T00:10:01.889Z
