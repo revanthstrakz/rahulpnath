@@ -1,15 +1,14 @@
 ---
-id: 25
+id: 26
 title: "2016: What Went Well, What Didn't and Goals"
-path: '/2016-recap'
+path: '/blog/2016-recap'
 thumbnail: './happy_new_year.png'
 date: 2020-01-03T00:10:01.889Z
 edited: 2020-01-03T00:10:01.889Z
 next: '/get-paid-while-you-are-learning-working-at-a-startup'
 tags:
-  - bio
-  - career
-  - dev
+  - Thoughts
+  - Review
 popular: false
 draft: false
 ---
