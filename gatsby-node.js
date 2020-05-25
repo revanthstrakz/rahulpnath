@@ -27,7 +27,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   try {
     const postTemplate = path.resolve('./src/templates/post.js')
-    const legalTemplate = path.resolve('./src/templates/legal.js')
     const tagTemplate = path.resolve('./src/templates/tag.js')
     const tagPrefix = '/blog/tag/';
 
@@ -38,7 +37,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       createPage,
       pageTemplate: 'src/templates/blog.js',
       pageLength: 8,
-      pathPrefix: 'blog',
+      pathPrefix: 'blog/page',
     })
 
     // Create posts pages
@@ -46,14 +45,6 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       createPage({
         path: slug,
         component: postTemplate,
-      })
-    })
-
-    // Create legal pages
-    data.legal.edges.forEach(({ node: { fields: { slug } } }) => {
-      createPage({
-        path: slug,
-        component: legalTemplate,
       })
     })
 

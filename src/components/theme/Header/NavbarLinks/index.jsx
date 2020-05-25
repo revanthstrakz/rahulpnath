@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
+import day from 'assets/icons/day.svg'
+import night from 'assets/icons/night.svg'
 import { Link } from 'gatsby'
 import { ThemeContext } from 'providers/ThemeProvider'
-import night from 'assets/icons/night.svg'
-import day from 'assets/icons/day.svg'
+import React, { useContext } from 'react'
 import { Links, StyledButton } from './styles'
 
 export default ({ desktop }) => {
@@ -18,9 +18,6 @@ export default ({ desktop }) => {
       </Link>
       <Link to="/blog" activeClassName="current">
         Blog
-      </Link>
-      <Link to="/talks" activeClassName="current">
-        Talks
       </Link>
       <Link to="/contact" activeClassName="current">
         Contact
