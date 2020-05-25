@@ -1,22 +1,9 @@
-import React, { useContext } from 'react'
+import { Tag } from 'components/common'
 import { navigate } from 'gatsby'
 import Img from 'gatsby-image'
-import { Tag } from 'components/common'
 import { ThemeContext } from 'providers/ThemeProvider'
-import {
-  Item,
-  Post,
-  ArticleContent,
-  ArticleImg,
-  ArticleTitle,
-  Paragraph,
-  Info,
-  StyledSpan,
-  TalkDetails,
-  Slides,
-  Demos,
-  Tags,
-} from './styles'
+import React, { useContext } from 'react'
+import { ArticleContent, ArticleImg, ArticleTitle, Demos, Info, Item, Paragraph, Post, Slides, StyledSpan, Tags, TalkDetails } from './styles'
 
 export const CardPost = ({
   path,
@@ -44,7 +31,7 @@ export const CardPost = ({
           talk={slides}
           path={path}
         >
-          <Img fluid={thumbnail.childImageSharp.fluid} />
+         {thumbnail && thumbnail.childImageSharp && <Img fluid={thumbnail.childImageSharp.fluid} /> }
         </ArticleImg>
         <ArticleContent>
           <ArticleTitle

@@ -13,7 +13,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   switch (node.internal.type) {
     case 'MarkdownRemark': {
       const { relativePath } = getNode(node.parent);
-      const  slug = `/${relativePath.replace('.md', '')}/`;
+      const  slug = `/${relativePath.replace('.md', '').replace('.markdown', '')}/`;
       // Used to generate URL to view this content.
       createNodeField({
         node,

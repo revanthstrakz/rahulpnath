@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyledTag } from './styles'
+import React from 'react';
+import { StyledTag } from './styles';
 
 export const Tag = ({ tag, link }) => {
   const tagPrefix = '/blog/tag/';
@@ -23,7 +23,7 @@ export const Tag = ({ tag, link }) => {
   //   node: { bg, color, title },
   // } = edges.find(({ node: { title } }) => title === tag)
   return (
-    <StyledTag bg={'#263238'} color={'#fff'} to={`${tagPrefix}${link}`}>
+    <StyledTag bg={'#00b6ff'} color={'#fff'} to={`${tagPrefix}${link}`}>
       {tag}
     </StyledTag>
   )

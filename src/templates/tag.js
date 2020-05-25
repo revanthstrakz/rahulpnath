@@ -1,13 +1,6 @@
-import React from 'react'
+import { CardPost, Container, Layout, PageTitle, Row, SEO } from 'components/common'
 import { graphql } from 'gatsby'
-import {
-  Layout,
-  Container,
-  SEO,
-  PageTitle,
-  CardPost,
-  Row,
-} from 'components/common'
+import React from 'react'
 
 export default ({ data: { tag, posts } }) => (
   <Layout>
@@ -21,7 +14,8 @@ export default ({ data: { tag, posts } }) => (
               id,
               description,
               timeToRead,
-              frontmatter: { title, date, path, thumbnail, tags },
+              fields: { slug },
+              frontmatter: { title, date, thumbnail, tags },
             },
           }) => (
             <CardPost
@@ -30,7 +24,7 @@ export default ({ data: { tag, posts } }) => (
               timeToRead={timeToRead}
               title={title}
               date={date}
-              path={path}
+              path={slug}
               thumbnail={thumbnail}
               tags={tags}
             />

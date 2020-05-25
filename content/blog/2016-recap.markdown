@@ -1,16 +1,22 @@
 ---
+author: [Rahul Nath]
 title: "2016: What Went Well, What Didn't and Goals"
-thumbnail: '../images/happy_new_year.png'
-date: 2020-01-03T00:10:01.889Z
-edited: 2020-01-03T00:10:01.889Z
 tags:
   - Thoughts
   - Review
+date: 2016-12-20
+completedDate: 2016-12-11 06:42:05 +1100
+edited: 2016-12-11 06:42:05 +1100
+keywords:
+description: A short recap of the year that is gone by and looking forward!
+thumbnail: ../images/happy_new_year.png
 popular: false
 draft: false
 ---
 
-![](./happy_new_year.png)
+<a href="http://www.oldlaundrytheatre.co.uk/happy-new-year-from-all-at-the-old-laundry/">
+<img class="center" alt="Posts per month - 2016" src="../images/happy_new_year.png"/>
+</a>
 
 2016 was a great year and I thought sharing some of the things that went well, those that didn't and setting goals for 2017.
 
@@ -24,7 +30,7 @@ draft: false
 
 This has been a great year with my blog. On an average, I published four blog posts a month. It started with a self-challenge from March to write every day. I was able to come up with eight posts that month, but then felt it was not something that I could stick with consistently. So I kept a target of four posts per month and stuck to it for the rest of the year. I automated a lot of mundane tasks in my blogging workflow right from [creating draft posts](http://www.rahulpnath.com/blog/optimizing-octopress-workflow-for-new-posts/) to [deploying posts](http://www.rahulpnath.com/blog/continuos-delivery-of-octopress-blog-using-travisci-and-docker/) and [scheduling posts for future deployment](http://www.rahulpnath.com/blog/automatic_deployment_of_future_posts_with_octopress/). This has saved a lot of time for me and helps me stick just with the writing part of blogging!
 
-![Posts per month - 2016](/images/2016_postspermonth.png)
+<img class="center" alt="Posts per month - 2016" src="../images/2016_postspermonth.png"/>
 
 Sticking with [publishing posts on a regular interval](http://www.rahulpnath.com/blog/maintaining-a-blogging-schedule/) was more about deciding that I have to write every day. I set a 'mini habit' to write every day - at least one line every day - and stuck to it. This helped me get over the initial inertia of starting to write a post. Having set this goal to myself I had to consistently come with topics to blog about. This very much changed the way that I approached [my day job](http://www.rahulpnath.com/blog/finding-a-job-abroad/). I always involved in it with the need to find something to share, in a way that I can abstract it out from the business dependencies. Most of the decisions and issues that happened to us (the development team) are now documented here. This acts as a documentation for any new joiners and makes the [ramp up to the project a bit easier](http://www.rahulpnath.com/blog/make-it-easy-for-the-new-person-joining-your-team-have-a-project-ramp-up-plan/). More than anything it definitely helps me find the solution when I come across the same issue again. So if you still don't have a blog of your own, there is no better time than now. Make it a new year resolution. [Get a URL](http://www.rahulpnath.com/blog/own-your-urls/) and start writing. I have also been successful in getting a couple of people (at least four that I personally know of) to blog. Getting started is the biggest hurdle, the rest will fall in the due course of time.
 

@@ -15,7 +15,6 @@ module.exports = `
   posts: allMarkdownRemark(
     filter: { frontmatter: { type: { ne: "legal" }, draft: { ne: true } } }
     sort: { order: DESC, fields: [frontmatter___date] }
-    limit: 200
   ) {
     edges {
       node {
