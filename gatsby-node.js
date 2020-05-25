@@ -12,9 +12,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   // eslint-disable-next-line default-case
   switch (node.internal.type) {
     case 'MarkdownRemark': {
-      const { relativeDirectory } = getNode(node.parent);
-      
-      const slug = "/" + relativeDirectory;
+      const { relativePath } = getNode(node.parent);
+      const  slug = `/${relativePath.replace('.md', '')}/`;
       // Used to generate URL to view this content.
       createNodeField({
         node,

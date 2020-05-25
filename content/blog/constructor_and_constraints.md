@@ -1,11 +1,11 @@
 ---
 title: "Back To Basics: Constructors and Enforcing Invariants"
+thumbnail: '../images/strong_code_contracts.jpg'
 comments: true
 date: 2020-03-16
 tags:
   - Programming
   - Basics
-thumbnail: ./strong_code_contracts.jpg
 ---
 
 In C# or any class-based object-oriented language, a Constructor is used to create an object. The constructor is responsible for initializing the object's data members and establishing the class invariants. A constructor fails and throws an exception when the class invariants are not met. An invariant is an assertion that is always held true.
