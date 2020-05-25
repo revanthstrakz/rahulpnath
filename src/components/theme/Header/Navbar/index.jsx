@@ -15,7 +15,7 @@ export default () => {
           color={theme === 'dark' ? '#fff' : '#212121'}
           strokeWidth="2"
         />
-        Smakosh
+        Rahul Nath
       </Brand>
       <NavbarLinks desktop />
     </Wrapper>

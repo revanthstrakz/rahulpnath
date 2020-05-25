@@ -28,7 +28,7 @@ const Wrapper = ({
     <FormWrapper as={Container}>
       <StyledForm theme={theme}>
         <Form>
-          <Title theme={theme}>Subscribe to Smakosh.com</Title>
+          <Title theme={theme}>Subscribe to rahulpnath.com</Title>
           <Subtitle theme={theme}>
             And get the latest articles delivered right to your inbox!
           </Subtitle>

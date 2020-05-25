@@ -35,7 +35,7 @@ export const SEO = ({
 		},
 		"headline": "${description}",
 		"image": "${
-      cover ? `https://smakosh.com${cover}` : `https://smakosh.com${Thumbnail}`
+      cover ? `https://rahulpnath.com${cover}` : `https://rahulpnath.com${Thumbnail}`
     }",
 		"datePublished": "${datePublished}",
 		"dateModified": "${dateModified}",
@@ -53,7 +53,7 @@ export const SEO = ({
 			}
 		},
 		"description": "${description}",
-		"url": "${url}${location}/?ref=smakosh.com"
+		"url": "${url}${location}/?ref=rahulpnath.com"
 	}`
 
   const structuredDataOrganization = `{
@@ -98,14 +98,14 @@ export const SEO = ({
         content={cover ? `${url}${cover}` : `${url}${Thumbnail}`}
       />
 
-      <meta property="og:url" content={`${url}${location}/?ref=smakosh.com`} />
+      <meta property="og:url" content={`${url}${location}/?ref=rahulpnath.com`} />
       <meta
         property="og:type"
         content={type === 'NewsArticle' ? 'NewsArticle' : 'website'}
       />
       <meta
         property="og:title"
-        content={title ? `Smakosh | ${title}` : defaultTitle}
+        content={title ? `Rahul Nath | ${title}` : defaultTitle}
       />
       <meta
         property="og:description"
@@ -122,7 +122,7 @@ export const SEO = ({
       <meta name="twitter:site" content={social.twitter} />
       <meta
         name="twitter:title"
-        content={title ? `Smakosh | ${title}` : defaultTitle}
+        content={title ? `Rahul Nath | ${title}` : defaultTitle}
       />
       <meta
         name="twitter:description"
@@ -138,7 +138,7 @@ export const SEO = ({
           : structuredDataOrganization}
       </script>
       <link rel="publisher" href={socialLinks.google} />
-      <title>{title ? `Smakosh | ${title}` : defaultTitle}</title>
+      <title>{title ? `Rahul Nath | ${title}` : defaultTitle}</title>
       {type === 'NewsArticle' && (
         <meta name="twitter:label1" value="Reading time" />
       )}
@@ -146,7 +146,7 @@ export const SEO = ({
         <meta name="twitter:data1" value={`${readTime} min read`} />
       )}
       {type === 'NewsArticle' && (
-        <meta name="author" content="Ismail Ghallou" data-react-helmet="true" />
+        <meta name="author" content="Rahul Nath" data-react-helmet="true" />
       )}
       {type === 'NewsArticle' && (
         <meta

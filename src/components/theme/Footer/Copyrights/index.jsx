@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
-import { Link } from 'gatsby'
-import { SmallerContainer, GithubIcon } from 'components/common'
-import { ThemeContext } from 'providers/ThemeProvider'
 import gatsbyIcon from 'assets/footer/gatsby.svg'
 import zeitIcon from 'assets/footer/zeit-black.svg'
 import zeitWhiteIcon from 'assets/footer/zeit-white.svg'
-import { Wrapper, Links, Item } from './styles'
+import { GithubIcon, SmallerContainer } from 'components/common'
+import { Link } from 'gatsby'
+import { ThemeContext } from 'providers/ThemeProvider'
+import React, { useContext } from 'react'
+import { Item, Links, Wrapper } from './styles'
 
 export default () => {
   const { theme } = useContext(ThemeContext)
@@ -14,7 +14,7 @@ export default () => {
       <Links>
         ©{' '}
         <Item as={Link} to="/">
-          Smakosh
+          Rahul Nath
         </Item>{' '}
         2016-{`${new Date().getFullYear()} `}
         Built with
@@ -27,7 +27,7 @@ export default () => {
         </a>
         Open sourced on
         <a
-          href="https://github.com/smakosh/smakosh.com"
+          href="https://github.com/rahulpnath/rahulpnath.com"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -41,7 +41,7 @@ export default () => {
         </a>
         and deployed on
         <a
-          href="https://www.vercel.co/?utm_source=smakosh"
+          href="https://www.netlify.com/"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -49,7 +49,7 @@ export default () => {
             src={theme === 'light' ? zeitIcon : zeitWhiteIcon}
             img
             css="width:24px;"
-            alt="Vercel"
+            alt="Netlify"
           />
         </a>
       </Links>

@@ -6,13 +6,13 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://smakosh.com',
+    siteUrl: 'https://rahulpnath.com',
     rssMetadata: {
-      site_url: 'https://smakosh.com',
+      site_url: 'https://rahulpnath.com',
       feed_url: `${config.url}${config.siteRss}`,
       title: 'Rahul Nath',
       description: config.defaultDescription,
-      image_url: 'https://smakosh.com/static/favicon/logo-512.png',
+      image_url: 'https://rahulpnath.com/static/favicon/logo-512.png',
       author: config.author,
       copyright: `${config.defaultTitle} © ${new Date().getFullYear()}`,
     },

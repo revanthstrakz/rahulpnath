@@ -1,11 +1,11 @@
 module.exports = {
   defaultTitle: 'Rahul Nath',
-  logo: 'https://smakosh.com/favicon/logo-48.png',
+  logo: 'https://rahulpnath.com/favicon/logo-48.png',
   author: 'Rahul Nath',
-  url: 'https://smakosh.com',
+  url: 'https://rahulpnath.com',
   legalName: 'Rahul Nath',
   defaultDescription:
-    "I'm Ismail Ghallou aka Smakosh, a self-taught Graphic, UI/UX Designer and full stack developer, interested in the web, neural networks & tech in general.",
+    "I'm Rahul Nath.",
   socialLinks: {
     twitter: 'http://www.twitter.com/rahulpnath',
     github: 'https://github.com/rahulpnath',
@@ -18,18 +18,18 @@ module.exports = {
   backgroundColor: '#00c6ff',
   siteRss: '/rss.xml',
   social: {
-    facebook: '165244147328608',
-    twitter: '@smakosh',
+    facebook: '774780093',
+    twitter: '@rahulpnath',
   },
   address: {
-    city: 'Errachidia',
-    region: 'Drâa-Tafilalet',
-    country: 'Morocco',
-    zipCode: '52000',
+    city: 'Brisbane',
+    region: 'Queensland',
+    country: 'Australia',
+    zipCode: '4000',
   },
   contact: {
-    email: 'ismai23l@hotmail.com',
-    phone: '+212-663-53-27-61',
+    email: 'me@rahulpnath.com',
+    phone: '',
   },
-  foundingDate: '2016',
+  foundingDate: '2009',
 }

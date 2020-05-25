@@ -8,7 +8,7 @@ type: legal
 
 Effective date: November 11, 2018
 
-Ai Hashtags ("us", "we", or "our") operates the https://smakosh.com website and the Ai Hashtags mobile application (the "Service").
+Ai Hashtags ("us", "we", or "our") operates the https://rahulpnath.com website and the Ai Hashtags mobile application (the "Service").
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. Our Privacy Policy for Ai Hashtags is managed through Free Privacy Policy.
 
@@ -128,5 +128,5 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 If you have any questions about this Privacy Policy, please contact us:
 
 - By email: ismai23l@hotmail.com
-- By visiting this page on our website: https://smakosh.com/contact
+- By visiting this page on our website: https://rahulpnath.com/contact
 - By phone number: +212663532761
