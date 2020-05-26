@@ -69,7 +69,6 @@ module.exports = {
             },
             query: `{
 							allMarkdownRemark(
-                filter: { frontmatter: { type: { ne: "legal" } } },
 								sort: { order: DESC, fields: [frontmatter___date] }
 							) {
 								edges {

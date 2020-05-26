@@ -41,7 +41,7 @@ export const postQuery = graphql`
       title
     }
     posts: allMarkdownRemark(
-      filter: { frontmatter: { type: { ne: "legal" }, tags: { in: [$slug] } } }
+      filter: { frontmatter: { tags: { in: [$slug] } } }
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 200
     ) {

@@ -1,13 +1,7 @@
+import { CardPost, Container, CustomButton, Row, Subtitle } from 'components/common'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
-import {
-  Container,
-  CardPost,
-  Row,
-  Subtitle,
-  CustomButton,
-} from 'components/common'
-import { Wrapper, Center } from './styles.js'
+import { Center, Wrapper } from './styles.js'
 
 export const Popular = () => {
   const {
@@ -17,7 +11,7 @@ export const Popular = () => {
       popular: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: {
-          frontmatter: { popular: { eq: true }, type: { ne: "legal" } }
+          frontmatter: { popular: { eq: true } }
         }
         limit: 3
       ) {

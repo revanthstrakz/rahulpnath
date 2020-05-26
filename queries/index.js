@@ -1,19 +1,7 @@
 module.exports = `
 {
-  legal: allMarkdownRemark(
-    filter: { frontmatter: { type: { eq: "legal" } } }
-  ) {
-    edges {
-      node {
-        id
-        fields {
-          slug
-        }
-      }
-    }
-  }
   posts: allMarkdownRemark(
-    filter: { frontmatter: { type: { ne: "legal" }, draft: { ne: true } } }
+    filter: { frontmatter: { draft: { ne: true } } }
     sort: { order: DESC, fields: [frontmatter___date] }
   ) {
     edges {
