@@ -1,14 +1,14 @@
-import React, { useContext, Fragment } from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import { Container } from 'components/common'
-import { ThemeContext } from 'providers/ThemeProvider'
-import Envelope from 'assets/about/envelope.svg'
-import Phone from 'assets/about/phone.svg'
-import Marker from 'assets/about/marker.svg'
 import EnvelopeWhite from 'assets/about/envelope-white.svg'
-import PhoneWhite from 'assets/about/phone-white.svg'
+import Envelope from 'assets/about/envelope.svg'
 import MarkerWhite from 'assets/about/marker-white.svg'
-import { Wrapper, Img, P, DetailsContainer, Text } from './styles'
+import Marker from 'assets/about/marker.svg'
+import PhoneWhite from 'assets/about/phone-white.svg'
+import Phone from 'assets/about/phone.svg'
+import { Container } from 'components/common'
+import { graphql, Link, useStaticQuery } from 'gatsby'
+import { ThemeContext } from 'providers/ThemeProvider'
+import React, { Fragment, useContext } from 'react'
+import { DetailsContainer, Img, P, Text, Wrapper } from './styles'
 
 export default () => {
   const { theme } = useContext(ThemeContext)
@@ -20,7 +20,6 @@ export default () => {
         bio
         currentPosition
         email
-        phone
         addresses
       }
     }

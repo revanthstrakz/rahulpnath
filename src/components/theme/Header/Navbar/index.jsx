@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
-import { Link } from 'gatsby'
 import { Container, Logo } from 'components/common'
+import { Link } from 'gatsby'
 import { ThemeContext } from 'providers/ThemeProvider'
+import React, { useContext } from 'react'
 import NavbarLinks from '../NavbarLinks'
-import { Wrapper, BrandLogo, Brand } from './styles'
+import { Brand, BrandLogo, Wrapper } from './styles'
 
 export default () => {
   const { theme } = useContext(ThemeContext)

@@ -12,7 +12,7 @@
   creative: false
   darkIcon: "./assets/social/dark/linkedin.svg"
   lightIcon: "./assets/social/light/linkedin.svg"
-  link: https://www.linkedin.com/in/ismail-ghallou-630149122
+  link: https://www.linkedin.com/in/rahulpnath
 - name: Github
   creative: true
   darkIcon: "./assets/social/dark/github.svg"
