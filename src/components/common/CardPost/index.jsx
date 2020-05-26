@@ -18,7 +18,7 @@ export const CardPost = ({
     <Item>
       <Post theme={theme}>
         <ArticleImg landing={landing}>
-          {thumbnail && (
+          {thumbnail && thumbnail.childImageSharp && (
             <Img
               fluid={thumbnail.childImageSharp.fluid}
             />

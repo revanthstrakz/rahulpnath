@@ -16,7 +16,7 @@ export default ({ data: { post } }) => (
             ? post.frontmatter.edited
             : post.frontmatter.date
         }
-        cover={ (post.frontmatter.thumbnail && post.frontmatter.thumbnail.childImageSharp.fluid.originalImg)}
+        cover={ (post.frontmatter.thumbnail && post.frontmatter.thumbnail.childImageSharp && post.frontmatter.thumbnail.childImageSharp.fluid.originalImg)}
         location=''
         description={post.description}
         readTime={post.timeToRead}

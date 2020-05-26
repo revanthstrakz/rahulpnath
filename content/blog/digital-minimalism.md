@@ -2,7 +2,7 @@
 author: [Rahul Nath]
 title: "Digital Minimalism: An Experiment To Simplify Online Life"
   
-categories: 
+tags: 
 - Productivity
 date: 2019-02-22
 thumbnail: ../images/digital_minimalism_screen_time_report.jpg

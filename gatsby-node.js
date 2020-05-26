@@ -29,6 +29,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     const postTemplate = path.resolve('./src/templates/post.js')
     const tagTemplate = path.resolve('./src/templates/tag.js')
     const tagPrefix = '/blog/tag/';
+    const categoryPrefix = '/blog/category/';
 
     const { data, errors } = await graphql(Queries)
 
@@ -58,6 +59,17 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         },
       })
     })
+
+      // Create category pages
+      data.tags.edges.forEach(({ node: { title } }) => {
+        createPage({
+          path: `${categoryPrefix}${title}/`,
+          component: tagTemplate,
+          context: {
+            slug: title,
+          },
+        })
+      })
 
     if (errors) {
       throw new Error(errors)

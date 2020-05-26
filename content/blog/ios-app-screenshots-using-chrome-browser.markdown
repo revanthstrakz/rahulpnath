@@ -4,6 +4,8 @@ title: "How To Take iOS App Store Screenshots Using Google Chrome For Cordova Ap
 description: Using Chrome Browser to take screenshots in all resolutions as required by the App Stores.
 date: 2019-05-01
 thumbnail: ../images/ios_screenshots_devices.jpg
+tags:
+ - Programming
 ---
 
 When submitting an app to the iOS App Store, it now mandates to upload screenshots for iPhone XS Max or the 12.9-inch iPad Pro. I had just moved to a new client and was to push an update for their existing mobile application. I had none of the iOS app development related applications setup and had to get this done as soon as possible. The mobile app is the website packaged as a [Cordova application](https://cordova.apache.org/).

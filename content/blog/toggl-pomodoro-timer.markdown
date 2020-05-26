@@ -3,6 +3,9 @@ author: [Rahul Nath]
 title: "Tip of the Week: Toggl - A Pomodoro Timer"
 date: 2019-03-27
 thumbnail: ../images/toggl.jpg
+tags:
+ - Productivity
+ - Tools
 ---
 
 I have been on and off Pomodoro technique and always wanted to be more consistent following it. A while back I was using [Tomighty](https://www.rahulpnath.com/blog/tomighty-a-pomodoro-timer/), a minimalistic Pomodoro timer. However, with Tomighty, I often forget to start the timer and soon stopped using it altogether. Recently when reading through a [Productivity tips article](https://scotch.io/bar-talk/productivity-tips-ive-learned-building-scotchio#toc-time-is-still-a-major-factor) I came across Toggl.

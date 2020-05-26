@@ -2,7 +2,7 @@
 author: [Rahul Nath]
 title: "Building Windows Service Installer on Azure Devops"
   
-categories: 
+tags: 
 - Azure DevOps
 - Azure
 date: 2019-03-25
