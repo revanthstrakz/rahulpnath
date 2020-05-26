@@ -21,6 +21,11 @@ export const List = styled.ul`
   list-style: none;
   align-self: center;
 
+  li {
+    display: inline-block;
+    padding: 0 1rem;
+  }
+
   a {
     color: #fff;
   }

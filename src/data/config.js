@@ -6,7 +6,7 @@ module.exports = {
   legalName: 'Rahul Nath',
   defaultDescription:
     "I'm Rahul Nath.",
-  socialLinks: {
+    socialLinks: {
     twitter: 'http://www.twitter.com/rahulpnath',
     github: 'https://github.com/rahulpnath',
     linkedin: 'https://www.linkedin.com/in/rahulpnath',

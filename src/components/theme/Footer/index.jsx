@@ -1,10 +1,10 @@
-import { Container, Logo } from 'components/common'
+import { Container } from 'components/common'
 import { Link } from 'gatsby'
 import { ThemeContext } from 'providers/ThemeProvider'
 import React, { useContext } from 'react'
 import Copyrights from './Copyrights'
 import Social from './Social'
-import { Brand, FooterContainer, FullContainer, List, StyledLogo, Wrapper } from './styles'
+import { Brand, FooterContainer, FullContainer, List, Wrapper } from './styles'
 
 export const Footer = () => {
   const { theme } = useContext(ThemeContext)
@@ -16,7 +16,8 @@ export const Footer = () => {
           <List>
             <li>
               <Brand as={Link} to="/">
-                <StyledLogo as={Logo} color="#fff" strokeWidth="2" /> Rahul Nath  
+                {/* <StyledLogo as={Logo} color="#fff" strokeWidth="2" />  */}
+                Rahul Nath  
               </Brand>
             </li>
           </List>
@@ -31,7 +32,7 @@ export const Footer = () => {
               <Link to="/blog/">Blog</Link>
             </li>
             <li>
-              <Link to="/talks/">Talks</Link>
+              <Link to="https://www.youtube.com/user/rahulnathp/">YouTube</Link>
             </li>
           </List>
           <List>
