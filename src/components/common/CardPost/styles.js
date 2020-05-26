@@ -1,95 +1,54 @@
 import styled from 'styled-components'
 
 export const Item = styled.div`
-  max-width: 100%;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   height: 100%;
-
-  ${({ landing }) =>
-    landing &&
-    `
-      max-width: 32%;
-
-      @media (max-width: 960px) {
-        max-width: 48%;
-      }
-  `}
-
-  @media (max-width: 480px) {
-    max-width: 100%;
-  }
+  border-bottom: 1px solid #e4e4e4;
 `
 
 export const Post = styled.div`
-  border-radius: 0.2rem;
-  box-shadow: 0 0 10px 0 rgba(33, 33, 33, 0.14);
   background: #fff;
-  transition: 0.7s;
-  height: 100%;
-  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 
   @media (max-width: 680px) {
-    display: flex;
-    align-items: center;
+    flex-direction: column;
   }
 
   &:hover,
   &:focus {
     box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.7s;
   }
 
   ${({ theme }) =>
     theme === 'dark' &&
     `
-			background: #2b2a2a;
+      background: #2b2a2a;
+      
+      a {
+        color: #adad2e;
+      }
 	`};
-
-  ${({ talk }) =>
-    talk &&
-    `
-    box-shadow: none;
-    background: unset;
-
-    &:hover {
-      box-shadow: none;
-    }
-  `}
 `
 
 export const ArticleContent = styled.div`
   padding: 1rem;
+  flex: auto;
 
   @media (max-width: 680px) {
     flex: 2;
-    overflow: hidden;
-    padding: 0 1rem;
+    padding: 1.5rem;
   }
 `
 
 export const ArticleImg = styled.div`
-  height: 300px;
+  width: 280px;
+  min-width: 280px;
+  margin: 20px;
   overflow: hidden;
-
-
-  ${({ path }) =>
-    path &&
-    `
-    cursor: pointer;
-  `}
-
-  ${({ landing }) =>
-    landing &&
-    `
-		height: 200px;
-	`}
-
-  ${({ talk }) =>
-    talk &&
-    `
-		border-radius: 8px;
-	`}
+  background: linear-gradient(10deg,#0072ff 0%,#00c6ff 100%);
 
   .gatsby-image-wrapper {
     height: 100%;
@@ -97,79 +56,45 @@ export const ArticleImg = styled.div`
 
   @media (max-width: 992px) {
     height: 300px;
-
-    ${({ landing }) =>
-      landing &&
-      `
-			height: 200px;
-		`}
+    display: none;
   }
 
   @media (max-width: 680px) {
-    height: 150px;
+    height: 100px;
     width: auto;
     flex: 1;
-
-    ${({ talk }) =>
-      talk &&
-      `
-      height: 170px;
-    `}
   }
 `
 
 export const ArticleTitle = styled.h2`
   color: #212121;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 
-  ${({ path }) =>
-    path &&
-    `
-    cursor: pointer;
-  `}
+  a {
+    color: inherit;
+  }
 
   @media (max-width: 680px) {
-    margin-bottom: 0.1rem;
-    font-size: 12pt;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
   }
 
   ${({ theme }) =>
     theme === 'dark' &&
     `
-			color: #fff;
+      color: #fff;
+      
+      a {
+        color: #fff;
+      }
 	`};
 `
 
 export const Paragraph = styled.p`
   color: #616161;
-  overflow-y: hidden;
-
-  ${({ path }) =>
-    path &&
-    `
-    cursor: pointer;
-  `}
-
-  ${({ landing }) =>
-    landing
-      ? `
-    height: 150px;
-    `
-      : `
-    height: 100px;
-
-    @media (max-width: 960px) {
-      height: 100px;
-    }
-  `}
 
   @media (max-width: 680px) {
-    height: 20px;
-    overflow-y: hidden;
-    margin-bottom: 0.1rem;
-    font-size: 10pt;
+    margin-bottom: 1rem;
+    font-size: 1rem;
   }
 
   ${({ theme }) =>
@@ -181,16 +106,19 @@ export const Paragraph = styled.p`
 
 export const Info = styled.i`
   color: #212121;
-  font-size: 0.8em;
+  font-size: 0.85em;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  ${({ path }) =>
-    path &&
-    `
-    cursor: pointer;
-  `}
+  img {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
 
   @media (max-width: 680px) {
-    font-size: 0.6em;
+    flex-direction: column;
   }
 
   ${({ theme }) =>
@@ -200,25 +128,28 @@ export const Info = styled.i`
 	`};
 `
 
-export const StyledSpan = styled.span`
-  margin-left: 10px;
-`
+export const PublishInfo = styled.div`
+  width: 40%;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
 
-export const TalkDetails = styled.div`
-  padding: 0 0 0.5rem 0;
-`
+  @media only screen and (min-width: 680px) and (max-width: 1024px) {
+    width: 50%;
+  }
 
-export const Slides = styled.div`
-  padding: 0.2rem 0;
-`
-
-export const Demos = styled.div`
-  padding: 0.2rem 0;
-
-  a:first-child {
-    margin-right: 1rem;
+  @media (max-width: 680px) {
+    width: 100%;
+    justify-content: space-between;
   }
 `
+
+export const StyledSpan = styled.div`
+  margin-right: 20px;
+  display: inline-flex;
+  align-items: center;
+`
+
 
 export const Tags = styled.div`
   display: flex;
@@ -250,4 +181,44 @@ export const Tags = styled.div`
       }
     }
   }
+`
+
+export const TagWrapper = styled.span`
+  width: 35%;
+  display: flex;
+
+  @media only screen and (min-width: 680px) and (max-width: 1024px) {
+    display: none;
+  }
+
+  @media (max-width: 680px) {
+    width: 100%;
+    margin-left: 2rem;
+    justify-content: center;
+    margin: 1rem 0;
+    font-size: 0.7rem;
+  }
+`
+
+export const Tag = styled.a`
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 8px;
+  font-weight: 500;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 680px) {
+    padding: 8px;
+    margin-top: 5px;
+  }
+
+  ${({ theme }) =>
+    theme === 'dark' &&
+    `
+      background: rgba(255, 255, 255, 0.1);
+	`};
 `

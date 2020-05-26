@@ -1,13 +1,5 @@
+import { CardPost, Container, Layout, PageTitle, Pagination, Row, SEO } from 'components/common'
 import React from 'react'
-import {
-  Layout,
-  Container,
-  SEO,
-  PageTitle,
-  CardPost,
-  Row,
-  Pagination,
-} from 'components/common'
 
 export default ({ pageContext }) => {
   const { group, index, pageCount, pathPrefix } = pageContext
@@ -40,12 +32,9 @@ export default ({ pageContext }) => {
               <CardPost
                 key={id}
                 description={description}
-                timeToRead={timeToRead}
                 title={title}
-                date={date}
                 path={slug}
                 thumbnail={thumbnail}
-                tags={tags}
               />
             )
           )}
