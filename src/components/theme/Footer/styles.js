@@ -14,7 +14,7 @@ export const FullContainer = styled.div`
   width: 100%;
   padding: 8rem 0 2rem 0;
   color: #fff;
-  background-image: linear-gradient(10deg, #0072ff 0%, #00c6ff 100%);
+  background-image: linear-gradient(10deg, #30a1f2 0%, #358ccb 100%);
 `
 
 export const List = styled.ul`

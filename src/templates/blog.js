@@ -11,14 +11,7 @@ export default ({ pageContext }) => {
       <Container>
         <SEO title="Blog" type="Organization" location="/blog" />
         <Row>
-          <PageTitle>Recent articles</PageTitle>
-          <Pagination
-            pathPrefix={pathPrefix}
-            index={index}
-            pageCount={pageCount}
-            previousUrl={previousUrl}
-            nextUrl={nextUrl}
-          />
+          <PageTitle>Recent Articles</PageTitle>
           {group.map(
             ({
               node: {

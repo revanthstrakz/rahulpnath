@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const CustomButton = styled.button`
-  background-image: linear-gradient(10deg, #0072ff 0%, #00c6ff 100%);
+background-image: linear-gradient(10deg, #30a1f2 0%, #358ccb 100%);
   cursor: pointer;
   color: #fff;
   border-radius: 40px;

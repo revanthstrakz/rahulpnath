@@ -7,6 +7,7 @@ tags:
 - Azure
 - .Net-Core
 thumbnail: ../images/azure_ad_app_graph_api.jpg
+popular: true
 ---
 
 In an earlier post, we saw how to [enable Role-Based Access for .Net Core Web applications](https://www.rahulpnath.com/blog/dot-net-core-api-and-azure-ad-groups-based-access/). We used hardcoded AD Group Id's in the application as below

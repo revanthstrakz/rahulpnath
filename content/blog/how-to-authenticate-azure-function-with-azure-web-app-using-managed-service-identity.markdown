@@ -7,6 +7,7 @@ descripiton: Reduce one set of authentication keys that you need to manage using
 tags: 
 - Azure
 thumbnail: ../images/azure_function_msi.jpg
+popular: true
 ---
 
 Azure Functions are getting popular, and I start seeing them more at clients. One typical scenario I come across is to authenticate an Azure Function with an Azure Web API. Every time something like this comes up, it means more Azure AD applications, which in turn means more secrets/certificates that need to be managed. But with [Managed Service Identity](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview) (MSI) feature on Azure, a lot of these secrets and authentication bits can be taken off from our shoulders and left to the platform to manage for us.

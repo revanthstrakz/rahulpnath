@@ -48,7 +48,7 @@ export const ArticleImg = styled.div`
   min-width: 280px;
   margin: 20px;
   overflow: hidden;
-  background: linear-gradient(10deg,#0072ff 0%,#00c6ff 100%);
+  background-image: linear-gradient(10deg, #30a1f2 0%, #358ccb 100%);
 
   .gatsby-image-wrapper {
     height: 100%;
