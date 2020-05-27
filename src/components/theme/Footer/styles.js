@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const FooterContainer = styled.footer`
-  margin-top: 6rem;
+  margin-top: 4rem;
 
   ${({ theme }) =>
     theme === 'dark' &&
@@ -12,9 +12,9 @@ export const FooterContainer = styled.footer`
 
 export const FullContainer = styled.div`
   width: 100%;
-  padding: 8rem 0 2rem 0;
+  padding: 8rem 0 0 0;
   color: #fff;
-  background-image: linear-gradient(10deg, #30a1f2 0%, #358ccb 100%);
+  background-image: linear-gradient(10deg, #823EB7 0%, #823EB7 100%);
 `
 
 export const List = styled.ul`
@@ -32,7 +32,7 @@ export const List = styled.ul`
 `
 
 export const Wrapper = styled.div`
-  padding: 2rem 0;
+  padding: 2rem 0 0 0;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;

@@ -1,7 +1,7 @@
 module.exports = `
 {
   posts: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/blog/"}})
+    filter: {fileAbsolutePath: {regex: "/blog/"}}
     sort: { order: DESC, fields: [frontmatter___date] }
   ) {
     edges {

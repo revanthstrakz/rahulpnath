@@ -4,22 +4,17 @@ export const Wrapper = styled.div`
   background: #fff;
   width: 100%;
   z-index: 1;
-  border-bottom: 0.01em solid rgb(204, 204, 204);
+  box-shadow: 0 5px 20px -10px #000;
   margin-bottom: -3rem;
-
-  ${({ isHomePage }) =>
-    isHomePage &&
-    `
-		position: fixed;
-		margin-bottom: unset;
-	`}
+  position: fixed;
+	margin-bottom: unset;
 
   ${({ theme }) =>
     theme === 'dark' &&
     `
 		background: #212121;
 		border-bottom: unset;
-		box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.2);
+		box-shadow: 0 5px 20px -10px #fff;
 	`}
 `
 

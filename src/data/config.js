@@ -14,8 +14,8 @@ module.exports = {
     youtube: 'https://www.youtube.com/user/rahulnathp',
   },
   googleAnalyticsID: '',
-  themeColor: '#00c6ff',
-  backgroundColor: '#00c6ff',
+  themeColor: '#823EB7',
+  backgroundColor: '#823EB7',
   siteRss: '/rss.xml',
   social: {
     facebook: '774780093',

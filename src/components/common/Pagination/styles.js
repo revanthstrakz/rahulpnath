@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   padding: 1rem 0;
 
   a {
-    color: #00b6ff;
+    color: #823EB7;
     font-size: 17pt;
 
     &:hover {
@@ -24,5 +24,5 @@ export const Digit = styled.a`
 
 export const Spacer = styled.div`
   margin-right: 1rem;
-  color: #00b6ff;
+  color: #823EB7;
 `

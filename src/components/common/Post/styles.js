@@ -6,7 +6,7 @@ export const ArticleWrapper = styled.div`
 
   a {
     text-decoration: none;
-    color: rgb(0, 119, 255);
+    color: #823EB7;
   }
 
   i {
