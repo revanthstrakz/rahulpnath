@@ -13,7 +13,6 @@ export default () => {
         <BrandLogo
           as={Logo}
           color={theme === 'dark' ? '#fff' : '#212121'}
-          strokeWidth="2"
         />
       </Brand>
       <NavbarLinks desktop />

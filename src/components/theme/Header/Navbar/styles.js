@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  padding: 0.8rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+display: flex;
+justify-content: space-between;
+align-items: center;
+min-height: 40px;
+padding: 10px 0 10px 0;
+max-width: 100%;
 `
 
 export const Brand = styled.div`
