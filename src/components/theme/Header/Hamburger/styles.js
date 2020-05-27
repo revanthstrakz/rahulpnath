@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const HamburgerIcon = styled.div`
+export const HamburgerIcon = styled.button`
+  background-color: transparent;
+  border: none;
   z-index: 5;
   top: 1.6rem;
   right: 1.8rem;
