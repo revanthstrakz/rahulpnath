@@ -14,7 +14,7 @@ thumbnail: ../images/json_server.jpg
 
 However, it's not always that you can use something straight out of the box to fit all conditions and constraints of your API. In this post, let's look at customizing and configuring JSON Server for some commonly occurring scenarios.
 
-{{<youtube id="yq0S2f3k9zY">}}
+`youtube:https://www.youtube.com/embed/yq0S2f3k9zY`
 
 ### Setting up JSON Server
 

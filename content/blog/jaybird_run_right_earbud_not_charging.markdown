@@ -10,7 +10,7 @@ tags:
 A few months back, I got a used Jaybird run headphones to listen to music while running. I enjoy running with those, and they are a perfect fit. It has never dropped off during my runs. 
 However, after a couple of weeks, the right earbuds stopped charging. Here are a few tips that help me get it charged every time - yes need to do one of these or even a combination to get it to charge every time I pop them back on the case.
 
-{{< youtube id="-XGSHh7wF7o" >}}
+`youtube:https://www.youtube.com/embed/-XGSHh7wF7o`
 <br />  
 
 - Remove the ear tips and open/close lots of times until it decides to charge    

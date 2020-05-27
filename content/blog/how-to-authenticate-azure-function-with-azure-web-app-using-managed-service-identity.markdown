@@ -12,7 +12,7 @@ popular: true
 
 Azure Functions are getting popular, and I start seeing them more at clients. One typical scenario I come across is to authenticate an Azure Function with an Azure Web API. Every time something like this comes up, it means more Azure AD applications, which in turn means more secrets/certificates that need to be managed. But with [Managed Service Identity](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview) (MSI) feature on Azure, a lot of these secrets and authentication bits can be taken off from our shoulders and left to the platform to manage for us.
 
-{{< youtube id="r4QFBsT2YE8" >}}
+`youtube:https://www.youtube.com/embed/r4QFBsT2YE8`
 <br /> 
 
 In this post let us explore how we can successfully authenticate/authorize an Azure Function with a Web API using AD application and Managed Service Identity and still not have any Secrets/certificates involved in the whole process. 
@@ -86,7 +86,7 @@ Now that we have the authentication set up between the Azure Function and Web AP
 
 #### Using AD Role
 
-{{< youtube id="HVruBWuKnYw" >}}
+`youtube:https://www.youtube.com/embed/HVruBWuKnYw`
 <br/>
 
 To add an App Role for the MSI function, we first need to add an 'Application' role to the AD Application (one that Web API uses to authenticate against). The [allowedMemberTypes](https://docs.microsoft.com/en-us/azure/active-directory/develop/reference-app-manifest) does allow comma separated values if you are looking to add the same role for User and Application.
@@ -127,7 +127,7 @@ New-AzureADServiceAppRoleAssignment -Id $adApp.AppRoles[0].Id `
 
 #### Using AD Group
 
-{{< youtube id="FTpAgSHfu8o" >}}
+`youtube:https://www.youtube.com/embed/FTpAgSHfu8o`
 <br/>
 
 In a [previous post](https://www.rahulpnath.com/blog/custom-authorization-policy-providers/), we saw how to use Azure AD Groups to provide role-based access. You can add a Service Principal to the AD group either through the portal or code.

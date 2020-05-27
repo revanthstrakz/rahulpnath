@@ -19,7 +19,7 @@ In this post, let us see how we can link secrets from Key Vault to DevOps Variab
 
 > [Azure Key Vault](https://azure.microsoft.com/en-au/services/key-vault/) enables safeguard cryptographic keys and secrets used by the application. It increases security and control over keys and passwords.
 
-{{< youtube id="1OAy3XOE3OY" >}}
+`youtube:https://www.youtube.com/embed/1OAy3XOE3OY`
 <br />
 
 ### Link Variable Group to Key Vault

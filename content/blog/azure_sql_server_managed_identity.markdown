@@ -19,7 +19,7 @@ To connect to a SQL database, we usually use a connection string that has a user
   }
 ```
 
-{{< youtube id="FFBaw-ug2-I">}}
+`youtube:https://www.youtube.com/embed/FFBaw-ug2-I`
 
 Azure SQL supports Azure AD authentication, which means it also supports the [Managed Identity](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview) feature of Azure AD. With Managed Identity, we no longer need the User Id and Password to connect. The credential is managed automatically by Azure and allows us to connect to resources that support Azure AD authentication.
 

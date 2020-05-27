@@ -11,7 +11,7 @@ thumbnail: ../images/azure_keyvault_secrets.jpg
 
 In the previous post, we saw how to [Enable History for Azure DevOps Variable Groups Using Azure Key Vault](/blog/azure-devops-variable-groups-history/). However, there is one issue with using this approach. Whenever a deployment is triggered, it fetches the latest Secret value from the Key Vault. This behaviour might be desirable or not depending on the nature of the Secret.
 
-{{< youtube id="r1rL_2isCWM" >}}
+`youtube:https://www.youtube.com/embed/r1rL_2isCWM`
 <br/>
 In this post, we will see how we can use an alternative approach using the Azure Key Vault Pipeline task to fetch Secrets and at the same time, allow us to snapshot variable values against a release.
 

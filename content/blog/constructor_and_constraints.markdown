@@ -13,7 +13,7 @@ In C# or any class-based object-oriented language, a Constructor is used to crea
 
 > The invariant must hold to be true after the constructor is finished and at the entry and exit of all public member functions.
 
-{{<youtube id="-9zzIS3R56w">}}
+`youtube:https://www.youtube.com/embed/-9zzIS3R56w`
 
 ### Simple Invariants
 

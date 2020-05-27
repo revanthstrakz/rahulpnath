@@ -13,7 +13,7 @@ thumbnail: ../images/keyVault_connectedService.png
 
 Visual Studio (VS) now supports adding [Azure Key Vault](https://rahulpnath.com/blog/category/azure-key-vault/) as a [Connected Service](https://docs.microsoft.com/en-us/azure/key-vault/vs-key-vault-add-connected-service), for Web Projects ( ASP.NET Core or any ASP.NET project). Enabling this from the Connected Service makes it easier for you to get started with Azure Key Vault. Below are the prerequisites to use the Connected Service feature
 
-{{< youtube id="S7EPrlpPqXw" >}}
+`youtube:https://www.youtube.com/embed/S7EPrlpPqXw`
 <br />
 
 > [Prerequisites](https://docs.microsoft.com/en-us/azure/key-vault/vs-key-vault-add-connected-service#prerequisites)

@@ -13,7 +13,7 @@ thumbnail: ../images/indickeyboard.png
 
 I came across the [Google Indic Keyboard](https://play.google.com/store/apps/details?id=com.google.android.apps.inputmethod.hindi&hl=en) recently and now enjoy writing in my native language. If you want to write in an Indian language on your Android device, then this post is for you
 
-{{<youtube id="SikrzTLzgds">}}
+`youtube:https://www.youtube.com/embed/SikrzTLzgds`
 
 Google Indic Keyboard allows you to type messages, update on social networks or compose emails in your native language on your Android phone. At the time of writing the keyboard supports the following languages:
 

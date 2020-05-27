@@ -15,7 +15,7 @@ Azure Key Vault is a cloud-hosted service for managing cryptographic keys and se
 
 In this post, I will walk-through how to access Secrets in an Azure Key Vault from a .Net Core Web application. The Web Application has an API endpoint that drops a message to Azure Storage Queue. It uses a connection string in Azure Key Vault to connect to Azure Storage Queue. The application also gracefully handles rotating Secrets, retiring the old connection string, and replacing with a new one, without needing to restart the application.
 
-{{<youtube id="6l_kpygO0Ic">}}
+`youtube:https://www.youtube.com/embed/6l_kpygO0Ic`
 <br />
 
 The application uses an _AzureQueueSender_ to drop messages to the Storage Queue. Just like usual, it gets the Connection String value from the application configuration, using the .Net Core _IConfiguration_ library. Since the Connection String is sensitive information, you should keep this out of [source control](/blog/keeping-sensitive-configuration-data-out-of-source-control/). Usually, this would be by storing it as [User Secrets](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets) in the local environment and using Variable replacement in Azure DevOps for any deployed environment like dev, test or prod.

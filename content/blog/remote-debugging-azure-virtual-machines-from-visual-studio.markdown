@@ -11,7 +11,7 @@ thumbnail: ../images/remote_debug_visualstudio.jpg
 
 It's not often that you want to debug into applications running on a Virtual Machine, but not to say that it is never required. Recently at one of my clients, I had to debug into an application running on an Azure Virtual machine. I wanted to debug an application with Azure AD group logic, and my laptop was not domain-joined. This called for remote debugging with the application running on a domain-joined virtual machine.
 
-{{< youtube id="I_9LBBbsWHI" >}}
+`youtube:https://www.youtube.com/embed/I_9LBBbsWHI`
 <br /> 
 
 In this post, we will look at how to set up the Virtual Machine and Visual Studio for remote debugging. If you are interested in watching this in action, check out the video in the link above.
