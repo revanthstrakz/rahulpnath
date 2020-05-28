@@ -31,18 +31,46 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     const tagPrefix = '/blog/tag/';
     const categoryPrefix = '/blog/category/';
 
-    const { data, errors } = await graphql(Queries)
+    const { data, errors } = await graphql(Queries);
+    const postsPerPage = 8;
+    const totalPages = Math.ceil(data.posts.edges.length/postsPerPage);
+
+    createPage({
+      path: 'blog',
+      component: path.resolve('src/templates/blog.js'),
+      context: {
+        group: data.posts.edges.slice(0, postsPerPage),
+        pathPrefix: 'blog/page',
+        first: true,
+        last: false,
+        index: 1,
+        pageCount: totalPages,
+      },
+    })
+
+    createPage({
+      path: 'blog/page/1',
+      component: path.resolve('src/templates/blog.js'),
+      context: {
+        group: data.posts.edges.slice(0, postsPerPage),
+        pathPrefix: 'blog/page',
+        first: true,
+        last: false,
+        index: 1,
+        pageCount: totalPages,
+      },
+    })
 
     createPaginatedPages({
       edges: data.posts.edges,
       createPage,
       pageTemplate: 'src/templates/blog.js',
-      pageLength: 8,
+      pageLength: postsPerPage,
       pathPrefix: 'blog/page',
     })
 
-    // Create posts pages
-    data.posts.edges.forEach(({ node: { fields: { slug } } }) => {
+     // Create posts pages
+     data.posts.edges.forEach(({ node: { fields: { slug } } }) => {
       createPage({
         path: slug,
         component: postTemplate,

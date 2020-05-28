@@ -1,7 +1,7 @@
-import React from 'react'
-import { range } from 'helpers'
 import { Link } from 'gatsby'
-import { Wrapper, Spacer, Digit } from './styles'
+import { range } from 'helpers'
+import React from 'react'
+import { Digit, Spacer, Wrapper } from './styles'
 
 export const Pagination = ({
   pathPrefix,
@@ -69,12 +69,12 @@ export const Pagination = ({
   return (
     <Wrapper>
       {index > 1 && (
-        <Link style={{ marginRight: 10 }} to={`/blog/${previousUrl}`}>
+        <Link style={{ marginRight: 10 }} to={`/blog/page/${previousUrl}`}>
           Prev
         </Link>
       )}
       {getPageLinks()}
-      {index < pageCount && <Link to={`/blog/${nextUrl}`}>Next</Link>}
+      {index < pageCount && <Link to={`/blog/page/${nextUrl}`}>Next</Link>}
     </Wrapper>
   )
 }

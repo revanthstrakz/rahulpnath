@@ -6,13 +6,13 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://rahulpnath.com',
+    siteUrl: 'https://www.rahulpnath.com',
     rssMetadata: {
-      site_url: 'https://rahulpnath.com',
+      site_url: 'https://www.rahulpnath.com',
       feed_url: `${config.url}${config.siteRss}`,
       title: 'Rahul Nath',
       description: config.defaultDescription,
-      image_url: 'https://rahulpnath.com/static/favicon/logo-512.png',
+      image_url: 'https://www.rahulpnath.com/static/favicon/logo-512.png',
       author: config.author,
       copyright: `${config.defaultTitle} © ${new Date().getFullYear()}`,
     },
@@ -53,6 +53,14 @@ module.exports = {
 				}`,
         feeds: [
           {
+            setup: locals => {
+              return {
+                ...locals,
+                ...locals.query.site.siteMetadata,
+                site_url: "https://www.rahulpnath.com/",
+                feed_url: "https://www.rahulpnath.com/rss.xml"
+              };
+            },
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
@@ -62,13 +70,14 @@ module.exports = {
                     edge.node.frontmatter.path,
                   guid:
                     site.siteMetadata.rssMetadata.site_url +
-                    edge.node.frontmatter.path,
+                    edge.node.fields.slug,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
             },
             query: `{
 							allMarkdownRemark(
+                filter: {fileAbsolutePath: {regex: "/blog/"}}
 								sort: { order: DESC, fields: [frontmatter___date] }
 							) {
 								edges {
@@ -88,6 +97,7 @@ module.exports = {
 						}`,
             output: config.siteRss,
             title: 'Rahul Nath',
+            link: 'https://feeds.feedburner.com/rahulpnath'
           },
         ],
       },

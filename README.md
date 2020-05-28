@@ -5,8 +5,8 @@ My personal website
 
 Built with [Gatsby](https://www.gatsbyjs.org/) and [more](https://github.com/smakosh/smakosh.com/blob/master/package.json#L6)
 
-[Lighthouse test](https://lighthouse-dot-webdotdevsite.appspot.com/lh/html?url=https://smakosh.com)
+[Lighthouse test](https://lighthouse-dot-webdotdevsite.appspot.com/lh/html?url=https://www.rahulpnath.com.com)
 
-[Page speed test](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsmakosh.com%2F&tab=desktop)
+[Page speed test](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%www.rahulpnath.com.com%2F&tab=desktop)
 
-[Pingdom test](https://tools.pingdom.com/#59caaf6660000000)
+[Pingdom test](https://tools.pingdom.com/#5c9663a67a400000)

@@ -1,8 +1,8 @@
 module.exports = {
   defaultTitle: 'Rahul Nath',
-  logo: 'https://rahulpnath.com/favicon/logo-48.png',
+  logo: 'https://www.rahulpnath.com/favicon/logo-48.png',
   author: 'Rahul Nath',
-  url: 'https://rahulpnath.com',
+  url: 'https://www.rahulpnath.com',
   legalName: 'Rahul Nath',
   defaultDescription:
     "I'm Rahul Nath.",
