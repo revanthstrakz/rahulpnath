@@ -36,13 +36,7 @@ export const StyledForm = styled.div`
 export const Subtitle = styled.p`
   margin-bottom: 1em;
   color: #738a94;
-  font-size: 1.2em;
-  line-height: 1.55em;
   letter-spacing: 0.2px;
-
-  @media (max-width: 800px) {
-    font-size: 0.8em;
-  }
 
   ${({ theme }) =>
     theme === 'dark' &&
@@ -55,13 +49,7 @@ export const Title = styled.h3`
   margin: 0 0 3px;
   padding: 0;
   color: #15171a;
-  font-size: 1.5em;
   line-height: 1;
-  font-weight: 700;
-
-  @media (max-width: 800px) {
-    font-size: 1em;
-  }
 
   ${({ theme }) =>
     theme === 'dark' &&
@@ -75,7 +63,6 @@ export const Message = styled.h4`
   font-weight: normal;
 
   @media (max-width: 800px) {
-    font-size: 0.9em;
     width: 90%;
     margin: 1rem auto;
   }

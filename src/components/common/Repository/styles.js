@@ -57,14 +57,8 @@ export const Header = styled.div`
   padding: 1rem 0;
 
   h3 {
-    font-size: 0.9em;
     margin: 0;
-    font-weight: normal;
     color: #212121;
-
-    @media (max-width: 680px) {
-      font-size: 1.2em;
-    }
 
     ${({ theme }) =>
       theme === 'dark' &&
@@ -78,8 +72,6 @@ export const Description = styled.div`
   padding: 1rem 0;
 
   p {
-    font-size: 16px;
-    line-height: 1.46429em;
     margin: 0;
     color: #212121;
 

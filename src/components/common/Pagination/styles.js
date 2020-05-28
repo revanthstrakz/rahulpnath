@@ -9,10 +9,9 @@ export const Wrapper = styled.div`
 
   a {
     color: #823EB7;
-    font-size: 17pt;
 
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 `

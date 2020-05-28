@@ -13,7 +13,7 @@ export const Intro = () => {
         I am a programmer, blogger, speaker and enjoys running. Blogs are usually technical or about life in general.
       </p>
       <Flex>
-        <MagicalButton as={Link} to="/contact">
+        <MagicalButton as={Link} to="/about">
           About me
         </MagicalButton>
       </Flex>

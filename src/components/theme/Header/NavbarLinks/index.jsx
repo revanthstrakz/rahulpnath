@@ -19,9 +19,9 @@ export default ({ desktop }) => {
       <Link to="/blog" activeClassName="current">
         Blog
       </Link>
-      <Link to="/contact" activeClassName="current">
-        Contact
-      </Link>
+      <a href="https://www.youtube.com/user/rahulnathp/" rel="noopener noreferrer" target="_blank" activeClassName="current">
+        YouTube
+      </a>
       <StyledButton type="button" onClick={toggleTheme}>
         <img src={theme === 'dark' ? day : night} alt={theme} />
       </StyledButton>

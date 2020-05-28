@@ -24,6 +24,12 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-transformer-yaml',
     {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/providers/typography`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
         endpoint: "https://rahulpnath.us4.list-manage.com/subscribe/post?u=0ce70a8674f4eeb34468f3f55&amp;id=38866b3761",

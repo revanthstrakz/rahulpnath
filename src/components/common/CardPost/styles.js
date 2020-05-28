@@ -75,7 +75,6 @@ export const ArticleTitle = styled.h2`
 
   @media (max-width: 680px) {
     margin-bottom: 1rem;
-    font-size: 1.2rem;
   }
 
   ${({ theme }) =>
@@ -94,7 +93,6 @@ export const Paragraph = styled.p`
 
   @media (max-width: 680px) {
     margin-bottom: 1rem;
-    font-size: 1rem;
   }
 
   ${({ theme }) =>
@@ -106,8 +104,6 @@ export const Paragraph = styled.p`
 
 export const Info = styled.i`
   color: #212121;
-  font-size: 0.85em;
-  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -170,7 +166,6 @@ export const Tags = styled.div`
     @media (max-width: 960px) {
       padding: 0.05rem 0.5rem;
       margin: 0 0.4rem 0.4rem 0;
-      font-size: 8pt;
     }
 
     &:last-child {
@@ -196,7 +191,6 @@ export const TagWrapper = styled.span`
     margin-left: 2rem;
     justify-content: center;
     margin: 1rem 0;
-    font-size: 0.7rem;
   }
 `
 
@@ -204,8 +198,6 @@ export const Tag = styled.a`
   cursor: pointer;
   margin-right: 10px;
   padding: 8px;
-  font-weight: 500;
-  font-size: 0.8rem;
   border-radius: 20px;
   text-align: center;
   color: rgba(0, 0, 0, 0.8);

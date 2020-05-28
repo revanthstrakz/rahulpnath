@@ -30,8 +30,6 @@ export const Back = styled.div`
 `
 
 export const Content = styled.div`
-  font-size: 1.2rem;
-  line-height: 2rem;
 `
 
 export const Comments = styled.div`
@@ -46,7 +44,6 @@ export const ArticleDate = styled.div`
   margin-bottom: 1rem;
 
   i {
-    font-size: 0.9em;
 
     &:first-child {
       margin-right: 0.2rem;

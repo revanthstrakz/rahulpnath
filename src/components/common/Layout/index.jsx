@@ -5,7 +5,6 @@ import { ThemeContext } from 'providers/ThemeProvider'
 import { Header, Footer } from 'components/theme'
 import { Wrapper } from './styles'
 import globalTheme from './globalTheme'
-import './fonts.css'
 import './layout.css'
 
 export const Layout = ({ children }) => {
