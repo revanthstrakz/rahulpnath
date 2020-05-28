@@ -69,32 +69,41 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       pathPrefix: 'blog/page',
     })
 
+    let alltags = [];
      // Create posts pages
-     data.posts.edges.forEach(({ node: { fields: { slug } } }) => {
+     data.posts.edges.forEach(({ node: { fields: { slug }, frontmatter: { tags } } }) => {
+      alltags = alltags.concat(tags || [])
       createPage({
         path: slug,
         component: postTemplate,
       })
     })
-
+ 
+    const uniqueTags = [...new Set(alltags)];
+    console.log('HERE-----------------------');
+    console.log(uniqueTags);
     // Create tags pages
-    data.tags.edges.forEach(({ node: { title } }) => {
+   uniqueTags.forEach(tag => {
+     let slug = tag.replace(/\s+/g, '-');
       createPage({
-        path: `${tagPrefix}${title}/`,
+        path: `${tagPrefix}${slug}/`,
         component: tagTemplate,
         context: {
-          slug: title,
+          slug,
+          tag
         },
       })
     })
 
-      // Create category pages
-      data.tags.edges.forEach(({ node: { title } }) => {
+    // Create category pages
+    uniqueTags.forEach(tag => {
+      let slug = tag.replace(/\s+/g, '-')
         createPage({
-          path: `${categoryPrefix}${title}/`,
+          path: `${categoryPrefix}${slug}/`,
           component: tagTemplate,
           context: {
-            slug: title,
+            slug,
+            tag
           },
         })
       })

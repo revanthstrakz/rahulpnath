@@ -18,7 +18,7 @@ export const Post = ({ html, frontmatter, timeToRead, fields }) => {
       <PageTitle>{frontmatter.title}</PageTitle>
       <Tags>
         {frontmatter.tags.map((item, i) => (
-          <Tag tag={item} link={`/${item}/`} key={i}>
+          <Tag tag={item} link={`/${item.replace(/\s+/g, '-')}/`} key={i}>
             {item}
           </Tag>
         ))}

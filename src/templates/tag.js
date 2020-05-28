@@ -2,12 +2,12 @@ import { CardPost, Container, Layout, PageTitle, Row, SEO } from 'components/com
 import { graphql } from 'gatsby'
 import React from 'react'
 
-export default ({ data: { tag, posts } }) => (
+export default ({ data: { posts }, pageContext: {tag, slug } }) => (
   <Layout>
     <Container>
-      <SEO type="Organization" title={tag.title} location={`/${tag.title}`} />
+      <SEO type="Organization" title={tag} location={`/${slug}`} />
       <Row>
-        <PageTitle>Articles related to {tag.title}</PageTitle>
+        <PageTitle>Articles related to {tag}</PageTitle>
         {posts.edges.map(
           ({
             node: {
@@ -36,12 +36,9 @@ export default ({ data: { tag, posts } }) => (
 )
 
 export const postQuery = graphql`
-  query($slug: String!) {
-    tag: tagsYaml(title: { eq: $slug }) {
-      title
-    }
+  query($tag: String!) {
     posts: allMarkdownRemark(
-      filter: { frontmatter: { tags: { in: [$slug] } } }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 200
     ) {
