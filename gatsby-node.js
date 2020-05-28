@@ -79,9 +79,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       })
     })
  
-    const uniqueTags = [...new Set(alltags)];
-    console.log('HERE-----------------------');
-    console.log(uniqueTags);
+    const uniqueTags = [...new Set(alltags.map(tag => tag.toLowerCase()))];
     // Create tags pages
    uniqueTags.forEach(tag => {
      let slug = tag.replace(/\s+/g, '-');
