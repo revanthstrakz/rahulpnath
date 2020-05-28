@@ -7,7 +7,7 @@ author: [Rahul Nath]
 title: Synchronize SQL Server database objects
 wordpress_id: 7
 tags:
-  - .Net
+  - .NET
   - Tools
 thumbnail: ../images/database_sync.jpg
 ---

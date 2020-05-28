@@ -7,7 +7,7 @@ author: [Rahul Nath]
 title: WCF to ASP.NET Web API
 wordpress_id: 328
 tags:
-  - .Net
+  - .NET
   - ASP.NET
   - WCF
 ---

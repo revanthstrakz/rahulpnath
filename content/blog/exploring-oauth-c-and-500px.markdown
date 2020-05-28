@@ -7,7 +7,7 @@ author: [Rahul Nath]
 title: 'Windows 8 Series - Exploring OAuth: c# and 500px'
 wordpress_id: 358
 tags:
-  - .Net
+  - .NET
   - Windows 8
 thumbnail: ../images/oauth_500px_application_details.png
 ---

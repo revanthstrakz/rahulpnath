@@ -1,10 +1,9 @@
 ---
 author: [Rahul Nath]
 title: 'Setting up an Electron Application using create-react-app Template'
-  
 tags:
   - JavaScript
-  - Electron
+  - React
 date: 2017-10-10
 completedDate: 2017-10-10 06:41:14 +1100
 keywords:

@@ -5,7 +5,7 @@ date: 2014-11-10 01:38:56
   
 tags:
   - Web Api
-  - rest
+  - REST
 thumbnail: ../images/not_restful.png
 ---
 

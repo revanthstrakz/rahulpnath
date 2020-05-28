@@ -7,7 +7,7 @@ author: [Rahul Nath]
 title: 'Giveaway : Get a license of your choice from Syncfusion'
 wordpress_id: 578
 tags:
-  - syncfusion giveaway
+  - Tools
 ---
 
 Often we run up into the need for third party controls to give your apps/sites that extra edge that all of us are looking for. Syncfusion provides an excellent collection of controls for various platforms, details of which you can find [here](http://www.syncfusion.com/products?UTM_medium=rahulblogreview) .

@@ -3,7 +3,7 @@ author: [Rahul Nath]
 title: 'Exclude Certain Scripts From Transaction When Using DbUp'
   
 tags:
-  - programming
+  - Programming
 date: 2018-12-17
 completedDate: 2018-12-15 05:34:26 +1000
 keywords:

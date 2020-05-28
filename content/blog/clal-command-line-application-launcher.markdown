@@ -3,8 +3,7 @@ author: [Rahul Nath]
 title: 'CLAL - Command Line Application Launcher'
   
 tags:
-  - tools
-  - clal
+  - Tools
 date: 2016-04-07 06:11:22
 keywords:
 description:

@@ -7,7 +7,7 @@ author: [Rahul Nath]
 title: Windows 8 Series – Drop Down Button
 wordpress_id: 415
 tags:
-  - .Net
+  - .NET
   - Windows 8
 thumbnail: ../images/windows8_dropdown_button.png
 ---

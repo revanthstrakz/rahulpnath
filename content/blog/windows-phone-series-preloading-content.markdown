@@ -7,7 +7,7 @@ author: [Rahul Nath]
 title: Windows Phone Series – Preloading Content
 wordpress_id: 501
 tags:
-  - .Net
+  - .NET
   - Windows Phone
   - WP7
 thumbnail: ../images/preloaded_content_vs_refresh.png

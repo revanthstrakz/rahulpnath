@@ -7,7 +7,6 @@ author: [Rahul Nath]
 title: 'Windows Phone Series: Image Caching Library - JetImageLoader'
 wordpress_id: 1012
 tags:
-  - Nuget
   - Open Source
   - Windows Phone
 thumbnail: ../images/WP-JetImagLoader.png

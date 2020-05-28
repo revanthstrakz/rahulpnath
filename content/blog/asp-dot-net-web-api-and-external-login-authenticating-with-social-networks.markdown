@@ -4,7 +4,7 @@ title: 'ASP.NET Web API and External Login - Authenticating with Social Networks
 date: 2014-09-10 19:29:35
   
 tags:
-  - asp.net
+  - ASP.NET
   - Web Api
 thumbnail: ../images/web_api_authentication_vs_template.png
 ---

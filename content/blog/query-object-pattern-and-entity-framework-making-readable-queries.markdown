@@ -3,7 +3,7 @@ author: [Rahul Nath]
 title: 'Query Object Pattern and Entity Framework - Making Readable Queries'
   
 tags:
-  - Entity Framework
+  - .NET
   - Programming
 date: 2018-12-20
 completedDate: 2018-12-17 08:40:44 +1000

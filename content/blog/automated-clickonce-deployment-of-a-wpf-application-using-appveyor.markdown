@@ -3,9 +3,8 @@ author: [Rahul Nath]
 title: 'Automated ClickOnce Deployment of a WPF Application using Appveyor'
   
 tags:
-  - clal
-  - tools
-  - wpf
+  - Tools
+  - WPF
 date: 2016-03-04 12:00:03
 keywords:
 description:

@@ -1,10 +1,9 @@
 ---
 author: [Rahul Nath]
 title: 'Setting up AutoHotkey to Speed up Trivial Tasks'
-  
 tags:
-  - productivity
-  - tools
+  - Productivity
+  - Tools
 date: 2016-02-09 04:22:03
 keywords:
 description:

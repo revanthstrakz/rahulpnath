@@ -7,7 +7,7 @@ author: [Rahul Nath]
 title: HTTP – A Short Dive
 wordpress_id: 534
 tags:
-  - Reviews
+  - Review
   - Web
 thumbnail: ../images/http_succinctly.png
 ---

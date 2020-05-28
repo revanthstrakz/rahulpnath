@@ -7,7 +7,7 @@ author: [Rahul Nath]
 title: FxCop Custom Naming Rules
 wordpress_id: 32
 tags:
-  - .Net
+  - .NET
 ---
 
 Recently I had started using [FxCop](http://msdn.microsoft.com/en-us/library/bb429476.aspx),which is a wonderful code analysis tool.Soon after getting into it,I felt the need of rules specific to my requirements and standards.One such need was in the area of 'Naming of Variables'.  

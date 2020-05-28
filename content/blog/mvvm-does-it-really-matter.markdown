@@ -7,7 +7,7 @@ author: [Rahul Nath]
 title: MVVM – Does it really matter?
 wordpress_id: 484
 tags:
-  - .Net
+  - .NET
   - Thoughts
   - Windows 8
   - Windows Phone

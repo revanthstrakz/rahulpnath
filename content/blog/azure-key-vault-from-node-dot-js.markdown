@@ -5,7 +5,7 @@ title: 'Azure Key Vault From Node.js'
 tags:
   - Azure Key Vault
   - Nodejs
-  - Javascript
+  - JavaScript
 date: 2017-06-12
 completedDate: 2017-05-16 05:42:34 +1000
 keywords:

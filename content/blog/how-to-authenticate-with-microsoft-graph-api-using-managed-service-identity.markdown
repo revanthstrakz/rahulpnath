@@ -5,7 +5,7 @@ date: 2019-10-06
   
 tags:
 - Azure
-- .Net-Core
+- .NET-Core
 thumbnail: ../images/azure_ad_app_graph_api.jpg
 popular: true
 ---

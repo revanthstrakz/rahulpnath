@@ -9,7 +9,7 @@ wordpress_id: 442
 tags:
   - Gadgets
   - Photography
-  - Reviews
+  - Review
 thumbnail: ../images/vanguard_uprise45_review.png
 ---
 

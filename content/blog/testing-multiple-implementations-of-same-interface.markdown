@@ -4,8 +4,8 @@ title: 'Testing Multiple Implementations of same Interface'
 date: 2015-01-10 10:24:15
   
 tags:
-  - .net
-  - testing
+  - .NET
+  - Testing
 ---
 
 Often there are times when we need to test multiple implementations of the same interface. We would want to use the same test case against all the implementations so that we [don't repeat ourselves](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself). In this post we will see how we can reuse the same test cases to test both the implementation, by running them against both the implementations.

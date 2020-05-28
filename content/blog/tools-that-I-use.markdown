@@ -4,8 +4,8 @@ title: 'Tools that I use'
 date: 2015-10-10 05:44:19
   
 tags:
-  - tools
-  - productivity
+  - Tools
+  - Productivity
 keywords:
 description: A list of tools that help me with the day to day life/work.
 ---

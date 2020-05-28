@@ -7,7 +7,7 @@ author: [Rahul Nath]
 title: Getting Started with ASP.NET Web Api
 wordpress_id: 348
 tags:
-  - .Net
+  - .NET
   - ASP.NET
   - REST
 thumbnail: ../images/web_api_default_template_welcome_screen.png

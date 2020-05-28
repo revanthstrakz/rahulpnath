@@ -7,7 +7,7 @@ author: [Rahul Nath]
 title: Windows Phone Series – Incremental Loading
 wordpress_id: 471
 tags:
-  - .Net
+  - .NET
   - Windows Phone
   - WP7
 thumbnail: ../images/wp_incremental_loading_longlistselector.jpg

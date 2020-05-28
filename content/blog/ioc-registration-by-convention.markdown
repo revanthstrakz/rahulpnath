@@ -4,7 +4,7 @@ title: 'IoC Registration by Convention'
 date: 2015-01-03 18:03:17
   
 tags:
-  - .net
+  - .NET
   - Dependency Injection
 thumbnail: ../images/ioc_usefulness.png
 ---

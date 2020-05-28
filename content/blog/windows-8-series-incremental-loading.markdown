@@ -7,7 +7,7 @@ author: [Rahul Nath]
 title: Windows 8 Series - Incremental Loading
 wordpress_id: 392
 tags:
-  - .Net
+  - .NET
   - REST
   - Windows 8
 thumbnail: ../images/windows8_incremental_loading.png

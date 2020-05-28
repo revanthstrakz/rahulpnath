@@ -4,8 +4,8 @@ title: 'Is Code Coverage a Lie?'
 date: 2015-04-11 19:00:42
   
 tags:
-  - Test
-  - Tdd
+  - Testing
+  - TDD
 keywords: code coverage, unit test, TDD
 description: This post reflects on how code coverage is seen today in the industry and on how it should actually be seen and interpreted so as to produce better and stable code.
 thumbnail: ../images/code_coverage.PNG

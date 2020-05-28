@@ -4,7 +4,7 @@ title: 'Tip of the Week: IF This Then That (IFTTT) - Connect Your Services'
   
 tags:
   - TipOW
-  - tools
+  - Tools
 date: 2017-04-24
 completedDate: 2017-04-24 09:13:26 +1000
 keywords:
