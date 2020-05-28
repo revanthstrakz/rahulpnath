@@ -79,7 +79,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       })
     })
  
-    const uniqueTags = [...new Set(alltags.map(tag => tag.toLowerCase()))];
+    const uniqueTags = [...new Set(alltags)];
     // Create tags pages
    uniqueTags.forEach(tag => {
      let slug = tag.replace(/\s+/g, '-');
@@ -95,15 +95,15 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 
     // Create category pages
     uniqueTags.forEach(tag => {
-      let slug = tag.replace(/\s+/g, '-')
-        createPage({
-          path: `${categoryPrefix}${slug}/`,
-          component: tagTemplate,
-          context: {
-            slug,
-            tag
-          },
-        })
+      let slug = tag.replace(/\s+/g, '-').toLowerCase();
+      createPage({
+        path: `${categoryPrefix}${slug}/`,
+        component: tagTemplate,
+        context: {
+          slug,
+          tag
+        },
+      });
       })
 
     if (errors) {
