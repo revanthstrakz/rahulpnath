@@ -9,7 +9,7 @@ export default () => {
 
   return (
     <Wrapper>
-      <Title theme={theme}>Or somewhere else on the web</Title>
+      <Title theme={theme}>Follow me!</Title>
       <Social theme={theme} />
       <Creative theme={theme} />
     </Wrapper>

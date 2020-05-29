@@ -4,17 +4,11 @@ export const ArticleWrapper = styled.div`
   color: #212121;
   padding: 2rem 1rem;
 
-  a {
-    text-decoration: none;
-    color: #823EB7;
-  }
-
   i {
     color: #a7a7a7;
   }
 
   h1 {
-    font-family: 'Merriweather', serif;
     text-align: center;
   }
 

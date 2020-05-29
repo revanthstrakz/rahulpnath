@@ -19,7 +19,7 @@ export default ({ desktop }) => {
       <Link to="/blog" activeClassName="current">
         Blog
       </Link>
-      <a href="https://www.youtube.com/user/rahulnathp/" rel="noopener noreferrer" target="_blank" activeClassName="current">
+      <a href="https://www.youtube.com/user/rahulnathp/" rel="noopener noreferrer" target="_blank">
         YouTube
       </a>
       <StyledButton type="button" onClick={toggleTheme}>

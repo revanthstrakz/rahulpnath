@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { textAlign, padding } from 'styled-system'
+import { padding, textAlign } from 'styled-system'
 
 export const Center = styled.div`
   ${textAlign}

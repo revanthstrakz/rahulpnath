@@ -1,64 +1,50 @@
-import EnvelopeWhite from 'assets/about/envelope-white.svg'
-import Envelope from 'assets/about/envelope.svg'
-import MarkerWhite from 'assets/about/marker-white.svg'
-import Marker from 'assets/about/marker.svg'
-import PhoneWhite from 'assets/about/phone-white.svg'
-import Phone from 'assets/about/phone.svg'
 import { Container } from 'components/common'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 import { ThemeContext } from 'providers/ThemeProvider'
-import React, { Fragment, useContext } from 'react'
-import { DetailsContainer, Img, P, Text, Wrapper } from './styles'
+import React, { useContext } from 'react'
+import { Text, Wrapper } from './styles'
 
 export default () => {
   const { theme } = useContext(ThemeContext)
-  const {
-    about: { bio, currentPosition, email, phone, addresses },
-  } = useStaticQuery(graphql`
-    query {
-      about: aboutYaml {
-        bio
-        currentPosition
-        email
-        addresses
-      }
+  const { AboutImage } = useStaticQuery(graphql`
+  query AboutImageQuery {
+    AboutImage: imageSharp(fluid: { originalName: { eq: "us.jpg" } }) {
+      ...imageFields
     }
-  `)
-
+  }
+`)
   return (
-    <Wrapper as={Container} width="100%" maxWidth="48%">
-      <Text lineHeight={1.6} color={theme === 'dark' ? 'white' : 'dark'}>
-        {bio} <Link to="/blog">articles</Link>.
+    <Wrapper as={Container}>
+      <a href={AboutImage.fluid.src}>
+            <Img fluid={AboutImage.fluid} alt="Rahul, Parvathy and Gautham at The Farm, Byron Bay" />
+      </a>
+      <br />
+      <Text theme={theme}>
+        Hey, it's Rahul. I am a software engineer, currently working in Brisbane, Australia. 
+        Thank you for reading my blog and checking out more about me as a person. I am the guy (on the left) in the above picture and next to me is my wife Parvathy. 
+        The little guy is my son Gautham. This picture was taken at <a href="https://thefarm.com.au/">The Farm, Byron Bay</a> during one
+        of <a href="/blog/category/travelogue/">our weekend trips.</a>
+        </Text>
+        
+        <Text>
+        
+        I currently work with 
+        <a
+          href="https://www.telstra.com.au/business-enterprise/services/telstra-purple"
+          rel="noopener noreferrer" target="_blank"
+        >
+          {' '}
+          Telstra Purple.
+        </a>
       </Text>
-      <Text
-        lineHeight={1.6}
-        color={theme === 'dark' ? 'white' : 'dark'}
-        dangerouslySetInnerHTML={{ __html: currentPosition }}
-      />
-      <Text lineHeight={1.6} color={theme === 'dark' ? 'white' : 'dark'}>
-        For business inquiries feel free to get in touch with me at:
+      
+      <Text>
+        <strong>This blog and its contents are all opinions of my own.</strong>
       </Text>
-      <DetailsContainer>
-        <P color={theme === 'dark' ? 'white' : 'dark'}>
-          <Img src={theme === 'dark' ? EnvelopeWhite : Envelope} alt="email" />
-          {email}
-        </P>
-        <P color={theme === 'dark' ? 'white' : 'dark'}>
-          <Img src={theme === 'dark' ? PhoneWhite : Phone} alt="phone" />
-          {phone}
-        </P>
-        {addresses.map((item, i) => (
-          <Fragment key={i}>
-            <P color={theme === 'dark' ? 'white' : 'dark'}>
-              <Img
-                src={theme === 'dark' ? MarkerWhite : Marker}
-                alt="address"
-              />
-              {item}
-            </P>
-          </Fragment>
-        ))}
-      </DetailsContainer>
+      <Text>
+        If you want to drop a mail, feel free to sent it to <a href="mailto:hello@rahulpnath.com?subject=Hello Rahul!">hello@rahulpnath.com</a>.
+      </Text>
     </Wrapper>
   )
 }
