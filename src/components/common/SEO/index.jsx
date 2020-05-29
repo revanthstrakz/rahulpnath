@@ -1,19 +1,7 @@
+import Thumbnail from 'assets/me.jpg'
+import { address, author, contact, defaultDescription, defaultTitle, foundingDate, legalName, logo, social, socialLinks, url } from 'data/config'
 import React from 'react'
 import Helmet from 'react-helmet'
-import Thumbnail from 'assets/me.jpg'
-import {
-  url,
-  defaultTitle,
-  defaultDescription,
-  social,
-  socialLinks,
-  address,
-  contact,
-  legalName,
-  foundingDate,
-  logo,
-  author,
-} from 'data/config'
 
 export const SEO = ({
   title,
@@ -105,7 +93,7 @@ export const SEO = ({
       />
       <meta
         property="og:title"
-        content={title ? `Rahul Nath | ${title}` : defaultTitle}
+        content={title ? `${title} | Rahul Nath` : defaultTitle}
       />
       <meta
         property="og:description"
@@ -122,7 +110,7 @@ export const SEO = ({
       <meta name="twitter:site" content={social.twitter} />
       <meta
         name="twitter:title"
-        content={title ? `Rahul Nath | ${title}` : defaultTitle}
+        content={title ? `${title} | Rahul Nath` : defaultTitle}
       />
       <meta
         name="twitter:description"
@@ -138,7 +126,7 @@ export const SEO = ({
           : structuredDataOrganization}
       </script>
       <link rel="publisher" href={socialLinks.google} />
-      <title>{title ? `Rahul Nath | ${title}` : defaultTitle}</title>
+      <title>{title ? `${title} | Rahul Nath` : defaultTitle}</title>
       {type === 'NewsArticle' && (
         <meta name="twitter:label1" value="Reading time" />
       )}
