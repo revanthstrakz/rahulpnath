@@ -24,7 +24,7 @@ So for a client to access the key vault, it needs to obtain the token from the A
 - Using ClientId and secret
 - Using ClientId and certificate
 
-#### **Using ClientId and Secret**
+## **Using ClientId and Secret**
 
 Creating an application that can be authenticated using clientid and secret can be done using the management portal. In the azure management portal, we need to create to the application under the default AD. To find the default AD you can check under the settings in the portal
 
@@ -61,7 +61,7 @@ var keyClient = new KeyVaultClient((authority, resource, scope) =>
 
 <iframe class="center" width="560" height="315" src="https://www.youtube.com/embed/51Qmk3TQJ44" frameborder="0" allowfullscreen></iframe>
 
-#### **Using ClientId and Certificate**
+## **Using ClientId and Certificate**
 
 Creating an application that can be authenticated using the clientid and the certificate is only possible using powershell scripts, and these are again available with the key vault powershell scripts. For this we first need to create a certificate or if your organization already has provided one use that. Since this is for demo I would be creating a test certificate as [explained here](https://msdn.microsoft.com/en-in/library/ff699202.aspx).
 

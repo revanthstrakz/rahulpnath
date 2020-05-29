@@ -15,7 +15,7 @@ A while back we looked at how we can use [Postman to chain multiple requests to 
 
 In this post, we will see how we can use Postman to test some basic CRUD operations over an API using a feature called [Postman Runner](http://blog.getpostman.com/2016/11/22/postmans-new-collection-runner/). Using this still involves some manual intervention. However, we can automate them using a combination of different tools.
 
-### Setting Up the API
+## Setting Up the API
 
 To start with I create a simple API endpoint using the out of the box Web API project from Visual Studio 2017. It is a Values Controller which stores key-value pairs to which you can send GET, POST, DELETE requests. Below is the API implementation. It is a simple in-memory implementation and does not use any persistent store. However, the tests would not change much even if the store was to be persistent. The importance here is not in the implementation of the API, but how you can use Postman to add some quick tests.
 
@@ -54,7 +54,7 @@ public class ValuesController : ApiController
 }
 ```
 
-### Setting Up Postman
+## Setting Up Postman
 
 To start with we will create a new Collection in Postman to hold our tests for the Values Controller - I have named it '_Values CRUD - Test_'. The collection is a container for all the API requests that we are going to write. First, we will add all the request definitions into postman which we can later reorder for the tests.
 
@@ -68,7 +68,7 @@ Below are the environment variables for my local environment. You can define as 
 
 Now that I have all the request definitions for the API added let's add some tests to verify our API functionality.
 
-### Writing The First Test
+## Writing The First Test
 
 Postman allows executing scripts before and after running API requests. We did see this in the [API Chaining post](https://rahulpnath.com/blog/postman-chaining-requests-to-speed-up-manual-api-tests/) where we grabbed the _messageId_ from the POST request and added it to the environment variable for use in the subsequent requests. Similarly, we can also add scripts to verify that the API request returns expected results, status code, etc.
 
@@ -88,7 +88,7 @@ Similarly, you can also write _Pre-request Script_ to set variables or perform a
 pm.environment.set('Value', 'Test');
 ```
 
-### Collection Runner
+## Collection Runner
 
 The collection runner allows you to manage multiple API requests and run them as a set. Once completed it shows a summary of all the tests included within each request and details of tests that passed/failed in the run. You can target the Runner to run against your environment of choice.
 

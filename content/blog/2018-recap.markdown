@@ -21,9 +21,9 @@ thumbnail: ../images/happy_new_year.png
 Looking forward to 2019!
 
 
-### What went well
+## What went well
 
-#### **Running, Cycling and Learning to Swim**
+### **Running, Cycling and Learning to Swim**
 
 As planned last year I did two half marathon events - [Brisbane Great South Run](https://www.strava.com/activities/1495400703) and [Springfield Half Marathon](https://www.strava.com/activities/1628202657). I could also do a [Sub 50 10k](https://www.strava.com/activities/1756881573/overview) run after many tries. Even though running a marathon was part of one of the goals it did not happen. Cycling was on and off, and towards the year end, I started commuting to work (around 10k one way). However, it lasted only around 2 months as I changed client, for which I had to commute to Gold Coast (around 70km, once a week). With swimming, I still struggle to do more than two laps at a stretch. The goal was to swim 1km by the end of 2018 but looks like that's a long way to go. I was often lazy and not motivated to go out to the pool to practice.
 
@@ -33,11 +33,11 @@ I can spend all this time on these activities because of the full support from m
     <img src="../images/2018_sport.jpg" alt="Year in Sport" />
 </a>
 
-#### **Travel**
+### **Travel**
 
 We covered a couple of major tourist destinations around Australia - Great Barrier Reef (Cairns), [Gold Coast](https://rahulpnath.com/blog/ndc-security-2018-overview-and-key-takeaways/), Frazer Island and Tasmania being the top highlights. We also did a lot of hikes and short trips around Brisbane including Tin Can Bay and Ballina. Snorkeling in the Great Barrier Reef, Penguin Tour in Tasmania, Whale watching, beach highway drive, and 7 seater beach flight in Frazer Island, dolphin feeding at Tin Can Bay, Croc attack show at Hartley's Crocodile Park were some of the new experiences in life and enjoyed it a lot.
 
-#### **Community**
+### **Community**
 
 I did two public talks, one at the [.Net User Group](https://www.meetup.com/en-AU/Brisbane-Net-User-Group/events/251639570/) on Azure Key Vault and one at Readify Back2Base on [Ok I Have Got HTTPS! What Next?](https://www.rahulpnath.com/blog/ok-i-have-got-https-what-next/). Two is still a smaller number and is something I want to do more of in the coming years.
 
@@ -46,7 +46,7 @@ I did two public talks, one at the [.Net User Group](https://www.meetup.com/en-A
 I created a youtube pip video on [Key Vault Connected Service]( https://www.youtube.com/watch?v=S7EPrlpPqXw), and wanted to do couple more of such videos but did not get prioritized enough over the other things. 
 The significant open source contribution was to [KeyVault configuration builder](https://github.com/aspnet/MicrosoftConfigurationBuilders/commits?author=rahulpnath) that is part of the ASP.Net framework.
 
-### What didn't go well
+## What didn't go well
 
 - **Blogging** Blogging took a back seat this year, even though I had set out to do 4 posts a month. I did a total of 29 posts that's roughly over 2 posts a month. Some months I missed out on it completely.
 
@@ -58,7 +58,7 @@ The significant open source contribution was to [KeyVault configuration builder]
 
 - **Learning** Most of the learning was at work, and I did not actively take up learning anything new. I did start with Category Theory and FSharp again, but it did not stick for a long time. 
 
-### Goals for 2019
+## Goals for 2019
 
 - **Reading** Read 10 books
 

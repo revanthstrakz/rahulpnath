@@ -19,21 +19,21 @@ Recently I have been trying to contribute to open source projects, to build the 
 
 I started with an [easy issue](https://github.com/mikehadlow/AsmSpy/pull/20) to get familiar with the code and to confirm that the project owner, [Mike Hadlow](https://github.com/mikehadlow), accepts Pull Requests (PR). Mike was fast to approve and merge in the changes. There was a feature request to make AsmSpy available as [Chocolatey](https://chocolatey.org/) package. Chocolatey is a package manger for Windows, to automate software management. AsmSpy, being a tool that's not project specific, it makes sense to deliver this via Chocolatey and makes installation easier. Mike added me as a project [collaborator](https://help.github.com/articles/permission-levels-for-a-user-account-repository/), which gave better control over the repository.
 
-### Manually Releasing the Chocolatey Package
+## Manually Releasing the Chocolatey Package
 
 AsmSpy is currently distributed as a [zip package](http://static.mikehadlow.com/AsmSpy.zip). Chocolatey supports packaging from a URL with a PowerShell script [_Install-ChocolateyZipPackage_](https://github.com/chocolatey/choco/wiki/HelpersInstallChocolateyZipPackage). For the first release I [used this helper script to create the Chocolatey package](https://github.com/mikehadlow/AsmSpy/pull/22) and uploaded it to my account. After fixing a few review comments the [package got published](https://chocolatey.org/packages/asmspy/1.0.0).
 
 <img class="center" alt="choco install asmspy" src="../images/asmspy_choco.png" />
 
-### Automating Chocolatey Releases
+## Automating Chocolatey Releases
 
 Now that I have to manage the AsmSpy Chocolatey package installations, I decided to automate the process of Chocolatey package creation and upload. Since I had used AppVeyor for [automating Click-Once deployment](http://www.rahulpnath.com/blog/automated-clickonce-deployment-of-a-wpf-application-using-appveyor/) of [CLAL](https://github.com/rahulpnath/clal), I decided to use AppVeyor for this.
 
-#### **The Goal**
+### **The Goal**
 
 I wanted to automatically deploy any new version of the package to Chocolatey. Any time a [tagged commit](https://git-scm.com/book/en/v2/Git-Basics-Tagging) is made in the main branch (master) it should trigger a deployment and push the new package to Chocolatey. This will give us the flexibility to control version numbers and decide when we actually want to make a release.
 
-#### **Setting up the Appveyor Project**
+### **Setting up the Appveyor Project**
 
 Since now I am a collaborator on the project, AppVeyor shows the AsmSpy GitHub repository in my AppVeyor account too. Setting up a project is really quick in AppVeyor and most of it is automatic. Any commits now to the repository triggers an automated build
 
@@ -48,7 +48,7 @@ The AppVeyor team was quick to respond and suggested a possible problem with the
 
 <img alt="Github webhook url for appveyor" src="../images/asmspy_github_webhook.png"/>
 
-#### **Creating Chocolatey Package**
+### **Creating Chocolatey Package**
 
 AppVeyor has [support for Chocolatey commands](https://www.appveyor.com/blog/2014/11/06/appveyor-with-a-hint-of-chocolatey) out of the box, which makes it easy to create packages on a successful build. I added in the [nuspec file](https://github.com/mikehadlow/AsmSpy/blob/master/AsmSpy/AsmSpy.nuspec) that defines the Chocolatey Package and added an after-build script to generate the package. AppVeyor exposes [environment variables](https://www.appveyor.com/docs/environment-variables), that are set for every build. In the 'after_build' scripts I trigger Chocolatey packaging only if the build is triggered by a commit with a tag (APPVEYOR_REPO_TAG_NAME). Every build generates the zip package that can be used to test the current build.
 
@@ -68,7 +68,7 @@ artifacts:
     name: Nuget Package
 ```
 
-#### **Setting up Chocolatey Environment**
+### **Setting up Chocolatey Environment**
 
 Since Chocolatey is built on top of NuGet infrastructure, it supports deployment to it like you would do for a NugGet package. The [NuGet deployment provider](https://www.appveyor.com/docs/deployment/nuget) publishes packages to a NuGet feed. All you need to provide is the feed URL and the API key and the package to deploy. I created a NuGet deployment environment with the chocolatey NuGet URL, my account API key and the Artifact to deploy.
 

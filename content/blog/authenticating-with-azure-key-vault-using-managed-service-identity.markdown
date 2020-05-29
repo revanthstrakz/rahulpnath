@@ -38,7 +38,7 @@ _The [AzureServiceTokenProvider](https://azure.microsoft.com/en-us/resources/sam
 2. _Azure CLI (for local development) - Azure CLI version 2.0.12 and above supports the get-access-token option. AzureServiceTokenProvider uses this option to get an access token for local development._
 3. _Active Directory Integrated Authentication (for local development). To use integrated Windows authentication, your domain’s Active Directory must be federated with Azure Active Directory. Your application must be running on a domain-joined machine under a user’s domain credentials._
 
-### Local Development
+## Local Development
 
 For the AzureServiceTokenProvider to work locally we need to install the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) and also setup an environment variable - _AzureServicesAuthConnectionString_. Depending on whether you want to use ClientId/Secret or ClientId/Certificate-based authentication the value for the environment variable changes.
 

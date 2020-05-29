@@ -19,15 +19,15 @@ thumbnail: ../images/happy_new_year.png
 
 > 2017 was the transformation year. Regular exercise and healthy eating helped [loose around 20 kilos](http://www.rahulpnath.com/blog/how-i-lost-13-kilos-in-one-and-half-months/). Lots of travel and blogging made it an excellent year. Reading, Photography and Open source did not go that great. Looking forward to 2018!
 
-### What went well
+## What went well
 
-#### **Blogging**
+### **Blogging**
 
 It has been both good and a bad year as far as this blog. Including the '[Tip of the Week](http://www.rahulpnath.com/blog/category/tipow/)' series I wrote seventy-six posts this year with an average of over six posts per month. This is the good part, as it is well past the goal of a _minimum four posts a month_ goal set last year. But looking at the actual posts per month graph below, it is clear that I have fallen short of it on an actual month by month basis. Up until August, I had a steady stream of posts coming in, from when it started dropping down, with even months (November) with no posts. Mainly it's my laziness to blame, but I can also tell reasons like Vietnam trip, Shifting to Brisbane, etc.
 
 <img src="../images/2017_postpermonth.png" alt="Posts per month in the year 2017" />
 
-#### **Running**
+### **Running**
 
 I had started running towards the end of December 2016. One of my goals for 2017 was running, and it has had a good improvement. Ran over 750 kilometers including a half marathon. I am yet to participate in any running events and am planning to in the coming year. I have also started cycling, and it is an excellent way to cross train.
 
@@ -35,13 +35,13 @@ I had started running towards the end of December 2016. One of my goals for 2017
     <img src="../images/2017_sport.jpg" alt="Year in Sport" />
 </a>
 
-#### **Travel**
+### **Travel**
 
 Did our first international holiday to Vietnam for ten days and was a great experience. Also went around Australia visiting Blue Mountains, Canberra, Port Macquarie, Brisbane and lots of [one-day trips around Sydney](http://www.rahulpnath.com/blog/one-day-trips-around-sydney/). Mandarin Picking, Strawberry picking and Whale watching were some of the top activities for the year.
 
 <img src="../images/strawberyy_picking.jpg" alt="Strawberry Picking, Ricardoes" />
 
-### What didn't go well
+## What didn't go well
 
 - **Reading** Had set out with a [goal of 21 books](https://www.goodreads.com/challenges/5493-2017-reading-challenge) but ended up finishing only ten books. Of the books I read liked [Mindset](https://www.amazon.com/Mindset-Psychology-Carol-S-Dweck/dp/0345472322) and [How to Win Friends and Influence People,](https://www.amazon.com/How-Win-Friends-Influence-People/dp/1439167346/) was the best.
 
@@ -51,7 +51,7 @@ Did our first international holiday to Vietnam for ten days and was a great expe
 - **FSharp**
   FSharp was again on and off this year. Apart from a [small utility that I created for Todoist](http://www.rahulpnath.com/blog/todoist-template-transformer-transform-tasks-to-x-days-from-now/), I did not do much F# work.
 
-### Goals for 2018
+## Goals for 2018
 
 - **Blogging** Stick to 4 posts a month. Need to get back on schedule.
 
