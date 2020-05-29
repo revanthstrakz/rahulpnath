@@ -3,13 +3,12 @@ import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 
 export default () => {
-  const { sideProjects } = useStaticQuery(graphql`
+  const { videos } = useStaticQuery(graphql`
     query {
-      sideProjects: allSideprojectsYaml {
+      videos: allYoutubeYaml {
         edges {
           node {
             id
-            title
             image {
               childImageSharp {
                 fluid(maxWidth: 630) {
@@ -18,11 +17,10 @@ export default () => {
               }
             }
             link
-            description
           }
         }
       }
     }
   `)
-  return <Project title="Side Projects" projects={sideProjects} />
+  return <Project title="YouTube" projects={videos}  />
 }

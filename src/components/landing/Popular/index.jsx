@@ -41,7 +41,7 @@ export const Popular = () => {
 
   return (
     <Wrapper as={Container}>
-      <Subtitle>Popular articles</Subtitle>
+      <Subtitle>Popular Articles</Subtitle>
       <Row landing>
         {edges.map(
           ({

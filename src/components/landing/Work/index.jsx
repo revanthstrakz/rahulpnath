@@ -1,8 +1,7 @@
-import { Container, Subtitle } from 'components/common'
+import { Container } from 'components/common'
 import { graphql } from 'gatsby'
 import React from 'react'
-import SideProjects from './SideProjects'
-
+import YouTube from './YouTube'
 export const imageFields = graphql`
   fragment imageFields on ImageSharp {
     fluid(maxWidth: 960) {
@@ -13,9 +12,6 @@ export const imageFields = graphql`
 
 export const Work = () => (
   <Container>
-    <Subtitle>Featured work</Subtitle>
-    <SideProjects />
-    {/* <Behance />
-    <Dribbble /> */}
+    <YouTube />
   </Container>
 )
