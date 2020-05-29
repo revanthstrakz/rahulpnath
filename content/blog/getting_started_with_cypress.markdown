@@ -30,7 +30,7 @@ The Cypress docs are well explained and have a [step by step walkthrough to set 
 - Enable [Typescript support for Cypress](https://docs.cypress.io/guides/tooling/typescript-support.html). Add tsconfig.json under the cypress folder.
 - Install and Set up [Cypress Testing Library](https://testing-library.com/docs/cypress-testing-library/intro). Types are available at [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/testing-library__cypress)
 
-```node
+``` bash
 npm install --save-dev cypress @testing-library/cypress @types/testing-library__cypress
 ```
 

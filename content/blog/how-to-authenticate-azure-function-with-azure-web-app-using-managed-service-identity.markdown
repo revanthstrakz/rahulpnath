@@ -133,7 +133,7 @@ New-AzureADServiceAppRoleAssignment -Id $adApp.AppRoles[0].Id `
 In a [previous post](https://www.rahulpnath.com/blog/custom-authorization-policy-providers/), we saw how to use Azure AD Groups to provide role-based access. You can add a Service Principal to the AD group either through the portal or code.
 
 ![](../images/azure_function_msi_add_to_ad_group.jpg)
-``` cmd
+``` bash
 az ad group member add 
     --subscription b3c70d42-a0b9-4730-84a4-b0004a31f7b4 
     -g aa762499-6287-4e28-8753-27e90cfd2738 // ADGroup Id

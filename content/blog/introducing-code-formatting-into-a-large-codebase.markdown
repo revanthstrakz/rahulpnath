@@ -111,7 +111,7 @@ Taking an incremental approach, fixing one by one as and when a file is changed 
 
 We can plug into various hooks that source controls give to enforce code formatting on developer machines. In git, you can add a [custom pre-commit hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to run the StyleCop analysis on all the staged files. [StyleCopcli](https://github.com/bbadjari/stylecopcli) is an open source application that wraps over the StyleCop DLLs and allows running the analysis from the command line. So in the hook, I use this CLI to run StyleCop analysis on all the staged files.
 
-```bat
+``` bash
 #!/bin/sh
 echo "Running Code Analysis"
 ./stylecopcli/StyleCopCLI.exe -cs $(git diff --cached --name-only)

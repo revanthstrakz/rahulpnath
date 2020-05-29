@@ -36,7 +36,7 @@ The dates on the template are relative to the day that you import the template i
 
 The Todoist Template Transformer takes in a date and template path and adjusts all tasks in the template to start relative to the passed in date. In the above example, if I want to blog on Wednesday, I will input the Wednesday date and the template file path. The first two tasks will start on Wednesday and the third and fourth on Thursday. Running the transformer on a Sunday (07-May-2017) with the next Wednesday (10-May-2017) below is the new template
 
-```bat
+``` bash
 TodoistTemplateTransformer.exe -startDate "10-May-2017" -templateFile "Blog Template.csv"
 ```
 

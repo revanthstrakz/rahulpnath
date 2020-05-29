@@ -20,7 +20,7 @@ Since we need to sign the executable, the DLLs and also the installer that packa
 #### Sign DLLs
 The pipeline first builds the whole project to generate all the DLLs and the service executable. Microsoft's [SignTool](https://docs.microsoft.com/en-us/windows/desktop/seccrypto/signtool) is used to sign the DLLs and executable. The tool takes in the certificate's thumbprint as a parameter and also takes in a few other parameters; [check the documentation](https://docs.microsoft.com/en-us/windows/desktop/seccrypto/signtool) to see what each what parameter does. It does accept wildcards for the files to be signed. If you follow a convention for project/DLL names (which you should), then signing them all can be done in one command.
 
-``` cmd
+``` bash
 c:\cert\signtool.exe sign /tr http://timestamp.digicert.com 
     /fd sha256 /td sha256 /sm /sha1 "$(CodeSignCertificateThumbprint)" 
     /d "My Project description"  MyProject.*.dll
@@ -38,7 +38,7 @@ Now that we have the DLLs and the executable signed, we need to package them in 
 
 We also had a few Powershell scripts that were packaged along in a separate application. To sign them you can use the [Set-AuthenticodeSignature](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-authenticodesignature?view=powershell-6) cmdlet. All you need is to get the certificate from the appropriate store and pass it on to the cmdlet along with the files that need to be signed.
 
-``` ps
+``` powershell
 $cert = Get-Childitem cert:\LocalMachine\My   `
     | where {$_.Thumbprint -eq "$(CodeSignCertificateThumbprint)"}[0]
 Set-AuthenticodeSignature -TimestampServer "http://timestamp.digicert.com" `

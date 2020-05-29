@@ -20,7 +20,7 @@ In this post, let's look at how we can set up Cypress for a React application th
 
 Setting up a Create React App with TypeScript is straightforward and supported out of the box. All you need to specify is the typescript template when you create a new application (as shown below). The documentation also has [steps on how to add Typescript to an existing project](https://create-react-app.dev/docs/adding-typescript/).
 
-```node
+``` bash
 npx create-react-app my-app --template typescript
 ```
 
@@ -28,7 +28,7 @@ npx create-react-app my-app --template typescript
 
 In the previous post we looked at [how to set up a Fake REST API using JSON Server](/blog/setting_up_a_fake_rest_api_using_json_server/). Let's move JSON Server and the mock data to TypeScript. It forces us to update the mock data any time the models are updated. I have JSON Server under the _mockApi_ folder.
 
-```node
+``` bash
 npm install json-server @types/json-server typescript
 ```
 
@@ -89,7 +89,7 @@ The Cypress docs are well explained and have a [step by step walkthrough to set 
 - Enable [Typescript support for Cypress](https://docs.cypress.io/guides/tooling/typescript-support.html). Add tsconfig.json under Cypress folder.
 - Install and Set up [Cypress Testing Library](https://testing-library.com/docs/cypress-testing-library/intro). Types are available at [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/testing-library__cypress)
 
-```node
+``` bash
 npm install --save-dev cypress @testing-library/cypress @types/testing-library__cypress
 ```
 

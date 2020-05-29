@@ -75,7 +75,7 @@ The above implementation might work in cases where the number of interfaces are 
 
 We can now run these test dll's using batch files by setting different environment variables as below. The bat files can be integrated into your build
 
-```bat
+``` bash
 set Foo.tests=2
 echo "Testing for configuration 2"
 msbuild TestingMultipleImplementations.sln
