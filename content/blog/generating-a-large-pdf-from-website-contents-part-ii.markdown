@@ -19,7 +19,7 @@ thumbnail: ../images/pdf_generation_flow.png
 
 In the previous post, [Generating a Large PDF from Website Contents](/blog/generating-a-large-pdf-from-website-contents) we saw from a high level the approach taken to generate PDF files from a Content Management System (CMS) website. In this post, we will delve further into the details of each of those areas.
 
-### HTML To PDF
+## HTML To PDF
 
 There are a lot of libraries and services that support converting HTML to PDF. We chose this mechanism mainly for keeping the content formatting simple and reusable. Most of the PDF data was to be structured like the website content. This means we can reuse (read copy/paste) the HTML styling for the PDF content as well.
 
@@ -91,7 +91,7 @@ private static void BuildBookmarkTree(PdfDocument pdfDocument, HtmlToPdfResult h
 }
 ```
 
-### Handling Empty Pages
+## Handling Empty Pages
 
 In our case, the content is from a CMS, and the user gets an option to select what categories/sub-categories and sections of data to be displayed in the generated PDF. At times it happens that some of the selected combinations might not have any data in the system. To avoid printing a blank page (or an error page) in the generated PDF, we can check the conversion result to check for the returned content. Whenever the content does not exists the HTML endpoint returns an [EmptyResult class](<https://msdn.microsoft.com/en-us/library/system.web.mvc.emptyresult(v=vs.118).aspx>). At the PDF conversion side, you can check if the response is empty and accordingly perform your logic to ignore the generated PDF.
 

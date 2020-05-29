@@ -21,7 +21,7 @@ The ability to pick on something and to make a habit of it is something that is 
     <img alt="Motivation is what gets you started. Habit is what keeps you going" src="../images/habit.jpg" class="center" />
 </a>
 
-### How Habits Work
+## How Habits Work
 
 To form new habits, it is important that we understand [how habits work](http://charlesduhigg.com/how-habits-work/).
 
@@ -43,7 +43,7 @@ Like if it is running that you are planning to start it could be - _Every Saturd
 
 Break your goals into small and achievable mini goals. These mini goals are often referred to as [Most Important Tasks (MIT)](http://www.rahulpnath.com/blog/morning_routine/), [Big Rocks](http://www.rahulpnath.com/blog/experimenting-with-pomodoro-technique/) etc. The key is to break them down into smaller achievable mini-goals and setting a cue to trigger the activity.
 
-### Motivation and Its Role
+## Motivation and Its Role
 
 Very often we get motivated to start new activities and begin with great enthusiasm. In the beginning, we feel a spike in energy and see things happening. But soon you hit a point where you feel nothing is moving and you feel it a burden to continue. This stage is referred to as _plateau - a state of little or no change following a period of activity or progress._ You soon see your motivation levels dropping and justifying to yourself how little or no benefit your actions have. Eventually, you find yourself losing entire interest in the activity and start looking for new motivation spikes. This has happened to me many times.
 
@@ -53,7 +53,7 @@ I have found this to be entirely true. We need the motivation to help us to get 
 
 Once you have decided to pursue the idea, break it into smaller pieces and set achievable 'mini goals.' Set dedicated time at regular intervals for achieving these mini-goals. Most important is in having some 'me time' to get towards these goals. Like for me I have found that [mornings work best for me](http://www.rahulpnath.com/blog/waking-up-early-is-all-about-waking-up-to-an-alarm/) and created a [Morning Routine](http://www.rahulpnath.com/blog/morning_routine/). To make sure that I make the best of my time I try to work in [Pomodoro's and inspect and adapt the process](http://www.rahulpnath.com/blog/experimenting-with-pomodoro-technique/) often.
 
-### Tracking and Feedback
+## Tracking and Feedback
 
 Tracking is an important part of habit formation. Once you have set your goals and mini habits also find ways to track your progress. [Inspect and Adapt](http://www.rahulpnath.com/blog/psm-learnings/) is the fundamental principle behind Agile Processes. Habit formation is nothing but being agile, keeping the end goal in mind, adjusting the way you reach there. Find ways and tools to track progress on the habits that you are trying to form.
 

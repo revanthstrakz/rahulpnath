@@ -15,7 +15,7 @@ _How to sign a PDF using Azure Key Vault?_ - This is one of the questions that I
 
 <img src="../images/adobe_signature.png" alt="Digitally Signed PDF Contents" />
 
-### Signing with a Local Certificate
+## Signing with a Local Certificate
 
 When the certificate (along with the private key) is available locally, signing the PDF is straightforward. You can load the certificate as an X509Certificate from the local certificate store using the [thumbprint](https://stackoverflow.com/questions/11115511/how-to-find-certificate-by-its-thumbprint-in-c-sharp). Make sure that the certificate is installed with the Exportable option as shown below.
 
@@ -48,11 +48,11 @@ private static void SignPdf(X509Certificate2 certificate, IExternalSignature ext
 }
 ```
 
-### Certificates in Azure Key Vault
+## Certificates in Azure Key Vault
 
 You can [manage certificates in Azure Key Vault](http://www.rahulpnath.com/blog/manage-certificates-in-azure-key-vault/) as a first class citizen. Azure Key Vault supports creating new or uploading existing certificates into the vault. Key Vault provides an option to specify whether the private portion of the certificate is exportable or not. Let us see how we can use the certificate from the vault in both these scenarios.
 
-#### **Exportable Certificate**
+### Exportable Certificate
 
 To create a self-signed certificate in the vault use the below PowerShell script. In this case, the private key is exportable. Executing the below script adds a self-signed certificate into the vault.
 
@@ -82,7 +82,7 @@ public static async Task<X509Certificate2> GetCertificateKeyVault(string secretI
 
 The certificate is encoded as Base64String in the Secret. We create an in-memory representation of the certificate and mark it as _Exportable_. This certificate can be used the same way as the local certificate. Since the private key is part of it, the PrivateKeySignature can still be used to sign.
 
-#### **Non Exportable Certificate**
+### Non Exportable Certificate
 
 To create a non-exportable certificate when creating the certificate use [_KeyNotExportable_ flag](https://docs.microsoft.com/en-us/powershell/module/azurerm.keyvault/new-azurekeyvaultcertificatepolicy?view=azurermps-4.1.0) flag as below.
 

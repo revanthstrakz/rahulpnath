@@ -13,7 +13,7 @@ thumbnail: ../images/vaultexpiry_key.png
 
 I came across this [question](https://social.msdn.microsoft.com/Forums/azure/en-US/90d4b814-f025-42a0-acac-b8c8bf9d8cf8/alert-or-event-on-secret-expiry?forum=AzureKeyVault) in Azure Key Vault forums looking for options to get notified when Key or Secrets in vault nears expiry. It's useful to know when Object's (Keys/Secrets) near expiry, to take necessary action. I decided to explore on my proposed solution of having a scheduled custom PowerShell script to notify when a key is about to expire. In this post, we will see how to get all objects nearing expiry and scheduling this using Azure Runbook to run daily.
 
-### Getting Expiring Objects
+## Getting Expiring Objects
 
 Both Keys and Secrets can be set with an Expiry date. The expiry date can be set when creating the Object or can be set on an existing Object. This can be set from the UI or using PowerShell scripts (setting the [-Expires attribute](https://msdn.microsoft.com/en-us/library/dn868045.aspx)).
 
@@ -134,7 +134,7 @@ if($vaultObject.Expires -and $vaultObject.Expires.AddDays(-$AlertBeforeDays).Dat
 }
 ```
 
-### Scheduling Expiry Notification using Azure Runbook
+## Scheduling Expiry Notification using Azure Runbook
 
 You can either run this manually every time you want to get a list of objects that are expired or nearing expiry. Alternatively, you can set up a scheduled task to run the script at a set frequency. Since you are already on Azure, you can try [Azure Automation](https://azure.microsoft.com/en-us/services/automation/) and schedule the task for you. A Runbook in Azure Automation account can be granted access to the key vault. The Automation account should have 'Run as account' setup and the service principal created for it can be used to assign Access Policies to access the vault. Check out the [Accessing Azure Key Vault From Azure Runbook](/blog/accessing-azure-key-vault-from-azure-runbook) post for a step by step instruction on how to setup runbook to access key vault. You can then [schedule the runbook](https://azure.microsoft.com/en-us/documentation/articles/automation-scheduling-a-runbook/) to execute at fixed time intervals. Feel free to modify the script to send email notifications or push notification or any other that matches your need.
 

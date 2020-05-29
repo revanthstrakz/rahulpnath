@@ -15,7 +15,7 @@ One of the common challenges when building cloud applications is managing creden
 
 In this post, let us look at how to set up DefaultAzureCredential for the local development environment so that it can work seamlessly as with Managed Identity while on Azure infrastructure. On the local development machine, we can use two credential type to authenticate.
 
-### Using EnvironmentCredential
+## Using EnvironmentCredential
 
 The EnvironmentCredential looks for the following environment variables to connect to the Azure AD application.
 
@@ -49,7 +49,7 @@ Add the sensitive configs to the [User Secrets](https://docs.microsoft.com/en-us
 
 When using DefaultAzureCredential to authenticate against resources like Key Vault, SQL Server, etc., you can create just one Azure AD application for the whole team and share the credentials around securely (use a [password manager](/blog/password-manager-get-one-if-you-havent-already/)).
 
-### Using SharedTokenCacheCredential
+## Using SharedTokenCacheCredential
 
 DefaultAzureCredential can use the shared token credential from the IDE. In the case of Visual Studio, you can configure the account to use under Options -> Azure Service Authentication. By default, the accounts that you use to log in to Visual Studio does appear here. If you have multiple accounts configured, set the [SharedTokenCacheUsername](https://docs.microsoft.com/en-us/dotnet/api/azure.identity.defaultazurecredentialoptions.sharedtokencacheusername?view=azure-dotnet) property to specify the account to use.
 

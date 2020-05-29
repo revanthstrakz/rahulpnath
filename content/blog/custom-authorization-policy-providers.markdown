@@ -13,7 +13,7 @@ coverthumbnail: ../azure_ad_Groups.png
 
 In the post, [.Net Core Web App and Azure AD Security Groups Role based access](https://www.rahulpnath.com/blog/dot-net-core-api-and-azure-ad-groups-based-access/), we saw how to use Azure AD Security Groups to provide Role Based Access for your .Net Core applications. We covered only cases where our Controllers/functions were provided access based on a single Azure AD Security group. At times you might want to extend this to include multiple groups, e.g., A user can edit an order if they belong to Admin OR Manager group or both Admin ANDManager group. In this post, we will see how to achieve that.
 
-### Belongs to Multiple Groups
+## Belongs to Multiple Groups
 
 In the previous post, we added different policy per AD Security Group and used that in the *Authorize* attribute to restrict access to a particular Security Group, say *Admin*. If you want to limit functionality to **users who belong to both Admin AND Manager**, you can use two attributes one after the other as shown below. 
 
@@ -27,7 +27,7 @@ public partial class AddUsersController : ControllerBase
 
 The above code looks for policies named 'Admin' and 'Manager', which we registered on application startup using the *services.AddAuthorization* call (as shown in the [previous post](https://www.rahulpnath.com/blog/dot-net-core-api-and-azure-ad-groups-based-access/)).
 
-### Belongs to Any One Group
+## Belongs to Any One Group
 
 In cases where you want to restrict access to a controller/function depending on the user being part of at least one of the groups in a list of given groups, e.g., **user is either Admin OR Manager**. The natural tendency is to use a comma-separated list of values for the Policy as shown below. 
 
@@ -93,7 +93,7 @@ public class IsMemberOfAnyGroupHandler : AuthorizationHandler<IsMemberOfAnyGroup
 
 The code now works fine, and users belonging to either Admin OR Manager can now access the *AddUsersController* functionality. 
 
-### Custom Authorization Policy Providers
+## Custom Authorization Policy Providers
 
 Even though the above code works fine, we had to add a policy specific to *'Admin,Manager'* combination. These combinations can soon start to grow in a large application and become hard to maintain. You can add a custom authorization attribute along with [customizing the policy retrieval](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/iauthorizationpolicyprovider?view=aspnetcore-2.2) to match our needs.
 

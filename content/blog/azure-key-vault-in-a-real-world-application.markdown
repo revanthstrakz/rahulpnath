@@ -15,7 +15,7 @@ thumbnail: ../images/multiple_ad_application.png
 
 Over the last couple of posts we have seen how to [Get Started with Azure Key Vault](http://www.rahulpnath.com/blog/getting-started-with-azure-key-vault/), [Authenticate a Client Application with the Vault](http://www.rahulpnath.com/blog/authenticating-a-client-application-with-azure-key-vault/) and also on how the vault can be used as an [alternate to the configuration file to keep sensitive information secure](http://www.rahulpnath.com/blog/moving-sensitive-information-from-configuration-file-to-azure-key-vault/). In this post we will explore into how a key vault can be fit into the life-cycle of an application, configuring application to use the keyvault for different deployments and also on how to manage the keys/secrets for these different deployments. Any application that uses the Key Vault to manage keys and other sensitive information, should be able to switch easily to use the vault configured for it.
 
-### Configuring Client-Applications to use the Key vault
+## Configuring Client-Applications to use the Key vault
 
 Objects are uniquely identified within Azure Key Vault using a URL such that no two objects in the system, regardless of geo-location, have the same URL. The complete URL to an object is called the Object Identifier and consists of a prefix portion that identifies the Key Vault, the object type, a user provided Object Name, and an Object Version. The _object-name_ is case-insensitive and immutable. When an object is first created it is given a unique version identifier and is marked as the current version of the object. Creation of a new instance with the same object name gives the new object a unique version identifier and causes it to become the current version. When querying for an object _object-version_ is optional and if not provided will point to the current version of the given object-name.
 
@@ -66,17 +66,17 @@ public class KeyVaultIdentifierHelper
 
 ```
 
-### Managing the Key Vault for Multiple Deployments
+## Managing the Key Vault for Multiple Deployments
 
 Now that we have decoupled the application from the Key Vault, we need to see how to configure key vaults to cater for multiple deployments. In any application development life-cycle, there would be multiple deployments at a given time for the application to cater for different roles - developers, testers and maybe a production one too. It is very likely that the connection strings and other sensitive information would be deployment specific and we would want to keep them separate. Best way to achieve this would be to create Key vault per deployment so that this separation is clearly maintained. You could check on the [Key Vault Pricing](http://azure.microsoft.com/en-in/pricing/details/key-vault/) on how this would affect your overall cost. For each of these deployments you would need to make sure that all the required keys/secrets are added with valid values. Since this can soon end up as a repeated activity, it is best to automate this (using powershell scripts or your own application)
 
-### Restricting Permissions to Key Vault
+## Restricting Permissions to Key Vault
 
 We had seen how to [authenticate a client application with a Key Vault](http://www.rahulpnath.com/blog/authenticating-a-client-application-with-azure-key-vault/) using an Active Directory (AD) application, and how to set various access policies for these application's. Applications should be given only the minimum set of permissions that it requires to operate on, most probably this would be only the read permissions. For [administrative application's](https://github.com/rahulpnath/AzureKeyVaultExplorer) we would want to give all permissions so that it can modify the vault keys/secrets as required. For such a scenario it is best to have, two (or more) separate AD application's created and have separate permissions provided.
 
 <img class="center" alt="Multiple AD applications to access key vault with different permissions" src="../images/multiple_ad_application.png" />
 
-### What all should be there in my configuration file?
+## What all should be there in my configuration file?
 
 All your [sensitive information should be moved out of your application configuration file](http://www.rahulpnath.com/blog/moving-sensitive-information-from-configuration-file-to-azure-key-vault/), and Key Vault is the one place to have them all. The application's configuration file should only have the azure key vault url and the AD application id and certificate identifier (thumb print) that can be used to authenticate with the AD. Yes it is advisable to use the [certificate authentication mechanism](http://www.rahulpnath.com/blog/authenticating-a-client-application-with-azure-key-vault/) as opposed to the secret mechanism, if not you would have to put the secret in your configuration file, which would be like 'giving a thief the key to your safe'.Additionally you could also have the key identifier mappings in the configuration file that the application can use to map to key/secret in the vault as we had seen above.
 

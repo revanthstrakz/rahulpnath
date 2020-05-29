@@ -24,7 +24,7 @@ AllMappings = Resources.UsageMap
 
 It all worked fine on my machine and even on other team members machines. There was no reason to doubt this piece of code, until on the development environment we noticed the mapped value in the destination system always null.
 
-### Analyzing the Issue
+## Analyzing the Issue
 
 Since in the destination system, all the other values were getting populated as expected, except for this mapping it was easy to narrow down to the class that returned the mapping value, to be the problematic one. Initially, I thought this was an issue with the resource file not getting bundled properly. I used [dotPeek](https://www.jetbrains.com/decompiler/) to decompile the application and verified that resource file was getting bundled properly and had exactly the same text (visually) as expected.
 
@@ -43,7 +43,7 @@ We use git for our source control and [configured to use 'auto' line endings](ht
 
 The checkout step in Bamboo used the built in git plugin (JGit) and has certain limitations. It's recommended to use native git to use the full git features. JGit also has a known issue with [line endings on a Windows machine](https://jira.atlassian.com/plugins/servlet/mobile#issue/BAM-9591) and checks out a file with LF endings. So whenever the source code was checked out, it replaced all line endings in the file with LF before compilation. So the resource file ended up having LF line endings in the assembly, and the code could no longer find Environment.Newline (\r\n) to split.
 
-### Possible Fixes
+## Possible Fixes
 
 Two possible ways to fix this issue is
 

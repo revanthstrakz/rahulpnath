@@ -23,9 +23,9 @@ CSP is an added layer of security that helps to detect and mitigate certain type
 Content-Security-Policy: default-src 'self' *.rahulpnath.com
 ```
 
-### Setting CSP Headers
+## Setting CSP Headers
 
-**Web Server Configuration**
+### Web Server Configuration
 
 CSP's can be set via the configuration file of your web server host if you want to specify it as part of the header. In my case I use Azure Web App, so all I need to do is add in a web.config file to my root with the header values. Below is an example which specified CSP headers (including Report Only) and [STS headers](/blog/http-strict-transport-security-sts-or-hsts/).
 
@@ -42,7 +42,7 @@ CSP's can be set via the configuration file of your web server host if you want 
     ...
 ```
 
-**Using Fiddler**
+### Using Fiddler
 
 However if all you want is to play around with the CSP header and don't have access to your Web server or the configuration file, you can still test these headers. You can inject in the headers into the response using a [Web Proxy like Fiddler](/blog/fiddler-free-web-debugging-proxy/)
 
@@ -64,7 +64,7 @@ if (oSession.HostnameIs('rahulpnath.com')) {
 
 By injecting these headers, we can play around with the CSP headers for the webiste without affecting other users. Once you have the CSP rules that cater to your site you can commit this to the actual website. Even with all the CSP headers set, you can additionally set the [report-to](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) (or deprecated [report-uri](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri)) directive on the policy to capture any policies that you may have missed.
 
-### Content-Security-Policy-Report-Only
+## Content-Security-Policy-Report-Only
 
 The _Content-Security-Policy_Report-Only_ header allows to test the header settings without any impact and also to capture any CSP headers that you might have missed on your website. The browser uses this for reporting purposes only and does not enforce the policies. We can specify a report endpoint to which the browser will send any CSP violations as a JSON object.
 
@@ -89,11 +89,11 @@ POST https://rahulpnath.report-uri.com/r/d/csp/reportOnly HTTP/1.1
 }
 ```
 
-### Generating CSP Policies
+## Generating CSP Policies
 
 Coming up with the CSP policies for your site can be a bit tricky as there are a lot of options and directives involved. Your site might also be pulling in dependencies from a variety of sources. Setting CSP policies is also an excellent time to review your application dependencies and manage them correctly. For e.g., if you have a javascript file from an untrusted source, etc. There are a few ways by which you can go about generating CSP policies. Below are two ways I found useful and easy to get started.
 
-**Using Fiddler**
+### Using Fiddler
 
 The [CSP Fiddler Extension](https://github.com/david-risney/CSP-Fiddler-Extension) is a Fiddler extension that helps you produce a strong CSP for a web page (or website). Install the extension and with Fiddler running navigate to your web pages using a browser that supports CSP.
 
@@ -101,7 +101,7 @@ The [CSP Fiddler Extension](https://github.com/david-risney/CSP-Fiddler-Extensio
 
 <img src="../images/https_csp_fiddler_rule_collector.png" class="center" alt="Fiddler CSP Rule Collector" />
 
-**Using Report URI**
+### Using Report URI
 
 [ReportURI](https://report-uri.com/) is a real-time security reporting tool which can be used to collect various metrics about your website. One of the features it provides is giving a nice little wizard interface for creating your CSP headers. [Pricing](https://report-uri.com/#prices) is usage based and provides the first 10000 reports of the month free (which is what I am using for this blog).
 
@@ -111,7 +111,9 @@ ReportURI gives a dashboard summarizing the various stats of your site and also 
 
 One of the cool features is the [CSP Wizard](https://scotthelme.co.uk/report-uri-csp-wizard/) which as the name suggests, provides a wizard-like UI to build out CSP's for the site. The websites need to be configured to report CSP errors to a specific endpoint on your ReportURI endpoint (as shown below). The header value can be set either on CSP header or the Report Only header.
 
-> _You can find your report URL from the Setup tab on Report URI. Make sure you use the URL under the options Report Type: CSP and Report Disposition: **Wizard**_
+> _You can find your report URL from the Setup tab on Report URI. Make sure you use the URL under the options Report Type: CSP and Report Disposition: 
+
+###Wizard
 
 ```text
 Content-Security-Policy-Report-Only: default-src 'none';report-uri https://<subdomain>.report-uri.com/r/d/csp/wizard

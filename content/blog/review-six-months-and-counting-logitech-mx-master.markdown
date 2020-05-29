@@ -19,7 +19,7 @@ It's been six months with the [Logitech MX Master](http://amzn.to/2ddLmUf) mouse
     <img  alt="Logitech MX Master" src="../images/logitech_mxmaster.jpg"/>
 </a>
 
-#### **Key Features**
+## Key Features
 
 - The mouse fits perfectly into the hand and supports the wrist in a native position. It is suitable for long duration use.
 
@@ -41,7 +41,7 @@ The software allows setting application specific actions for buttons. For e.g. I
 
 <img  alt="Logitech MX Master Software customizations" src="../images/logitech_mxmaster_customize.png"/>
 
-#### **Issue**
+### Issue
 
 The only issue that I faced so long is with the Mouse scroll mode. The 'Ratchet' mode no longer works for me. It is always in smooth scrolling mode and the mechanical key to shift modes does not work anymore. Google tells me that this is a [common issue](https://community.logitech.com/s/question/0D531000051026rCAA) with the mouse .
 [This video](https://www.youtube.com/watch?v=KR9fLd_ViYw) walks through on how to open up the mouse and fix the mechanical part that clicks in to switch the scroll modes. I have not tried this myself as I don't feel much a problem without the Ratchet mode.

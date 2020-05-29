@@ -63,7 +63,7 @@ public class LocationsUsagesCalculator
 }
 ```
 
-### Testability Issues with Current Design
+## Testability Issues with Current Design
 
 The code is self-explanatory and does what's expected. But what interests us more is the test code for this. From a test perspective we need to make sure
 that for all locations, usages gets processed for the pending days. Direct cases when last processed day is a day before, a couple of days before and different for each location are some of the likely scenarios. Let's see one of the cases where the last processed day is a few days before for all locations

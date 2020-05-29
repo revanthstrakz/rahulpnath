@@ -14,7 +14,7 @@ thumbnail: ../images/postman_published.png
 
 In the previous post, we explored how to use [Postman for testing API endpoints](/blog/automated-api-testing-using-postman-collection-runner/). Postman is an excellent tool to manage API specs as well, so that you can try API requests individually to see how things are working. It also acts as documentation for all your API endpoints and serves as a good starting point for someone new to the team. When it comes to managing the API specs for your application, there are a few options that we have and let's explore what they are.
 
-### Organizing API Specs
+## Organizing API Specs
 
 Postman supports the concept of [Collections](https://www.getpostman.com/docs/v6/postman/collections/creating_collections), which are nothing but a Folder to group of saved API requests/Specs. Collections support nesting which means you can add Folders within a collection to further group them. As you can see below the _MyApplication_ and _Postman Echo_ are collections, and there are subfolders inside them which in turn contains API requests. The multi-level hierarchy helps you to organize your requests the way you want to.
 
@@ -40,7 +40,7 @@ Postman allows you to [publish API specs](https://www.getpostman.com/docs/v6/pos
 
 <img src="../images/postman_published.png" alt="Postman Published" class="center" />
 
-### Security Considerations
+## Security Considerations
 
 When using the sync feature of Postman (logged in to the application with Postman account), it is [recommended](https://www.getpostman.com/docs/v6/postman_for_publishers/run_button/security) that you do not have any sensitive information (like passwords/tokens) as part of the API request spec/Collection. These should be extracted out as Environment variables and stored as part of the appropriate environment.
 

@@ -14,7 +14,7 @@ description: This post looks into the life cycle of managing an Azure AD applica
 
 Access to the Key Vault is secured using AD application token, as we had seen in the '[Authenticating a Client Application with Azure Key Vault](http://www.rahulpnath.com/blog/authenticating-a-client-application-with-azure-key-vault/)'. Quite often administrators require to manage the AD application created, performing activities like creating new AD applications, changing the certificate used to authenticate with the AD application, remove a certificate or even delete an application. All of these are possible using PowerShell scripts and administrators can even run this as part of their automation scripts. With the latest Azure PowerShell version(0.9.2 or higher), the Key Vault cmdlet's are included automatically and does not require any additional installations. For managing the Azure AD application we need to [install the Azure AD module for PowerShell](https://msdn.microsoft.com/en-us/library/azure/jj151815.aspx#bkmk_installmodule) and import them into the PowerShell command prompt.
 
-#### **Creating AD application**
+## Creating AD application
 
 The _[New-AzureADApplication](https://msdn.microsoft.com/en-us/library/dn986794.aspx)_ cmdlet is used to create a new Azure AD application. It also provides an option to specify the certificate details used to authenticate with the AD application at the time of creation itself. This can be done as a separate step if required, which is shown later in the post.
 
@@ -49,7 +49,7 @@ Set-AzureKeyVaultAccessPolicy -VaultName 'KeyVaultRahul' -ObjectId  $servicePrin
 $ServicePrincipal.ApplicationId #Outputs the ServicePrincipalName/AppPrincipalId
 ```
 
-#### **Adding a Certificate**
+### Adding a Certificate
 
 The _[New-MsolServicePrincipalCredential](https://msdn.microsoft.com/en-us/library/azure/dn194106.aspx)_ cmdlet is used to add a new credential to a service principal or to an application. The service principal is identified by supplying one of the following: object ID, appPrincipalID, service principal name (SPN).
 
@@ -66,7 +66,7 @@ $endDate = $startDate.AddYears(1)
 New-MsolServicePrincipalCredential -ServicePrincipalName $ServicePrincipal.ApplicationId -Type Asymmetric -Value $credentialValue -StartDate $startDate -EndDate   $endDate
 ```
 
-#### **Removing a Certificate**
+### Removing a Certificate
 
 Whenever a credential gets compromised or as part of regular credential refresh, administrators would want to remove an old certificate and replace with a new one. The [Remove-MsolServicePrincipalCredential](https://msdn.microsoft.com/en-us/library/azure/dn194125.aspx) cmdlet is used to remove a credential key from a service principal by specifying the key ID for the credential and the objectID/applicationID/ServicePrincipalName to identify the service principal. To get the key ID of an existing credential, [Get-MsolServicePrincipalCredential](https://msdn.microsoft.com/en-us/library/azure/dn194091.aspx) cmdlet can be used, which returns the list of credentials associated with a service principal. The below script just removes the first credential, you could loop through and remove all.
 
@@ -75,7 +75,7 @@ $servicePrincipalCredential = Get-MsolServicePrincipalCredential -ServicePrincip
 Remove-MsolServicePrincipalCredential -ServicePrincipalName $ServicePrincipal.ApplicationId -KeyIds $servicePrincipalCredential[0].KeyId
 ```
 
-#### **Delete an application**
+### Delete an application
 
 The [Remove-MsolServicePrincipal](https://msdn.microsoft.com/en-us/library/azure/dn194113.aspx) cmdlet removes a service principal from Microsoft Azure Active Directory, by specifying objectID/applicationID/ServicePrincipalName to identify the service principal.
 

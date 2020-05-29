@@ -16,7 +16,7 @@ It's not often that you want to debug into applications running on a Virtual Mac
 
 In this post, we will look at how to set up the Virtual Machine and Visual Studio for remote debugging. If you are interested in watching this in action, check out the video in the link above.
 
-### Setting up Virtual Machine
+## Setting up Virtual Machine
 
 To be able to remote debug to a Virtual Machine it needs to be running the *Remote Debugging Monitor (msvsmon)*. Assuming you have Visual Studio installed on your local machine (which is why you are trying to debug in the first place), you can find *msvsmon* under the folder - *C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\Remote Debugger*. The path might slightly different based on the version of Visual Studio and the Subscription (Professional, Community, Enterprise). The above path is for Visual Studio (VS) 2019 Professional version. Copy over the Remote Debugger folder into the virtual machine. Alternatively, you can also install the Remote Debugger tools from the [internet](https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging?view=vs-2019#download-and-install-the-remote-tools). Make sure you download the version that matches the Visual Studio version that you will be using to debug.
 
@@ -38,7 +38,7 @@ In the Azure Portal, under the Networking tab for the Virtual Machine,  add an i
 
 ![](../images/remote_debug_vm_azure_portal.jpg)
 
-### Debugging From Visual Studio
+## Debugging From Visual Studio
 
 Now that everything is set up, we are good to debug the application from our local machine. Make sure the application to be debugged is running in the Virtual Machine. From Debug -> Attach To Process in Visual Studio. Choose Remote (no authentication) under the Connection type and enter the IP address or the fqdn to the VM along with the port number. Shortly you should see the list of applications running on the machine, and you can choose the appropriate app to debug.
 

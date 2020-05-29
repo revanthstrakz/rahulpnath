@@ -16,7 +16,7 @@ Screencast helps to connect with people in a different way and adds a personal t
 
 > _A [screencast](https://en.wikipedia.org/wiki/Screencast) is a digital recording of computer screen output, also known as a video screen capture, often containing audio narration._
 
-### Presentation
+## Presentation
 
 I chose to do my first screencast as a slide share presentation, as it was something that I was comfortable with. Since there are not many videos on [Azure Key Vault](http://www.rahulpnath.com/blog/category/azure-key-vault/) and I have been blogging extensively about it, I didn't have to think twice about the topic. I scripted the whole presentation, to every word that I would say. Scripting for a video is different from writing a blog post as it has to be conversational with a video. Also, there are a lot more details that need to be covered and talked about as it is all visible on the recording.
 
@@ -24,7 +24,7 @@ Since I did not have an external monitor I wanted a presentation application tha
 
 <img alt="Using slides on multiple devices" src="../images/screencast_slides_multidevice.jpg" />
 
-### Microphone
+## Microphone
 
 An external microphone is absolutely necessary to record your sound well. The microphone that comes built into the laptop is not suited for recording good quality audio. It picks a lot more of the background noises, room noise, typing etc and creates a lot of disturbance in the recording. There are a lot of options available when it comes to getting an external microphone. Most of the microphones are either [Condenser Mics](http://ehomerecordingstudio.com/best-condenser-mics/) or [Dynamic Mics](http://ehomerecordingstudio.com/dynamic-studio-microphone/). Microphones also have different connectivity options like [XLR](https://en.wikipedia.org/wiki/XLR_connector), [USB](https://en.wikipedia.org/wiki/USB) etc. For a home recording setup USB is easier to get started with so I decided to get one with a [USB connectivity](http://ehomerecordingstudio.com/usb-microphones/).
 
@@ -32,7 +32,7 @@ I got the [Rode Podcaster](http://www.rode.com/microphones/podcaster) with a [bo
 
 <img alt="Screencast Microphone, Rode Podcaster" src="../images/screencast_microphone_rode.jpg" />
 
-### Software
+## Software
 
 Choosing the software was much easier than getting the microphone. [Adobe Premiere](http://www.adobe.com/au/products/premiere.html?sdid=VBF1KRFN&mv=search&s_kwcid=AL!3085!3!107609177344!e!!g!!adobe%20premiere&ef_id=Ve-MSAAABFDV-qvS:20170101175215:s) or [Camtasia](http://shop.techsmith.com/store/techsm/en_AU/pd/productID.289432000) are the most popular screen recording software's in the windows world. I have a lot of friends already using Camtasia and was happy with it. So I decided to stick with Camtasia and bought a license (Thanks to [Readify's](http://www.rahulpnath.com/blog/finding-a-job-abroad/) Software Allowance, I did not have to spend a lot from my pocket).
 

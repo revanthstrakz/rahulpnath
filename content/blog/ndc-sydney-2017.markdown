@@ -15,7 +15,7 @@ Last week was a busy one at [NDC Sydney](http://ndcsydney.com/) and was happy to
 
 <img class="center" alt="NDC Sydney" src="../images/ndc_sydney_2017.png" />
 
-### Sessions
+## Sessions
 
 Each talk is one hour long and [eight talks happen at the same time](http://ndcsydney.com/agenda/). Below are the talks I attended:
 

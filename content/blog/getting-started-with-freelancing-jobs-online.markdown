@@ -17,7 +17,7 @@ Easy right! Yes absolutely it is, but here are a few things that might help you 
 
 <img class="center" alt="Freelancer" src="../images/freelancing.jpg" />
 
-### **Finding work**
+## **Finding work**
 
 Finding work is just an easy search across on the platforms with your preferred skills. It will be a good idea to stick to one of the platforms so that you can build up a profile and then move on to other platforms. Landing your first job as a freelancer could be tricky as clients have a tendency to look for people with some work record on the platform, which assures them that it is a 'real human' that they are talking to. But this is kind of 'chicken and egg problem'. One of the best way to break into your first job is to sell yourself low - Yes, you heard it right - Really low!
 

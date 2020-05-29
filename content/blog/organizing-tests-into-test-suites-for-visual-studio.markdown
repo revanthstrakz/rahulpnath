@@ -17,7 +17,7 @@ There are multiple ways that we can do this within Visual Studio and below are s
 
 <img class="center" alt="Geek productivity" src="../images/geek_productivity.jpg" />
 
-#### **Test Traits**
+## Test Traits
 
 Traits are a good way to group tests together and to run them as different suites. It encompasses TestCategory, TestProperty, Priority and Owner. Using [TestCategory](https://msdn.microsoft.com/en-au/library/microsoft.visualstudio.testtools.unittesting.testcategoryattribute.aspx) attribute we can specify the group of the test and the Visual Studio Test Explorer uses this value to group the tests and allows executing tests in specific groups.
 
@@ -25,7 +25,7 @@ Traits are a good way to group tests together and to run them as different suite
 
 Limitation with the above approach is that it depends on developers to put these attributes on the test cases or class level and not leveraging any existing conventions that might be already in place. Having integration tests, unit tests, acceptance tests in different projects is a very common practice, with conventions like project names ending with '.UnitTests, .IntegrationTests, .AcceptanceTests' etc.
 
-#### **Build Tasks and Task Runner Explorer**
+### Build Tasks and Task Runner Explorer
 
 The [Task Runner Explorer](https://visualstudiogallery.msdn.microsoft.com/8e1b4368-4afb-467a-bc13-9650572db708) (TRE) provides custom task runner support to Visual Studio, allowing to run grunt/gulp task or target inside Visual Studio. Grunt/Gulp has packages for most of the unit testing frameworks, using which different build tasks can be created. To select the tests to execute different conventions can also be used. Below is an example of a gulp task to execute all the c# unit tests in the project.
 
@@ -54,7 +54,7 @@ function runTests(dllPath) {
 Similarly we can have multiple tasks to execute different groups of tests and it will be available in the TRE within Visual Studio as shown below. This approach gives the most flexibility, allowing tests be grouped any way and providing ability to execute tests across the stack of technologies.
 <img class="center" alt="Visual Studio Task Runner Explorer" src="../images/vs_tre.png" />
 
-#### **Tests Settings File**
+### Tests Settings File
 
 Creating Test Playlist is an easy way to group tests into a playlist and executing them as group. From the Test Explorer, select the tests to be grouped and on right-click, the option to create playlist is available. The saved playlists can be selected from the drop down menu on the top bar for later execution.
 

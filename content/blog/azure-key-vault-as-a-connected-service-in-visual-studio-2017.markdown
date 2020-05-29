@@ -76,7 +76,7 @@ Make sure to add <b>configBuilders="AzureKeyVault"</b> to the appSettings tag. T
 
 The values _dummy\*_ are just dummy values and will be overridden at runtime from the Secret Values created in the Key Vault. If the Secret with the corresponding name does not exist in Key Vault, then the _dummy_ values will be used.
 
-### Authentication
+## Authentication
 
 When VS creates the Vault, it adds in the user logged into VS to the Access Policies list. When running the application, the AzureKeyVaultConfigBuilder uses the same details to authenticate with the Key Vault.
 
@@ -84,7 +84,7 @@ When VS creates the Vault, it adds in the user logged into VS to the Access Poli
 
 <img class =" center" src="../images/keyVault_connectedService_AccessPolicies.png" alt="Visual Studio, Azure Key Vault Connected Services" />
 
-### Secrets and Versioning
+## Secrets and Versioning
 
 The [AzureKeyVaultConfigBuilder](https://github.com/aspnet/MicrosoftConfigurationBuilders/tree/master/src/Azure) requests to get all the Secrets in the Key Vault at application startup using the [Secrets endoint](https://docs.microsoft.com/en-us/rest/api/keyvault/getsecrets/getsecrets). This call returns all the Secrets in the Key Vault. For whatever keys in the AppSettings that has a match with a Secret in the vault, a request is made to get the [Secret details](https://docs.microsoft.com/en-us/rest/api/keyvault/getsecret/getsecret), which returns the actual Secret value for the keys. Below are the traces of the calls going out captured using [Fiddler](https://www.rahulpnath.com/blog/fiddler-free-web-debugging-proxy/).
 

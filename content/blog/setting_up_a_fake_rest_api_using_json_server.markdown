@@ -16,7 +16,7 @@ However, it's not always that you can use something straight out of the box to f
 
 `youtube:https://www.youtube.com/embed/yq0S2f3k9zY`
 
-### Setting up JSON Server
+## Setting up JSON Server
 
 JSON Server can be [used as a module](https://github.com/typicode/json-server#module) in combination with the other Express middlewares when it needs to be customized. JSON server is built over [Express, a web framework for Node.js](https://expressjs.com/). To set it up as a module add a _server.js_ file to your repository with the below setup code as from the docs.
 
@@ -79,7 +79,7 @@ const router = jsonServer.router(data);
 
 Since this is an in-memory object, any changes made to it are not persistent. Every time the server starts, it uses the same data served from the 'index.js' file above.
 
-### Summary and Detail View Endpoints
+## Summary and Detail View Endpoints
 
 Another common scenario is to have a list view and a detailed view of the resources. E.g., We have a list of quotes, and clicking any will open the detailed view. The data representation for the detail and list view are often different.
 

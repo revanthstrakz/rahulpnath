@@ -15,7 +15,7 @@ popular: true
 `youtube:https://www.youtube.com/embed/QbmLxfRCt38`
 
 
-### Build Pipeline
+## Build Pipeline
 
 ![](../images/devops_create_react_app.jpg)
 
@@ -74,13 +74,13 @@ steps:
 
 The above pipeline generates a zip artifact of the contents of the 'build' folder.
 
-### Release Pipeline
+## Release Pipeline
 
 ![](../images/devops_cra_release.jpg)
 
 To release to Azure Web App, create a new release pipeline and add the Azure Web App Task. Link with the appropriate Azure subscription and select the web application to deploy.
 
-### Frontend Routing
+## Frontend Routing
 
 When using React, you will likely use a routing library like [react-router](https://reacttraining.com/react-router/). In this case, the routing library must handle the URLs and not the server hosting the files. The server will fail to server those routes as you probably won't have anything to interpret those routes. When hosting on IIS (also for Azure Web App on Windows) add a _web.config_ file to the public folder. This file will automatically get packaged at the root of the artifact. The file has a [URL Rewrite config](https://docs.microsoft.com/en-us/iis/extensions/url-rewrite-module/creating-rewrite-rules-for-the-url-rewrite-module) that takes any route and points it to the root of the website and have the _Index.html_ file served. Eg. If the web site has a route 'https://example.com/customer/1223' and if a user hits this URL directly on the browser, IIS will redirect it to 'https://example.com' and have the default file (Index.html) served back to the user. React router will then handle the remaining route and server the appropriate React component for 'Customer/1223'.
 
@@ -110,7 +110,7 @@ If APIs are part of the same host, then it needs to be excluded from the URL Rew
 </configuration>
 ```
 
-### Environment/Stage Variables
+## Environment/Stage Variables
 
 When deploying to multiple environments like (Test, Staging, Production), I like to have the configs as part of the [Azure DevOps Variable Groups](https://www.rahulpnath.com/blog/azure-devops-variable-groups-history/). It allows having all the configuration for the application in one place and easier to manage. These variables are to be replaced in the build artifact at the time of release based on the environment it is getting released. One way to handle this is to have a script tag in '_Index.html_' file as below.
 

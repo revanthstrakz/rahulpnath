@@ -25,7 +25,7 @@ Recently I was in a discussion with my friend/colleague on conducting a few ramp
 
 Just like there are company-wide induction/onboarding sessions, I have always felt that project specific onboarding plans are also required and help new hires be part of the team and be more productive with their day-to-day activities faster. As mentioned in this [article](http://www.fastcompany.com/3029820/work-smart/infographic-the-real-ways-to-hold-on-to-new-hires/3), _New hires care more about effective job training and clear guidelines, and it's time you provide that for them._ It's best to have a plan in place when you have someone new joining your team and you along with the team are the best people to put that plan together.
 
-### Boy Scout Rule
+## Boy Scout Rule
 
 The Boy Scouts have a [rule](http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule) - _"Always leave the campground cleaner than you found it."_ New hires are like 'new camp group' at a campground, so it's the duty of the 'existing team' there to make it a good experience for them.
 
@@ -33,11 +33,11 @@ The Boy Scouts have a [rule](http://programmer.97things.oreilly.com/wiki/index.p
 
 It's not that my friend was intentionally trying not to pass on any information, but he felt that learning on their own would be better. Even I agree with him that learning on your own is far better than 'spoon-feeding' - but a ramp up plan is not spoon-feeding. A ramp up plan is only to speed up the learning process and to make it more comfortable for someone joining new.
 
-### When to create the plan?
+## When to create the plan?
 
 The need for such a plan is there only when there has been enough progress made on the project, after which there is someone new joining the team. So when a new hire is scheduled to join is a good time to create the 'draft' plan. Once the new hire has gone through it and updated back with his own experiences it could become the first version of the plan, which can then be confidently shared to anyone joining after as it has worked for at least one person.
 
-### What should be there in the plan
+## What should be there in the plan
 
 _It depends!_
 

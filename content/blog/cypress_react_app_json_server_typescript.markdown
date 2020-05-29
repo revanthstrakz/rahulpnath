@@ -16,7 +16,7 @@ For the past couple of weeks, I have been playing around with Cypress and been e
 
 In this post, let's look at how we can set up Cypress for a React application that runs over a FAKE JSON Server all using TypeScript. By using a Fake Server for the tests, we can guarantee the application state and the data to expect.
 
-### Create React App
+## Create React App
 
 Setting up a Create React App with TypeScript is straightforward and supported out of the box. All you need to specify is the typescript template when you create a new application (as shown below). The documentation also has [steps on how to add Typescript to an existing project](https://create-react-app.dev/docs/adding-typescript/).
 
@@ -24,7 +24,7 @@ Setting up a Create React App with TypeScript is straightforward and supported o
 npx create-react-app my-app --template typescript
 ```
 
-### Setting Up JSON Server
+## Setting Up JSON Server
 
 In the previous post we looked at [how to set up a Fake REST API using JSON Server](/blog/setting_up_a_fake_rest_api_using_json_server/). Let's move JSON Server and the mock data to TypeScript. It forces us to update the mock data any time the models are updated. I have JSON Server under the _mockApi_ folder.
 
@@ -81,7 +81,7 @@ const quotes: QuoteDto[] = [
 
 Depending on how you have the React app calling the API, you can set it up to use the Mock API Server that we are running. If the Web App and API are served from the same host and port usually, you can proxy the requests to JSON Server by [setting the proxy field in package.json](https://create-react-app.dev/docs/proxying-api-requests-in-development/).
 
-### Setting Up Cypress
+## Setting Up Cypress
 
 The Cypress docs are well explained and have a [step by step walkthrough to set up Cypress tests](https://docs.cypress.io/guides/getting-started/installing-cypress.html). I have Cypress installed under the web application folder.
 

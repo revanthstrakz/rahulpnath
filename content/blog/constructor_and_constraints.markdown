@@ -15,7 +15,7 @@ In C# or any class-based object-oriented language, a Constructor is used to crea
 
 `youtube:https://www.youtube.com/embed/-9zzIS3R56w`
 
-### Simple Invariants
+## Simple Invariants
 
 E.g. If a constructor takes in a string and checks it to be not null before assigning it to its property, the invariant is that the string _Value_ can never be null.
 
@@ -74,7 +74,7 @@ public class Name
 
 By marking it as read-only, we enforce that _Value_ can no longer be set to Null even within the class. The only place you can set the property is the constructor. Name is now an immutable - _value cannot be changed after it is created_.
 
-### Multi-Property Invariants
+## Multi-Property Invariants
 
 The NotNull constraint is something we see often and are used to writing. However, those are not the only constraints. The best example is the DateTime class, which enforces that any date created is valid.
 
@@ -107,7 +107,7 @@ public class DateRange
 }
 ```
 
-### Business Invariants
+## Business Invariants
 
 Taking this to the next level, we can add business invariants as well. Let's take an example of a quote for mobile phones and associated accessories. A quote can be in many different states (Draft, Open Accepted, and Expired). There are a few rules associated with the creation of a Quote.
 

@@ -32,7 +32,7 @@ Google Indic Keyboard allows you to type messages, update on social networks or 
 
 Setting up the keyboard could be a bit confusing as changing keyboards is not something that we often do. I ended up spending some time walking through the setup for some of friends and family.
 
-### Setting Up
+## Setting Up
 
 1. In Google Play Store search for [Google Indic Keyboard]. If you have not installed/updated before, tap on Install or Update to get the latest application version.
 

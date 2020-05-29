@@ -55,7 +55,7 @@ Setting up and getting started with Quartz scheduler is fast and easy. The libra
 
 The [RAMJobStore](http://www.quartz-scheduler.org/api/2.2.1/org/quartz/simpl/RAMJobStore.html) indicates the store to use for storing job. There are other job stores available if you want persistence of jobs anytime the application restarts.
 
-### Setting Up Jobs
+## Setting Up Jobs
 
 Basically, there are three jobs - Alert Job, CoolOff Job, and Refresh Job - set up for the whole application. The Alert and Refresh Jobs are scheduled on application start. The CoolOff Job is triggered by the Alert Job as required. Any data that is required by the job is passed in using [JobDataMap](https://www.quartz-scheduler.net/documentation/quartz-2.x/tutorial/more-about-jobs.html#jobdatamap).
 
@@ -79,7 +79,7 @@ var trigger = TriggerBuilder
 scheduler.ScheduleJob(job, trigger);
 ```
 
-#### **Alert Jobs**
+### Alert Jobs
 
 The Alert Job is responsible for checking the stored procedure and sending the alerts if required. If an alert is sent, it starts the CoolOff Job and pauses the current job instance. THe DisallowConcurrentExecution prevents multiple instances of the Job having the same key does not execute concurrently. We explicitly set the Job Key based on the Rule Id. This prevents any duplicate messages getting sent out if any of the job instances takes more time to execute than its set polling interval.
 
@@ -119,7 +119,7 @@ public class AlertJob : Job
 }
 ```
 
-#### **Cool-Off Job**
+### Cool-Off Job
 
 Cool-Off Jobs is a one time job scheduled by the Alert Job after an alert is sent successfully. The CoolOff job is scheduled to start after the Cool-Off time as configured for the alert. This triggers the job only after the set amount of time. It Resumes the original Rule Job to continue execution.
 
@@ -134,7 +134,7 @@ public class CoolOffJob : IJob
 }
 ```
 
-#### **Refresh Job**
+### Refresh Job
 
 The Refresh Job is a recurring job, that polls the database for any changes to the Rules themselves If any change is detected,it removes the existing schedules for the alert and adds the updated alert job.
 

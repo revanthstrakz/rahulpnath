@@ -18,7 +18,7 @@ When it comes to mobile phones, I used to be a gadget freak and buy the latest p
 
 <img src="../images/pixel.png" alt="Pixel" class="center" />
 
-#### **Key Features**
+## Key Features
 
 The Pixel is the first phone in the Google Pixel hardware line and is a successor to the Nexus range of devices. The Pixel runs [Android-Nougat](https://www.android.com/intl/en_au/versions/nougat-7-0/) with some features exclusive to it. The Pixel is very much comparable to the Nexus, with improved hardware and latest software. Below are some of the key features that I like about the phone.
 

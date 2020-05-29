@@ -12,7 +12,7 @@ description:
 
 Over the past month I had thought of migrating this blog to Hugo, a static site generator that is faster than the current one, Octopress. Lack of workflow for creating new posts and slower build times were the main reasons. I am the kind of person when writing post want to see often, how it looks like on the real site. With the current number of posts it takes around 40-50 seconds to build the entire site and it makes me to wander off to something else while the build is happening - at times it takes a long time to get back to writing!. But migrating to a new platform has a lot of challenges and time-consuming and I did not want to invest my time in that, so though of looking out for ways to optimize the current process. A bit of googling and playing around with Ruby, solved both of the major issues and I have an improved workflow!
 
-#### **Draft workflow**
+## **Draft workflow**
 
 I was lucky to find this [post](http://neverstopbuilding.com/how-to-enhance-your-octopress-draft-and-heroku-deploy-process) which handled most of the draft workflow process. Most of the code below is used from there with a very few minor additions. Newer versions of Jekyll support [working with drafts](http://jekyllrb.com/docs/drafts/) and uses the '_--drafts_' switch to build the drafts (instead of using published flag as in thr above linked post), that are in '_\_drafts_' folder. Drafts are posts which does not have date's, so I added in a placeholder text, '_thisIsStillADraft_', in the yaml front matter of the post which will later be replaced with the post publish date. Also added in the code to open the default writer with the newly created post
 
@@ -92,7 +92,7 @@ end
 
 With these two new rake tasks, I can now create as many draft posts at a time and publish them once ready.
 
-#### **Improving the build time**
+### **Improving the build time**
 
 Jekyll build command options provides a switch, '_configuration_', that allows to pass a configuration file instead of using '_\_config.yml_'. In the configuration file we can specify a 'exclude' option to exclude the directories and/or files from the build. I created a new task for building only the current drafts, by specifying the '_--drafts_' switch and a dynamically generated configuration file, _\_previewconfig.yml_, which excludes the '_\_posts_' folder. This dramatically increases the build time, and completes almost immediately after a making a change to a post. This fits perfectly into my workflow, as while writing new posts I do not want to see any already published posts. You can add the dynamically generated configuration file name to the _.gitignore_ as I do not delete it in the tasks. I did not want to use the '_rake isolate_' task that is already present in the rakefile, as that does not integrate with the draft workflow and unnecessarily moves all the posts to a temporary place.
 
@@ -123,7 +123,7 @@ task :previewdrafts do
 end
 ```
 
-#### **Dropbox integration**
+### **Dropbox integration**
 
 At times, I have started to draft blog posts while commuting to work from my mobile device, so I wanted to sync my draft posts to [Dropbox](https://db.tt/bvYw3pL6), so that I can edit it from my [mobile phone](http://www.rahulpnath.com/blog/review-two-months-and-counting-android-and-nexus-5/). Apps like [MarkDrop](https://play.google.com/store/apps/details?id=net.keepzero.markdrop&hl=en)/[JotterPad](https://play.google.com/store/apps/details?id=net.keepzero.markdrop&hl=en) integrates with Dropbox and supports Markdown editing. I set up a drafts folder on my Dropbox folder on laptop, which is automatically synced using the [Dropbox application](https://www.dropbox.com/install). I then used [Mklink](https://technet.microsoft.com/en-us/library/cc753194.aspx) to create a symbolic link from the folder on Dropbox to my drafts folder in my blog repository. Whenever a new draft post is added, it gets automatically inserted into the Dropbox folder, which will then be synced to cloud and available for edit on my mobile phone too. (Part of this post is written from my mobile!)
 
@@ -131,7 +131,7 @@ At times, I have started to draft blog posts while commuting to work from my mob
 mklink /D "C:\blog\_drafts" "C:\dropbox\_drafts"
 ```
 
-#### **Cmder integration**
+### **Cmder integration**
 
 [Cmder](http://cmder.net/) is a portable console emulator for Windows and provides a good nice looking feature rich console experience on Windows and is one of my [favourite tools](http://www.rahulpnath.com/blog/tools-that-I-use/). Creating alias for commands is one of the features, that allows to create a short key combination for an otherwise long command. You can use this to create commands for the task in Octopress like below
 

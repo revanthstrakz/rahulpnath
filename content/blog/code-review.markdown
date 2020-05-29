@@ -22,11 +22,11 @@ Code review is an essential practice of the development life cycle. It helps imp
 
 Below are some of my thoughts on the various aspects involved in a Code Review.
 
-### Sending a Review
+## Sending a Review
 
 Before sending for a code review make sure that only the necessary files for the change are added in the review. Often it happens that when we write code there are remains of things that we tried and discarded, like new files, packages, changes to project metadata files etc. Double check and make sure that the changes are what are just required. Ensure that the code builds successfully. If there are any build scripts that your team uses, make sure that those are run and passes successfully. When submitting a code review make sure that you reference the associated work item - be it a bug, story, task etc. Add [tests](http://www.rahulpnath.com/blog/category/testing/). Add in a description detailing the change and any reasoning behind it to add in more context. This will help the reviewer understand the code much faster. Add in relevant people for the review and submit a request. Check out [some great tips for a better-looking review request](http://blog.ploeh.dk/2015/01/15/10-tips-for-better-pull-requests/).
 
-### Handling Review Comments
+## Handling Review Comments
 
 One of the key things in a code review and one that's often missed and drives people frustrated is that they try to take it all in.
 
@@ -36,7 +36,7 @@ If a review comment points out a mistake in logic or business functionality or c
 
 Look at comments as a way to improve your code and help the team and business. Go in with a positive attitude. When seen as an overhead or an extra ritual, code reviews can be really painful and depressing. Make a note of commonly occurring comments or mistakes you are making and try to handle them at the time of development. Rather than mechanically going through the code review and making changes to the code, internalize on the change and try to see the benefits of a change. This helps to incorporate such suggestions in future reviews as well.
 
-### Responding to a Code Review
+## Responding to a Code Review
 
 I usually find myself following the below three variations when coming to replying to a code review request
 
@@ -49,15 +49,15 @@ I usually find myself following the below three variations when coming to replyi
 - **Add Relevant People**
   Add in reviewers that I feel are missed and relevant for the part of the code that is changed. This I do irrespective of the above two options if I feel someone else needs to take a look. In these cases, if it was my review that gets added in an extra reviewer I would wait to get a sign off from that person too.
 
-#### **Business Aspect**
+### **Business Aspect**
 
 When reviewing code look first for the functionality that the code change addresses. It is possible that we get carried away just by the technical aspect of code and ignore the business aspect altogether. If you have [Acceptance Criteria](https://www.leadingagile.com/2014/09/acceptance-criteria/) defined for tasks then it's worth reading it before doing the code review to get more context.
 
-#### **Technical aspect**
+### **Technical aspect**
 
 Once the business aspect is covered have a look at the technical aspect of the change. Whether the code is decoupled, has the correct abstractions, follows team conventions (best if automated). Check for commonly occurring problems like improper usage of dispose pattern, magic numbers, large methods, all code flow paths not handled etc. See if the new code fits into the overall architecture of the application. Look for tests and ensure the validity of the test data. Look out for [overengineering](https://en.wikipedia.org/wiki/Overengineering) or [not invented here syndrome](https://en.wikipedia.org/wiki/Not_invented_here).
 
-#### **Aesthetic**
+### **Aesthetic**
 
 Code formatting is as important as the code itself. Code is read more often than written, so we should try and optimize code for reading. I would prefer to automate this as far as possible so that people don't need to look for these in reviews. I feel that is often time not well spent and also tends to lead to longer discussions ([tabs vs Spaces](https://blog.codinghorror.com/death-to-the-space-infidels/)). When it is part of the build and automated people seldom complain about it and in a very short period of time, the formatting rules become second nature to them. If you currently do not have automated checks you can gradually [introduce formatting checks into your builds for a large code base](http://www.rahulpnath.com/blog/introducing-code-formatting-into-a-large-codebase/).
 
@@ -68,7 +68,7 @@ There might be a lot of practices that is being followed over the period of time
 - No need to stop or allocate people to repeatedly do the same task of cleaning it everywhere. (Unless there is a very strong business justification to it)
 - You get gradually introduced to the new way of doing things. This gives time to reflect and compare with the old way. You have time to correct yourself if the new approach is not fitting well either or causing more trouble than previous.
 
-### Handling Conflicts
+## Handling Conflicts
 
 <img class="center" alt="Posts per month - 2016" src="../images/codereview_wtf.png"/>
 

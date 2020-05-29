@@ -23,7 +23,7 @@ If you are not convinced check out [https://doesmysiteneedhttps.com/](https://do
 
 Depending on how you are hosting you could possibly take two routes to enable HTTPS on your site. Let's look at them in detail.
 
-### Option 1 - Get your Certificate and Add to Your Host
+## Option 1 - Get your Certificate and Add to Your Host
 
 If your hosting service already allows you to upload a custom domain certificate, but you were just holding back because of the extra cost of getting a certificate, then head over to [Let's Encrypt](https://letsencrypt.org/) to get your free certificate. Again depending on your hosting provider and the level of access that you have on your web server, Let's Encrypt has [muliple ways](https://letsencrypt.org/getting-started/) on how you can get a certificate.
 
@@ -34,7 +34,7 @@ If your hosting service already allows you to upload a custom domain certificate
 
 > _In some cases, integrators (e.g. hosting providers) will charge a nominal fee that reflects the administrative and management costs they incur to provide Let’s Encrypt certificates._
 
-### Option 2 - CloudFlare
+## Option 2 - CloudFlare
 
 If you are like me on a shared/cheaper hosting service it is more likely that your hosting plan does not support adding SSL certificates. You will be forced to upgrade to a higher plan to upload a certificate, which in turn will cost you more. In this case, you can use [Cloudflare](https://www.cloudflare.com/), to enable HTTPS for free.
 
@@ -55,7 +55,7 @@ Cloudflare supports [multiple SSL settings](https://support.cloudflare.com/hc/en
 
 You can also choose to enable Cloudflare with Full SSL(Strict) if you have followed Option 1 and have a custom SSL certificate for the domain. This will give you the added benefits that Cloudfare provides.
 
-### Enabling HSTS Preload
+## Enabling HSTS Preload
 
 Now that you have HTTPS setup on your domain with either of the options above, we can see that the website is now accessible over HTTPS. However, when you make the very first request to the website, the request goes over HTTP which then redirects over to HTTPS, after which the communication happens over a secure channel. However, there is a risk where the very first request can be intercepted and cause undesired behaviour.
 

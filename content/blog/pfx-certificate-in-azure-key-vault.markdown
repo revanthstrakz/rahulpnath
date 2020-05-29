@@ -37,7 +37,7 @@ pvk2pfx -pvk mykey.pvk -spc CertificateKey.cer -pfx CertificateKey.pfx -po test
 
 The _makecert_ creates the CER and PVK, the public/private key files which gets combined into a single PFX file using _pvktopfx_.
 
-### Using the PFX Certificate to Encrypt and Decrypt
+## Using the PFX Certificate to Encrypt and Decrypt
 
 PFX files along with CER files allows to encrypt/decrypt data without the need for Key Vault. You can share the public key, CER, to your clients, who can then use it to encrypt data before sending it to the server. Using the private key, available in PFX, the server can decrypt this data
 
@@ -62,7 +62,7 @@ using (var cryptoProvider = privateCertificate.PrivateKey as RSACryptoServicePro
 
 ```
 
-### Creating a Key in Key Vault from PFX file
+## Creating a Key in Key Vault from PFX file
 
 Now that I am able to use the PFX file (which essentially is a software-protected key) to encrypt/decrypt data, I will upload this to the Azure Key Vault so that it stays secure there. If you are new to Azure Key Vault and want to get started check my [other posts](http://www.rahulpnath.com/blog/category/azure-key-vault/).
 

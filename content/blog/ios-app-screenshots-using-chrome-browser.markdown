@@ -12,7 +12,7 @@ When submitting an app to the iOS App Store, it now mandates to upload screensho
 
 In this post, we will see how we can use Google Chrome Browser to take screenshots in the different resolution that the App Store requires for app submission. 
 
-### Simulate Mobile Devices in Chrome
+## Simulate Mobile Devices in Chrome
 
 Use the [Chrome DevTools to simulate mobile devices](https://developers.google.com/web/tools/chrome-devtools/device-mode/) and load the website in mobile view. In this mode, the devices drop-down list shows all the predefined list of mobile device lists. You can switch between them to see how the site will render on various devices. 
 
@@ -30,7 +30,7 @@ iPhone XS Max has a screen size of [1242px x 2688px](https://developer.apple.com
 
 ![](../images/ios_screenshots_iphone_xs_max_chrome.jpg)
 
-### Capture Screenshot in Native Resolution
+## Capture Screenshot in Native Resolution
 
 To upload the screenshots to the App Store you need them to be in the native resolution, as you would have taken a screenshot in the actual devices. Since the page rendered on the Mobile Device layout is of a different size you cannot simply take a screen capture of the rendered page, since that will be in a different resolution. To capture a screenshot in the native resolution there are two options
 

@@ -12,7 +12,7 @@ thumbnail: ../images\service_management_adAccess.png
 
 Creating and managing Azure Key Vault was mostly supported through PowerShell cmdlets [initially](http://www.rahulpnath.com/blog/getting-started-with-azure-key-vault/), but there are multiple ways of achieving this now - REST API, [PowerShell](http://www.rahulpnath.com/blog/how-the-deprecation-of-switch-azuremode-affects-azure-key-vault/), CLI or [ARM templates](http://www.rahulpnath.com/blog/managing-azure-key-vaults-using-azure-resource-manager-arm-templates/). In this post, we will look into how we can use the REST API to create and manage a Key Vault.
 
-### Azure Resource Manager API
+## Azure Resource Manager API
 
 The [Azure Resource Manager API](https://msdn.microsoft.com/en-AU/library/azure/dn790568.aspx) provides programmatic access to manage Azure services that support [Resource Manager](https://azure.microsoft.com/en-us/documentation/articles/resource-group-overview/). Since Key Vault supports Resource Manager, we will be using it. Any requests to the API must be authenticated and can be done using an Azure AD application. Most of the steps to create an AD application are same as we saw when creating an AD application to [Authenticate a Client Application with Azure Key Vault](http://www.rahulpnath.com/blog/authenticating-a-client-application-with-azure-key-vault/). From the '_permissions to other applications_' tab in portal (as shown below), we can give the application access to Management API's.
 
@@ -37,7 +37,7 @@ private async Task<string> GetAccessToken(string authority, string resource, str
 
 <img src="../images\service_management_adAccess.png" class="center" alt="AD Application access to Azure Service Management API">
 
-### Key Vault Management Client
+## Key Vault Management Client
 
 The [Microsoft.Azure.Management.KeyVault](https://www.nuget.org/packages/Microsoft.Azure.Management.KeyVault/) NuGet package, provides capabilities to connect to the Management API's and manage the Vaults. With the NuGet reference added I can use the _[KeyVaultManagementClient](https://github.com/Azure/azure-sdk-for-net/blob/master/src/ResourceManagement/KeyVaultManagement/KeyVaultManagement/Generated/KeyVaultManagementClient.cs)_.
 
@@ -91,7 +91,7 @@ var vaultFromCode = await keyVaultManagementClient.Vaults
         .CreateOrUpdateAsync("SharedGroup", "VaultFromCode", parameters);
 ```
 
-### Managing Existing Key Vaults
+## Managing Existing Key Vaults
 
 **Update a Key Vault**
 

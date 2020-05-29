@@ -32,7 +32,7 @@ public class OrderSummaryQuery
 
 I have removed the final projection in all the queries below to keep the code to a minimum. We will go through all the iterations to make the code more readable, keeping the generated SQL query efficient as possible.
 
-### Iteration 1 - Crude Form
+## Iteration 1 - Crude Form
 
 Let's start with the crudest form of the query stating all possible combinations of the query. Since all properties are nullable, check if a value exists before using it in the query.
 
@@ -50,7 +50,7 @@ where order.Status == OrderStatus.Quote &&
       order.Created >= query.DateRange.StartDate && order.Created <= query.DateRange.EndDate))
 ```
 
-### Iteration 2 - Separating into Multiple Lines
+## Iteration 2 - Separating into Multiple Lines
 
 With all those explicit AND (&&) clauses the query is hard to understand and keep up. Splitting them into multiple where clauses make it more cleaner and keep each search criteria independent. The end SQL query that gets generated remains the same in this case.
 
@@ -68,7 +68,7 @@ where query.DateRange == null ||
       (order.Created >= query.DateRange.StartDate && order.Created <= query.DateRange.EndDate)
 ```
 
-### Iteration 3 - Refactor to Expressions
+## Iteration 3 - Refactor to Expressions
 
 Now that each criterion is independently visible let's make each of the _where_ clause more readable. Refactoring them into C# class functions makes the generated SQL inefficient, as EF cannot transform C# functions into SQL. Such conditions in a standard C# function gets evaluated on the client site, after retrieving all data from the server. Depending on the size of your data, this is something you need [to be aware of](https://docs.microsoft.com/en-us/ef/core/querying/client-eval#client-evaluation-performance-issues).
 
@@ -119,7 +119,7 @@ WHERE (([order].[Active] = 1) AND ([order].[Status] = @__OrderStatus_0)) AND
 If you use constructor initialization for intermediate projection, *OrderSummaryQueryResult* the where clauses gets executed on the client side. So use the object initializer syntax to create the intermediate projection.
 </div>
 
-### Iteration 4 - Refactoring to Extension method
+## Iteration 4 - Refactoring to Extension method
 
 After the last iteration, we have a query that is easy to read and understand. We also have all queries consolidated within the query object, and it acts as a one place holding all the queries. However, something still felt not right, and I had a quick chat with my friend [Bappi](https://twitter.com/zpbappi), and we refined it further. The above query has too many where clauses and it was just repeating for each of the filters. To encapsulate this further, I moved all the filter expressions to be returned as an Enumerable and wrote an extension method, _ApplyAllFilters_, to execute them all.
 

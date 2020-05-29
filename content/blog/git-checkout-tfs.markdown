@@ -13,7 +13,7 @@ thumbnail: ../images/git_featurebranch_workflow.png
 
 It's been a year since using [Git](https://git-scm.com/) as my mainstream version control system and I am loving it! Before Git, I had used Team Foundation Version Control (TFVC) for a very long time and was so used to it that I found Git a bit complex and overwhelming in the beginning. Team Foundation Server (TFS) is the whole product suite from Microsoft that provides source code management. Until TFS 2013, it supported only TFVC which is when it introduced [Git in TFS](https://blogs.msdn.microsoft.com/mvpawardprogram/2013/11/13/git-for-tfs-2013/). Even today people use TFS and TFVC synonymously (like in the title of this post) though they are not the same.
 
-### Fundamental shift in thinking
+## Fundamental shift in thinking
 
 By design, Git is a Distributed VCS, whereas TFS is centralized one. It takes quite a while to get your head around this and what it actually means. By definition
 
@@ -29,7 +29,7 @@ The real power of Git is better understood when you start working disconnected, 
 
 > _Git feels so lightweight and never gets in the way of doing things._
 
-### Make command line your friend
+## Make command line your friend
 
 If you are a UI savvy person then Git might a good starting point to start using the command line. At first, it definitely feels hard especially if you were TFS/Visual Studio users and might be tempted to use the GUI tools available ([GitHub Desktop](https://desktop.github.com/) or [SourceTree](https://www.sourcetreeapp.com/))
 
@@ -47,7 +47,7 @@ gc=git commit -m "$*"
 gcc=git commit
 ```
 
-### Different workflows
+## Different workflows
 
 Git can be used in many ways and which makes it hard to get started. There are a few popular [workflows](https://www.atlassian.com/git/tutorials/comparing-workflows/) that one can use. Currently, I am using - [Feature Branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) -
 which means that all work happen on independent feature branches and once completed gets merged into the main trunk (master branch). Code Reviews happens on the way it gets pulled into the main branch, which ensures code quality and familiarity.
@@ -58,7 +58,7 @@ which means that all work happen on independent feature branches and once comple
 
 Git is a version control system and does not limit itself to storing code. You can use it for [version controlling any of your work](http://readwrite.com/2013/11/08/seven-ways-to-use-github-that-arent-coding/). For example, this blog is [hosted on Github](https://github.com/rahulpnath/rahulpnath.com) and all the [changes are version controlled](https://github.com/rahulpnath/rahulpnath.com/commits/master), which gives me the flexibility to work and commit locally. Since the blog is [static generated](http://www.rahulpnath.com/blog/static-generator-is-all-a-blog-needs-moving-to-octopress/) I can also preview all the changes locally. I use git whenever I work on any documents or [presentations](https://github.com/rahulpnath/Speaking) so that I can avoid manual copy of files and renaming with suffixes like '_Draft_, '_Draft1_,_Final_,"_FinalRevision_' etc. (if that sounds any similar)
 
-### Managing Commits
+## Managing Commits
 
 When coming to commits, which are nothing but checkpoints of meaningful work done, people might have a different definition for '_meaningful_' - for some it might be really granular, for others a bit coarse and for yet another it means all the work is done. I tend to commit quite often - even a rename of a variable leads to a commit so that I do not have to backtrack if at all something goes wrong immediately after that.
 

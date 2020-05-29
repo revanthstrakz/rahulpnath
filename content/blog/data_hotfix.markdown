@@ -20,7 +20,7 @@ Yesterday I was late to leave office as I had to data fix some of the systems th
 <strong>WARNING!</strong> Normally I do not recommend making any changes directly in production server. In this case, there was a business urgency and was forced to do the data fix the same night, for smooth functioning the day after. We still managed to get in some testing in the development environment before running it in production.
 </div>
 
-### It All Starts with a Few
+## It All Starts with a Few
 
 I have seen it repeatedly happen that this kind of data fixes starts with a few in the beginning. Within a short span of time the affected data size grows drastically and manual updates might not be a good solution.
 
@@ -36,25 +36,25 @@ Having it as a test script restricted me from scaling the update process (though
 
 In retrospective, here are a few things that I should have done different and should be doing if ever I am in a similar situation again.
 
-#### **Create Stand-alone Executable**
+### **Create Stand-alone Executable**
 
 Having a stand-alone executable running the script provides the capability to scale the number of processes as I wanted. Input can be passed as a file or as an argument to the application allowing to break the large data set into smaller subsets.
 
-#### **Log Error and Success**
+### **Log Error and Success**
 
 It's very much possible that the 'fix-to-fix errors' can go wrong or throw exceptions. So handle for errors and log appropriate message to take any corrective actions. It's better to log to a file or other durable storage as that is more foolproof. Logging to the output window (Debug.Writeline/Console.Writeline) is not recommended, as there is a risk of accidentally losing it (with another test run or closing VS).
 
 Logging successes are equally important to keep track of fixed records. It helps in cases where the process terminates suddenly while processing a set of data. It gives a track of all data sets that were successfully processed and exclude from following runs.
 
-#### **Test**
+### **Test**
 
 It is very likely that the script has bugs and does not handle all possible cases. So as with any code, testing the data fix script is also mandatory. Preferably, test in a development/test environment, if not try for a small subset of input in the production. In my case, I was able to test in the development environment and then in production. But still, I ran a small subset in production first and ended up finding an issue that I could not find in development.
 
-#### **Parallelize if Possible**
+### **Parallelize if Possible**
 
 In cases where the data fixes are independent of each other (which likely is when dealing with large data fixes), each of the updates can be in parallel. Also using nonblocking calls when updating across the network helps speed up the process, by reducing the idle time and improves the overall processing time.
 
-#### **Parameterize Input**
+### **Parameterize Input**
 
 Parameterizing of input to the script (console) application helps when you want to scale the application. In my case updating each of the clients took around 8-10 seconds as it involved calling multiple geographically distributed systems. (Updating a system in the US from Australia does take a while!). Having a parameterized application enables to have multiple applications running with different input sets updating the data and speeds up the overall processing time.
 

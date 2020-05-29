@@ -17,7 +17,7 @@ How often have you gone into a class to see the implementation when consuming th
 <img style="box-shadow:none;" class="center" alt="Stronger Code Contracts" src="../images/strong_code_contracts.jpg"/>
 </a>
 
-### Leaky Abstraction
+## Leaky Abstraction
 
 These days in programming we tend to abstract a lot more than what we really need. [Dependency Injection](http://www.rahulpnath.com/blog/category/dependency-injection/) and use of IOC containers have started forcing ourselves to think that everything needs to be an interface. But essentially this is not the case. But the bigger problem lies not in the abstraction, but on depending on the implementation details after abstracting. A [leaky abstraction](https://en.wikipedia.org/wiki/Leaky_abstraction) is an abstraction that exposes details and limitations of its underlying implementation to its users that should ideally be hidden away.
 
@@ -63,7 +63,7 @@ config.Do(value => LoadFromFile(value));
 
 You can write different extension methods on the Maybe class, depending on how you want to process the value. In the above example, I have a Do extension method that calls on to a function with the configuration value if any exists. By explicitly stating that a value may or may not be present we have more clarity in code. No longer do we need any unnecessary null checks in the case where a value is always present. This is best achieved when agreed upon as a convention by the development team and enforced through tooling (like code analysis).
 
-### Value Objects
+## Value Objects
 
 One of the root problem for having a lot of null/empty checks scattered across the code is [Primitive Obsession](http://blog.ploeh.dk/2015/01/19/from-primitive-obsession-to-domain-modelling/). Just because you can represent a value as a string, it doesn't mean that you always should. Enforcing structural restrictions imposed by the business is best done by encapsulating these constraints within a class, also known as a [Value Object](http://www.rahulpnath.com/blog/thinking-beyond-primitive-values-value-objects/). This leads to classes for representing various non-nullable values for e.g. Name, configuration, Age etc. You can use this in conjunction with [Null Object](https://en.wikipedia.org/wiki/Null_Object_pattern) pattern if required. A value object is a class whose equality is based on the value that it holds. So two class instances with same values will be treated equally. In F# you get this by default but in C# you need to override Equals and GetHashCode functions to enforce this equality.
 

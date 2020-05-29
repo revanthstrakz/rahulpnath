@@ -22,7 +22,7 @@ Let's take an example of a simple list page of Quotes. Some of the scenarios for
 
 In this post, we will look at how to [set up a fake JSON Server API](/blog/setting_up_a_fake_rest_api_using_json_server/) to return data based on scenarios we specify. This post describes an approach that you can adapt to your application and the scenarios you have. If you are new to setting up a fake API, check out how to [Set up Up A Fake REST API Using JSON Server](/blog/setting_up_a_fake_rest_api_using_json_server/)
 
-### Specifying Scenarios to JSON Server
+## Specifying Scenarios to JSON Server
 
 To start with, we need to specify which scenario we are interested in when calling the API. A scenario could be specific to one API endpoint or multiple. On an API endpoint, the best place to pass extra data is request headers, as it is least intrusive. We need to send the scenarios only in our development environment and it does not hurt to add an extra header to every HTTP request.
 
@@ -100,7 +100,7 @@ export interface Scenarios<T> {
 
 Based on the [generic type T](https://www.typescriptlang.org/docs/handbook/generics.html), the scenarios property can have only the associated values. Based on your application and the scenarios applicable, add different types and values to represent them.
 
-### Handling Scenarios and Modifying Response
+## Handling Scenarios and Modifying Response
 
 A 'no-user' in the scenarios header must not filter out all qoutes from the quotes endpoint. For each endpoint there is a set of associated scenario values applicable. This is a super set (includes all and more) of the scenario type (QuoteScenario, UserScenario etc).
 
@@ -193,7 +193,7 @@ router.render = (req, res) => {
   }};
 ```
 
-### Invoking Scenarios
+## Invoking Scenarios
 
 When requesting the API, pass the scenarios header to activate the different scenarios. Based on the values in the scenarios header, JSON Server will filter out the response data. Below is a sample request made with 'draft' in scenarios header, and it returns only quotes that have the 'draft' scenarios applied to it.
 

@@ -16,7 +16,7 @@ thumbnail: ../images\testing.jpg
 
 In the earlier post, [Removing Unnecessary Dependencies](http://rahulpnath.com/blog/refactoring-to-improve-testability-removing-unnecessary-dependencies/), we saw how having an unnecessary dependency hinders testability. In this post we will see how the test code changed by the refactoring we did for removing the unnecessary dependency and explore ways to control these changes.
 
-### Impact on Tests by the Refactoring
+## Impact on Tests by the Refactoring
 
 The refactoring in the last post involved a change in the updating the constructor signature to take in a string value instead of an interface. This broke a lot of our tests and forced us to change all constructor usages with the below code.
 
@@ -29,7 +29,7 @@ When seen in isolation, this is not much a change, but as the number of tests gr
 
 > _The idea behind TDD was [Red-Green-Refactor](http://www.jamesshore.com/Blog/Red-Green-Refactor.html). But if tests break when Refactoring, then why follow TDD at all?_
 
-### Refactoring Tests
+## Refactoring Tests
 
 Ideally, we should write tests that do not break when we refactor, so that it helps us to use the same tests over the refactored code. Let's see how we can improve the test code to prevent tests from breaking, when we refactor to [remove unnecessary dependency](http://rahulpnath.com/blog/refactoring-to-improve-testability-removing-unnecessary-dependencies/). Below is the original code (_rewritten into xUnit and Moq, as I prefer that_) with the dependency on IAppSettings (which we will change it to string later)
 
@@ -64,7 +64,7 @@ The [Rule of Three](https://en.wikipedia.org/wiki/Rule_of_three_(computer_progra
 
 So lets Refactor applying the [various techniques](http://www.refactoring.com/catalog/) that we know of!
 
-#### **[Extract Method](http://www.refactoring.com/catalog/extractMethod.html)**
+### [Extract Method](http://www.refactoring.com/catalog/extractMethod.html)
 
 _You have a code fragment that can be grouped together. Turn the fragment into a method whose name explains the purpose of the method._
 
@@ -94,7 +94,7 @@ private MyService GetMyServiceWithMyOtherDependency(Mock<IMyOtherDependency> oth
 
 This starts taking us towards **[Object Mother Pattern](http://martinfowler.com/bliki/ObjectMother.html)**. It looks good to start with and might work well if all we have is the same [fixture setup](http://xunitpatterns.com/Fixture%20Setup%20Patterns.html). But if we have a different kind of fixture setup, with more dependency and combinations of setup, we will soon have a lot of similar creational methods with different combinations of parameters - _GetMyServiceWithMyOtherDependencyAndAppSettings,GetMyServiceWithAppSettings_ etc. The problem with having different methods is that all of them are dependent on the SUT constructor and set the same properties, leading to code duplication again.
 
-#### **[Extract Class](http://www.refactoring.com/catalog/extractClass.html)**
+### [Extract Class](http://www.refactoring.com/catalog/extractClass.html)
 
 _You have one class doing work that should be done by two. Create a new class and move the relevant fields and methods from the old class into the new class._
 
@@ -151,7 +151,7 @@ public void PerformOperationsShouldReturnTrue()
 
 Now the test is just dependent on the objects that it needs. If all the test use _MyServiceBuilder_, we can now easily refactor to [Remove the Unnecessary Dependency](http://rahulpnath.com/blog/refactoring-to-improve-testability-removing-unnecessary-dependencies/) on IAppSettings, by just changing the _MyServiceBuilder_ to use a string property. We will also need to change tests that use the _WithAppSettings_ method which is expected, as those tests are dependent on the app settings value in the first place and so the tests definitely need to be re-written.
 
-### Generic Test Data Builder
+## Generic Test Data Builder
 
 We could have essentially stopped at the above step, but then we realize that it is too much work to create a Test Data Builder class for each of the production code classes that we have. It takes a lot out of the [finite number of keystrokes left in your hands](http://keysleft.com/) and you definitely don't want to waste that in typing redundant code. This is where we can use
 [AutoFixture](https://github.com/AutoFixture/AutoFixture), that is an open source library for .NET that helps reduce the [Setup](http://xunitpatterns.com/Four%20Phase%20Test.html)/[Arrange](http://c2.com/cgi/wiki?ArrangeActAssert) phase. Using [AutoData Theories with AutoFixture](http://blog.ploeh.dk/2010/10/08/AutoDataTheorieswithAutoFixture/) our test case now looks like below.

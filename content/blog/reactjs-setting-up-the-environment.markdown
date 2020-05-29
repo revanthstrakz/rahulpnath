@@ -17,7 +17,7 @@ I have been playing around with [React](https://facebook.github.io/react/) for t
 
 The openness of the Web makes it really difficult to get started with any development platform on it and is the same with React. There are a lot of options for getting things done and can get [overwhelming when newly starting out](https://en.wikipedia.org/wiki/Decision_fatigue). This post explains 'one way' to set up the development environment when developing an application using the React JavaScript framework. I am using VS Code for some time now and wanted to use the same for React development. Except for setting up VS Code, everything else would still make sense to you if you are using a different editor.
 
-### Package Manager for External Dependencies
+## Package Manager for External Dependencies
 
 One of the first things we need when starting with a fresh project on React, is the React library itself. I use Node Package Manager(npm) for managing all my code and development dependencies. Use the below commands to set up the [npm configuration (_package.json_) ](https://docs.npmjs.com/cli/init) and install the latest version of React library.
 
@@ -29,7 +29,7 @@ npm i --save react-dom
 
 > _When installing npm packages use [--save](https://docs.npmjs.com/files/package.json#dependencies) if it needs to be deployed with the application and use [--save-dev](https://docs.npmjs.com/files/package.json#devdependencies) for a package added to support development._
 
-### Setting up VS Code
+## Setting up VS Code
 
 JavaScript development experience is better when you have _[jsconfig.json](https://code.visualstudio.com/Docs/languages/javascript)_ file in your project root. VSCode recommends adding this file through a small light bulb notification on the right side of the status bar (as shown below). With this configuration file, VSCode treats all the _js_ files under the same project context.
 
@@ -45,7 +45,7 @@ typings install --save-dev gulp
 
 <img class="center" src= "../images/react_vscode_intellisense.png" alt="Visual Studio code Intellisense" />
     
-### Hello World from React ###
+## Hello World from React
 
 Now that we have enough to get us started let's write our first react component, which displays a message passed into it.
 
@@ -101,7 +101,7 @@ If you now manually copy over the HTML file into the _dest_ folder and open it f
 
 I definitely did not want to keep running the above command and copy the HTML(/CSS) files, every time I make a change, to see the output - so automating it was very much required. What I would essentially like to have is every time I make a change on any of the files in the project, the build to trigger and output the updated application into the _dest_ folder and automatically refreshing the browser so that I can see the changes (near) real-time. I chose to use [Gulp](http://gulpjs.com/) as this is popular and I have had some [experience using it before](http://www.rahulpnath.com/blog/organizing-tests-into-test-suites-for-visual-studio/).
 
-#### **[gulpfile.js](https://github.com/rahulpnath/Blog/blob/master/React_Template/gulpfile.js)**
+### **[gulpfile.js](https://github.com/rahulpnath/Blog/blob/master/React_Template/gulpfile.js)**
 
 To organize all the different path's used in the gulp build file, I have an object, _path_ holding all the properties together, that's used in the [gulp tasks](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulptaskname--deps-fn). The different tasks that I have defined are to _build_ ( which _copyHtmlFiles_ and builds and transforms _js_ files), _[lint](https://github.com/adametry/gulp-eslint)_, _[watch](https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob--opts-tasks-or-gulpwatchglob--opts-cb)_'es the source folder for changes and triggers the required build, _[connect](https://www.npmjs.com/package/gulp-connect)_'s a server to host the application and automatically _reload_'s the browser whenever code is changed.
 

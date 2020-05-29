@@ -26,17 +26,17 @@ node_modules
 jspm_packages
 ```
 
-### Common Arguments for not Checking in Packages
+## Common Arguments for not Checking in Packages
 
 Since checking in packages is not a common practice, let's first see some of the arguments for not doing this and how it compares to having them checked in.
 
-#### **Storage**
+### **Storage**
 
 _Packages are something that can be resolved at runtime and keeping them excluded saves that extra space on the source control system._
 
 Yes, this might have been a good reason few years back, but these days this is not a good reason as storage has become really cheap. Moreover popular source control systems charge by the [number of repositories](https://github.com/pricing/plans) and not by the space it occupies (although it has [limits](https://help.github.com/articles/what-is-my-disk-quota/) on it).
 
-#### **Time**
+### **Time**
 
 _The clone is faster when you do not have packages in the source control repository as opposed to having them._
 
@@ -46,11 +46,11 @@ But for the project to build we need the packages restored first. So the time is
 
 Moreover cloning a repository is a one-time activity, while a clean can be done any time a developer wants to. So it actually saves more time to keep the packages checked in.
 
-### More Reason for Checking in Packages
+## More Reason for Checking in Packages
 
 Now that we have seen most of the common arguments are not valid, let's see more reasons on why including the packages into the source control is actually better.
 
-#### **Explicit Dependencies**
+### **Explicit Dependencies**
 
 It's always better to be explicit about your code dependencies and not have them resolved by a package manager.
 
@@ -58,11 +58,11 @@ It's always better to be explicit about your code dependencies and not have them
 
 There are possibilities of specific package versions getting [removed from the package manager](http://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm), which your application is still dependent on and leads to build breakage! If your package configuration is set up in such a way to resolve the latest available package of the specific dependency, there are possibilities that the package owner pushes an update that is not backward compatible, causing the build to break! Given that these possibilities exist there is no reason to exclude package dependencies from checked in.
 
-#### **Package Source Downtime**
+### **Package Source Downtime**
 
 Though the publicly available package sources like NuGet, npm are available almost all the time, it is likely that they too [can go down](http://stackoverflow.com/questions/17806889/nuget-feed-reliability). The last thing you would want is to get blocked by the downtime of these services - be it failure to build locally or on a server or even block a critical deployment. With the packages available in your source control, you have one less moving part in your whole deployment pipeline and it is better to have lesser dependencies.
 
-#### **Custom Package Sources**
+### **Custom Package Sources**
 
 Many times I have had to update my Package sources in Visual Studio and break my head on the specific order of these entries to get the project building. This is very common when using custom packages sources like [ProGet](http://inedo.com/proget) or [MyGet](https://myget.org/). Such dependencies make project setup harder and is easily avoided if all the dependent assemblies are available within the repository. You can still have them as custom NuGet sources but have the dependencies included into the repository and update the references whenever source changes. This makes project ramp up easier and faster, with one less configuration step.
 

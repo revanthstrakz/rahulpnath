@@ -17,16 +17,17 @@ Azure Key Vault service is a cloud hosted, HSM(Hardware Security Modules)-backed
 
 <img class="center" alt="Azure Key Vault Overview" src="../images/azurekeyvault_overview.png" />
 
-### Key Types
+## Key Types
 
 The initial release of Azure Key Vault only supports RSA keys (asymmetric cryptography) - it supports both software and HSM processed keys, and are represented as JSON Web Key objects. In future there might be more support for the different key types that are there in cryptography. For those who are new to cryptography or needs a quick recap on cryptography algorithms:
 
-##### **Symmetric Cryptography**
+### **Symmetric Cryptography**
 
 Symmetric cryptography, uses the same key to encrypt and decrypt the data. The keys are shared between the identities that require to transfer the encrypted data.
 
 <img class="center" alt="Symmetric Encryption" src="../images/symmetric_encryption.png" />
-##### **Asymmetric Cryptography** #####
+
+### **Asymmetric Cryptography**
 Asymmetric cryptography, also known as public key cryptography uses two separate keys - a public key and private key. The public key can be used to encrypt the data or to verify a digital signature whereas the private key is used to decrypt the text or to digital sign.
 
 <img class="center" alt="Asymmetric Encryption" src="../images/asymmetric_encryption.png" />
@@ -48,7 +49,7 @@ Version    : 0f653b06c1d94159bc7090596bbf7784
 Id         : https://testvaultrahul.vault.azure.net/keys/rahulkey/0f653b06c1d94159bc7090596bbf7784
 ```
 
-### Key Operations
+## Key Operations
 
 Now that we have a key in the vault, we can use this to perform different operations allowed on the key, as provided in the _key_ops_ field in the key details above. Typical operations that can be performed using the key are Encrypt, Decrypt, Sign, Verify, WrapKey and UnWrapKey. For an application to use the key vault keys, it needs to authenticate using a token from the Azure Active Directory. For this we first need to [register an application with azure active directory](http://azure.microsoft.com/en-us/documentation/articles/key-vault-get-started/#register) and then use the Application id and Authentication key(client secret) to authenticate against the AD application. Instead of using the key/secret, this could also be through a certificate authentication, which might be a more preferred approach(For the simplicity of this demo will use the application id and the secret directly). To connect to the AD application we can use the [Active Directory Authentication Library](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/2.14.201151115) nuget package, the KeyVault libraries are availalble as part of the [samples](http://www.microsoft.com/en-us/download/details.aspx?id=45343).
 

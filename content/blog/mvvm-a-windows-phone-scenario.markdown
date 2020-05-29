@@ -17,7 +17,7 @@ MVVM Light does come with a ViewModelBase class, that all your View Models are t
 
 Common MVVM scenarios that we come across while developing and probable approaches are discussed below. There might be different ways of achieving the same, and at times we might go off the ‘purist’  MVVM implementation,  i.e.  of not having a code behind at all. As for me I am ok to have code behind at a minimum if it is really required and does not affect the original intent of MVVM(separations of concerns, testability and reusability)
 
-**Scenarios**
+## Scenarios
 
 1. Binding the View – ViewModel
 2. ViewModel and Model

@@ -22,7 +22,7 @@ Right from the in-shop experience to setting it up, I found many similarities wi
     <figcaption><em>This is just one of the aisle and there were around 35 of them!</em></figcaption>
 </figure>
 
-### Code Management & Inventory Management
+## Code Management & Inventory Management
 
 Throughout the [Showroom](https://shoutsfromtheabyss.files.wordpress.com/2013/06/ikea-map.jpg) you see an _Aisle number_ and the _Location_ displayed under the displayed items. For the items interested in, one can note those numbers on paper or use the mobile application to [scan the QR code of the product](http://www.ikea.com/ms/en_KR/customer-service/apps/mobile_app_14.html) for reference. In the checkout area, you can find the item at the said aisle/location number. Finding and picking up the item from the aisle is easy and joyful.
 
@@ -33,7 +33,7 @@ Code management is an important aspect in Software development, as code bases ca
 - [Organizing Namespace](https://msdn.microsoft.com/en-us/library/893ke618(v=vs.71\).aspx)
 - Remove unused code and not comment it out. Let the version control system take care of file history.
 
-### Manual
+## Manual
 
 The assembly instructions that comes with each package is clear and expressive. It's mostly [conveyed through pictures](http://www.ikea.com/au/en/assembly_instructions/malm-desk__AA-516949-7_pub.pdf) and easy to follow through. The manual is up to date with the packaged product and matched exactly with the contents.
 
@@ -48,7 +48,7 @@ Code comments used for communicating intent mostly gets out of sync with what th
 
 > _[A comment is an apology](http://butunclebob.com/ArticleS.TimOttinger.ApologizeIncode) for not choosing a more clear name or a more reasonable set of parameters, or for the failure to use explanatory variables and explanatory functions._
 
-### Tools
+## Tools
 
 <img class="left" alt="IKEA Tools" src="../images/ikea_tools.jpg" />
 
@@ -60,7 +60,7 @@ Having the [right set of tools](http://www.rahulpnath.com/blog/tools-that-I-use/
 
 > _[We are Typists First, Programmers Second](http://blog.codinghorror.com/we-are-typists-first-programmers-second/): The keyboard is one of the most important tools for a developer - learn it well_
 
-### Componentization
+## Componentization
 
 The furniture comes as separate pieces that can be easily assembled, with all the screw holes of perfect size. All the different pieces fit perfectly and right even when done by an amateur. Though some of the pieces required two people to fix, I could fix them up myself. It was all cut to perfection with all the holes right in place and fits perfectly the first time.
 
@@ -73,7 +73,7 @@ Having well-defined interfaces that interact with each other seamlessly is impor
 
 Interfaces should be well-defined and not [leak abstractions](https://en.wikipedia.org/wiki/Leaky_abstraction). The name and parameters(input/return) should completely abstract the 'how' part of the functionality and expose only the 'what'. This helps to build more robust interfaces.
 
-### Packaging and Shipping
+## Packaging and Shipping
 
 [IKEA's efficiency in packaging](http://www.wsj.com/articles/ikea-cant-stop-obsessing-about-its-packaging-1434533401) is one of the reasons that enables them to sell at a low-cost and they keep improving at it. Compact and small packages make it easy to handle right from 'self-checkout' to unpacking it at your home. It also helps in optimizing transportation costs for IKEA which in turn enables them to reduce prices.
 
@@ -90,7 +90,7 @@ Deployment in software development is a key part and having the entire pipeline 
 
 This shows IKEA's confidence in the shipped product and the self-belief of nothing going wrong. For a software product to be shipped with this level of confidence it should be thoroughly tested - preferably automated, which allows verifying each time we make a release and allows us to release more often.
 
-### Cost Effective
+## Cost Effective
 
 Having always bought pre-assembled furniture I have never had to think about anything - it was always just about the money. But with IKEA being self-assembled, you get the flexibility to choose the components/features that you need for the furniture like you could choose to have a [headboard for the bed](http://www.ikea.com/au/en/catalog/products/20228714/) or not, which obviously implies a reduced price. You could choose to self-checkout and pay nothing, but also do a paid checkout, where an IKEA member would get all the items out for you to the billing counter. You could transport it yourself to your home or [get it delivered](http://www.ikea.com/ms/en_AU/customer_service/ikea_services/home_delivery.html). So it's all about giving you the options to choose what you want and really keep the cost low.
 
@@ -100,7 +100,7 @@ Keeping the cost low is an important aspect in software industry too and at vari
 - Deployment/Infrastructure costs - Build applications for scale and as independent services so that they can be turned on and off as required. [The cloud](https://azure.microsoft.com/en-us/) has greatly reduced the infrastructure setup costs and provides an easy way for setup. Make sure you understand well the pricing models offered by various cloud providers.
 - Software Costs/Subscription Costs: Give flexibility to your consumers in how they can consume your software. Keeping functionality loosely coupled and pluggable allows to offer various subscription plans or selling model.
 
-### Value Added Services
+## Value Added Services
 
 It's not just in the home furnishings and their core business that IKEA has taken great care for. The other [Value Added Services](http://www.ikea.com/ms/en_SG/service-offer/) they offer like Delivery, Assembly, Planning Tools, Gift Cards, Children's Services and Return Policy are top-notch.
 

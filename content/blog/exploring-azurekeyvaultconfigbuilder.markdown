@@ -21,7 +21,7 @@ In this post, we will look detailed into the [AzureKeyVaultConfigBuilder](https:
 Make sure to update the <b><i>Microsoft.Configuration.ConfigurationBuilders.Azure</i></b> and <b><i>Microsoft.Configuration.ConfigurationBuilders.Base</i></b> Nuget packages to the latest version.
 </div>
 
-### Loading Connection String and App Settings
+## Loading Connection String and App Settings
 
 The AzureKeyVaultConfigBuilder can be specified on both [appsettings](https://msdn.microsoft.com/en-us/library/ms228154.aspx) and [connectionString](<https://msdn.microsoft.com/en-us/library/bf7sd233(v=vs.100).aspx>) element using the _configBuilders_ attribute.
 
@@ -34,7 +34,7 @@ The AzureKeyVaultConfigBuilder can be specified on both [appsettings](https://ms
  </connectionStrings>
 ```
 
-### Accessing Multiple Key Vaults
+## Accessing Multiple Key Vaults
 
 The configBuilders element supports comma-separated list of builders. Using this feature, we can specify multiple Vaults as a source for our secrets. Note how we pass in _'keyVault1,keyVault2'_ to configBuilders option below.
 
@@ -59,7 +59,7 @@ The configBuilders element supports comma-separated list of builders. Using this
 
 If the same key has a value in multiple sources, then the value from the last builder in the list takes precedence. (But I assume you would not need that feature!)
 
-### Modes
+## Modes
 
 All config builders have the options of setting a [mode](https://github.com/aspnet/MicrosoftConfigurationBuilders#mode), which allows three options.
 
@@ -71,7 +71,7 @@ All config builders have the options of setting a [mode](https://github.com/aspn
 
 In short when set to _Strict_ it matches the names in configuration file to Secrets in the Vault's configured. If it does not find corresponding Secret it ignores that key. When set to _Greedy_, irrespective of what keys are there in the configuration file, it makes all the secrets available in the Vaults specified via Configuration. **This to me sounds like magic and would not prefer to do in an application that I build.**
 
-### Greedy Mode Filtering and Formatting Secrets
+## Greedy Mode Filtering and Formatting Secrets
 
 When using Greedy mode, we can filter on the list of keys that are made available by using the [prefix](https://github.com/aspnet/MicrosoftConfigurationBuilders#prefix) option. Only Secret Names starting with the prefix is made available in the configuration. The other secrets are ignored. This feature can be used in conjunction with [stripPrefix](https://github.com/aspnet/MicrosoftConfigurationBuilders#stripprefix) option. When stripPrefix is set to true (defaults to false), the Secret is made available in the configuration after stripping off the prefix.
 
@@ -92,7 +92,7 @@ var connectionString = ConfigurationManager.ConnectionStrings["MyConnection"];
 
 _Use prefix and stripPrefix in conjunction with the Greedy mode. For keys mentioned in the config it will try to match it with the prefix appended to the key name_
 
-### Preloading Secrets
+## Preloading Secrets
 
 By default, the Key Vault Config Builder is set to preload the available Secrets in key vault. By doing this the config builder knows the list of configuration values that the key vault can resolve. For preloading the Secrets, the config builder uses the _List_ call on Secrets. If you don't have list access on Secrets you can turn this feature off using the _preloadSecretNames_ configuration option. At the time of writing the config builder version (1.0.1) throws an exception when preloading Secrets in turned on and List policy is not available on the Vault. I have raised a [PR to fix](https://github.com/aspnet/MicrosoftConfigurationBuilders/pull/24) this issue, which if accepted would no longer throw the exception and would invalidate this configuration option.
 
@@ -104,7 +104,7 @@ By default, the Key Vault Config Builder is set to preload the available Secrets
     vaultName="keyVault1"
 ```
 
-### Authentication Modes
+## Authentication Modes
 
 The connectionString attribute allows you to specify the authentication mechanism with Key Vault. By default when using the Connected Service to create the key vault it adds the Visual Studio user to the access policies of the Key Vault. When connecting it uses the same. But this does not help you in a large team scenario. Most likely the Vault will be created under your organization subscription and you might want to share the same vault between all developers in the team. You could add the users individually and give them the appropriate access policies, but this might soon become cumbersome for a large team. Instead of using the [Client Id/Secret or Certificate](https://www.rahulpnath.com/blog/authenticating-a-client-application-with-azure-key-vault/) authentication along with [Managed Service Identity](https://www.rahulpnath.com/blog/authenticating-with-azure-key-vault-using-managed-service-identity/) configuration for localhost works the best. The configuration provider will then use the _AzureServicesAuthConnectionString_ value from environment variable to connect to the key vault.
 

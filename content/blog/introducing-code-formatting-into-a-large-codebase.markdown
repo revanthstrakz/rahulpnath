@@ -15,7 +15,7 @@ Code Formatting is an important aspect of writing code. If followed well it help
 
 Below are some of the popular formatting rules and those that have a high value when enforced in a project.
 
-#### **Tabs vs Spaces**
+## **Tabs vs Spaces**
 
 One of the most debated topic in code formatting is whether to use tabs or spaces to intend code. I never knew such a debate existed until my most recent project. It had developers from different parts of the world and with different preferences. I came across the below excerpt from Jeff Atwood, to which I completely agree.
 
@@ -27,7 +27,7 @@ One of the most debated topic in code formatting is whether to use tabs or space
 
 Settings for these are often available at the IDE level. In Visual Studio this is available under [Options, Text Editor, All Languages, Tabs](https://msdn.microsoft.com/en-us/library/7sffa753.aspx). Be aware of what you choose and make sure you have the same settings across your team members.
 
-#### **Horizontal Alignment**
+### **Horizontal Alignment**
 
 Avoid aligning by common separators (=;,) when they occur in adjacent lines. This kind of alignment falls out of order when we rename variables or properties. It happens when you chaange property names.
 
@@ -52,7 +52,7 @@ var person = new Person()
 };
 ```
 
-#### **Horizontal Formatting**
+### **Horizontal Formatting**
 
 _You should never have to scroll to the right_ - I caught on with this recommendation from the book Clean Code ([a recommended read](http://www.rahulpnath.com/blog/language-agnostic-books-for-every-developer-2/)). It is also recommended that a function should fit on the screen, without needing to scroll up or down. This encourages to keep functions short and specific.
 
@@ -65,7 +65,7 @@ The [Productivity Power Tools](https://visualstudiogallery.msdn.microsoft.com/d0
 <img class="center" alt="Code Formatting Maximum Width Column Guide in Visual Studio using Power Tools" 
 src="../images/codeformatting_column_guide.png" />
 
-#### **Aligning Function Parameters**
+### **Aligning Function Parameters**
 
 Always try to keep the number of parameters as less as possible. In cases where there are more parameters or longer function names, the team must choose a style. There are different styling formats followed when splitting parameters to a new line.
 
@@ -91,15 +91,15 @@ public int ThisIsALongFunctionNameWithLotsOfParameters(
 }
 ```
 
-#### **Visibility Based Ordering**
+### **Visibility Based Ordering**
 
 It is a good practice to maintain a specific order of items within a class. Have all properties declared first, then constructors, public methods, protected methods, private methods etc. This is up to the team to determine the order, but sticking on to it makes the code more readable.
 
-### Code Analysis Tools
+## Code Analysis Tools
 
 Checking for styling and formatting issues in a code review requests is a boring task. It’s best to automate style checks at build time (local and server builds). Making build throw errors for styling issues forces developers to fix them. Once developers get used to the rules, writing code without any formatting issues becomes second nature. [StyleCop](https://stylecop.codeplex.com) is an open source static code analysis tool from Microsoft that checks C# code for conformance to StyleCop's recommended coding styles and a subset of Microsoft's .NET Framework Design Guidelines. It has a Visual Studio plugin and also integrates well with [MsBuild](https://stylecop.codeplex.com/wikipage?title=Setting%20Up%20StyleCop%20MSBuild%20Integration).
 
-#### **Cleaning up a Large Code Base**
+### **Cleaning up a Large Code Base**
 
 Introducing StyleCop (or any code format enforcement) into a large pre-existing code base is challenging. Turning the tool on would immediately throw hundreds and thousands of errors. Trying to fix them in a stretch might impact the ongoing development process. This often causes us to delay the introduction of such enforcement's into the project and it continues to be a technical debt.
 
@@ -107,7 +107,7 @@ Taking an incremental approach, fixing one by one as and when a file is changed 
 
 > _Trivial things like code formatting is hard to mandate within a team unless it is enforced through tooling_
 
-### Source Control Hooks
+## Source Control Hooks
 
 We can plug into various hooks that source controls give to enforce code formatting on developer machines. In git, you can add a [custom pre-commit hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to run the StyleCop analysis on all the staged files. [StyleCopcli](https://github.com/bbadjari/stylecopcli) is an open source application that wraps over the StyleCop DLLs and allows running the analysis from the command line. So in the hook, I use this CLI to run StyleCop analysis on all the staged files.
 

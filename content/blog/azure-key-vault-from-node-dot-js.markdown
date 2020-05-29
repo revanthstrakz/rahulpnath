@@ -38,7 +38,7 @@ const KeyVault = require('azure-keyvault');
 const { AuthenticationContext } = require('adal-node');
 ```
 
-#### **Authenticate Using ClientId and Secret**
+## **Authenticate Using ClientId and Secret**
 
 Create the Azure AD application and the Secret key as shown in [this post](http://www.rahulpnath.com/blog/authenticating-a-client-application-with-azure-key-vault/). Grab the ClientId and Secret for authentication from the node application.
 
@@ -75,7 +75,7 @@ client.getSecret(secretUrl, function (err, result) {
 });
 ```
 
-#### **Authenticate Using ClientId and Certificate**
+## **Authenticate Using ClientId and Certificate**
 
 To authenticate using ClientId and Certificate the AuthenticationContext exposes a function _acquireTokenWithClientCertificate_ which takes in the certificate (pem format) and the certificate thumbprint. If you already have a certificate go ahead and use that. If not create a new test certificate as shown below
 

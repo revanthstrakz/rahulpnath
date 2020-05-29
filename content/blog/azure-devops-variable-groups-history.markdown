@@ -22,7 +22,7 @@ In this post, let us see how we can link secrets from Key Vault to DevOps Variab
 `youtube:https://www.youtube.com/embed/1OAy3XOE3OY`
 <br />
 
-### Link Variable Group to Key Vault
+## Link Variable Group to Key Vault
 
 Azure DevOps supports [linking Secrets from an Azure Key Vault to a Variable Group](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml#link-secrets-from-an-azure-key-vault). When creating a new variable group toggle on the '_Link secrets from an Azure Key Vault as variables_' option. You can now link the Azure subscription and the associated Key Vault to retrieve the secrets. Clicking the Authorize button next to the Key Vault sets the required permissions on the Key Vault for the Azure Service Connection (that what connects your DevOps account with the Azure subscription).
 
@@ -34,7 +34,7 @@ The Add button pops up a dialog as shown below. It allows you to select the Secr
 
 Create an Azure Key Vault for each environment to manage Secrets for that environment. As per the current [pricing](https://azure.microsoft.com/en-au/pricing/details/key-vault/), creating a Key Vault does not have any cost associated. Cost is based on operations to Key Vault - around _USD \$0.03/10,000 transactions_ (at the time of writing.)
 
-### Version History for Variable Changes
+## Version History for Variable Changes
 
 Key Vault supports versioning and creates a new version of an object (key/secret/certificate) each time it is updated. This helps keep track of previous values. You can set expiry/activation dates on the secret if applicable. Further, by having [Expiry Notification for Azure Key Vault](https://www.rahulpnath.com/blog/expiry-notification-for-azure-key-vault-keys-and-secrets/) set up, you can stay on top of rotating your secrets/certificates on time. The Variable Group refers only to the Secret names in the Key Vault. The secret names are the same as what is in the application configuration file. Every time a release is deployed, it reads the latest value of the Secret from the associated Key Vault and uses that for the deployment. This is different from when defining the variables directly as part of the group, where the variables are snapshot at the time of release.
 
@@ -42,7 +42,7 @@ Key Vault supports versioning and creates a new version of an object (key/secret
 
 Make sure this behavior is acceptable with your deployment scenario before moving to use Key Vault via Variable Groups. However, there is a different plugin that you can use to achieve variable snapshotting even with Key Vault, which I will cover in a separate post.
 
-### Handling Accidental Deletes
+## Handling Accidental Deletes
 
 In case anyone accidentally deletes a variable group in Azure DevOps, it is as simple as cloning one of your other environments and renaming to be Dev Variable group. Mostly it's the same set of variables across all environments. The actual secret value is not required anymore, as that is managed in Key Vault.
 

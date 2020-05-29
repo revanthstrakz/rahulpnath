@@ -22,11 +22,11 @@ I have been using Cmder as my command line for around two years and been loving 
 
 This is not right with Windows 10, as there is a new command prompt which has a lot more features. I have not yet thought of moving to that as Cmder has been working well for me.
 
-#### **Installation and setting up**
+## **Installation and setting up**
 
 Cmder is open source and free to download from [Cmder.net](http://cmder.net/). One of the advantages of Cmder is its portability. You can carry it with you on a USB stick or in the Cloud, so all your settings can go anywhere you go. Installation is simple, all you need to do is download the latest release, extract the archive and run Cmder executable. Check out the documentation if you face any difficulties.
 
-#### **Features I Like**
+### **Features I Like**
 
 Able to **_paste into the console using the Windows shortcut Ctrl + V_** is one of the key things that got me started with this command line tool. It also supports most of the other text traversal keyboard shortcuts of Windows.
 

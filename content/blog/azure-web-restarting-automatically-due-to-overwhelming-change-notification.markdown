@@ -30,7 +30,7 @@ As you can tell from the logs, the website is an [Umbraco](https://umbraco.com/)
 Even though this post details on why the specific site on Umbraco was restarting, most of the contents are still applicable for any other ASP.NET MVC application.
 </div>
 
-### fcnMode Configuration
+## fcnMode Configuration
 
 A quick search got me to the [fcnMode](<https://msdn.microsoft.com/en-us/library/system.web.configuration.httpruntimesection.fcnmode(v=vs.110).aspx>)setting under [httpRuntime](<https://msdn.microsoft.com/en-us/library/system.web.configuration.httpruntimesection(v=vs.110).aspx>) section. An ASP.net application monitors certain files and folders under the wwwroot folder and will restart the application domain whenever it detects changes. This likely look looks the reason why the web site is restarting.
 
@@ -60,7 +60,7 @@ The [fcnMode enumeration](<https://msdn.microsoft.com/en-us/library/system.web.c
 
 You can read more about fcnMode setting and how it affects ASP.Net applications [here](https://shazwazza.com/post/all-about-aspnet-file-change-notification-fcn/).
 
-### What's causing file changes?
+## What's causing file changes?
 
 Default reaction when you come across such a setting or configuration value might be to turn that off and fcnMode does allow that as well - _Disabled_. But first, it is better that we understand what is causing file changes under the wwwroot folder and see if we can address that. The [FCN Viewer](https://shazwazza.com/post/fcn-file-change-notification-viewer-for-aspnet/) helps visualize how many files and folders are being watched in as ASP.Net application.
 

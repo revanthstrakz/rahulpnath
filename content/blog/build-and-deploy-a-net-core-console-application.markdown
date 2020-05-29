@@ -16,7 +16,7 @@ I was given a console application written in .NET Core 2.0 and asked to set up a
 
 At the end of this post, we will have a console application that is automatically deployed to a server and running, anytime a change is pushed to the associated source control repository.
 
-### Setting Up TeamCity
+## Setting Up TeamCity
 
 Create a [New Project](https://confluence.jetbrains.com/display/TCD10/Creating+and+Editing+Projects) and add a [new build configuration](https://confluence.jetbrains.com/display/TCD10/Creating+and+Editing+Build+Configurations) just like you would for any other project. Since the application is in .NET Core, install the [.NET CLI plugin](https://github.com/JetBrains/teamcity-dotnet-plugin) on the TeamCity server.
 
@@ -32,7 +32,7 @@ octo pack --id ApplicationName --version %build.number% --basePath published-app
 
 The NuGet package is published to the NuGet server used by Octopus. Using the [Octopus Deploy: Create Release](https://octopus.com/docs/api-and-integration/teamcity) build step, a new release is triggered in Octopus Deploy.
 
-### Setting Up Octopus Deploy
+## Setting Up Octopus Deploy
 
 Create a [new project](https://octopus.com/docs/deployment-process/projects) in Octopus Deploy to manage deployments. Under the Process tab, I have two [steps](https://octopus.com/docs/deployment-process/steps) - one to deploy the Package and another to start the application.
 

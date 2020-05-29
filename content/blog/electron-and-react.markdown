@@ -13,7 +13,7 @@ thumbnail: ../images/electron.png
 
 [Electron](https://electron.atom.io/) is a great way to build cross-platform desktop applications using HTML, CSS and JavaScript. I was surprised when I first came across Electron to see many of the applications that I use daily was developed in electron and I never knew about it. Since then I was interested in learning more about developing an application using Electron. Recently I was playing around with an idea for a side project and decided to use Electron as I wanted a desktop application. TDK react
 
-### Setting up the React Application
+## Setting up the React Application
 
 With the [create-react-app](https://github.com/facebookincubator/create-react-app) template generator, it is easy to setup and get up and running a react application. All you need to run are the below commands, and you have everything set up for a react application.
 
@@ -27,7 +27,7 @@ npm start
 
 The above commands will create an 'electron-react' folder with all the code and set up the app at _http://localhost:3000_ in development mode.
 
-### Setting up Electron
+## Setting up Electron
 
 Now that we have a react application setup, let us integrate electron with it. The below command installs electron package.
 

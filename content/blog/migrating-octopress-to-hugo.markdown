@@ -13,7 +13,7 @@ I have been on [Octopress blogging platform for around 5 years](https://www.rahu
 
 I have been wanting to migrate off Octopress since a while (reasons below) but have been putting it off since I did not want to go through [another migration pain](https://www.rahulpnath.com/blog/own-your-urls/). Now that it is all done, the migration was not as hard as I thought. In this post I will walk through the reasons of migrating away from Octopress, the actual migration steps involved and tweaking the default Hugo settings/theme and workflow to get what I wanted.
 
-### Reasons To Migrate
+## Reasons To Migrate
 
 - **No Longer Maintained:** [Octopress](http://octopress.org/) is no longer maintained by anyone and it's hard to keep up with all the dependent library updates and ruby version changes. I have my [builds breaking randomly](https://travis-ci.org/rahulpnath/rahulpnath.com-old/builds/470281590) for dependent package updates and it was not something I liked dealing with.
 
@@ -29,7 +29,7 @@ With Octopress I had my [build pipeline](https://www.rahulpnath.com/blog/continu
 I moved this site over to [HTTPS](https://www.rahulpnath.com/blog/ok-i-have-got-https-what-next/) a while back and had been using Cloudflare's Shared SSL. Moving over to the free [Let's Encrypt](https://letsencrypt.org/) certificate required [additional setup on Azure](https://letsencrypt.org/). Netlify takes out all this complexity and handles this all for you in the background. Once you set up a [custom domain](https://www.netlify.com/docs/custom-domains/), it's provisioned with a [Let's Encrypt](https://www.netlify.com/blog/2016/01/15/free-ssl-on-custom-domains/) certificate.
 
 
-### Migration
+## Migration
 
 The actual migration of the content was mostly related to moving all the files and fixing up some code blocks.
 

@@ -13,7 +13,7 @@ Wordpress is what that has been powering my blog for sometime and it definitely 
 
 There are a lot of [static site generators](https://www.staticgen.com/) out there today and any of them should be just fine. I wanted to choose a platform that was not on Microsoft stack and Octorpess was just perfect, it being on Ruby.[Octopress](http://octopress.org/), which is [Jekyll](http://jekyllrb.com/) based, provides almost all the features that a blog needs out of the box or via plugins. The [documentation](http://octopress.org/docs/setup/) for Octopress is very good and takes you through setting it up with ease.
 
-**Migrating from Wordpress**
+## Migrating from Wordpress
 
 The [exitwp](https://github.com/thomasf/exitwp) tool is what I used to get all my posts from Wordpress into Markdown format, so that it can be imported into Octopress. The steps are direct and is detailed out in the readme. Code formatting was an issue after the migration. I had been mainly using [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/) for code formatting in Wordpress. Formatting this took a bit of time, as I had to go through each post and do the necessary modifications to use the [Backtick Code Blocks](http://octopress.org/docs/plugins/backtick-codeblock/).
 

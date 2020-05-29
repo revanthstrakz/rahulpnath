@@ -14,7 +14,7 @@ thumbnail: ../images/composite_pattern.png
 
 I often come across functions that do multiple things. Many times such functions have a common pattern where multiple sections within the function use the same parameters for calculations. The results from these different code sections within the function are either separated by conditionals (if, switch, etc.) or combined using various arithmetic operators. The most obvious refactoring in such scenarios is to move the code sections into different functions within the same class. Having it in separate functions keeps the code readable. But on closer observation, such functions can be moved into different classes, keeping each of these code sections as the only responsibility.
 
-### Identifying the Refactoring
+## Identifying the Refactoring
 
 Within a function when a similar pattern of code repeats, it could be refactored into multiple classes and composed to give the same functionality. Let us take a simple example of a function where we are validating an Account object based on different criteria. The various criteria end up as conditionals within the function. This function can soon get big and difficult to manage. It also makes it harder to test. If you are adding more validations to this class over a period you are violating the Open-Closed Principle (OCP), the O in [SOLID](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod). Depending on the level of abstraction that we are looking at, the class also violates the Single Responsibility Principle(SRP), the S in SOLID. The function handles validations based on different criteria.
 
@@ -45,7 +45,7 @@ public List<string> Validate(Account account)
 
 <img alt="Composite Pattern" src="../images/composite_pattern.png" />
 
-### Refactoring
+## Refactoring
 
 In the Account validation above, the function checks for an email and validates the format, checks for valid billing details, etc. The validations could also extend on to users attached to the account and check if there is at least one user, the user has email, phone number, etc. Each of these validations can be moved into separate classes and composed together in one class so that they are all executed when an account needs to be validated. You can see a tree like hierarchy forming here, and the actual validation is composed of all these validations
 

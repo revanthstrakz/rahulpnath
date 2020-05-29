@@ -27,7 +27,7 @@ GO
 
 One option would be to turn off transaction all together using _builder.WithoutTransaction()_ (default transaction setting) and everything would work as usual. But in case you want each of your scripts to be run under a transaction you can choose either of the options below.
 
-### Using Pre-Processors to Modify Script Before Execution
+## Using Pre-Processors to Modify Script Before Execution
 
 [Script Pre-Processors](https://dbup.readthedocs.io/en/latest/more-info/preprocessors/) are an extensibility hook into DbUp and allows you to modify a script before it gets executed. So we can wrap each SQL script with a transaction before it gets executed. In this case, you have to configure your builder to run WithoutTransaction and modify each script file before execution and explicitly wrap with a transaction if required. Writing a custom pre-processor is quickly done by implementing the IScriptPreprocessor interface, and you get the contents of the script file to modify. In this case, all I do is check whether the text contains 'CREATE FULLTEXT' and wrap with a transaction if it does not. You could use file-name conventions or any other rules of your choice to perform the check and conditionally wrap with a transaction.
 
@@ -58,7 +58,7 @@ END CATCH";
 }
 ```
 
-### Using Multiple UpgradeEngine to Deploy Scripts
+## Using Multiple UpgradeEngine to Deploy Scripts
 
 If you are not particularly fine with tweaking the pre-processing step and want to use the default implementations of DbUp and still achieve keep transactions for you scripts where possible, you can use multiple upgraders to perform the job for you. Iterate over all your script files and then partition them into batches of files that need to be run under a transaction and those that can't be run under a transaction. As shown in the image below you will end up with multiple batches with alternating sets of transaction/non-transaction set of scripts. When performing the upgrade over a batch, set the _WithTransactionPerScript_ on the builder conditionally. If any of the batches fail, you can terminate the database upgrade.
 

@@ -13,7 +13,7 @@ thumbnail: ../images/azure_devops_wix.jpg
 
 Recently I was looking into packaging a Windows Service as an MSI installer. I wanted the MSI created in the build pipeline, in this case [Azure DevOps](https://azure.microsoft.com/en-au/services/devops/), and publish the MSI as a build artifact. The windows service uses .Net Framework and looking around for installer options I found mainly two approaches discussed below.
 
-### Visual Studio Installer Projects (*.VdProj)
+## Visual Studio Installer Projects (*.VdProj)
 
  [Microsoft Visual Studio Installer Projects](https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2017InstallerProjects) is available as an extension to Visual Studio and provides support for Visual Studio Installer Projects in Visual Studio. By adding this setup project to the solution, you can create a setup file that steps through a wizard and installs your application. If you are looking to how to set up the Installer project, this [stackoverflow answer](https://stackoverflow.com/questions/9021075/how-to-create-an-installer-for-a-net-windows-service-using-visual-studio/9021107#9021107) shows you exactly how. Once you have the installer project set up locally and have the MSI file generated on building solution, we can set this up in Azure DevOps pipeline and automate it.
 
@@ -31,7 +31,7 @@ I ran into the error message *An error occurred while validating. HRESULT = '800
 
 Make sure to either select the 'Create artifact for .msi' option in the custom build task or manually copy it out to the artifacts directory. The build now generates an MSI every time!
 
-### WIX
+## WIX
 
 WiX is an open source project that provides a set of tools that build Windows Installation Packages. The installer packages are XML based, and the learning curve is relatively steep. However, it offers a lot more features and capabilities over the Visual Studio installer project we saw above. Microsoft hosted agents support building WIX projects, and I was able to successfully run them on the [Hosted VS2017 agent](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml). 
 

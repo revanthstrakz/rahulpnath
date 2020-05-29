@@ -17,7 +17,7 @@ Microsoft Office Lens is the perfect application for scanning documents and whit
 
 <img src="../images/office_lens.png" alt="Office Lens Capture" class="center" >
 
-#### **Features**
+## **Features**
 
 - Capture and crop a picture of a whiteboard or blackboard, and share your meeting notes with colleagues.
 - Make digital copies of your printed documents, business cards or posters, and trim them precisely.

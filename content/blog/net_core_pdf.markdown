@@ -22,9 +22,9 @@ In this post we will look at how we can generate PDF in an Azure Web App and run
 
 > To use NReco HTML-To-PDF Generator with .Net Core, you need a [license](https://www.nrecosite.com/pdf_generator_net.aspx).
 
-### Generating the PDF
+## Generating the PDF
 
-##### Generate HTML
+### Generate HTML
 
 To generate the PDF, we first need to generate HTML. [RazorLight](https://github.com/toddams/RazorLight) is a template engine based on Razor for .Net Core. It is available as a [NuGet package](https://www.nuget.org/packages/RazorLight/). I am using the latest available pre-release version - [2.0.0-beta4](https://www.nuget.org/packages/RazorLight/2.0.0-beta4). Razor light supports templates from Files / EmbeddedResources / Strings / Database or Custom Source. The source is configured when setting the RazorLightEngine to be used in the application. For .Net Core, we can inject an instance of _IRazorLightEngine_ for use in the application. The [ContentRootPath](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.hosting.ihostenvironment.contentrootpath?view=dotnet-plat-ext-3.1) is from the IWebHostEnvironment that can be injected to the [Startup class](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/startup?view=aspnetcore-3.1#the-startup-class)
 
@@ -60,7 +60,7 @@ public class HtmlGenerationService : IHtmlGenerationService
 
 I got the following error - _InvalidOperationException: Cannot find reference assembly 'Microsoft.AspNetCore.Antiforgery.dll' file for package Microsoft.AspNetCore.Antiforgery_ and had to set _PreserveCompilationReferences and PreserveCompilationContext_ in the csproj as mentioned [here](https://github.com/toddams/RazorLight#im-getting-cannot-find-reference-assembly-microsoftaspnetcoreantiforgerydll-exception-on-net-core-app-30-or-higher). Make sure to check the FAQ's if you are facing any error using the library.
 
-##### Generate PDF
+### Generate PDF
 
 With the HTML generated, we can use the HtmlToPdfConverter, the [NReco wrapper](https://www.nrecosite.com/pdf_generator_net.aspx) class, to convert it to PDF format. The library is free for .Net but needs a paid license for .Net Core. It is available as a [NuGet package](https://www.nuget.org/packages/NReco.PdfGenerator.LT/) and does work fine with .Net Core 3.1 as well.
 
@@ -108,7 +108,7 @@ public async Task<IActionResult> Get(string id)
 }
 ```
 
-### Limitations
+## Limitations
 
 Before using any PDF generation library, make sure you read the associated [docs and FAQ's](https://www.nrecosite.com/pdf_generator_net.aspx) as most of them have one limitation or the other. It's about finding the library that fits the purpose and budget.
 
@@ -118,11 +118,11 @@ Before using any PDF generation library, make sure you read the associated [docs
 
 **Not all Browser features available** : wkhtmltopdf uses Qt WebKit rendering engine to render the HTML into PDF. You will need to play around and see what works and what doesn't. I have seen this mostly affecting with CSS (as Flexbox and CSS Grid support was unavailalbe in the version I was using).
 
-### Development Tips & Tricks
+## Development Tips & Tricks
 
 Here are a few things that helped speed up the development of the Razor file.
 
-##### Render Razor View While Development
+### Render Razor View While Development
 
 Once I had the PDF generation pipeline set up, the challenge was to get the formatting with real-time feedback. I didn't want to download the PDF and verify every time I made a change.
 
@@ -151,7 +151,7 @@ With caching turned off ( comment out _UseMemoryCachingProvider_) and using file
 
 Please make sure the final PDF looks as expected since the local browser might render the HTML different from what wkhtmltopdf uses.
 
-##### Styles in Sass
+### Styles in Sass
 
 I did not want to miss out on writing Sass for CSS but did not want to set up any automated scripts/pipeline for just the templates. [Web Compiler](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler), a Visual Studio extension, makes it easy to compile Sass to CSS. Once you have the extension installed, right-click on the SCSS to compile to CSS. It adds a config file to the solution, and from then on automatically compiles when the SCSS file changes.
 

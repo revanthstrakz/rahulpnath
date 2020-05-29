@@ -20,13 +20,13 @@ There are different ways you can avoid pushing sensitive data into source contro
 
 > _Use configuration files as template definitions for the configuration data your application requires. Have the actual values stored elsewhere_
 
-### Azure App Settings
+## Azure App Settings
 
 If you are deploying your application as a Web App on Azure, you can store [application settings and connection strings in Azure](https://azure.microsoft.com/en-us/blog/windows-azure-web-sites-how-application-strings-and-connection-strings-work/). At runtime, Windows Azure Web Sites automatically retrieves these values for you and makes them available to code running in your website. This removes the need for having sensitive data in the configuration file.
 
 <img alt="Azure App Settings and Connection Strings" src="../images/sensitiveData_azure_app_settings.png" />
 
-### Release Management Tools
+## Release Management Tools
 
 Release management tools like Octopus Deploy, Microsoft Release Management, that performs configuration transformation. It supports creating different environments (development, production) and corresponding configurations. On creating a package for an environment, it applies the corresponding environment configurations
 
@@ -34,7 +34,7 @@ Release management tools like Octopus Deploy, Microsoft Release Management, that
 
 Packaging embeds the configuration value into the configuration file. This makes it available to anyone who has access to the host systems.
 
-### Azure Key Vault
+## Azure Key Vault
 
 Azure Key Vault acts as a centralized repository for all sensitive information. Key vault stores cryptographic keys and Secrets and makes them available over a HTTP Api. The objects (keys and secrets) in key vault has unique identifier to retrieve them. Check [Azure Key Vault in real world application](http://www.rahulpnath.com/blog/azure-key-vault-in-a-real-world-application/) for more details on how to achieve this. A client application can [authenticate with Azure Key Vault using a ClientID/secret or ClientID/certificate](http://www.rahulpnath.com/blog/authenticating-a-client-application-with-azure-key-vault/). Using certificate to authenticate is the preferred approach. To get Keys/Secret from key vault all you need is the AD Application Id, the client secret or certificate identifier and the key/secret names. The certificate itself can be deployed separately into the application host.
 

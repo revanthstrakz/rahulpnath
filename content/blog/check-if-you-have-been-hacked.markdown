@@ -20,7 +20,7 @@ With more and more data breaches happening it is possible that your personal inf
 
 To check if you have been part of a data breach you can use the service [haveibeenpwned](https://haveibeenpwned.com/). If you have been part of any data breaches, then it will show you the details. In addition to that, you can also use the [Pwned Passwords](https://haveibeenpwned.com/Passwords) list to check if the password that you use has been part of any data breaches. It's good to change your password if you find yours in there. If you are worried about entering your password in haveibeenpwned site, the good thing is that it uses [k-anonymity model](https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/), which means that your full password is not sent across the wire.
 
-### Next Steps
+## Next Steps
 
 - Update your passwords on all sites that you use if you have been reusing passwords. If you don't have much time to do this in one shot, you can do this incrementally as and when you next visit them.
 - Make sure you have unique passwords for each of the site. [A good password is one that you cannot remember](https://www.troyhunt.com/only-secure-password-is-one-you-cant/). So if you are not using a [Password Manager](https://www.rahulpnath.com/blog/password-manager-get-one-if-you-havent-already/) it's a good idea to start using. If you don't want to spend money on a password manager, you can always use a [random password generator](https://www.lastpass.com/password-generator) to generate one for you. Remembering that password might be hard, you could either write it down or save it in the browser (not that I am recommending it over getting a Password Manager, but better than reusing passwords).

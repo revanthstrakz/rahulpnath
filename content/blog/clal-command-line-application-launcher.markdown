@@ -28,6 +28,6 @@ Once new configuration is saved you can launch the application with the specifie
 
 [**Contribute**](https://github.com/rahulpnath/clal/issues) to the development by coding or reporting issues that you find file using the application. [Check out these articles](http://www.rahulpnath.com/blog/category/clal/) for my learnings while building this application.
 
-#### **Credits**
+**Credits**
 
 [Icons/Logo](https://github.com/rahulpnath/clal/tree/master/Resources): [Rosh TS](https://twitter.com/RoshTS)

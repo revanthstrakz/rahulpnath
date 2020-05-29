@@ -20,7 +20,7 @@ One of the traits of a good unit test is to have just [one Assert statement.](ht
 
 When a test with multiple asserts fails, it is hard to tell the exact reason of test failure. To get more details on the actual failure we either have to debug the tests or look into the stack trace.
 
-### Tests With Multiple Assertions
+## Tests With Multiple Assertions
 
 Many times we end up needing to assert on more than one properties or behavior. Let's look at a few such examples and see how we can refactor the tests. _I have excluded the actual code that is getting is tested here as it is easy to understand what that will look like from the tests. (Drop a comment otherwise)_
 
@@ -86,7 +86,7 @@ public void AllowanceToDomainModelMapsAllProperties(
 }
 ```
 
-### Semantic Comparison Library
+## Semantic Comparison Library
 
 [Semantic Comparison](https://www.nuget.org/packages/SemanticComparison/) is a library that allows deep comparison of similar looking objects. Originally part of [AutoFixture](http://www.rahulpnath.com/blog/autofixture-make-your-unit-tests-robust/) library, it is also available as a separate [Nuget package](https://www.nuget.org/packages/SemanticComparison/).
 

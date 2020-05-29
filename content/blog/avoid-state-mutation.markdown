@@ -15,7 +15,7 @@ How many times have you had to navigate down a long chain of function calls to f
 
 <img alt="Avoid State Mutation" src="../images/mutation.png" />
 
-### What is state Mutation
+## What is state Mutation
 
 The process of changing the value of a variable or an object over time after creation is called mutation. In simpler terms when you are changing the value of an object, you are mutating the state. I am sure that everyone would have had some time getting their head around the below statement when starting off with programming (I did)
 
@@ -28,11 +28,11 @@ By second nature (depending on the programming languages one is exposed to e.g. 
 
 > _The process of actually changing a variable’s value over time, within a single context, is called mutation._
 
-### Risks of Mutation
+## Risks of Mutation
 
 Mutable types can pose risks when passing a mutable value as function parameters or when returning mutable values from functions.
 
-#### **Passing Mutable Value**
+### **Passing Mutable Value**
 
 Let us take a simple example below. I have a list of integers, and I want to check if the first item of the incoming list and the sorted one are same. I have a simple sort method which implements [Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort). What do you think will be the output?
 
@@ -83,7 +83,7 @@ var sortedList = Sort(list.ToList());
 
 The above solution does not imply that every time we need to pass in a list to a function we should defensively copy it (using ToList). _It depends_. Within a development team, there can be a convention that it sticks to CQS principle. In case of exceptions, make sure that it is communicated to everyone. Communication to developers is done best by naming the function to reflect that or adding a comment that shows up in the IDE intellisense (if any). For code that you consume from third parties or open sources make sure you understand well how the library behaves and check the documentation before using it. Ensure you have [unit tests](http://www.rahulpnath.com/blog/category/tdd/) asserting the assumptions and behavior in all cases.
 
-#### **Returning Mutable Values**
+### **Returning Mutable Values**
 
 Let us take an example to see the possible effects of returning mutable values from a function. Below is a configuration helper class which returns a configuration object. The helper method is used in three different places of the application shown as _config1, config2, config3_. In one of the cases, the business logic requires the Duration value to be twice that in configuration. Since the real configuration helper reaches out to the database for its values, it was decided to cache the values after the first call. The ConfigurationHelper uses '_[Singleton Pattern](https://en.wikipedia.org/wiki/Singleton_pattern)_ to achieve the caching Below is the implementation. Do you see any problems?
 

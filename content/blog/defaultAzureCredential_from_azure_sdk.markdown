@@ -20,7 +20,7 @@ The DefaultAzureCredential is very [similar to the AzureServiceTokenProvider cla
 
 `youtube:https://www.youtube.com/embed/TU82BTmeNeU`
 
-### Azure Key Vault
+## Azure Key Vault
 
 When connecting with Key Vault, make sure to provide the identity (Service Principal or Managed Identity) with relevant Access Policies in the Key Vault. It can be added via the Azure portal (or cli, PowerShell, etc.).
 
@@ -51,7 +51,7 @@ var secret = await keyVaultClient
     .GetSecretAsync("<Secret Identifier>");
 ```
 
-### Microsoft Graph API
+## Microsoft Graph API
 
 When connecting with the [Graph Api](https://www.rahulpnath.com/blog/how-to-authenticate-with-microsoft-graph-api-using-managed-service-identity/), we can get a token to authenticate using the same DefaultAzureCredential. I am not sure if there is a GraphServiceClient variant that takes in the TokenCredential (similar to SecretsClient). Do drop in the comments if you are aware of one.
 

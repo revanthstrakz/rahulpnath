@@ -67,7 +67,7 @@ public Connect(string username,
 
 As you can see above the formatting is now all over the place, and you need to format them into place manually. Again when in isolation this might seem like a few press of spacebar. But when the property/function that you rename is used in multiple places this soon becomes a problem. Such code formatting introduces maintenance overhead and soon falls out of place if something gets missed.
 
-### Better Ways To Format Code
+## Better Ways To Format Code
 
 Left aligning code is one of the key things that I try to follow always. Keeping the code aligned to the left makes it easier to read (assuming that you are programming in a language written from left to right). Since we read from left to right having most of the code aligned to the left means that you have more code visible. Left aligning also means that you would almost avoid the need to scroll the code editor when reading through the code horizontally.
 

@@ -17,7 +17,7 @@ When using Azure Active Directory for managing your users, it is a common requir
 
 Recently when I had to do this at a client, we had users in Azure AD, the additional property, employeeCode for the user was available in an internal application which had the users Azure email-address mapped to it. We needed these to be synced across to the user Azure AD and make it available as part of claims for a Web site that uses [Azure AD authentication](https://docs.microsoft.com/en-us/azure/active-directory/develop/authentication-scenarios)
 
-### Adding Custom Attribute using Directory Schema Extensions
+## Adding Custom Attribute using Directory Schema Extensions
 
 Azure AD user has a set of [default properties](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal), manageable through the Azure Portal. Any additional property to User gets added as an extension to the current user Schema. To add a new property we first need to [register an extension](https://msdn.microsoft.com/library/azure/ad/graph/howto/azure-ad-graph-api-directory-schema-extensions#RegisterAnExtension). Adding a new extension can be done using the [GraphExplorer website](https://graphexplorer.azurewebsites.net/). You need to specify the appropriate directory name (e.g., _contoso.onmicrosoft.com_) and the applicationObjectId. The application object id is the Object Id of the AD application that the Web Application uses to authenticate with Azure AD.
 
@@ -39,7 +39,7 @@ The response gives back the fully-qualified extension property name, which is us
 
 If you have multiple environments (like Dev, Test, UAT, Prod) all pointing to the same Active Directory, it is a good idea to append the environment name to the extension property. It avoids any bad data issues between environments as all these properties get written to the same User object. You can automate the above step using any scripting language of your choice if required.
 
-### Setting Values for Custom Attributes
+## Setting Values for Custom Attributes
 
 Now that we have the extension property created on the AD application, we can set the property on the User object. If you want to set this manually, you can use the [GraphExplorer website](https://graphexplorer.azurewebsites.net/) again to do this.
 
@@ -102,7 +102,7 @@ private async Task UpdateEmployeeCode(
 
 Looping through all the employee codes, you can update all of them into Azure AD at regular intervals. To verify that the attributes are updated correctly, you can either use the Graph API client to read the extension property or use the Graph Explorer Website.
 
-### Accessing Custom Attributes through Claims
+## Accessing Custom Attributes through Claims
 
 With the Azure AD updated with the employee code for each user, we can now set up the AD application to return the additional property as part of the claims, when the web application authenticates with it. The application manifest of the Azure AD application needs to be modified to return the extension property as part of the claims. By default [optionalClaims property](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims#configuring-optional-claims) is set to null and you can update it with the below values.
 

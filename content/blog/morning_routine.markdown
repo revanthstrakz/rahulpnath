@@ -21,13 +21,13 @@ Humans are [creatures of habit](https://www.youtube.com/watch?v=zdGbHY9VKVM) and
 
 A morning routine is nothing but a sequence of actions regularly followed. I have tried switching my routine too, to late in the night a few times but found that mornings work better for me. But this could be different for you, so stick to the time of day that works for you. Before going to how my morning routine looks like (which I just started a week back), I will explain how I made the plan for the routine.
 
-### Brain Dump
+## Brain Dump
 
 At any point in time, there are a lot of things in my mind and things that I kept committing to myself and others. It is not possible to keep up with everything that I wish to do. So the very first thing to do is to dump everything out onto to paper and then decide what needs attention. The [Incompletion Trigger List](http://gettingthingsdone.com/wp-content/uploads/2014/10/Mind_Sweep_Trigger_List.pdf) assists to get everything out of your mind onto paper. It's a good idea to block some time of yours to perform this exercise and give it all the attention it needs. At times it helps to **_Slow Down to Go Fast_**.
 
 <img  alt="Slow down, to go faster" src="../images/morningroutine_slow_down.jpg"/>
 
-### Most Important Task (MIT)
+## Most Important Task (MIT)
 
 If you are following along, hope the brain dump helped to flush out all that was there in your mind. This exercise needs to be occasionally done (maybe every 2-3 months) to stay clear and stay on top of things. I was sure that I could not do everything on that list after the brain dump. Now comes the hard part of choosing what matters to you and choosing those that aligns well with your goals. For the morning routine, I stuck to items from the brain dump that fall under 'Personal Projects' category (as highlighted in the below image).
 
@@ -71,7 +71,7 @@ For me, the mini habits look like this
 
 The idea behind keeping it so small is just to start. It's very rare that I have stopped writing after writing a sentence or stopped reading after a line. The trouble is only with getting started - once done you can easily carry on for at least 20-30 minutes. Even if I make 2 out of the 3 of the above tasks, I take it as a success, which gives me some flexibility each day.
 
-### Waking up Tricks
+## Waking up Tricks
 
 There are days when [Resistance](https://en.wikipedia.org/wiki/Resistance_(creativity\)) beats me to it, and I don't get up to the routine. But I feel low on those days for not able to progress on my goals. So I try hard to have less of such days.
 
@@ -96,7 +96,7 @@ There are days when [Resistance](https://en.wikipedia.org/wiki/Resistance_(creat
 
 Having a morning routine has helped me focus more on things that matter and not wander from one task to another. It has also helped set a sense of direction to what I do every day and spent less time in thinking what to do. I find my days starting in gradually and not rushing into it, setting up the pace for the day. Hope this helps you too!
 
-#### **References**
+#### References
 
 <div>
       <div class="row">

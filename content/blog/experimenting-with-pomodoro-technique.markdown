@@ -20,7 +20,7 @@ A while back I had blogged about my [Morning Routine](http://www.rahulpnath.com/
 > - Improve Focus using Pomodoro Technique
 > - Daily Review and Weekly Review
 
-### One Week Sprints
+## One Week Sprints
 
 The [PSM course](http://www.rahulpnath.com/blog/psm-learnings/) I attended in January made me realize the importance is sticking to a process. I decided to do weekly sprints for managing my personal work. I have a better estimate of how much I can get done with a shorter interval. I have blocked time on Sunday morning for my weekly planning and processing the 'In-Basket.' The In-Basket is where anything that comes up during the week goes. Todoist has an Inbox Project to which any uncategorized items go by default. I process the inbox and move them to various categories that I have setup in Todoist. Depending on the priority things make their way into the coming week or get set to 'tentative' dates and appropriate categories.
 
@@ -48,7 +48,7 @@ I blocked out the time for running and exercise first, then I filled in with blo
 
 I was surprised how easily I could fit all of these into the time I have. Since the task breakdown above is guesstimates, I have some buffer time in my plan so that I can accommodate tasks that take more time or urgent tasks that come up during the week or the laziness that kicks in at times.
 
-### Increasing Focus and Removing Distractions
+## Increasing Focus and Removing Distractions
 
 Social Media and emails were one of the biggest distractions for me. Even though I try to reduce the amount of time I spent for these, I often ended up taking a glance at those sites now and then. It often ended distracting and taking me completely off course from the task. I decided to stick to checking personal email only once a day and work emails twice a day. As for social networks (especially Facebook), I decided to keep that to one as well. I wanted to track this as well and see how well I was with it. I use [Loop Habit Tracker](https://play.google.com/store/apps/details?id=org.isoron.uhabits&hl=en) app on my phone for tracking these habits.
 

@@ -17,7 +17,7 @@ I have monitors in the below order with my laptop on the left (which I mostly le
 
 ![Dual monitor layout](../images/dual_monitor_layout.jpg)
 
-#### Surface Pro and Dual 4k
+### Surface Pro and Dual 4k
 My daily work machine is a Surface Pro i7 Model 1796 which has a Mini DisplayPort for outputting the video. With just one Dell monitor connecting it to the Surface was easy and worked great at 60Hz. The only way to connect an extra display off the Surface Pro is to either Daisy Chain the Monitors or have a dock/USB device with more display ports.
 
 The Dell P2715Q does support daisy chaining the monitor; the U2718Q does not. But since there are only two monitors we only need one of the monitors to support MST and also the graphics card on your laptop. MST needs to explicitly enabled on the monitor settings (Menu -> Display -> MST -> Primary). Check out the [User's Guide](https://cdn.cnetcontent.com/a6/3a/a63a60d9-e04e-4eee-bba0-58e8fcd4371f.pdf) for more details, Assume this is because it puts the monitor into 30Hz as opposed to the default 60Hz. a
@@ -47,7 +47,7 @@ There are some options from [Targus](https://www.targus.com/au/docking-stations)
 
 I have been **working on 30Hz** for the past one week and not finding many issues with it. Primarily my work involves text-based interfaces and not much of videos or image editing. Because of this, I don't see much difference running on a 30Hz. But given a chance, I would like to bump up the experience to work on 60Hz, but that would mean shelling out some extra dollars and getting a dual 4k dock or switching my work machine to my MacBook Pro.
 
-#### MacBook Pro (2015)
+### MacBook Pro (2015)
 
 I have a MacBook Pro (2015) model that I don't use much these days. Even though it is a bit older, it has much [more ports and connectivity](https://support.apple.com/kb/SP719?locale=en_US) than the Surface Pro. It supports two Thunderbolt 2 ports both runs at 60Hz on 4k. It also has an additional HDMI port but supports 4k only at a 30Hz.
 

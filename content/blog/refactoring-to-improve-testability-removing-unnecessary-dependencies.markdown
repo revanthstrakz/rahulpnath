@@ -22,7 +22,7 @@ Unnecessary dependencies are those components which a [SUT](http://xunitpatterns
 
 While looking for an example to write on, I came across a post from my friend [Bappi](https://twitter.com/zpbappi), where he explains [Testing Codes with ConfigurationManager](http://zpbappi.com/testing-codes-with-configurationmanager-appsettings/). It's a good read on how to remove the dependency with various Configuration Providers by creating an abstraction over it.
 
-### Testability Issues with Current Design
+## Testability Issues with Current Design
 
 While abstracting the Configuration Manager by using an interface is a good idea, you should also be careful on how the application classes depend on it. Configurations live at the application root and it is a good idea to restrict dependencies with it at that level. Rest of the application must be dependent only on the configuration value and not the configuration itself. Inner components having dependency with the configuration provider brings in unnecessary complexities and makes code fragile. Some common issues are
 

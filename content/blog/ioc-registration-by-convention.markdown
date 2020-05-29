@@ -15,7 +15,7 @@ The below image by [Mark Seemann](https://twitter.com/ploeh) sums it all up on w
 
 <a href="http://bit.ly/1zLiq6p" class="center" title="Image By Mark Seemann, from http://bit.ly/1zLiq6p"><img src="../images/ioc_usefulness.png" class="center" alt="Image By Mark Seemann, from http://bit.ly/1zLiq6p"></a>
 
-#### Convention Over Configuration
+## Convention Over Configuration
 
 [Convention over configuration](http://en.wikipedia.org/wiki/Convention_over_configuration), is very popular today and there are already many frameworks that have adopted it e.g. MVC, Web Api. Following the same approach would make life much simpler and registration less painful as dependencies would get auto registered, if the convention is followed. Conventions could vary across projects/teams, so it is up to the team to decide on the conventions that are to be followed and have all the developers follow them religiously.
 

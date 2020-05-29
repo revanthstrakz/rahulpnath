@@ -76,7 +76,7 @@ using (var context = new QuoteContext(optionsBuilder.Options))
 }
 ```
 
-### EF Core and its Reflection Magic
+## EF Core and its Reflection Magic
 
 With a phone attached to the Quote, we can now Open the Quote as shown below.
 
@@ -98,7 +98,7 @@ We don't notice this unless we write tests or have other use cases in code to cr
 
 No offense to the magic, don't get me wrong here. I like it and use it a lot and makes it easier to write code to retrieve data from the database. However, let's not allow the magic to drive our Constructors and the class definitions. Let's write a test to make this more evident.
 
-### EF Magic Makes Tests Fragile
+## EF Magic Makes Tests Fragile
 
 Below is a test to verify that calling _OpenQuote_, sets the Quote to Open Status. However, note that we have to call the _UpdatePhone_ method to update the Quote object before calling _OpenQuote_.
 

@@ -39,7 +39,7 @@ at UserQuery.GetPersonDetails(Guid personId)
 
 We will not be able to tell which of the values was null, making it hard to debug the error. We have to manually go through the code checking how each of the dependencies retrieves values and check which one possibly was null. Debugging takes a lot of time and might be difficult depending on the complexity of the dependencies. The advantage of the above code though is that it is readable and there is **_noise_** in the code.
 
-### Extensive Defense
+## Extensive Defense
 
 Let us now modify the above example to see how it would be to add defensive code and check for nulls.
 
@@ -70,7 +70,7 @@ public PersonDetails GetPersonDetails(Guid personId)
 
 The defensive checks added for guarding against invalid values makes the code harder to read. Defensive checks are there for incoming parameters as well and validate if they are null/default value (for Guid). However when an error happens the stack trace will mention the name of the property which was null. Debugging is fast and easy and makes the exception message useful. But we don't want our code filled with defensive checks like this.
 
-### Team Conventions and Practices
+## Team Conventions and Practices
 
 Let us dig a bit deeper into why we had to put in the defensive checks in the first place. We had to check for null on _person_ since the repository decided to return a null when it could not find the person given an id. Does it even make sense or add any value in returning a null reference from the repository? Unless the business works in a way that there is a high possibility of something returning null this does not add any value. Even in cases like that, we should revert to other options which we will see in a while. When most of the time we expect a person to exists, it is better for the repository to throw an exception right away that the person does not exist. If the validations and the defensive checks are performed at the boundaries, then we do not need to do a null check anymore when getting a person or any similar functions.
 
@@ -132,7 +132,7 @@ public PersonDetails GetPersonDetails(Guid personId)
 }
 ```
 
-### Value Objects and Defensive Coding
+## Value Objects and Defensive Coding
 
 Let us now look at other ways to improve defensive checks on properties. Modeling properties as [Value Objects](http://www.rahulpnath.com/blog/thinking-beyond-primitive-values-value-objects/) helps contain the defensive code within the property. Like in the above case where email cannot be null, the checks to make sure that it is a valid email can be within the Email class. Containing this logic in the class removes the need for the rest of the code to check for it. If an email object exists, it will be valid. It is the same with names, date ranges, money, etc. The lesser we expose primitive type properties, the less defensive code we need to write. It also removes the problems of checking _string.IsNullOrEmpty_ at some places and just for nulls at others.
 

@@ -14,7 +14,7 @@ thumbnail: ../images/ndc_security.jpg
 
 While in Sydney I was lucky enough to have attended the [first](https://www.rahulpnath.com/blog/ndc-sydney/) and [second](https://www.rahulpnath.com/blog/ndc-sydney-2017/) NDC Conferences. After moving up to Brisbane, did not think I could attend one of these soon. However, then comes a nice shorter version of NDC specific to Security - [NDC Security](https://ndcsecurity.com.au/). As the name suggests, this conference is particular to security-related topics with a 2-day workshop and 1-day conference, as was held in Gold Coast, Queensland.
 
-### The Workshop
+## The Workshop
 
 [Troy Hunt](https://www.troyhunt.com/) and [Scott Helme](https://scotthelme.co.uk/) ran [two workshops](https://ndcsecurity.com.au/workshops/) and I attended [Hack Yourself First](https://ndcsecurity.com.au/workshop/hack-yourself-first-how-to-go-on-the-cyber-offence/) by Troy. The workshop covers a wide range of topics and is perfect for anyone who is into web development. The best thing is that you only need to have a browser and [Fiddler](https://www.telerik.com/download/fiddler)/[Charles Proxy](https://www.charlesproxy.com/download/) (depending on whether you are on Windows or Mac land). One of the interesting thing about the workshop is that it puts you first into the hackers perspective and forces you to exploit existing vulnerabilities in the [sample site](http://hackyourselffirst.troyhunt.com/) designed specifically for this. Once you can do this, we then look at ways of protecting ourselves against such exploits and other mechanisms involved.
 
@@ -22,7 +22,7 @@ While in Sydney I was lucky enough to have attended the [first](https://www.rahu
 
 The workshop highlights how easy it is to find and exploit vulnerabilities in applications. Some tools detect vulnerabilities and exploit them for you if you input a few details to them. You necessarily need not know the vulnerabilities itself or how exactly to exploit them. Such tools make it easy for people to use them on any website that is out there on the web. Combined with the power of search engines it makes it quite easy to make your site vulnerabilities to be easily discoverable.
 
-### The Conference
+## The Conference
 
 There were [six talks](https://ndcsecurity.com.au/agenda/) in total and below are the ones that I found interesting.
 
@@ -39,7 +39,7 @@ There are incidents of massive data breaches because of vulnerabilities in third
 
 The harder thing is to keep track of the vulnerabilities that are getting reported and always checking back with your application's dependencies. There is a wide range of tools that help make this easy and seamlessly integrate within the development workflow. It can be included as early as when a developer intends to include a library into the source code, or in the build pipeline or even for sites that are up and running. The earlier such issues get detected in the software development lifecycle, the less costly and impact it has on time and cost.
 
-#### **Tools**
+### Tools
 
 - [Sonarwhal](https://sonarwhal.com/scanner/)
 - [Snyk](https://snyk.io/)

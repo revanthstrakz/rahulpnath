@@ -17,7 +17,7 @@ Azure Functions are getting popular, and I start seeing them more at clients. On
 
 In this post let us explore how we can successfully authenticate/authorize an Azure Function with a Web API using AD application and Managed Service Identity and still not have any Secrets/certificates involved in the whole process. 
 
-### Setting Up the Web API
+## Setting Up the Web API
 
 The Azure hosted Web API is set to use [Azure AD authentication based on JWT token](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/limitingidentitybyscheme?view=aspnetcore-2.2&tabs=aspnetcore2x). To enable this, I have the below code in the Startup class. I created an AD application and ClientId set up as shown below. Any request to the Web API needs a valid token from the Azure AD application in the request header.
 
@@ -80,11 +80,11 @@ wc.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer",
 var result = await wc.GetAsync("<Secured API URL>");
 ```
 
-### Role-Based Authorization For Azure Function MSI
+## Role-Based Authorization For Azure Function MSI
 
 Now that we have the authentication set up between the Azure Function and Web API, we might want to restrict the endpoints on the API the function can call. It is the typical User Authorization scenario, and we can use similar approaches that apply. 
 
-#### Using AD Role
+### Using AD Role
 
 `youtube:https://www.youtube.com/embed/HVruBWuKnYw`
 <br/>
@@ -125,7 +125,7 @@ New-AzureADServiceAppRoleAssignment -Id $adApp.AppRoles[0].Id `
      -ResourceId $adApp.ObjectId
 ```
 
-#### Using AD Group
+### Using AD Group
 
 `youtube:https://www.youtube.com/embed/FTpAgSHfu8o`
 <br/>

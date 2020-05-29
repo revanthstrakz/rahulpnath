@@ -33,7 +33,7 @@ I was around 95 kilos when I started out in December. At the time of writing, I 
     <figcaption><em>Here is the before and after.</em></figcaption>
 </figure>
 
-### Exercises
+## Exercises
 
 I started with running once a week. But now I am so into it I try to run two to three times a week. I use [Runtastic](https://www.runtastic.com/en/users/4b76cfab-734e-1658-b5e4-600759a3b066) to track my runs. Last week I purchased the premium plan for Runtastic and looking forward to starting one of their 10k [training plans](https://www.runtastic.com/en/training-plans/10k) and [runtastic results](https://www.runtastic.com/en/results) on days that I do not run. I use a [Bose SoundSport in-ear audio only headphones](https://www.bose.com.au/en_au/products/headphones/earphones/soundsport-in-ear-headphones-audio.html#v=soundsport_ie_headphones_ii_audio_charcoal) headphones (the cheapest in their range) for music during the runs. Luckily Bose was running a half price on those models when I purchased.
 
@@ -41,7 +41,7 @@ I do push-ups every day and get 150+ (25 \* 6+) every day. I split this out thro
 
  <img alt="My Running History" src="../images/weight_running.jpg" />
 
-### Diet
+## Diet
 
 Breakfast (_7:30 am_): Green Smoothie (+ eggs on days that I run) or Avocado and eggs.
 Lunch (_12 pm_): Raw vegetables (Carrot, Cucumber, spinach, kale, beetroot, corn, sprouts)
@@ -54,7 +54,7 @@ When eating out, I keep an eye on carbs and other junk. Try to eat grilled inste
 
 Sugar: I try my best to avoid it fully. To start with I quit tea and coffee. Believe me, I was a tea addict and I needed lots of it. It was hard, but then Parvathy quit it one day, and I got inspired by her. I still remember that last tea I took when I decided I am having no more of it. It's hard but doable!. I don't have any ice-cream, fruit juice, carbonated drinks, energy drinks, pastries, etc.
 
-### Family Outings
+## Family Outings
 
 We used to spend a lot of our weekends in shopping malls till a while back. We decided to change that to more of outdoor activities. So it's either the beach, boating, parks, walks, etc. This has increased our general activity levels and help burn extra calories. And mostly I have 'an extra weight' to carry around; you can tell that from the photos :). Gautham also enjoys these outdoor activities, and there's more for him to learn in each of those short trips. On weekdays we go for a walk after dinner, shop around for groceries, etc. and run any other errands so that we are free during weekends.
 

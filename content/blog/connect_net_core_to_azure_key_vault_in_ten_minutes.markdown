@@ -52,7 +52,7 @@ Guess what the easy solution we usually come up with - _Let us not change the co
 
 > The whole process is not optimized for change and our immediate reaction to resist it.
 
-### Moving Secrets To Key Vault
+## Moving Secrets To Key Vault
 
 Azure Key Vault provides centralized storage for application secrets. To move the connection string to Key Vault, head to Azure Portal, and create a new Key Vault. Under Secrets, create a new Secret with name _'QueueConnectionString'_, the same as that we used in our application configuration. Update the value for the Secret and save.
 
@@ -91,7 +91,7 @@ The above code uses the _VaultName_ from the configuration file (which is not se
 
 When the application starts, it looks for all matching configuration names in the associated Vault and retrieves the Secrets and caches them. The IConfiguration provides the same interface over all the different scenarios and makes it possible for the application to have the same code just as if it was in the configuration file.
 
-### Handling Secret Rotation
+## Handling Secret Rotation
 
 When the Connection String needs to be updated, we can do that in the Azure Key Vault without needing to update and redeploy the application. However, since the application caches the Secret from Key Vault on application startup, we need to restart the app to refresh the Key Vault cache. This is not ideal. When configuring Azure Key Vault as the configuration source, we can specify a _[ReloadInterval](https://docs.microsoft.com/en-us/aspnet/core/security/key-vault-configuration?view=aspnetcore-3.1#configuration-options)_. It will reload the Secrets from the Key Vault every time the Reload Interval duration is over, in the below case every 10 minutes.
 

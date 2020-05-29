@@ -19,7 +19,7 @@ In the new Azure portal search for 'key vault' to access this new feature. Or yo
 
 <img  alt="Key Vault in Azure Portal" src="../images/keyvaultportal_menu_option.png"/>
 
-#### **Creating Key Vault**
+## Creating Key Vault
 
 To create a new Key Vault select the 'Create' option. By entering the Vault Name, Subscription, Resource Group and Location you can create a new Key Vault.
 
@@ -33,7 +33,7 @@ You can specify the Key Permissions and the Secret Permissions that the ServiceP
 
 <img  alt="Access Policy set Secret Permissions" src="../images/keyvaultportal_secretpermissions.png"/>
 
-#### **Keys and Secrets**
+### Keys and Secrets
 
 Once the Vault is created you can add in Keys and Secrets into the vault. This can be done by selecting the Vault that was just created from the Vaults list. From here you can manage different aspects of the Vault and also manage Keys and Secrets.
 

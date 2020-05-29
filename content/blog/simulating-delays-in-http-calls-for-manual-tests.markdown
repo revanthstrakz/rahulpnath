@@ -19,11 +19,11 @@ Let's not go into the design discussion of whether the UI should be sending in a
 
 When using automated tests there are a lot of frameworks that can help delay requests. But in this case, we were relying on manual tests.
 
-### Using Fiddler to Delay Requests
+## Using Fiddler to Delay Requests
 
 [Fiddler](http://www.telerik.com/fiddler) is an HTTP debugging proxy server application, that captures HTTP and HTTPS traffic and displays to the user. It is one of the [tools that I use almost every other day](http://www.rahulpnath.com/blog/tools-that-I-use/). In Fiddler, we can create rules on web requests and modify how they are handled and responded. Most of the functionality is available under the [AutoResponder](http://docs.telerik.com/fiddler/KnowledgeBase/AutoResponder#latency) tab. We had seen earlier how to [compose web requests and also simulate error conditions in Fiddler](http://www.rahulpnath.com/blog/using-fiddler-to-help-in-manual-testing/). Here we will see how to use Fiddler to delay request/response time. In Fiddler, we can either delay the request itself being sent to the server or delay the handover of response back to the calling application once it is received from the server.
 
-#### **Delay**
+### Delay
 
 By setting [delay](http://docs.telerik.com/fiddler/KnowledgeBase/AutoResponder#delay) on a request we can specify the time to delay sending the request to the server. The value is specified in milliseconds. When a request that [matches](http://docs.telerik.com/fiddler/KnowledgeBase/AutoResponder#matching-rules) the condition set (in this case an EXACT match with a URL) fiddler delays sending this request to the server by the set amount of time.
 
@@ -33,7 +33,7 @@ Drag'n Drop the request the URL (1) into the AutoResponder tab (2) and from the 
 
 <img class="center" alt="Posts per month - 2016" src="../images/fiddler_delay.png"/>
 
-#### **Latency**
+### Latency
 
 By setting [latency](http://docs.telerik.com/fiddler/KnowledgeBase/AutoResponder#latency) on a request we can specify the delay before a response is received. When a request that [matches](http://docs.telerik.com/fiddler/KnowledgeBase/AutoResponder#matching-rules) the condition set fiddler sends the requests to the server immediately. Once the response is received it delays passing the response back to the calling application by the set delay time in milliseconds.
 

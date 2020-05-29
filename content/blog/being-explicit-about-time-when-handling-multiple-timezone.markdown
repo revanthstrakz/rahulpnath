@@ -21,7 +21,7 @@ At one of my clients, we are facing similar issues with date time, with an appli
 
 Across the domain, we use either [DateTime](https://msdn.microsoft.com/en-us/library/system.datetime(v=vs.110\).aspx) or [DateTimeOffset](https://msdn.microsoft.com/en-us/library/system.datetimeoffset(v=vs.110\).aspx) to represent time - there is a good recommendation on when to use what - [Choosing Between DateTime, DateTimeOffset, TimeSpan, and TimeZoneInfo](https://msdn.microsoft.com/en-us/library/bb384267(v=vs.110\).aspx). The problem with using either is that it does not play well with the domain concept to where time is related to - the location. We do have property name suffixes (not consistent though) indicating whether it is Coordinated Universal Time (UTC) or local - like _bookingDateUTC_, _paymentDateLocal_ etc. But it so happens that these naming conventions gets broken somewhere along the different layers and leads to conversion between time zone at the application boundary layers.
 
-### Issues with Current Approach
+## Issues with Current Approach
 
 DateTime and DateTimeOffset have by default time zones attached to it and it might go unnoticed till we face issues.
 
@@ -39,7 +39,7 @@ public string GetAvailability(string locationCode, DateTime? dateTime)
 
 Even worse this date time might get converted back and forth to different time zones, even by the same developer or other developers in the team. These conversions implicitly depend on the Kind property and goes unnoticed. One of the most common problems that we see as a result of this is that the dates might fall over to a day before or after or after, depending on where in the world the user, the server running the application is.
 
-### Being Explicit Using Value Objects
+## Being Explicit Using Value Objects
 
 > _The issue in dealing with time is about not being explicit. It's a good idea to tie your domain concept (location in this case) and time together_
 
@@ -117,7 +117,7 @@ public string Get(string locationCode, DateTime? dateTimeAtLocation)
 
 Even with the above code, you cannot restrict what gets passed into the API/application boundary method, but this has made it explicit to the application on how to start treating the date time. This forces the developer to think and be explicit on the time format expected at the boundary. This might lead to better naming of the variables at the boundary - instead of _dateTime_ to _dateTimeAtLocation_ - and being more explicit to the outside world too!
 
-### Custom Factories Using Extension Method
+## Custom Factories Using Extension Method
 
 Depending on the use case there will be a lot of ways you want to create the value object and possibility of some being used over and over again is more. You can use factory methods to help you extract out this code duplication.
 

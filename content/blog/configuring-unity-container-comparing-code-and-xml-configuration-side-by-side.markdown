@@ -96,7 +96,7 @@ this.unityContainer.RegisterType<IConflictingInterface, ConflictingInterfaceImpl
 <register type="ExternalLibrary.IConflictingInterface, ExternalLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" mapTo="ExternalLibrary.ConflictingInterfaceImplementation, ExternalLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
 ```
 
-#### **_Code and Config_** instead of **_Code Vs Config_**
+## **_Code and Config_** instead of **_Code Vs Config_**
 
 Now that we have seen some of the common usage scenarios in registering types with containers, one main thought would be '[Should Unity be configured in code or configuration file?](http://stackoverflow.com/questions/5418392/should-unity-be-configured-in-code-or-configuration-file)'. Xml configurations are anytime a pain for the developer as it more prone to errors and configuration complexities. But then there are scenarios where dependencies would have to be plugged in at runtime, for which xml configuration is really helpful. Unity does allow to specify both together, making the best use of both worlds. You can choose to have only your dependencies that are Late Bound in the config and have all others in the code. You could also override an already registered dependency.
 

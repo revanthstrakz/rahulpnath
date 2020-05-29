@@ -23,7 +23,7 @@ Azure Key Vault supports sign and verify operations and can be used to implement
 
 > _Verification of signed hashes is supported as a convenience operation for applications that may not have access to [public] key material; it is recommended that, for best application performance, verify operations are performed locally._
 
-### Signing Data
+## Signing Data
 
 Sign and Verify operations on Key Vault are allowed only on hashed data. So the application calling these API methods should locally hash the data before invoking the method. The algorithm property value passed to the Key Vault Client API depends on the hashing algorithm used to hash the data. Below are the [supported algorithms](https://msdn.microsoft.com/library/en-us/Mt149357.aspx).
 
@@ -43,7 +43,7 @@ var signedResult = await keyVaultClient
     .SignAsync(keyIdentifier, JsonWebKeySignatureAlgorithm.RS256, digest);
 ```
 
-### Verify Online
+## Verify Online
 
 To verify a signature online, the keyVaultClient supports a [Verify method](https://msdn.microsoft.com/en-us/library/microsoft.azure.keyvault.keyvaultclient.verifyasync.aspx). It takes the key identifier, algorithm, digest and signature to verify if the signature is valid for the given digest.
 
@@ -52,7 +52,7 @@ var isVerified = await keyVaultClient
     .VerifyAsync(keyIdentifier, JsonWebKeySignatureAlgorithm.RS256, digest, signedResult.Result);
 ```
 
-### Verify Offline
+## Verify Offline
 
 To Verify offline, we need access to the public portion of the key used to sign the data. The client application that needs to verify signatures can connect to the vault and get the key details or use a public key shared out of band. The [AD application used to authenticate](http://www.rahulpnath.com/blog/authenticating-a-client-application-with-azure-key-vault/) with the key vault should have Get access for retrieving the public key from the vault. Get access can be set using the PermissionToKeys switch when registering the AD application with the key vault. Assuming we have access to the public key as a JSON string, we can use the [RSACryptoServiceProvider](https://msdn.microsoft.com/en-us/library/system.security.cryptography.rsacryptoserviceprovider(v=vs.110\).aspx) to verify the signature offline.
 

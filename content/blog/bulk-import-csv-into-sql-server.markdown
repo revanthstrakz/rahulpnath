@@ -9,7 +9,7 @@ tags:
 
 My recent project got me back into some long lost technologies, including Excel sheets, vb scripts, Silverlight, bash scripts, and whatnot. Amongst one of the things was a bash script that imported data from different CSV files to a data store. There were 40-50 different CSV schemas mapped to their corresponding tables to import. I had to repoint these scripts to write to a SQL Server.
 
-### Challenges with BCP Utility
+## Challenges with BCP Utility
 
 The [bcp Utility](https://docs.microsoft.com/en-us/sql/tools/bcp-utility?view=sql-server-2017) is one of the best possible options to use from a command line to bulk import data from CSV files. However, the bcp utility requires the fields (columns) in the CSV data file to match the order of the columns in the SQL table. The columns counts must also match. Both were not the case in my scenario. The way that you can work around this using bcp is by providing a [Format File](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server?view=sql-server-2017). 
 
@@ -20,7 +20,7 @@ The [bcp Utility](https://docs.microsoft.com/en-us/sql/tools/bcp-utility?view=sq
 
 Format File has an XML and a Non-XML variant, that can be pre-generated or dynamically generated using code. I did not want to pre-generate the format file because I do not own the generation of the CSV files. There could be more files, new columns, and order of columns can change. Dynamic generation involved a lot more work and bash scripts didn't feel like the appropriate choice. These made me to rewrite that code.
 
-### SqlBulkCopy
+## SqlBulkCopy
 
 CSharp being my natural choice for programming language and having excellent support for [SQLBulkCopy](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlbulkcopy?view=netframework-4.8), I decided to rewrite the existing bash script. SQLBulkCopy is the equivalent of bcp utility and allows to write managed code solutions for similar functionality. SQLBulkCopy can only write data to SQL Server. However, any data source can be used as long as it can be loaded into a DataTable instance.
 
@@ -60,7 +60,7 @@ CSV file may have empty columns where the associated column in SQL table is NULL
 
 Explicitly marking the empty values as null (as in the code above) solves the problem.
 
-### CSV File Gotchas
+## CSV File Gotchas
 
 The above code worked all file until there were some CSV files which had comma as a valid value for few of the columns, as shown below.
 

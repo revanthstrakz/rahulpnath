@@ -30,7 +30,7 @@ To avoid hardcoding the id's in the application config, we can use the Graph API
 `youtube:https://www.youtube.com/embed/__StouilkH0`
 <br /> 
 
-### Using Client Credentials
+## Using Client Credentials
 
 To authenticate using Client Id and secret, we need to create an AD App in the Azure portal. Add a new client secret under the 'Certificates & Secrets' tab. To access the Graph API, make sure to add permissions under the 'API permissions' tab, as shown below. I have added the required permissions to read the AD Groups.
 
@@ -63,7 +63,7 @@ private static async Task<GraphServiceClient> GetGraphApiClient()
 
 ```
 
-### Using Managed Service Identity
+## Using Managed Service Identity
 
 With the client credentials approach, we have to manage the AD app and the associated secrets. To avoid this, we can use Managed Service identity (MSI), and the Azure infrastructure will do this for us automatically. To use MSI, turn on Identity for the Azure Web App from the Azure Portal.
 

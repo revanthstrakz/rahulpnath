@@ -13,7 +13,7 @@ thumbnail: ../images/blog_ci.png
 
 It's been a while since I have wanted to deploy my blog automatically whenever there is a new commit pushed into the associated [git repository](https://github.com/rahulpnath/rahulpnath.com). I use Octopress as my blog engine and have been [tweaking it to my blogging workflow](http://www.rahulpnath.com/blog/optimizing-octopress-workflow-for-new-posts/). Octopress is a static blog generator built over Jekyll. So anytime I make any updates to the blog, I need to build the blog with the accompanying rake tasks and push the generated output (HTML, JavaScript, and CSS) to an Azure Web App that hosts my blog. For this I use the [git deployment feature](https://azure.microsoft.com/en-us/documentation/articles/web-sites-deploy/#continuousdeployment) of web apps, so just pushing the built output to a git repo (branch) deploys it to my website. As you see every time, I make a change I have to build the site and push it to the git repository and this can be automated. Since Octopress is in Ruby, I decided to use [Travis CI](https://travis-ci.org/) for the build and deploy.
 
-### Local Build Environment with Docker
+## Local Build Environment with Docker
 
 I am on an older repository fork of Octopress and have not updated to latest version. So it has hard dependencies with specific versions of gem packages that it needs and also on the Ruby and Jekyll version. So every time I change laptop it's difficult to set up the blog environment. In the past, I manually installed the dependencies whenever I got a new laptop. As changing laptop does not happen frequently, I had been delaying creating any script for this. But now since I had to setup the Travis build environment, I thought of also having a local build environment to test before pushing it up to Travis. Travis provides a Docker image that matches exactly their build environment.
 
@@ -28,12 +28,12 @@ docker run -it -p 4000:4000 quay.io/travisci/travis-ruby /bin/bash
 
 Once in the container, you can run the same build scripts that you manually run yo deploy and check. I had a few issues with the gem packages and [fixed it by specifying hard package dependency](https://github.com/rahulpnath/rahulpnath.com/commit/abefbf58e3696384c7931d5a4918239a41700106#diff-8b7db4d5cc4b8f6dc8feb7030baa2478). To launch the site hosted in Docker from host system [I expose incoming ports through the host container](https://github.com/wsargent/docker-cheat-sheet#exposing-ports). Once I have the local server running in the docker container (in port 4000) I can access it via _localhost:4000_ from my host computer.
 
-### Post Dates and TimeZones
+## Post Dates and TimeZones
 
 When building from the container, I noticed that the dates of posts were off by 1. For posts that were on month start (like Aug 1), it started coming up in July, on the archive page. After a bit of investigation, I realized that Jekyll parses the date time from the post and converts them into local system time. The container was running in UTC and when generating the site it converted post DateTime to UTC. All the posts that I had written after coming to Sydney had an offset of +1000 (or +1100) and most were published early in the morning. So it converted those posts to the previous date.
 Since I am not that worried about the time zone of the post, I decided to remove it. I removed timezone information getting set for new posts in my Rake scripts. For the existing posts, [I removed all the timezone information from the _datetime_ YAML header in the posts](https://github.com/rahulpnath/rahulpnath.com/commit/1d8902fa69a1aad9ad6615ee3c47e3474b6cd263). I set the config.yml to built in UTC irrespective of the system timezone that it is getting build.
 
-### Setting up TravisCI
+## Setting up TravisCI
 
 Setting up automated build on Travis CI is smooth and easy process TDK. I just added a travis.yml with the '_rake generate_. TDK The post build script does the following
 
@@ -59,7 +59,7 @@ after_success: |
 
 Every time I make a commit to the GitHub master branch, the automated build triggers and deploys the latest generated site.
 
-### Current Blogging Workflow [![Build Status](https://travis-ci.org/rahulpnath/rahulpnath.com.svg?branch=master)](https://travis-ci.org/rahulpnath/rahulpnath.com)
+## Current Blogging Workflow [![Build Status](https://travis-ci.org/rahulpnath/rahulpnath.com.svg?branch=master)](https://travis-ci.org/rahulpnath/rahulpnath.com)
 
 <img class="center" alt="Continuos Delivery of Octopress Blog" src="../images/blog_ci.png" />
 

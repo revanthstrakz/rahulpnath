@@ -19,7 +19,7 @@ The bin folder of the Web application did have a Newtonsoft.Json DLL, but of a d
 
 > _Knowing what exactly caused the issue, I created a sample project to demonstrate it for this blog post. All screenshots and code samples are of the sample application._
 
-### Using AsmSpy to find conflicting assemblies
+## Using AsmSpy to find conflicting assemblies
 
 [AsmSpy](https://github.com/mikehadlow/AsmSpy) is a command-line tool to view conflicting assembly references in a given folder. This is helpful to find the different assemblies that refer to different versions of the same assembly in the given folder. Using AsmSpy, on the bin folder of the web application, it showed the conflicting Newtonsoft.Json DLL references by different projects in the solution. There were three different versions of Newtonsoft Nuget package referred in the whole solution. The web project referred to an older version than the shared project and the worker project.
 
@@ -35,7 +35,7 @@ Reference: Newtonsoft.Json
 
 The assembly binding redirects for both the host projects were correct and using the version of the package that it referred to in the packages.config and project (csproj) file.
 
-### Using MsBuild Structured Log to find conflicting writes
+## Using MsBuild Structured Log to find conflicting writes
 
 Using the [Msbuild Structured Log Viewer](https://github.com/KirillOsenkov/MSBuildStructuredLog) to analyze what was happening with the build, I noticed the below '_DoubleWrites_' happening with Newtonsoft DLL. The double writes list shows all the folders from where the DLL was getting written into the bin folder of the project getting building. In the MSBuild Structured log viewer, a DLL pops up only when there are more than one places from where a DLL is getting written, hence the name '_Double writes_. This is a problem as there is a possibility of one write overriding other, depending on the order of writes, causing DLL version conflicts (which is exactly what's happening here).
 
@@ -47,7 +47,7 @@ But in this specific case, the log captured above does not show the full problem
 
 This confirms that there is something happening with the Web application bin outputs when we build the worker/shared dependency project.
 
-### Building Web application in Visual Studio
+## Building Web application in Visual Studio
 
 When building a solution with a Web application project in Visual Studio (VS), I noticed that VS copies all the files from the bin folder of referred projects into the bin of the Web application project. This happens even if you build the shared project alone, as VS notices a change in the files of a dependent project and copies it over. So in this particular case, every time we build the dependent shared project or the worker project (which in turn triggers a build on the shared project), it ended up changing the files in shared projects bin folder, triggering VS to copy it over to the Web application's bin folder. This auto copy happens only for the Web application project and not for the Console/WPF project. ([Yet to find](https://twitter.com/rahulpnath/status/745841691979022336) what causes this auto copy on VS build)
 
