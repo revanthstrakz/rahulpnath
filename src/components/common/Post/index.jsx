@@ -28,7 +28,7 @@ export const Post = ({ html, frontmatter, timeToRead, fields }) => {
         <i>{timeToRead} min read</i>
       </ArticleDate>
       <Content dangerouslySetInnerHTML={{ __html: html }} />
-      <SocialShare {...frontmatter} />
+      <SocialShare title={frontmatter.title}  path = {fields.slug} />
       <Comments>
         <Disqus.DiscussionEmbed
           shortname={disqusShortName}

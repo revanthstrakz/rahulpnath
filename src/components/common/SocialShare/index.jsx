@@ -20,7 +20,7 @@ export const SocialShare = ({ title, path, iconSize = 32 }) => (
     <RedditShareButton url={`${config.url}${path}`} title={title}>
       <RedditIcon round size={iconSize} />
     </RedditShareButton>
-    <TwitterShareButton url={`${config.url}${path}`} title={title}>
+    <TwitterShareButton url={`${config.url}${path}`} title={`${title} via @rahulpnath`}>
       <TwitterIcon round size={iconSize} />
     </TwitterShareButton>
     <FacebookShareButton url={`${config.url}${path}`} quote={title}>
