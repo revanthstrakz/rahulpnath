@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { color, lineHeight, layout } from 'styled-system'
+import { color, layout, lineHeight } from 'styled-system'
 
 export const Wrapper = styled.div`
   ${layout}
@@ -27,4 +27,10 @@ export const P = styled.p`
 export const Text = styled.p`
   ${color}
   ${lineHeight}
+
+  ${({ theme }) =>
+    theme === 'dark' &&
+    `
+		color: #fff;
+	`};
 `

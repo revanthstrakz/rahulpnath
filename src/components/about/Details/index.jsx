@@ -27,7 +27,7 @@ export default () => {
         of <a href="/blog/category/travelogue/">our weekend trips.</a>
         </Text>
         
-        <Text>
+        <Text theme={theme}>
         
         I currently work with 
         <a
@@ -39,10 +39,10 @@ export default () => {
         </a>
       </Text>
       
-      <Text>
+      <Text theme={theme}>
         <strong>This blog and its contents are all opinions of my own.</strong>
       </Text>
-      <Text>
+      <Text theme={theme}>
         If you want to drop a mail, feel free to sent it to <a href="mailto:hello@rahulpnath.com?subject=Hello Rahul!">hello@rahulpnath.com</a>.
       </Text>
     </Wrapper>
