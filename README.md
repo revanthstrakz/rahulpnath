@@ -3,7 +3,7 @@
 My personal website
 
 
-Built with [Gatsby](https://www.gatsbyjs.org/) and [more](https://github.com/smakosh/smakosh.com/blob/master/package.json#L6)
+Built with [Gatsby](https://www.gatsbyjs.org/) 
 
 [Lighthouse test](https://lighthouse-dot-webdotdevsite.appspot.com/lh/html?url=https://www.rahulpnath.com.com)
 
