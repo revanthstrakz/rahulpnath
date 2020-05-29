@@ -23,7 +23,7 @@ export const SEO = ({
 		},
 		"headline": "${description}",
 		"image": "${
-      cover ? `https://rahulpnath.com${cover}` : `https://rahulpnath.com${Thumbnail}`
+      cover ? `https://www.rahulpnath.com${cover}` : `https://www.rahulpnath.com${Thumbnail}`
     }",
 		"datePublished": "${datePublished}",
 		"dateModified": "${dateModified}",

@@ -11,7 +11,7 @@ description: Format your code fast, easy and consistent.
 thumbnail: ../images/prettier.png
 ---
 
-Code Formatting is an essential aspect of writing code, and I did write about this a while back on [introducing code formatting into a large code base](https://rahulpnath.com/blog/introducing-code-formatting-into-a-large-codebase/). It's not about what all rules you and your team use, it's about sticking with the conventions and using them consistently. Code Formatting rules are best when applied automatically, and the developer does not need to do anything in particular about it.
+Code Formatting is an essential aspect of writing code, and I did write about this a while back on [introducing code formatting into a large code base](https://www.rahulpnath.com/blog/introducing-code-formatting-into-a-large-codebase/). It's not about what all rules you and your team use, it's about sticking with the conventions and using them consistently. Code Formatting rules are best when applied automatically, and the developer does not need to do anything in particular about it.
 
 [Prettier](https://prettier.io/) is an opinionated code formatter, which supports multiple languages and editors and easy to get started. Getting set up is as easy as just installing the [prettier package using yarn/npm](https://prettier.io/docs/en/install.html). There are multiple points at which you can integrate Prettier - [in your editor](https://prettier.io/docs/en/editors.html), [pre-commit hook](https://prettier.io/docs/en/precommit.html) or [CI environments](https://prettier.io/docs/en/cli.html#list-different).
 

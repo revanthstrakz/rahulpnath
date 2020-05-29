@@ -35,7 +35,7 @@ I can spend all this time on these activities because of the full support from m
 
 ### **Travel**
 
-We covered a couple of major tourist destinations around Australia - Great Barrier Reef (Cairns), [Gold Coast](https://rahulpnath.com/blog/ndc-security-2018-overview-and-key-takeaways/), Frazer Island and Tasmania being the top highlights. We also did a lot of hikes and short trips around Brisbane including Tin Can Bay and Ballina. Snorkeling in the Great Barrier Reef, Penguin Tour in Tasmania, Whale watching, beach highway drive, and 7 seater beach flight in Frazer Island, dolphin feeding at Tin Can Bay, Croc attack show at Hartley's Crocodile Park were some of the new experiences in life and enjoyed it a lot.
+We covered a couple of major tourist destinations around Australia - Great Barrier Reef (Cairns), [Gold Coast](https://www.rahulpnath.com/blog/ndc-security-2018-overview-and-key-takeaways/), Frazer Island and Tasmania being the top highlights. We also did a lot of hikes and short trips around Brisbane including Tin Can Bay and Ballina. Snorkeling in the Great Barrier Reef, Penguin Tour in Tasmania, Whale watching, beach highway drive, and 7 seater beach flight in Frazer Island, dolphin feeding at Tin Can Bay, Croc attack show at Hartley's Crocodile Park were some of the new experiences in life and enjoyed it a lot.
 
 ### **Community**
 
@@ -68,6 +68,6 @@ The significant open source contribution was to [KeyVault configuration builder]
 
 - **Learning** Become more proficient with JavaScript. Build [Azure Key Vault Explorer](https://github.com/rahulpnath/keyvaultexplorer) while learning.
 
-I have been on and off my [planning](https://rahulpnath.com/blog/experimenting-with-pomodoro-technique/) and [routines](https://rahulpnath.com/blog/morning_routine/). Looking to get back with this and organize my day-to-day activities a bit more and be more accountable for the goals that I have set.
+I have been on and off my [planning](https://www.rahulpnath.com/blog/experimenting-with-pomodoro-technique/) and [routines](https://www.rahulpnath.com/blog/morning_routine/). Looking to get back with this and organize my day-to-day activities a bit more and be more accountable for the goals that I have set.
 
 Wishing you all a Happy and Prosperous New Year!

@@ -11,7 +11,7 @@ description: Certain commands cannot run under a transaction. See how you can ex
 thumbnail: ../images/dbup_batches.png
 ---
 
-Recently I had written about [Setting Up DbUP in Azure Pipelines](https://rahulpnath.com/blog/setting-up-dbup-in-azure-pipelines/) at one of my clients. We had all our scripts run under [Transaction Per Script](https://dbup.readthedocs.io/en/latest/more-info/transactions/) mode and was all working fine until we had to deploy some SQL scripts that cannot be run under a transaction. So now I have a bunch of SQL script files that can be run under a transaction and some (like the ones below - [Full-Text Search](https://azure.microsoft.com/en-au/blog/full-text-search-is-now-available-for-preview-in-azure-sql-database/)) that cannot be run under a transaction. By default, if you run this using DbUp under a transaction you get the error message<span class="text-danger">
+Recently I had written about [Setting Up DbUP in Azure Pipelines](https://www.rahulpnath.com/blog/setting-up-dbup-in-azure-pipelines/) at one of my clients. We had all our scripts run under [Transaction Per Script](https://dbup.readthedocs.io/en/latest/more-info/transactions/) mode and was all working fine until we had to deploy some SQL scripts that cannot be run under a transaction. So now I have a bunch of SQL script files that can be run under a transaction and some (like the ones below - [Full-Text Search](https://azure.microsoft.com/en-au/blog/full-text-search-is-now-available-for-preview-in-azure-sql-database/)) that cannot be run under a transaction. By default, if you run this using DbUp under a transaction you get the error message<span class="text-danger">
 CREATE FULLTEXT CATALOG statement cannot be used inside a user transaction </span> and this is an [existing issue](https://github.com/DbUp/DbUp/issues/207).
 
 ```sql
@@ -123,4 +123,4 @@ private static DatabaseUpgradeResult PerformUpgrade(
 }
 ```
 
-Keeping all your scripts in a single place and automating it through the build-release pipeline is [something you need to strive for](https://rahulpnath.com/blog/working-effectively-under-constraints/). Hope this helps you to continue using DbUp even if you want to execute scripts that are a mix of transactional and non-transactional.
+Keeping all your scripts in a single place and automating it through the build-release pipeline is [something you need to strive for](https://www.rahulpnath.com/blog/working-effectively-under-constraints/). Hope this helps you to continue using DbUp even if you want to execute scripts that are a mix of transactional and non-transactional.

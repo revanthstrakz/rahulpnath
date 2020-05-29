@@ -54,7 +54,7 @@ where order.Status == OrderStatus.Quote &&
 
 With all those explicit AND (&&) clauses the query is hard to understand and keep up. Splitting them into multiple where clauses make it more cleaner and keep each search criteria independent. The end SQL query that gets generated remains the same in this case.
 
-> [Aesthetics of code](https://rahulpnath.com/blog/left-align-your-code-for-better-readability/) is as important as the code you write. Aligning is an important part that contributes to the overall aesthetics of code.
+> [Aesthetics of code](https://www.rahulpnath.com/blog/left-align-your-code-for-better-readability/) is as important as the code you write. Aligning is an important part that contributes to the overall aesthetics of code.
 
 ```csharp
 from order in _context.Order

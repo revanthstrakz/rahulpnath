@@ -125,7 +125,7 @@ With the Azure AD updated with the employee code for each user, we can now set u
   },
 ```
 
-I updated the idToken property as the .Net Core Web Application was using JWT ID token. If you are unsure of what token you can use [Fiddler](https://rahulpnath.com/blog/fiddler-free-web-debugging-proxy/) to find what kind of token is used (as shown below).
+I updated the idToken property as the .Net Core Web Application was using JWT ID token. If you are unsure of what token you can use [Fiddler](https://www.rahulpnath.com/blog/fiddler-free-web-debugging-proxy/) to find what kind of token is used (as shown below).
 
 <img src="../images/AzureAd_idToken.png" class="center" alt="Id token returned" />
 

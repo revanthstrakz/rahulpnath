@@ -11,7 +11,7 @@ description: Quick and easy way to test your API.
 thumbnail: ../images/postman_collection_runner.png
 ---
 
-A while back we looked at how we can use [Postman to chain multiple requests to speed up out Manual API Testing](https://rahulpnath.com/blog/postman-chaining-requests-to-speed-up-manual-api-tests/). For those who are not familiar with [Postman](https://www.getpostman.com/), it is an application that assists in API testing and development, which I see as sitting a level top of a tool like [Fiddler](https://rahulpnath.com/blog/fiddler-free-web-debugging-proxy/).
+A while back we looked at how we can use [Postman to chain multiple requests to speed up out Manual API Testing](https://www.rahulpnath.com/blog/postman-chaining-requests-to-speed-up-manual-api-tests/). For those who are not familiar with [Postman](https://www.getpostman.com/), it is an application that assists in API testing and development, which I see as sitting a level top of a tool like [Fiddler](https://www.rahulpnath.com/blog/fiddler-free-web-debugging-proxy/).
 
 In this post, we will see how we can use Postman to test some basic CRUD operations over an API using a feature called [Postman Runner](http://blog.getpostman.com/2016/11/22/postmans-new-collection-runner/). Using this still involves some manual intervention. However, we can automate them using a combination of different tools.
 
@@ -70,7 +70,7 @@ Now that I have all the request definitions for the API added let's add some tes
 
 ## Writing The First Test
 
-Postman allows executing scripts before and after running API requests. We did see this in the [API Chaining post](https://rahulpnath.com/blog/postman-chaining-requests-to-speed-up-manual-api-tests/) where we grabbed the _messageId_ from the POST request and added it to the environment variable for use in the subsequent requests. Similarly, we can also add scripts to verify that the API request returns expected results, status code, etc.
+Postman allows executing scripts before and after running API requests. We did see this in the [API Chaining post](https://www.rahulpnath.com/blog/postman-chaining-requests-to-speed-up-manual-api-tests/) where we grabbed the _messageId_ from the POST request and added it to the environment variable for use in the subsequent requests. Similarly, we can also add scripts to verify that the API request returns expected results, status code, etc.
 
 Let's first write a simple test on our GET API request that it returns a 200 OK response when called. The below test uses the [Postmans PM API](https://www.getpostman.com/docs/v6/postman/scripts/postman_sandbox_api_reference) to assert that status code of the response is 200. Check the _[Response Assertion API in test scripts](https://www.getpostman.com/docs/v6/postman/scripts/postman_sandbox_api_reference#response-assertion-api-in-test-scripts)_ to see the other assertion options available like _pm.response.to.have.status_. The tests are under the Tests section similar to where wrote the scripts to chain API requests. When executing the API request, the Tests tab shows the successful test run for the particular request.
 

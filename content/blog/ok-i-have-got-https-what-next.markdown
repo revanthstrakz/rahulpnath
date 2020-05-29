@@ -11,7 +11,7 @@ description:
 thumbnail: ../images/https_next.png
 ---
 
-Security is of more and more a concern these days and we [saw why it's important to move on to HTTPs](https://rahulpnath.com/blog/https-for-free-and-why-you-should-care/). Hope you have already moved on to HTTPS, If not right now is a perfect time - this is one of the things that you should not be putting off for later. Also, do check out the [HTTPS is Easy](https://httpsiseasy.com/) series by Troy Hunt on how simple it is to get onboard with HTTPS. Most of the things mentioned here, I started exploring after getting introduced to it by [Scott Helme](https://scotthelme.co.uk/) and [Troy Hunt](https://www.troyhunt.com/) at the [NDC Security conference](https://rahulpnath.com/blog/ndc-security-2018-overview-and-key-takeaways/).
+Security is of more and more a concern these days and we [saw why it's important to move on to HTTPs](https://www.rahulpnath.com/blog/https-for-free-and-why-you-should-care/). Hope you have already moved on to HTTPS, If not right now is a perfect time - this is one of the things that you should not be putting off for later. Also, do check out the [HTTPS is Easy](https://httpsiseasy.com/) series by Troy Hunt on how simple it is to get onboard with HTTPS. Most of the things mentioned here, I started exploring after getting introduced to it by [Scott Helme](https://scotthelme.co.uk/) and [Troy Hunt](https://www.troyhunt.com/) at the [NDC Security conference](https://www.rahulpnath.com/blog/ndc-security-2018-overview-and-key-takeaways/).
 
 <a href="https://securityheaders.com/?q=rahulpnath.com&followRedirects=on">
     <img
