@@ -33,7 +33,7 @@ npm i --save react-dom
 
 JavaScript development experience is better when you have _[jsconfig.json](https://code.visualstudio.com/Docs/languages/javascript)_ file in your project root. VSCode recommends adding this file through a small light bulb notification on the right side of the status bar (as shown below). With this configuration file, VSCode treats all the _js_ files under the same project context.
 
-<img class="center" src= "/images/vscode_jsconfig_balloon.png" alt="Visual Studio code jsconfig balloon notification" />
+<img class="center" src= "../images/vscode_jsconfig_balloon.png" alt="Visual Studio code jsconfig balloon notification" />
 
 Intellisense for libraries is available through type definition files, usually available in the [DefinitelyTyped](http://definitelytyped.org/) [repository](https://github.com/DefinitelyTyped/DefinitelyTyped). With npm, you can manage these definition files using the [TypeScript Definition Manager (typings)](https://github.com/typings/typings) package. To get started install the typings package and support for node packages. Now you can use [typings](https://github.com/typings/typings/blob/master/docs/commands.md) to manage all the typescript definitions and use it for getting IntelliSense support. Once you have the correct type definitions installed for the packages you use, VSCode will show IntelliSense as shown below.
 
@@ -43,7 +43,7 @@ typings install --ambient node
 typings install --save-dev gulp
 ```
 
-<img class="center" src= "/images/react_vscode_intellisense.png" alt="Visual Studio code Intellisense" />
+<img class="center" src= "../images/react_vscode_intellisense.png" alt="Visual Studio code Intellisense" />
     
 ### Hello World from React ###
 
@@ -163,7 +163,7 @@ gulp.task('default', ['build', 'connect', 'lint', 'open', 'watch']);
 
 With the default gulp task running, either using [VSCode Task Runner](https://code.visualstudio.com/Docs/editor/tasks) or the [command line](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#4-run-gulp), any edits that I make to the code gets build and pushed to the output directory and the browser refreshes to show the latest changes.
 
-<img class="center" src= "/images/react_realtime_edits.gif" alt="React real-time browser refresh" />
+<img class="center" src= "../images/react_realtime_edits.gif" alt="React real-time browser refresh" />
 
 _If you find any package details missing see the [package.json](https://github.com/rahulpnath/Blog/blob/master/React_Template/package.json) file._
 

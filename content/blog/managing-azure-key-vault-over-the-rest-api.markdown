@@ -35,7 +35,7 @@ private async Task<string> GetAccessToken(string authority, string resource, str
 
 > _Earlier authentication requests were served from https://login.windows.net (authority URL) which is [now updated](https://blogs.technet.microsoft.com/ad/2015/03/06/simplifying-our-azure-ad-authentication-flows/) to https://login.microsoftonline.com ._
 
-<img src="/images\service_management_adAccess.png" class="center" alt="AD Application access to Azure Service Management API">
+<img src="../images\service_management_adAccess.png" class="center" alt="AD Application access to Azure Service Management API">
 
 ### Key Vault Management Client
 

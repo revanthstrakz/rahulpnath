@@ -11,7 +11,7 @@ description:
 thumbnail: ../images/pfx_security.jpg
 ---
 
-<a href="http://perspecsys.com/" class="center" title="Image By Perspecsys Photos, from https://www.flickr.com/photos/111692634@N04/15855489588"><img class="center" alt="Security" src="/images\pfx_security.jpg" /></a>
+<a href="http://perspecsys.com/" class="center" title="Image By Perspecsys Photos, from https://www.flickr.com/photos/111692634@N04/15855489588"><img class="center" alt="Security" src="../images\pfx_security.jpg" /></a>
 
 In one of my earlier posts, [PFX Certificate in Azure Key Vault](http://www.rahulpnath.com/blog/pfx-certificate-in-azure-key-vault/), we saw how to save PFX Certificate files in Key Vault as Secrets. Azure Key Vault now [supports certificates as a first class citizen](https://blogs.technet.microsoft.com/kv/2016/09/26/get-started-with-azure-key-vault-certificates/). This means one can manage certificates as a separate entity in KeyVault. At the time of writing, Key Vault supports managing certificates using Powershell. The [portal UI](http://www.rahulpnath.com/blog/managing-key-vault-through-azure-portal/) is still to catch up on this feature. Using the Key Vault's certificate feature, we can create a new certificate: self-signed or signed by a supported certificate authority, import an existing certificate, retrieve the certificate with or without a private key part.
 
@@ -36,7 +36,7 @@ https://vaultfromcode.vault.azure.net:443/certificates/TestCertificate
 
 To retrieve all the certificates in a vault use the [Get-AzureKeyVaultCertificate](https://docs.microsoft.com/en-us/powershell/resourcemanager/azurerm.keyvault/v2.2.0/get-azurekeyvaultcertificate) cmdlet passing in the VaultName. To get details of a certificate pass in the Certificate Name as well.
 
-<img class="center" alt="Azure Key Vault, GetAzureKeyVaultCertificate" src="/images\keyvault_getazurekeyvaultcertificate.png" />
+<img class="center" alt="Azure Key Vault, GetAzureKeyVaultCertificate" src="../images\keyvault_getazurekeyvaultcertificate.png" />
 
 When creating a new certificate make sure that a Key or Secret does not exist with the same name in the vault. Azure adds in a key and secret with the same name as that of the certificate when creating a new certificate as shown in the above image. The key is required when for certificates created with non-exportable key (-[KeyNotExportable](https://docs.microsoft.com/en-us/powershell/resourcemanager/azurerm.keyvault/v2.1.0/new-azurekeyvaultcertificatepolicy#KeyNotExportable)). Non-exportable certificates do not have the private portion contained in secret. Any certificate operation requiring the private part should use the key. For consistency, the key exists for exportable certificates as well.
 

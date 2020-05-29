@@ -12,7 +12,7 @@ description:
 thumbnail: ../images\coding.jpg
 ---
 
-<a href="https://pixabay.com/en/code-data-programming-code-944504/" class="center" title="Image By Lawrence Monk, from https://pixabay.com/en/code-data-programming-code-944504/"><img src="/images\coding.jpg" class="center" alt="Refactoring"></a>
+<a href="https://pixabay.com/en/code-data-programming-code-944504/" class="center" title="Image By Lawrence Monk, from https://pixabay.com/en/code-data-programming-code-944504/"><img src="../images\coding.jpg" class="center" alt="Refactoring"></a>
 
 In the earlier post, [Removing Unnecessary Dependencies](http://rahulpnath.com/blog/refactoring-to-improve-testability-removing-unnecessary-dependencies/), we saw how having an unnecessary dependency hinders testability. In this post we will see just the opposite of that - extracting functionality out of a class and creating another class to separate responsibilities, making it easier to test and adhere to [Single Responsibility Principle](https://blog.8thlight.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html)(SRP).
 

@@ -21,7 +21,7 @@ Recently I was in a discussion with my friend/colleague on conducting a few ramp
 
 > _Friend: But 'I did not have any ramp up when I joined, and I felt it was better to have learned it on my own, though it took a lot more time._
 
-<a href="http://www.mindtickle.com/wp-content/uploads/2014/02/new_employee_orientation_business_strategy_research.png" class="center" title="Image, from http://www.mindtickle.com/wp-content/uploads/2014/02/new_employee_orientation_business_strategy_research.png"><img src="/images\rampup_plan.png" class="center" alt="Rampup Plan"></a>
+<a href="http://www.mindtickle.com/wp-content/uploads/2014/02/new_employee_orientation_business_strategy_research.png" class="center" title="Image, from http://www.mindtickle.com/wp-content/uploads/2014/02/new_employee_orientation_business_strategy_research.png"><img src="../images\rampup_plan.png" class="center" alt="Rampup Plan"></a>
 
 Just like there are company-wide induction/onboarding sessions, I have always felt that project specific onboarding plans are also required and help new hires be part of the team and be more productive with their day-to-day activities faster. As mentioned in this [article](http://www.fastcompany.com/3029820/work-smart/infographic-the-real-ways-to-hold-on-to-new-hires/3), _New hires care more about effective job training and clear guidelines, and it's time you provide that for them._ It's best to have a plan in place when you have someone new joining your team and you along with the team are the best people to put that plan together.
 

@@ -63,7 +63,7 @@ _You should never have to scroll to the right_ - I caught on with this recommend
 The [Productivity Power Tools](https://visualstudiogallery.msdn.microsoft.com/d0d33361-18e2-46c0-8ff2-4adea1e34fef) extension for Visual Studio allows adding a Column Guide. A Column Guide reminds developers their full line of code or comments may not fit on a single screen.
 
 <img class="center" alt="Code Formatting Maximum Width Column Guide in Visual Studio using Power Tools" 
-src="/images/codeformatting_column_guide.png" />
+src="../images/codeformatting_column_guide.png" />
 
 #### **Aligning Function Parameters**
 
@@ -72,12 +72,12 @@ Always try to keep the number of parameters as less as possible. In cases where 
 Allowing parameters to take the **_natural flow of IDE_** (Visual Studio) is the simplest approach. This often leads to poor readability and code cluttering.
 
 <img class="center" alt="Function Parameters taking natural flow of IDE" 
-src="/images/codeformatting_functionparameters_naturalflowide.png" />
+src="../images/codeformatting_functionparameters_naturalflowide.png" />
 
 Breaking parameters into separate lines is important for readability. Use the Column guide to decide when to break function parameters into different lines. There are different approaches followed when splitting parameters into new lines. Keeping the first parameter on the same line as the function and then having all other **_parameters on new line aligned with the first parameter_** is another approach. This works well when viewed in the same font and resolution used when writing. When you change font or resolution this kind of formatting falls out of place.
 
 <img class="center" alt="Function Parameters on new line aligned with first parameter" 
-src="/images/codeformatting_functionparameters_alignzoom.png" />
+src="../images/codeformatting_functionparameters_alignzoom.png" />
 
 A better variant of the above style is to have the parameters in the new line aligned to the left. This ensures parameters stay in the same place when changing font or resolutions. The one that I prefer is to have all parameters in a new line. This formatting works well with different font sizes and resolutions.
 

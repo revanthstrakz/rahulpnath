@@ -11,7 +11,7 @@ description: Scheduling jobs at different time intervals and pausing them in bet
 thumbnail: ../images/scheduling_jobs.jpg
 ---
 
-<a href="https://flic.kr/p/8ys6Hs" class="center" ><img class="center" alt="Scheduling" src="/images\scheduling_jobs.jpg" /></a>
+<a href="https://flic.kr/p/8ys6Hs" class="center" ><img class="center" alt="Scheduling" src="../images\scheduling_jobs.jpg" /></a>
 
 At one of my clients, they had a requirement of scheduling various rules to sent our alert messages via SMS, Email, etc. A Rule consists of below and a few other properties
 

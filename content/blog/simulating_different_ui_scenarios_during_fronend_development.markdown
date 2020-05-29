@@ -9,11 +9,6 @@ tags:
   - Cypress
 date: 2020-05-05
 thumbnail: ../images/scenario_selector_ui_form.jpg
-images:
-  [
-    "/images/scenario_selector_ui_form.jpg",
-    "/images/scenario_selector_local_storage.jpg",
-  ]
 ---
 
 In a previous post, [Simulating Different Scenarios Using Fake JSON Server API](/blog/simulating_different_api_scenarios_using_json_server/), I showed how to set up a fake API to return data based on different UI state. E.g., Given a UI list view, the application can be in different states. It can show an empty list, a list of data, a list of data that does not fit in one page, a server error, etc.
