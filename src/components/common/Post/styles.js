@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { flexbox, layout, style } from 'styled-system'
 
 export const ArticleWrapper = styled.div`
   color: #212121;
@@ -19,8 +20,21 @@ export const ArticleWrapper = styled.div`
 	`};
 `
 
+export const Flex = styled.div`
+  ${layout}
+  ${flexbox}
+  
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+`
+
 export const Back = styled.div`
   margin-top: 2rem;
+`
+
+export const Ad = styled.div`
+min-height: 140px;
 `
 
 export const Content = styled.div`
