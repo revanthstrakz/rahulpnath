@@ -13,7 +13,7 @@ module.exports = {
     instagram: 'https://instagram.com/rahulpnath',
     youtube: 'https://www.youtube.com/user/rahulnathp',
   },
-  googleAnalyticsID: '',
+  googleAnalyticsID: 'UA-43172163-1',
   themeColor: '#823EB7',
   backgroundColor: '#823EB7',
   siteRss: '/index.xml',
