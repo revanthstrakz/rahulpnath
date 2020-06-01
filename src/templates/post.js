@@ -17,7 +17,7 @@ export default ({ data: { post } }) => (
             : post.frontmatter.date
         }
         cover={ (post.frontmatter.thumbnail && post.frontmatter.thumbnail.childImageSharp && post.frontmatter.thumbnail.childImageSharp.fluid.originalImg)}
-        location=''
+        location={post.fields.slug}
         description={post.description}
         readTime={post.timeToRead}
       />
