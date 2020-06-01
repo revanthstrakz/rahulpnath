@@ -16,7 +16,7 @@ module.exports = {
   googleAnalyticsID: '',
   themeColor: '#823EB7',
   backgroundColor: '#823EB7',
-  siteRss: '/rss.xml',
+  siteRss: '/index.xml',
   social: {
     facebook: '774780093',
     twitter: '@rahulpnath',
