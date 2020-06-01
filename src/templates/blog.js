@@ -2,7 +2,7 @@ import { CardPost, Container, Layout, PageTitle, Pagination, Row, SEO } from 'co
 import React from 'react'
 
 export default ({ pageContext }) => {
-  const { group, index, pageCount, pathPrefix } = pageContext
+  const { group, index, pageCount, pathPrefix, title } = pageContext
   const previousUrl = index - 1 === 1 ? '/' : (index - 1).toString()
   const nextUrl = (index + 1).toString()
 
@@ -11,7 +11,7 @@ export default ({ pageContext }) => {
       <Container>
         <SEO title="Blog" type="Organization" location="/blog" />
         <Row>
-          <PageTitle>Recent Articles</PageTitle>
+          <PageTitle>{title || 'Recent Articles'}</PageTitle>
           {group.map(
             ({
               node: {

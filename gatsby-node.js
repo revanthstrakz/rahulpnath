@@ -78,6 +78,28 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         component: postTemplate,
       })
     })
+
+
+    createPage({
+      path: 'drafts',
+      component: path.resolve('src/templates/blog.js'),
+      context: {
+        group: data.drafts.edges,
+        title: 'Drafts',
+        first: true,
+        last: true,
+        index: 1,
+        pageCount: 1,
+      },
+    })
+
+    // Create draft pages
+    data.drafts.edges.forEach(({ node: { fields: { slug } } }) => {
+      createPage({
+        path: slug,
+        component: postTemplate,
+      })
+    })
  
     const uniqueTags = [...new Set(alltags)];
     // Create tags pages
