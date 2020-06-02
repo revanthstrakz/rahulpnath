@@ -19,6 +19,9 @@ export default ({ desktop }) => {
       <Link to="/notes" activeClassName="current">
         Notes
       </Link>
+      <Link to="/archives" activeClassName="current">
+        Archives
+      </Link>
       <a href="https://www.youtube.com/user/rahulnathp/" rel="noopener noreferrer" target="_blank">
         YouTube
       </a>

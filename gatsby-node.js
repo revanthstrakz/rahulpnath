@@ -79,6 +79,13 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       })
     })
 
+    createPage({
+      path: 'archives',
+      component: path.resolve('src/templates/archive.js'),
+      context: {
+        allPosts: data.posts.edges
+      }
+    })
 
     createPage({
       path: 'drafts',
