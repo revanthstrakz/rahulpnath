@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { flexbox, layout, style } from 'styled-system'
 
-export const ArticleWrapper = styled.div`
+export const ArticleWrapper = styled.article`
   color: #212121;
   padding: 2rem 1rem;
 

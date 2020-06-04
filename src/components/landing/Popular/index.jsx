@@ -13,7 +13,7 @@ export const Popular = () => {
         filter: {
           frontmatter: { popular: { eq: true } }
         }
-        limit: 3
+        limit: 5
       ) {
         edges {
           node {

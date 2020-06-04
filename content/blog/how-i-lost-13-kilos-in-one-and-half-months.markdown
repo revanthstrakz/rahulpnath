@@ -10,6 +10,7 @@ completedDate: 2017-02-04 20:02:28 +1100
 keywords:
 description:
 thumbnail: ../images/weigth_Before and After.jpg
+popular: true
 ---
 
 Getting fit is one of the goals that I have set for myself this year. I have started running since mid of December and also controlling my diet.
