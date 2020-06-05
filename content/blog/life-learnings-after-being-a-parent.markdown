@@ -11,15 +11,11 @@ description:
 thumbnail: ../images/gautham.jpg
 ---
 
-> _His father asked Ethan in a raspy voice, "You spend time with your son?"_
-
-> _"Much as I can," he’d answered, but his father had caught the lie in his eyes._
-
-> _"It’ll be your loss, Ethan. Day'll come, when he’s grown and it’s too late, that you'd give a kingdom to go back and spend a single hour with your son as a boy. To hold him.Read a book to him. Throw a ball with a person in whose eyes you can do no wrong. He doesn't see your failings yet. He looks at you with pure love and it won't last, so you revel in it while it's here."_
-
-> _Ethan thinks often of that conversation, mostly when he's lying awake in bed at night and everyone else is asleep, and his life screaming past at the speed of light—the weight of bills and the future and his prior failings and all these moments he's missing—all the lost joy—perched like a boulder on his chest._
-
-> - ** _[Pines (The Wayward Pines Trilogy, Book 1)](http://amzn.to/1YdxuYm)_ **
+> _His father asked Ethan in a raspy voice, "You spend time with your son?"_      
+> _"Much as I can," he’d answered, but his father had caught the lie in his eyes._      
+> _"It’ll be your loss, Ethan. Day'll come, when he’s grown and it’s too late, that you'd give a kingdom to go back and spend a single hour with your son as a boy. To hold him.Read a book to him. Throw a ball with a person in whose eyes you can do no wrong. He doesn't see your failings yet. He looks at you with pure love and it won't last, so you revel in it while it's here."_       
+> _Ethan thinks often of that conversation, mostly when he's lying awake in bed at night and everyone else is asleep, and his life screaming past at the speed of light—the weight of bills and the future and his prior failings and all these moments he's missing—all the lost joy—perched like a boulder on his chest._      
+> - ** _[Pines (The Wayward Pines Trilogy, Book 1)](http://amzn.to/1YdxuYm)_ **      
 
 Every second that I spent with Gautham is a pure joy and I enjoy it to the most. It's true that I have very less time to spend for myself, but then it also made me realized I have not been using all the time I did have before he was born. I have re-arranged all my schedules so that whenever I am home and he is awake, I do nothing else, but be with him! There has been a lot of learnings and realizations that I have had since the last 20 months.
 

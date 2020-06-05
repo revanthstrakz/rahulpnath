@@ -13,7 +13,7 @@ thumbnail: ../images/AzureKeyVaultConfigBuilder_config.png
 
 Over the last weekend, I was playing around with [Visual Studio Connected Services support for Azure Key Vault](https://www.rahulpnath.com/blog/azure-key-vault-as-a-connected-service-in-visual-studio-2017/). The new feature allows seamless integration of ASP.NET Web applications with Azure Key Vault, making it as simple as using the ConfigurationManager to retrieve the Secrets from the Key Vault - just like you would retrieve it from the config file.
 
-<img src="../images/AzureKeyVaultConfigBuilder_config.png" class="center" >
+<img src="../images/AzureKeyVaultConfigBuilder_config.png" class="center" />
 
 In this post, we will look detailed into the [AzureKeyVaultConfigBuilder](https://github.com/aspnet/MicrosoftConfigurationBuilders/tree/master/src/Azure) class that allows the seamless integration provided by Connected Services. As we saw in the previous post when you add [Key Vault as a Connected Service](https://www.rahulpnath.com/blog/azure-key-vault-as-a-connected-service-in-visual-studio-2017/), it modifies the applications configuration file to add in the AzureKeyVaultConfigBuilder references.
 

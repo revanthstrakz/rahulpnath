@@ -96,7 +96,7 @@ module.exports = {
 								edges {
 									node {
 										excerpt
-                    html
+                    body
                     fields {
                       slug
                     }
@@ -131,11 +131,12 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-remark-images',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: [`.mdx`, `.md`, `.markdown`],
-        plugins: [
+        gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-images',
             options: {

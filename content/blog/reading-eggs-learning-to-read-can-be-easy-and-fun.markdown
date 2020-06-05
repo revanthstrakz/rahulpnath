@@ -14,7 +14,7 @@ thumbnail: ../images/readingEggs.jpg
 
 A couple of months back Gautham (my son) started playing [Reading Eggs](https://readingeggs.com.au/). We started off initially with a free trial after it being recommended by our friend [Asha](https://www.facebook.com/asha.maria.90). We got a 21-day extended trial in addition to the initial 21 days free trial (i.e a total of 42 days), which helped a lot with confirming that Gautham was to use this app. We noticed that he was reading small words quite comfortably and he grew an interest to read various things around. We took an annual subscription and feels totally worth it.
 
-<img src="../images/readingEggs_Levels.jpg" alt="Reading Eggs Levels" >
+<img src="../images/readingEggs_Levels.jpg" alt="Reading Eggs Levels" />
 
 > Using the five essential keys to reading success, the program unlocks all aspects of learning to read for your child.
 

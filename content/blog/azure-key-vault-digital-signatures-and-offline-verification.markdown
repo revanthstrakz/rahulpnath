@@ -17,7 +17,7 @@ Digital Signature is a mechanism to ensure the validity of a digital document or
 
 The below diagram shows the overview of the different steps involved in the Digital Signature process. We generate a hash of the data that we need to protect and encrypt the hash value using a private key pair. This signed hash is sent along with the original data. The receiver generates a hash of the data received and also decrypts the attached signature using the public key. If both the hashes are same, the signature is valid, and the document has not been tampered with.
 
-<a href="https://commons.wikimedia.org/wiki/File:Digital_Signature_diagram.svg"><img class="center" alt="Azure Key Vault - Verify Signature Offline" src="../images/signing_verification.png"/></a>
+[![Azure Key Vault - Verify Signature Offline](../images/signing_verification.png)](https://commons.wikimedia.org/wiki/File:Digital_Signature_diagram.svg)
 
 Azure Key Vault supports sign and verify operations and can be used to implement Digital Signatures. In this post, we will explore how to sign and verify a message using Key Vault. Verifying the hash locally is the recommended approach as per the [documentation](https://msdn.microsoft.com/en-us/library/azure/dn903623.aspx#BKMK_KeyOperations) and we will explore how this can be achieved.
 

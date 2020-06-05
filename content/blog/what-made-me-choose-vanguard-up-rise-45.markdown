@@ -19,7 +19,7 @@ For over an year I was using the bag that came with my dslr and decided now to u
 1. [Lowepro Flipside 300](http://products.lowepro.com/product/flipside-300,2083.htm)
 2. [Lowepro Video Fastpack 250aw](http://products.lowepro.com/product/DSLR-Video%20Fastpack%20250%20AW,2282.htm)
 3. [Lowepro Pro Runner 200AW](http://products.lowepro.com/product/Pro-Runner-200-AW,2181,14.htm)
-4. [Manfrotto Veloce III](http://www.manfrotto.com/product/0/MB%2BSB390-3BC/_/Veloce_III_Camera_Backpack_for_DSLR_(Bungee_Cord\))
+4. [Manfrotto Veloce III](https://www.bhphotovideo.com/c/product/999769-REG/manfrotto_mb_sb390_3bb_veloce_iii_backpack_black.html)
 
 Deciding to drop into a store to see them was the best thing that I did, and I suggest everyone planning to buy a dslr bag to do that. What’s good for me, might not work out for you. Except the flipside one I did see everything else. For me the fastpack 250aw was a bit bulky, the Pro Runner a bit too small and lacking a quick access entry. Manfrotto was decent enough but then my tripod would not go through the tripod strap, since my tripod has all its legs connected to the centre rod.
 I happened to see the Vanguard Up-rise 43, which was actually a sling bag but had all the other features I was looking for. It was sleek looking, well padded,had a tripod holder(now this one had a adjustable strap to hold the tripod), a quick access,rain cover.
@@ -27,37 +27,8 @@ Back home I did again a bit of research and got to see the Up-rise 45,46 and 48,
 So finally I had a choice, [Vanguard Up-Rise 45](http://www.vanguardworld.com/index.php/en/pv/products/detail-1-1-4-33.html), at least for now that I feel might be good for me. Just got it shipped today and planning to take it with me for the next trip.
 Below are some snaps of the my bag. I did find a good [video](http://www.youtube.com/watch?v=_A4GN5lJhQY) on youtube which shows all the features, so I didn’t want to do one again.
 
-<div class="wlWriterEditableSmartContent" id="scid:66721397-FF69-4ca6-AEC4-17E6B3208830:a7930e23-e5d9-4bbf-a9d8-0bb834e7717a" style="float: none; margin: 0; display: inline; padding: 0;">
-<table style="outline: none; border-style: none; margin: 0; padding: 0; width: 408px; border-collapse: collapse;" border="0" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td style="outline: none; border-style: none; margin: 0; padding: 5px 0 5px 5px; width: 159px; vertical-align: bottom;" colspan="2"><a style="outline: none; border-style: none; margin: 0; padding: 0;" href="https://skydrive.live.com/redir.aspx?cid=d5a8034107adc30c&amp;page=play&amp;resid=D5A8034107ADC30C!3950&amp;parid=D5A8034107ADC30C!3949&amp;type=1&amp;Bsrc=Photomail&amp;Bpub=SDX.Photos&amp;authkey=!ABkuQXjWWoHjsww" target="_blank"> <img style="outline: none; border-style: none; padding: 0; margin: 0; border: 0; background: none; background-thumbnail: ../none; vertical-align: bottom;" title="View album" alt="vanguard uprise45 review" src="../images/vanguard_uprise45_review.png" width="159" height="159" border="0" /></a></td>
-<td style="vertical-align: middle; margin: 0; padding: 5px 5px 5px 0; outline: none; border-style: none; width: 226px;" colspan="3">
-<div style="margin-left: 10px; top: -3%;">
-<div style="width: 226px; overflow: visible;"><a style="text-decoration: none;" href="https://skydrive.live.com/redir.aspx?cid=d5a8034107adc30c&amp;page=browse&amp;resid=D5A8034107ADC30C!3949&amp;type=5&amp;authkey=!ABkuQXjWWoHjsww&amp;Bsrc=Photomail&amp;Bpub=SDX.Photos" target="_blank"><span style="line-height: 1.26em; padding: 0; width: 226px; font-size: 26pt; font-family: 'Segoe UI', helvetica, arial, sans-serif;">Vanguard Up-Rise 45</span></a></div>
-<div style="padding: 10px 0 0; margin: 0;">
-<table style="margin: 0; padding: 0; outline: none; border-style: none; border-collapse: collapse; width: auto;" border="0" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td style="vertical-align: top; outline: none; border-style: none; margin: 0; padding: 10px 15px 6px 0;"><a style="font-family: 'Segoe UI', helvetica, arial, sans-serif; font-size: 8pt; outline: none; border-style: none; text-decoration: none; padding: 0; margin: 0;" href="https://skydrive.live.com/redir.aspx?cid=d5a8034107adc30c&amp;page=play&amp;resid=D5A8034107ADC30C!3949&amp;type=5&amp;authkey=!ABkuQXjWWoHjsww&amp;Bsrc=Photomail&amp;Bpub=SDX.Photos" target="_blank">VIEW SLIDE SHOW</a></td>
-<td style="vertical-align: top; outline: none; border-style: none; margin: 0; padding: 10px 0 6px;"><a style="font-family: 'Segoe UI', helvetica, arial, sans-serif; font-size: 8pt; outline: none; border-style: none; text-decoration: none; padding: 0; margin: 0;" href="https://skydrive.live.com/redir.aspx?cid=d5a8034107adc30c&amp;page=downloadphotos&amp;resid=D5A8034107ADC30C!3949&amp;type=5&amp;Bsrc=Photomail&amp;Bpub=SDX.Photos&amp;authkey=!ABkuQXjWWoHjsww" target="_blank">DOWNLOAD ALL</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</td>
-</tr>
-<tr>
-<td style="vertical-align: bottom; outline: none; border-style: none; padding: 0 5px 5px; margin: 0; width: 77px; height: 77px;"><a style="font-family: 'Segoe UI', helvetica, arial, sans-serif; font-size: 8pt; outline: none; border-style: none; text-decoration: none; padding: 0; margin: 0;" href="https://skydrive.live.com/redir.aspx?cid=d5a8034107adc30c&amp;page=play&amp;resid=D5A8034107ADC30C!3951&amp;parid=D5A8034107ADC30C!3949&amp;type=1&amp;Bsrc=Photomail&amp;Bpub=SDX.Photos&amp;authkey=!ABkuQXjWWoHjsww" target="_blank"><img style="outline: none; border-style: none; padding: 0; margin: 0; border: 0; background: none; background-thumbnail: ../none; vertical-align: bottom;" title="View album" alt="vanguard uprise45 review" src="../images/vanguard_uprise45_review_1.png" width="77" height="77" border="0" /></a></td>
-<td style="vertical-align: bottom; outline: none; border-style: none; padding: 0 5px 5px 0; margin: 0; width: 77px; height: 77px;"><a style="font-family: 'Segoe UI', helvetica, arial, sans-serif; font-size: 8pt; outline: none; border-style: none; text-decoration: none; padding: 0; margin: 0;" href="https://skydrive.live.com/redir.aspx?cid=d5a8034107adc30c&amp;page=play&amp;resid=D5A8034107ADC30C!3952&amp;parid=D5A8034107ADC30C!3949&amp;type=1&amp;Bsrc=Photomail&amp;Bpub=SDX.Photos&amp;authkey=!ABkuQXjWWoHjsww" target="_blank"><img style="outline: none; border-style: none; padding: 0; margin: 0; border: 0; background: none; background-thumbnail: ../none; vertical-align: bottom;" title="View album" alt="vanguard uprise45 review" src="../images/vanguard_uprise45_review_2.png" width="77" height="77" border="0" /></a></td>
-<td style="vertical-align: bottom; outline: none; border-style: none; padding: 0 5px 5px 0; margin: 0; width: 77px; height: 77px;"><a style="font-family: 'Segoe UI', helvetica, arial, sans-serif; font-size: 8pt; outline: none; border-style: none; text-decoration: none; padding: 0; margin: 0;" href="https://skydrive.live.com/redir.aspx?cid=d5a8034107adc30c&amp;page=play&amp;resid=D5A8034107ADC30C!3953&amp;parid=D5A8034107ADC30C!3949&amp;type=1&amp;Bsrc=Photomail&amp;Bpub=SDX.Photos&amp;authkey=!ABkuQXjWWoHjsww" target="_blank"><img style="outline: none; border-style: none; padding: 0; margin: 0; border: 0; background: none; background-thumbnail: ../none; vertical-align: bottom;" title="View album" alt="vanguard uprise45 review" src="../images/vanguard_uprise45_review_3.png" width="77" height="77" border="0" /></a></td>
-<td style="vertical-align: bottom; outline: none; border-style: none; padding: 0 5px 5px 0; margin: 0; width: 77px; height: 77px;"><a style="font-family: 'Segoe UI', helvetica, arial, sans-serif; font-size: 8pt; outline: none; border-style: none; text-decoration: none; padding: 0; margin: 0;" href="https://skydrive.live.com/redir.aspx?cid=d5a8034107adc30c&amp;page=play&amp;resid=D5A8034107ADC30C!3954&amp;parid=D5A8034107ADC30C!3949&amp;type=1&amp;Bsrc=Photomail&amp;Bpub=SDX.Photos&amp;authkey=!ABkuQXjWWoHjsww" target="_blank"><img style="outline: none; border-style: none; padding: 0; margin: 0; border: 0; background: none; background-thumbnail: ../none; vertical-align: bottom;" title="View album" alt="vanguard uprise45 review" src="../images/vanguard_uprise45_review_4.png" width="77" height="77" border="0" /></a></td>
-<td style="vertical-align: bottom; outline: none; border-style: none; padding: 0 5px 5px 0; margin: 0; width: 77px; height: 77px;"><a style="font-family: 'Segoe UI', helvetica, arial, sans-serif; font-size: 8pt; outline: none; border-style: none; text-decoration: none; padding: 0; margin: 0;" href="https://skydrive.live.com/redir.aspx?cid=d5a8034107adc30c&amp;page=play&amp;resid=D5A8034107ADC30C!3955&amp;parid=D5A8034107ADC30C!3949&amp;type=1&amp;Bsrc=Photomail&amp;Bpub=SDX.Photos&amp;authkey=!ABkuQXjWWoHjsww" target="_blank"><img style="outline: none; border-style: none; padding: 0; margin: 0; border: 0; background: none; background-thumbnail: ../none; vertical-align: bottom;" title="View album" alt="vanguard uprise45 review" src="../images/vanguard_uprise45_review_5.png" width="77" height="77" border="0" /></a></td>
-</tr>
-</tbody>
-</table>
-</div>
+[![Vanguard Uprise 45](../images/vanguard_uprise45_review.png)](https://skydrive.live.com/redir.aspx?cid=d5a8034107adc30c&amp;page=play&amp;resid=D5A8034107ADC30C!3950&amp;parid=D5A8034107ADC30C!3949&amp;type=1&amp;Bsrc=Photomail&amp;Bpub=SDX.Photos&amp;authkey=!ABkuQXjWWoHjsww)
+
 
 In short the main things that made my choose the Vanguard Up-Rise 45
 

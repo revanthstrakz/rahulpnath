@@ -87,7 +87,7 @@ const quotes: (QuoteDto & Scenarios<QuoteScenario>)[] = [
 
 > Mock quote data is still type safe using Intersection types feature of TypeScript.
 
-The quote type is now an [Intersection Type](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types)- (QuoteDto & Scenarios<QuoteScenario>)[] - that combines multiple types into one. This allows us to maintain type safety for the mock data, while also adding the new scenario property. To avoid typos on the scenarios, we have type safe scenarios list as shown below.
+The quote type is now an [Intersection Type](https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types)- (QuoteDto & `Scenarios<QuoteScenario>`)[] - that combines multiple types into one. This allows us to maintain type safety for the mock data, while also adding the new scenario property. To avoid typos on the scenarios, we have type safe scenarios list as shown below.
 
 ```typescript
 export type QuoteScenario = "phone" | "no-phone" | "draft" | "open";

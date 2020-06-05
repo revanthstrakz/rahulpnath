@@ -27,9 +27,7 @@ Once I got regular with my runs I wanted better tracking, mainly to monitor hear
 
 One of the shops near to where I live was running a promotional offer on the [Garmin Forerunner 630 Bundle](https://buy.garmin.com/en-AU/AU/p/516105). But this model comes with a [Heart Rate Monitor (HRM) Strap](https://buy.garmin.com/en-AU/AU/p/530376). The strap needs to be worn around the chest during the run. Strap v Optical HRM added a new dimension of confusion to the whole tracker story. I reached out to my [runner friends again](https://twitter.com/rahulpnath/status/835320810734694400) and surprisingly all of them had models of Garmin that uses an HRM Strap.
 
-<a href="https://www.wareable.com/garmin/garmin-forerunner-630-review">
-<img alt="Garmin Forerunner 630 Bundle" class="center" src="../images/running_forerunner630.jpg" />
-</a>
+[![Garmin Forerunner 630 Bundle](../images/running_forerunner630.jpg)](https://www.wareable.com/garmin/garmin-forerunner-630-review)
 
 The Garmin Forerunner 630 is a GPS SmartWatch with Advanced Running Metrics. It provides all the data a runner needs (and a lot more than what I need). Paired with HRM monitor it helps measure cadence, vertical oscillation and additional running dynamics like ground contact time balance, stride length and vertical ratio. I still don't understand all the data that it shows but find the GPS tracking, heart rate monitoring and zones, training plans and custom workouts a great help to my runs. Garmin also integrates well with [Strava](https://www.strava.com/athletes/rahulpnath) where most of my other friends are there. The watch has a companion app on the phone and also a [website](http://connect.garmin.com) which helps visualize the data.
 

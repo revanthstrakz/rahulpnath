@@ -14,9 +14,7 @@ It's been a year since I have moved over to [Readify](https://readify.net/) in S
 
 > _If you are not a developer this post might not be fully applicable to you. However the things that helped me might help you too._
 
-<a href="https://commons.wikimedia.org/wiki/File:Sydney_Opera_house_HDR_Sydney_Australia.jpg">
-    <img class="center" alt="How I found a job in Sydney" src="../images/finding_job_abroad.png" />
-</a>
+[![How I found a job in Sydney](../images/finding_job_abroad.png)](https://commons.wikimedia.org/wiki/File:Sydney_Opera_house_HDR_Sydney_Australia.jpg)
 
 I was not so keen to move abroad with an on-site opportunity from India, given the overhead of [onsite-offshore coordination](https://en.wikipedia.org/wiki/Global_delivery_model) is a pain. Getting a resident visa for countries like Australia, Canada etc. and finding a job after moving in was another option. I didn't prefer that either, as ending up in a foreign country without a job didn't look great to me, [especially with Gautham](http://www.rahulpnath.com/blog/life-learnings-after-being-a-parent/). So the only option left was to find an employer who recruits internationally and move in with a sponsored work visa. There are a lot of companies that are looking for people across the world and ready to sponsor for the visa . Since there is more money and effort involved in the whole process of recruiting internationally, I have felt that companies look for something more than just passing an interview process. Here are a few things that helped me find such an employer and things that I could have done better.
 

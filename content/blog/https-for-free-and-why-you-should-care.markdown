@@ -49,9 +49,8 @@ Shared SSL is what is more interesting for us as part of this blog post. What sh
 <img src="../images/blog_ssl_certificate.png" class="center" />
 
 Cloudflare supports [multiple SSL settings](https://support.cloudflare.com/hc/en-us/articles/200170416) - Off, Flexible SSL, Full SSL, Full SSL(Strict). Depending on how your host is setup you can choose one of the options. Since I am using [Azure Web Apps](https://azure.microsoft.com/en-au/services/app-service/web/) to host, it supports https over _\*.azurewebsites.net_ subdomain. But since the certficate is not for my custom domain name (rahulpnath.com), I have set the SSL setting to Full SSL. Cloudfare in this case will connect over HTTPS but not validate the certificate. If your host does not support HTTPs connection (for free) you can use Flexible SSL.
-<a href="https://www.cloudflare.com/ssl/" >
-<img src="../images/cloudflare_ssl_modes.png" class="center" />
-</a>
+
+[![Cloudflare ssl](../images/cloudflare_ssl_modes.png)](https://www.cloudflare.com/ssl/)
 
 You can also choose to enable Cloudflare with Full SSL(Strict) if you have followed Option 1 and have a custom SSL certificate for the domain. This will give you the added benefits that Cloudfare provides.
 
@@ -66,8 +65,6 @@ By setting the [STS(Strict-Transport-Security)](https://developer.mozilla.org/en
 Now that the cost factor is out of making your site support HTTPS, is there anything else that is holding you back? If speed is a concern and it worries that encryption/decryption at both ends of communication is going to slow you down take a look at this post on [HTTPS' massive speed advantage](https://www.troyhunt.com/i-wanna-go-fast-https-massive-speed-advantage/).
 If you are still not convinced let me give it one last shot to get you on board. Going forward most modern browsers are going to default to the web as a secure place. So instead of the present positive visual security indicators, it would start showing warnings on pages served over HTTP. That means soon your sites would start showing <span style="color:red;">Not Secure</span> if you are not moving over to HTTPS.
 
-<a href="https://blog.chromium.org/2018/05/evolving-chromes-security-indicators.html" >
-    <img src="../images/chrome_https.png" class="center" />
-</a>
+[![Chrome HTTPS](../images/chrome_https.png)](https://blog.chromium.org/2018/05/evolving-chromes-security-indicators.html)
 
 I don't see any reason why we should still be serving our sites over HTTP. As you can see I have moved over to the HTTPS and have added this domain to the preload list as well. Let's make the web secure by default!

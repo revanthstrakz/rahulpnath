@@ -14,9 +14,7 @@ popular: false
 draft: false
 ---
 
-<a href="http://www.oldlaundrytheatre.co.uk/happy-new-year-from-all-at-the-old-laundry/">
-<img class="center" alt="Posts per month - 2016" src="../images/happy_new_year.png"/>
-</a>
+[![Posts per month - 2016](../images/happy_new_year.png)](http://www.oldlaundrytheatre.co.uk/happy-new-year-from-all-at-the-old-laundry/")
 
 2016 was a great year and I thought sharing some of the things that went well, those that didn't and setting goals for 2017.
 

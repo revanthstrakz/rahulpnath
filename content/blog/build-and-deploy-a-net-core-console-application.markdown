@@ -20,7 +20,7 @@ At the end of this post, we will have a console application that is automaticall
 
 Create a [New Project](https://confluence.jetbrains.com/display/TCD10/Creating+and+Editing+Projects) and add a [new build configuration](https://confluence.jetbrains.com/display/TCD10/Creating+and+Editing+Build+Configurations) just like you would for any other project. Since the application is in .NET Core, install the [.NET CLI plugin](https://github.com/JetBrains/teamcity-dotnet-plugin) on the TeamCity server.
 
-<img src="../images/net_core_teamcity_build_steps.png" alt="Build Steps to build .Net Core">
+<img src="../images/net_core_teamcity_build_steps.png" alt="Build Steps to build .Net Core" />
 
 The first three build steps use the .NET CLI to [Restore](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-restore?tabs=netcore2x), [Build](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build?tabs=netcore2x) and [Publish](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore2x) the application. Thee three steps restore the dependencies of the project, builds it and publishes all the relevant DLL's into the publish folder.
 
@@ -36,7 +36,7 @@ The NuGet package is published to the NuGet server used by Octopus. Using the [O
 
 Create a [new project](https://octopus.com/docs/deployment-process/projects) in Octopus Deploy to manage deployments. Under the Process tab, I have two [steps](https://octopus.com/docs/deployment-process/steps) - one to deploy the Package and another to start the application.
 
-<img src="../images/net_core_octopus_deploy_process.png" alt="Octopus Deploy Process Steps">
+<img src="../images/net_core_octopus_deploy_process.png" alt="Octopus Deploy Process Steps" />
 
 For the Deploy Package step I have enabled Custom Deployment Scripts and [JSON Configuration variables](https://octopus.com/docs/deploying-applications/deploying-asp.net-core-web-applications/json-configuration-variables-feature). Under the pre-deployment script, I stop any existing .NET applications. If multiple .NET applications are running on the box, select your application explicitly.
 

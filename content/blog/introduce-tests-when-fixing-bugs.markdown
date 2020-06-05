@@ -15,7 +15,7 @@ thumbnail: ../images/testing.jpg
 
 _When creating a subscription for a client, the calculated number of months was off by one at times_ - This was a bug reported from production application that I was currently working on. Though, not a blocker, it was creating enough issues for the end users that it required a hotfix. One of my friends picked this issue up and started working on it. A while later, while I was checking the status of that bug I noticed him playing around with [Linqpad](https://www.linqpad.net/). He was testing a method to calculate the number of months between two dates with different values.
 
-<a href="https://www.flickr.com/photos/toomore/23066277453" class="center" title="Image By Toomore Chiang, from https://www.flickr.com/photos/toomore/23066277453"><img src="../images\testing.jpg" class="center" alt="Testing"></a>
+[![Testing](..\images\testing.jpg)](https://www.flickr.com/photos/toomore/23066277453)
 
 We often test our code elsewhere because it's coupled with other code making it difficult to test at the source itself. The fact that we need to test an isolated part of a larger piece of code is a '[Code smell](https://en.wikipedia.org/wiki/Code_smell)'. There possibly is a class or method that can be extracted and unit tested separately.
 
@@ -124,31 +124,3 @@ public class DateRange
 ```
 
 If you are new to TDD or just getting started with tests, introducing tests while fixing bugs is a good place to start. This might also help make code decoupled and readable. Try [covering a fix with tests](http://www.rahulpnath.com/blog/is-code-coverage-a-lie/) the next time you fix a bug!
-
-### **References**
-
-<div>
-    <div class="row">
-        <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-                <a href="http://www.amazon.com/gp/product/0131495054/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0131495054&linkCode=as2&tag=rahulpnath-20&linkId=XR55UAOEPPMVMFK3">
-                    <img src="../images/books_xunit.jpg" data-holder-rendered="true" style="display: block;">
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-                <a href="http://www.amazon.com/gp/product/0321503627/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0321503627&linkCode=as2&tag=rahulpnath-20&linkId=TR6UCCVP6CMGBBZQ">
-                    <img src="../images/books_goos.jpeg" data-holder-rendered="true" style="display: block;">
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-                <a href="http://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0131177052&linkCode=as2&tag=rahulpnath-20&linkId=TTKEEYQLEMTOXPPQ">
-                    <img src="../images/books_welc.jpg" data-holder-rendered="true" style="display: block;">
-                </a>
-            </div>
-        </div>
-    </div>
-</div>

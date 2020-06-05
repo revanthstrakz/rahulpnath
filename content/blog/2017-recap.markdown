@@ -31,9 +31,7 @@ It has been both good and a bad year as far as this blog. Including the '[Tip of
 
 I had started running towards the end of December 2016. One of my goals for 2017 was running, and it has had a good improvement. Ran over 750 kilometers including a half marathon. I am yet to participate in any running events and am planning to in the coming year. I have also started cycling, and it is an excellent way to cross train.
 
-<a href="https://2017.strava.com/en-us/videos/92aff78b819c502351b85b8ef27e35025cd97adf/">
-    <img src="../images/2017_sport.jpg" alt="Year in Sport" />
-</a>
+[![Year in Sport](../images/2017_sport.jpg)](https://2017.strava.com/en-us/videos/92aff78b819c502351b85b8ef27e35025cd97adf/)
 
 ### **Travel**
 

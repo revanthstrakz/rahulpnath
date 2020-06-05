@@ -19,8 +19,7 @@ This was the first time Parvathy, and I was doing a road trip this long with Gau
 
 We headed straight to Royal Palms Motor Inn and dropped our bags and quickly freshened up. The weather forecast said it would rain, but luckily there was no rain and was a pleasant climate. We headed off straight to Jetty Beach, where we spent the rest of our day. The beach was calm and had a great walk by the side of it. The sand looked like a mirror, and in the beginning, Gautham was even cautious not to break it. We enjoyed the time there and stayed there till five. After having a wash down at the beach showers, we headed back to the hotel. Gautham fell asleep the moment we got into the car. We reached the hotel and stayed in the car till seven so not to disturb his sleep. Once he woke up, we headed off to Bombay Brasserie, an Indian restaurant right next to the hotel. We usually prefer other food option while eating outside to try different cuisine. But during the trip, we stuck to Indian hotels as Gautham often ends up eating more from there, as it was similar to food at home. We had a nice tandoori platter, Nan, rice and ice-cream. By half past eight, we reached back at the hotel, had a bath and went to sleep by ten.
 
-<a href="https://500px.com/photo/197577329/jetty-beach-by-rahul-nath"><img alt="Jetty Beach, Coffs Harbour" src="../images/coffs_harbour_jetty_beach.jpg" /></a>
-<img alt="Jetty Beach, Coffs Harbour" src="../images/coffs_harbour_jetty_beach_toys.jpg" />
+[![Jetty Beach, Coffs Harbour](../images/coffs_harbour_jetty_beach_toys.jpg)](https://500px.com/photo/197577329/jetty-beach-by-rahul-nath)
 
 ### Day 2 (Friday)
 

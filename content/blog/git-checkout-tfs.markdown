@@ -52,7 +52,7 @@ gcc=git commit
 Git can be used in many ways and which makes it hard to get started. There are a few popular [workflows](https://www.atlassian.com/git/tutorials/comparing-workflows/) that one can use. Currently, I am using - [Feature Branch workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) -
 which means that all work happen on independent feature branches and once completed gets merged into the main trunk (master branch). Code Reviews happens on the way it gets pulled into the main branch, which ensures code quality and familiarity.
 
-<a href="https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/feature-branch-workflow/01.svg"><img class="center" alt="Git Feature Branch Workflow" src="../images/git_featurebranch_workflow.png" /></a>
+[![Git Feature Branch Workflow](../images/git_featurebranch_workflow.png)](https://www.atlassian.com/git/images/tutorials/collaborating/comparing-workflows/feature-branch-workflow/01.svg)
 
 ### Not Just for Code
 

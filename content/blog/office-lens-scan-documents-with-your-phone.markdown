@@ -15,7 +15,7 @@ Scanning physical documents can be cumbersome using a scanner, especially if you
 
 Microsoft Office Lens is the perfect application for scanning documents and whiteboards. Office Lens focuses documents in the camera frame and allows you to capture just what is required. It enhances the selected document sections. Below is an example of the highlight and the captured document.
 
-<img src="../images/office_lens.png" alt="Office Lens Capture" class="center" >
+<img src="../images/office_lens.png" alt="Office Lens Capture" class="center" />
 
 ## **Features**
 

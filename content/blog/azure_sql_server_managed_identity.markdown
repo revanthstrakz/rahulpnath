@@ -74,7 +74,7 @@ ALTER ROLE db_ddladmin ADD MEMBER [<identity-name>];
 GO
 ```
 
-_\<identity-name>_ is the name of the managed identity in Azure AD. For a system-assigned identity, the name is the same as the App Service name. It can also be an Azure AD Group (use the group name in this case). It gives you multiple options on how you want to manage access to the database. For local development, you can either [create a separate AD application and use the ClientId/Secret for EnvironmentCredential](/blog/azure_managed_service_identity_and_local_development/), or add all developers to an Azure AD group and grant the AD group access or explicitly add in each user to the database.
+`<identity-name>` is the name of the managed identity in Azure AD. For a system-assigned identity, the name is the same as the App Service name. It can also be an Azure AD Group (use the group name in this case). It gives you multiple options on how you want to manage access to the database. For local development, you can either [create a separate AD application and use the ClientId/Secret for EnvironmentCredential](/blog/azure_managed_service_identity_and_local_development/), or add all developers to an Azure AD group and grant the AD group access or explicitly add in each user to the database.
 
 No longer we need any credentials to connect to the SQL database running on Azure. This makes it one less sensitive information to manage for our application.
 

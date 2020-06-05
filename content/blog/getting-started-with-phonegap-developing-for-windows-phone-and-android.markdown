@@ -43,7 +43,7 @@ Setting up PhoneGap is pretty easy and direct with its integration with [node.js
    **npm install –g cordova**
 4. Now we have everything setup for PhoneGap project. Lets create the project. Navigate to your project root folder and create a project.
 
-   **phonegap create <appname>**
+   **phonegap create appname**
 
    This will create the basic folder structure for your PhoneGap project which looks like below.
 
@@ -80,4 +80,3 @@ With PhoneGap/Cordova, you can see how easy it is to have an app in various plat
 ![Cordova_Android](../images/Cordova_Android.jpg)
 
 The source code for the sample is available [here](https://github.com/rahulpnath/Blog/tree/master/GettingStartedOnPhoneGap). Don’t forget to update the [api key for 500px](http://developers.500px.com/) before you run the application.
-<a href="http://www.codeproject.com" style="display:none" rel="tag">CodeProject</a>

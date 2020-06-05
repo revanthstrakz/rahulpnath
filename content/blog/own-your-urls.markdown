@@ -17,8 +17,7 @@ Over the past couple of years, I have been successful in motivating a couple of 
 
 You should have already guessed that from the post title - The URL where you blog under - Make sure you own it. Buy one of your choices, from any of the [domain providers](https://www.google.com.au/search?q=buy+domain) (more on this later) and blog under that. While it's easy to start blogging under popular services like WordPress.com/Blogspot.com, you actually don't own your domain.
 
-<a href="https://i.kinja-img.com/gawker-media/image/upload/pgtqyluoyhr1swo4wrmn.jpg">
-<img class="center" alt="Own your URL" src="../images/url.jpg" /></a>
+[![Own your URL](../images/url.jpg)](https://i.kinja-img.com/gawker-media/image/upload/pgtqyluoyhr1swo4wrmn.jpg)
 
 I have committed this mistake, of blogging under a URL not owned by me, not [once](http://rahulpnath.blogspot.com/) but [twice](https://rahulpnath.wordpress.com),and ended up having to edit the posts to redirect here. (I did not want to pay the providers a monthly fee just for the redirect and didn't have many readers). It's not that these external platforms are bad, but you are just throwing away the flexibility to change platforms (without any extra charge) when you want to. Owning your URLs allows you to change platforms, hosts, URL formats, redirects anything that you want to and I like to have that flexibility.
 
@@ -50,7 +49,7 @@ I have been irregular with my blogging schedules ([until lately](http://www.rahu
 
 <figure>  
     <img alt="Blog frequency as on 26-06-2-16 http://www.rahulpnath.com" src="../images/blog_frequency.png" />
-    <figcaption><em>Blog frequency as on June,2016 http://www.rahulpnath.com</em></figcaption>
+    <figcaption><em>Blog frequency as on June,2016 https://www.rahulpnath.com</em></figcaption>
 </figure>        
  
 It's a good idea to have a schedule to blog , so that you don't just end up writing one post and forget about your blog forever. [Pick a schedule that works for you](https://blog.codinghorror.com/how-to-achieve-ultimate-blog-success-in-one-easy-step/) and try to stick with it.

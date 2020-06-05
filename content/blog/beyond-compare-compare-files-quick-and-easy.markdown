@@ -13,7 +13,7 @@ thumbnail: ../images/beyond_compare.png
 
 Merging conflicts can be a pain when working in large teams and code bases change fast. Every time you sync with the main code base you need to make sure that you integrate the updates with your work in progress. It's great when the changes get automatically merged by the source control systems. But when things need to be manually merged is where a good tool can be of help.
 
-<img src="../images/beyond_compare.png" class="center" alt="Beyond Compare">
+<img src="../images/beyond_compare.png" class="center" alt="Beyond Compare" />
 
 > _[Beyond Compare](http://www.scootersoftware.com/index.php) allows you to quickly and easily compare your files and folders. By using simple, powerful commands, you can focus on the differences you're interested in and ignore those you're not. You can then merge the changes, synchronize your files, and generate reports for your records._
 

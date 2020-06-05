@@ -13,7 +13,7 @@ thumbnail: ../images/content-security-policy.png
 
 _This article is part of a series of articles - [Ok I have got HTTPS! What Next?](/blog/ok-i-have-got-https-what-next/). In this post, we explore how to use HSTS security header and the issues it solves._
 
-Content Security Policy (CSP) is a security response header or a <meta> element that instructs the browser, sources of information that it should trust for our website. A browser that supports CSP's then treats this list specified as a whitelist and only allows resources to be loaded only for those sources. CSP's allow you to specify source locations for a variety of resource types which are referred to as [fetch directives](https://developer.mozilla.org/en-US/docs/Glossary/Fetch_directive)(e.g. \_script-src, img-src,style-src\* etc).
+Content Security Policy (CSP) is a security response header or a `<meta>` element that instructs the browser, sources of information that it should trust for our website. A browser that supports CSP's then treats this list specified as a whitelist and only allows resources to be loaded only for those sources. CSP's allow you to specify source locations for a variety of resource types which are referred to as [fetch directives](https://developer.mozilla.org/en-US/docs/Glossary/Fetch_directive)(e.g. \_script-src, img-src,style-src\* etc).
 
 <img src="../images/content-security-policy.png" alt="Content Security Policy"  class="center" />
 

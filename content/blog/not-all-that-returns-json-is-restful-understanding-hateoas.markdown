@@ -13,7 +13,7 @@ Though [REST](http://en.wikipedia.org/wiki/Representational_state_transfer) has 
 
 It's not long back that we saw a new technology stack come up in ASP.Net, which redefined the way we were building services - [WCF to Web API](http://www.rahulpnath.com/blog/wcf-to-asp-net-web-api/). This was a major shift from the RPC/SOAP style of programming to the REST architectural pattern. The main things that changed as for a developer was to start returning JSON/XML instead of SOAP messages, use HTTP verbs for performing actions instead of the explicitly defined contracts and use a http client to invoke the services instead of a proxy. Thats where we (at least I) were or rather are at. But was this really what we wanted to achieve?
 
-<a href="http://geek-and-poke.com/geekandpoke/2013/6/14/insulting-made-easy" class="center" title="It's not RESTful, Image by geekandpoke"><img src="../images/not_restful.png" class="center" alt="It's not RESTful, Image by geekandpoke"></a>
+[![It's not RESTful](../images/not_restful.png)](http://geek-and-poke.com/geekandpoke/2013/6/14/insulting-made-easy)
 
 REST was originally introduced by [Roy Fielding](http://roy.gbiv.com/) in his [dissertation](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) and this is how he had seen it.
 
@@ -110,4 +110,3 @@ Additional Resources:
 - [Designing Evolvable Web APIs with ASP.NET](http://www.amazon.com/gp/product/1449337716/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1449337716&linkCode=as2&tag=rahulpnath-20&linkId=TD7FYXTI77G4P2GF)
 
 * [Blogs and other links](https://delicious.com/rahulpnath/hypermedia)
-  <a href="http://www.codeproject.com" style="display:none" rel="tag">CodeProject</a>

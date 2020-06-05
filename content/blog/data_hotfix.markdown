@@ -12,9 +12,7 @@ thumbnail: ../images/data_hotfix.jpg
 
 Yesterday I was late to leave office as I had to data fix some of the systems that we are currently building. We had just migrated few hundred clients onto the new platform. Invoices generated for the clients had wrong invoice amounts due to some mismatching data used when migrating. We had the expected invoice from the old system which made finding the problem easy. We ran a few scripts to correct the data in different systems and fixed the issue.
 
-<a href="http://static1.squarespace.com/static/54652521e4b0045935420a6c/t/548dee03e4b0f1b25cb560d5/1418587652009/Data.jpg?format=1500w">
-    <img class="center" alt="Data Hotfix" src="../images/data_hotfix.jpg" />
-</a>
+[![Data Hotfix](../images/data_hotfix.jpg)](http://static1.squarespace.com/static/54652521e4b0045935420a6c/t/548dee03e4b0f1b25cb560d5/1418587652009/Data.jpg?format=1500w)
 
 <div class="alert alert-warning">
 <strong>WARNING!</strong> Normally I do not recommend making any changes directly in production server. In this case, there was a business urgency and was forced to do the data fix the same night, for smooth functioning the day after. We still managed to get in some testing in the development environment before running it in production.

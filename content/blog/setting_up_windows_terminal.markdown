@@ -16,7 +16,7 @@ You can install using the [command line](https://github.com/microsoft/terminal#i
 
 ### Toggling
 
-Pressing  <img style="display: inline-block;" src="../images/windows-10.png" alt="WIN Key"> (WIndows Key) + # (the position of the app on the taskbar) works as [toggle](https://www.itprotoday.com/access-taskbar-keyboard-shortcuts). If the app is open and selected, it will minimize, if not, it will bring to the front and selects it. If the app is not running, it will start the app.
+Pressing WIN Key + # (the position of the app on the taskbar) works as [toggle](https://www.itprotoday.com/access-taskbar-keyboard-shortcuts). If the app is open and selected, it will minimize, if not, it will bring to the front and selects it. If the app is not running, it will start the app.
 
 ![](../images/windows_terminal_toggle.jpg)
 

@@ -29,7 +29,7 @@ Now you are up an running your blog on Azure!!
 
 **Things to look out for:**
 
-**1**. Make sure that all your blog links use your custom domain and not <yourdomain>.azurewebsite.net.
+**1**. Make sure that all your blog links use your custom domain and not *yourdomain*.azurewebsite.net.
 
 **2**. I had my Jetpack commenting system broken as I had moved the blog to a subdirectory. To correct this you would need to disconnect jetpack from the wordpress account and reconnect it. You can do this from the Wordpress dashboard. If reconnecting throws some error, then connect to your SQL database and delete of the entries that starts with jetpack in the _wp_options_ table.(Make sure you have a db backup before you do this). Reconnecting after that should work fine
 
@@ -48,4 +48,3 @@ You could either configure your ssl bindings in azure portal, under the [Configu
 If you do not have a free account, you might be thinking of the costs that would be really incurred for you to move on to Azure. In short Azure Web Sites is offered in four tiers: **Free**, **Shared (Preview)**, **Basic** and **Standard**. The pricing details for each of these is available in detail [here](http://azure.microsoft.com/en-us/pricing/details/web-sites/). To have a custom domain name mapping you would at least need to choose Shared mode. For more information on how to choose the right plan for you, Scott Hanselman has a very good article on [Penny Pinching in the cloud.](http://www.hanselman.com/blog/PennyPinchingInTheCloudWhenDoAzureWebsitesMakeSense.aspx)
 
 Do you plan to move to Azure Web Sites some time soon?
-<a href="http://www.codeproject.com" style="display:none" rel="tag">CodeProject</a>

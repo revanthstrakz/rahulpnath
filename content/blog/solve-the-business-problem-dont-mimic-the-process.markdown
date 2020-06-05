@@ -12,7 +12,7 @@ description: Describes on the importance of seeing the computing problems attach
 thumbnail: ../images/business_problem_automation.jpg
 ---
 
-<a href="http://www.dhc-gmbh.com/en/kompetenzen/business-process-management/"><img class="center" alt="Business" src="../images/business_problem_automation.jpg"/></a>
+[![Business Problem Automation](../images/business_problem_automation.jpg)](http://www.dhc-gmbh.com/en/kompetenzen/business-process-management/)
 
 While working with clients I often get into conversations with the domain experts and people involved directly with the business. The discussions usually happen around what the process they are currently doing and how to automate those. Knowing the business process is helpful but getting influenced by that to design the solution is often not effective. Recently our team was in a conversation with a domain expert for a new feature request.
 

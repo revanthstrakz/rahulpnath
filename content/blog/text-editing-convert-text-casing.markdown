@@ -15,7 +15,7 @@ Often when working with SQL queries, I come across the need to capitalize SQL ke
 
 Sublime Text Editor comes with a few built-in text casing converters that we can use, to convert text from one case to another. Using the [simultaneous editing](https://en.wikipedia.org/wiki/Simultaneous_editing) feature, we can combine it with case conversion and manipulate large documents easily.
 
-<img src="../images/textediting_convert_case.png" alt="Convert case options in sublime text" >
+<img src="../images/textediting_convert_case.png" alt="Convert case options in sublime text" />
 
 For example, let's say I have this below SQL query. As you can notice the SELECT and FROM keywords are cased differently across the query.
 

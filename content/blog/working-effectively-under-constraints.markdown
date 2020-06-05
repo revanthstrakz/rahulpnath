@@ -13,7 +13,7 @@ thumbnail: ../images/working_constraints.png
 
 At times you might be working in environments where there are a lot of restrictions on the tools that you can use, the process that you need to follow, etc. Under these circumstances, it is essential that we stick to some core and fundamental principles and practices that we as an industry have adopted. We need to make sure that we have that in place no matter what the restrictions imposed are. Below are a few of the restrictions that I along with my team had to face at one of the clients and what we did to keep ourselves on top of it and still deliver at a higher speed.
 
-<img src="../images/working_constraints.png" alt="Working under Constraints." title="Working under Constraints. Image Source - https://www.saba.com/blog/how-to-master-employee-engagement-constraints">
+<img src="../images/working_constraints.png" alt="Working under Constraints." title="Working under Constraints. Image Source - https://www.saba.com/blog/how-to-master-employee-engagement-constraints" />
 
 > _The issues discussed might or might not immediately relate to you, the important thing is your attitude towards such issues and finding ways around your constraints, keeping yourself productive on the long run._
 

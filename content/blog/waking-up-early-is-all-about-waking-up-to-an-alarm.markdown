@@ -12,7 +12,7 @@ I have always been the '_early to bed_' type of person and my day mostly ends by
 
 I have noticed that it's not that waking up in the morning that is a problem. Waking up from bed at any time of the day is a problem and we all tend to lie down for a few more minutes. Further reading about these on the Internet I came up with some strategies to help me wake up to an alarm. I have been following this for couple of months and its been working out for me, most of the time.
 
-<a href="http://flic.kr/p/6Zfgdp" class="center" title="Image By Guilherme Tavares, used under Creative Commons from http://flic.kr/p/6Zfgdp"><img src="../images/alarm.png" class="center" alt="Image By Guilherme Tavares, used under Creative Commons from http://flic.kr/p/6Zfgdp"></a>
+[![](../images/alarm.png)](http://flic.kr/p/6Zfgdp)
 
 1. **Plan:** Plan your activities to be done after waking up, before going to sleep the day before. '_Not having anything to do_', is one of the main reasons that keeps us from waking up. So plan ahead for it and find activities like reading, writing , working out, anything that you like. But have a plan!
 

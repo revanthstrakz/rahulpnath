@@ -14,16 +14,13 @@ thumbnail: ../images/bloggingSchedule_writedaily.jpg
 
 Consistency is important in blogging. It does not matter if you are bad at writing, have nothing to write or nobody reads your blog. What matters is whether you write on a predictable schedule - once a month, once a week, once a year, one per day etc. If you do not have a schedule you are more likely to fall off from sticking to blogging. I had [written before](http://www.rahulpnath.com/blog/own-your-urls/), I always struggled to write regularly. But since the start of this year, I have been blogging to a schedule (once a week) and have been successful with that. This post looks into some of the challenges that I faced and things that I have incorporated to stick to a schedule.
 
-<a href="https://www.flickr.com/photos/12389767@N04/3097124543/">
-<img  alt="Make writing a habit - write daily" src="../images/bloggingSchedule_writedaily.jpg"/>
-</a>
+[![Make writing a habit - write daily](../images/bloggingSchedule_writedaily.jpg)](https://www.flickr.com/photos/12389767@N04/3097124543/")
 
 ## Make Writing a Habit
 
 Writing posts was hard and I always procrastinated on it. It often took me more than a week to complete a post. There's a saying, **_If it hurts, do it more often_** - So to make writing easy I had to write more often.
 
-> _I write only when inspiration strikes. Fortunately it strikes every morning at nine o'clock sharp._
-
+> _I write only when inspiration strikes. Fortunately it strikes every morning at nine o'clock sharp._             
 > _- [Somerset Maugham](http://www.goodreads.com/quotes/302963-i-write-only-when-inspiration-strikes-fortunately-it-strikes-every)_
 
 ### **Generating Topics**

@@ -89,8 +89,6 @@ Using nonce allows us to get away with having an inline script. However, this sh
 
 [Check if](https://caniuse.com/#search=sri) your browser supports Subresource Integrity. Compared to a while back most of the browsers now support SRI.
 
-<a href="https://caniuse.com/#search=sri">
-  <img src="../images/sri_browser.png" alt="SRI Browser Support" class="center" />
-</a>
+[![SRI Browser Support](../images/sri_browser.png)](https://caniuse.com/#search=sri)
 
 Using SRI, we can make sure that the dependencies that we have are loaded are as expected and not modified in flight or at source by a malicious attacker. There is always a risk that you need to be willing to take when including external dependencies as they could be already having a threat embedded at the time of hash generation. For popular libraries, this is less likely. For those unpopular ones, it's always a good idea to take a quick look at the code to ensure it's not malicious. Using some tools to assist you with this is also a good idea, which we will look into in a separate article.

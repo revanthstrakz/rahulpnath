@@ -41,7 +41,7 @@ New-AzureKeyVault -VaultName 'TestKeyVault' -ResourceGroupName
 
 The above scripts creates the key vault under the '_SharedGroup_'. [Resource Groups](https://azure.microsoft.com/en-us/documentation/articles/resource-group-overview/#resource-groups) are logical containers, used to group resources together as required. [Access to azure resources](https://azure.microsoft.com/en-us/documentation/articles/role-based-access-control-configure/) can be assigned at any of the three levels (subscription, resource group or resource) and it inherits down the hierarchy as shown below. Roles can be assigned specifically to a resource, or to resource group (which would mean all to all resources in that group) or at the subscription level (which would apply to all resources/resource groups in that subscription.).
 
-<a href="https://acomdpsstorage.blob.core.windows.net/dpsmedia-prod/azure.microsoft.com/en-us/documentation/articles/role-based-access-control-configure/20151006095042/rbacassignmentscopes.png"><img src="../images/rbac_assignment_scopes.png" class="center"></img></a>
+[![RBAC Assignment Scopes](../images/rbac_assignment_scopes.png)](https://acomdpsstorage.blob.core.windows.net/dpsmedia-prod/azure.microsoft.com/en-us/documentation/articles/role-based-access-control-configure/20151006095042/rbacassignmentscopes.png)
 
 ### Setting Permission on the resource group
 

@@ -15,7 +15,7 @@ _This article is part of a series of articles - [Ok I have got HTTPS! What Next?
 
 When you enter a domain name in the browser without specifying the protocol (HTTP or HTTPS) the browser by default sends the first request over HTTP. For a server that supports only HTTPS, when it sees such a request, it redirects the request over to HTTPS. The server responds to the client with a _302 Redirect_, redirecting the client to HTTPS, from which on the browser starts requesting over HTTPS. As you can see here, the very first request that the client makes is over an insecure channel (HTTP), so is also vulnerable to attacks. You could be prone to man-in-the-middle (MITM) attack, and someone could spoof that request and point you to a different site, inject malicious scripts, etc. **The first insecure HTTP request is made everytime you enter the domain name in the browser or make an explicit call over HTTP.**
 
-<img src="../images/hsts_tofu.png" alt="Trust on First Use" class="center">
+<img src="../images/hsts_tofu.png" alt="Trust on First Use" class="center" />
 
 > _The HTTP **Strict-Transport-Security** response header (often abbreviated as HSTS) lets a website tell browsers that it should only be accessed using HTTPS, instead of using HTTP_
 

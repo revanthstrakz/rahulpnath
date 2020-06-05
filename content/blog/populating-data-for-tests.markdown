@@ -14,7 +14,8 @@ thumbnail: ../images/test_data.gif
 
 Populating data for tests is the section of the test that usually ends up making tests more coupled with the code that it is testing. Coupling makes tests more fragile and refactoring code harder because of breaking tests. We should try to avoid coupling with the implementation details when writing tests. Let us see a few options that we have to populate test data and constructing object graphs (chain of objects branched off from the root object). I use [xUnit.net](https://xunit.github.io/) as my test framework, but you can use these techniques in your choice of framework.
 
-<a href="http://xunitpatterns.com/Data-Driven%20Test.html" class="center" title="Image from xUnit Test Patterns"><img class="center" alt="Populating Test Data" src="../images\test_data.gif" /></a>
+
+[![Populating Test Data](..\images\test_data.gif)](http://xunitpatterns.com/Data-Driven%20Test.html)
 
 Let's start with some simple tests on a Customer class shown below.
 
@@ -241,6 +242,6 @@ public void CustomerControllerGetWithNoCustomerReturnsNotFound(
 }
 ```
 
-The tests above uses [InlineAutoMoqData attribute](http://blog.nikosbaxevanis.com/2012/07/31/autofixture-xunit-net-and-auto-mocking/) which is a customized xUnit data attribute that uses Moq framework to inject dependencies. The Mock<ICustomerRepository> represents a mocked interface implementation. Behavior is setup on the mock using the Setup method. By using [Frozen](http://blog.ploeh.dk/2010/03/17/AutoFixtureFreeze/) attribute for the Mock parameter, we tell AutoFixture to create only one instance of the mocked object and then use the same instance for any future requests of that type. This forces the same instance of the repository to be injected into the CustomerController class as well when it asks for a ICustomerRepository to AutoFixture.
+The tests above uses [InlineAutoMoqData attribute](http://blog.nikosbaxevanis.com/2012/07/31/autofixture-xunit-net-and-auto-mocking/) which is a customized xUnit data attribute that uses Moq framework to inject dependencies. The `Mock<ICustomerRepository>` represents a mocked interface implementation. Behavior is setup on the mock using the Setup method. By using [Frozen](http://blog.ploeh.dk/2010/03/17/AutoFixtureFreeze/) attribute for the Mock parameter, we tell AutoFixture to create only one instance of the mocked object and then use the same instance for any future requests of that type. This forces the same instance of the repository to be injected into the CustomerController class as well when it asks for a ICustomerRepository to AutoFixture.
 
 Creating test data is an important aspect of any test. Making sure that you minimize the dependencies on the implementation detail is important to make your tests more robust. This allows the code to be refactored as long as some of the core contracts that we are testing remain the same. AutoFixture helps minimize the code in [Fixture Setup phase](http://xunitpatterns.com/Four%20Phase%20Test.html), which otherwise tends to grow bigger. Hope this helps you with your tests!
