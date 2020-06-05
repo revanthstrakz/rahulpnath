@@ -37,7 +37,7 @@ export default ({ data: { posts }, pageContext: {tag, slug } }) => (
 
 export const postQuery = graphql`
   query($tag: String!) {
-    posts: allMarkdownRemark(
+    posts: allMdx(
       filter: { frontmatter: { tags: { in: [$tag] } } }
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 200

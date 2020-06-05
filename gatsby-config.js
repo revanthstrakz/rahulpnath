@@ -49,7 +49,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-feed',
+      resolve: 'gatsby-plugin-feed-mdx',
       options: {
         query: `{
 					site {
@@ -74,8 +74,8 @@ module.exports = {
                 feed_url: "https://www.rahulpnath.com/rss.xml"
               };
             },
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   url:
@@ -89,7 +89,7 @@ module.exports = {
               })
             },
             query: `{
-							allMarkdownRemark(
+							allMdx(
                 filter: {fileAbsolutePath: {regex: "/blog/"}}
 								sort: { order: DESC, fields: [frontmatter___date] }
 							) {
@@ -132,8 +132,9 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-plugin-mdx',
       options: {
+        extensions: [`.mdx`, `.md`, `.markdown`],
         plugins: [
           {
             resolve: 'gatsby-remark-images',

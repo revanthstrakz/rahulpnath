@@ -28,8 +28,8 @@ export default ({ data: { post } }) => (
 
 export const postQuery = graphql`
   query($path: String!) {
-    post: markdownRemark(fields: { slug: { eq: $path } }) {
-      html
+    post: mdx(fields: { slug: { eq: $path } }) {
+      body
       description: excerpt(pruneLength: 105)
       timeToRead
       fields {

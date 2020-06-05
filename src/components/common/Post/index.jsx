@@ -1,18 +1,11 @@
 import { PageTitle, SocialShare, Tag } from 'components/common'
 import Disqus from 'disqus-react'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { ThemeContext } from 'providers/ThemeProvider'
 import React, { useContext } from 'react'
-import {
-  Ad,
-  ArticleDate,
-  ArticleWrapper,
-  Comments,
-  Content,
-  Flex,
-  Tags,
-} from './styles'
+import { Ad, ArticleDate, ArticleWrapper, Comments, Flex, Tags } from './styles'
 
-export const Post = ({ html, frontmatter, timeToRead, fields }) => {
+export const Post = ({ body, frontmatter, timeToRead, fields }) => {
   const { theme } = useContext(ThemeContext)
   const disqusShortName = 'rahulpnath'
   const postIdentifier = `https://www.rahulpnath.com${fields.slug}`
@@ -54,7 +47,7 @@ export const Post = ({ html, frontmatter, timeToRead, fields }) => {
           }}
         />
       </Flex>
-      <Content dangerouslySetInnerHTML={{ __html: html }} />
+      <MDXRenderer>{body}</MDXRenderer>
       <SocialShare title={frontmatter.title} path={fields.slug} />
       <Comments>
         <Disqus.DiscussionEmbed
