@@ -8,7 +8,7 @@ export const Popular = () => {
     popular: { edges },
   } = useStaticQuery(graphql`
     query {
-      popular: allMarkdownRemark(
+      popular: allMdx(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: {
           frontmatter: { popular: { eq: true } }

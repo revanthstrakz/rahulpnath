@@ -1,6 +1,6 @@
 module.exports = `
 {
-  posts: allMarkdownRemark(
+  posts: allMdx(
     filter: {fileAbsolutePath: {regex: "//blog//"}}
     sort: { order: DESC, fields: [frontmatter___date] }
   ) {
@@ -38,7 +38,7 @@ module.exports = `
       }
     }
   },
-  drafts: allMarkdownRemark(
+  drafts: allMdx(
     filter: {fileAbsolutePath: {regex: "//drafts//"}}
     sort: { order: DESC, fields: [frontmatter___date] }
   ) {

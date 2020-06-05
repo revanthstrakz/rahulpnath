@@ -11,9 +11,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   // trip up. An empty string is still required in replacement to `null`.
   // eslint-disable-next-line default-case
   switch (node.internal.type) {
-    case 'MarkdownRemark': {
+    case 'Mdx': {
       const { relativePath } = getNode(node.parent);
-      const  slug = `/${relativePath.replace('.md', '').replace('.markdown', '')}/`;
+      const  slug = `/${relativePath.replace('.mdx', '').replace('.markdown', '').replace('.md','')}/`;
       // Used to generate URL to view this content.
       createNodeField({
         node,
