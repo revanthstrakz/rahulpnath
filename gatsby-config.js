@@ -179,7 +179,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
-        logo: './src/assets/favicon/logo-512x512.png',
+        logo: './src/favicon.png',
         injectHTML: true,
         icons: {
           android: true,
@@ -190,7 +190,7 @@ module.exports = {
           firefox: true,
           twitter: false,
           yandex: false,
-          windows: false,
+          windows: true,
         },
       },
     },
