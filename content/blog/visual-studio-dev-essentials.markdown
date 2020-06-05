@@ -17,7 +17,7 @@ If you are a .NET developer and looking for some awesome free stuff, then check 
 
 > _Get everything you need to build and deploy your app on any platform. With state-of-the-art tools, the power of the cloud, training, and support, it’s our most comprehensive free developer program ever._
 
-<img src="../images/vs_dev_essentials.png" alt="center" alt="Visual Studio Dev Essentials" >
+<img src="../images/vs_dev_essentials.png" alt="center" alt="Visual Studio Dev Essentials" />
 
 Some of the key attractions of the program are
 

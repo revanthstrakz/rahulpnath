@@ -15,9 +15,7 @@ thumbnail: ../images/logitech_mxmaster.jpg
 
 It's been six months with the [Logitech MX Master](http://amzn.to/2ddLmUf) mouse and I absolutely love it for daily use. I picked this mouse a week after reading [Hanselman's review](http://www.hanselman.com/blog/FindingThePerfectMouse.aspx). It feels just as it sounded in his review - Perfect!.
 
-<a href="http://www.logitech.com/en-us/product/mx-master">
-    <img  alt="Logitech MX Master" src="../images/logitech_mxmaster.jpg"/>
-</a>
+[![Logitech MX Master](../images/logitech_mxmaster.jpg)](http://www.logitech.com/en-us/product/mx-master)
 
 ## Key Features
 

@@ -17,7 +17,7 @@ With large scale applications it is very common to have an external cache, to op
 
 > In this blog post we will be seeing how to keep our Repositories clean and separate from the actual providers and provide a persistence ignorant data access to your business layer.
 
-<img src="../images/RepositoryPattern.PNG" class="center" alt="Repository Pattern Class Diagram">
+<img src="../images/RepositoryPattern.PNG" class="center" alt="Repository Pattern Class Diagram" />
 
 ### Creating the Repository
 
@@ -229,4 +229,3 @@ In the repository methods we return an IEnumerable and not an IQueryable, as we 
 By separating out the cache and data store strategies we have made it possible to change the providers for either of them without affecting any of the repository code. We could switch out the sql data store strategy and have a oracle strategy or a mongodb strategy and have that implement the specifics on how to retrieve the the data that we want. We would also have a specific IDataStoreContext implementation for the corresponding new data store.
 
 You can find the code structure for this [here](https://github.com/rahulpnath/Blog/tree/master/RepositoryPattern). It only provides the interfaces and some mock implementations and does not connect to any data stores or cache providers. Hope this helps in architecting the repository pattern when dealing with multiple strategies to save. What are your thoughts on this?
-<a href="http://www.codeproject.com" style="display:none" rel="tag">CodeProject</a>

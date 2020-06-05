@@ -129,7 +129,7 @@ I updated the idToken property as the .Net Core Web Application was using JWT ID
 
 <img src="../images/AzureAd_idToken.png" class="center" alt="Id token returned" />
 
-With the optonalClaims set, the web application is all set to go. For an authenticated user (with the extension property set), the extension property is available as part of claims. The claim type will be '_extn.employeeCode<optionalEnvironmentNam>_'. The below code can be used to extract the employee code from the claim.
+With the optonalClaims set, the web application is all set to go. For an authenticated user (with the extension property set), the extension property is available as part of claims. The claim type will be `_extn.employeeCode<optionalEnvironmentNam>_`. The below code can be used to extract the employee code from the claim.
 
 ```csharp
 public static string GetEmployeeCode(this ClaimsPrincipal claimsPrincipal)

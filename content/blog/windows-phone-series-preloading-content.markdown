@@ -23,7 +23,7 @@ Assuming that we have a folder “MyPreloadedContent” as indicated in the imag
 
 ![preloaded content Visual studio](../images/preloaded_content_Visual_studio.png)
 
-For this we would need to tweek the project file, to tell it that whatever is under MyPreloadedContent should be treated as ‘Content’. Edit the csproj file from notepad or any other text editor that you use([Notepad++](http://notepad-plus-plus.org/) is my personal favorite). Scroll down to wherever the other Content files are specified, like “<Content Include="ApplicationIcon.png">” for example. Add in the below line to make all the content put into that folder to be treated as Content, and save the csproj file.
+For this we would need to tweek the project file, to tell it that whatever is under MyPreloadedContent should be treated as ‘Content’. Edit the csproj file from notepad or any other text editor that you use([Notepad++](http://notepad-plus-plus.org/) is my personal favorite). Scroll down to wherever the other Content files are specified, like `<Content Include="ApplicationIcon.png">` for example. Add in the below line to make all the content put into that folder to be treated as Content, and save the csproj file.
 
     <strong><span style="font-size:large;"><Content Include="MyPreloadedContent**" /></span></strong>
 
@@ -78,7 +78,7 @@ In a T4 template it would be a mix of text and code, that would be used to gener
     }
 ```
 
-It just says to read the directory MyPreloadedContent and iterate to get all the files in that and writes it out by trimming of the absolute path and putting in only the relative path. Save the MyFiles.tt, and in Visual Studio right click on it and say “Run Custom Tool”. This would generate the cs file with an extension “.gen.cs” as we have mentioned in “**<#@ output extension=".gen.cs" #>”.  **The generated class would look like below
+It just says to read the directory MyPreloadedContent and iterate to get all the files in that and writes it out by trimming of the absolute path and putting in only the relative path. Save the MyFiles.tt, and in Visual Studio right click on it and say “Run Custom Tool”. This would generate the cs file with an extension “.gen.cs” as we have mentioned in `<#@ output extension=".gen.cs" #>`.  **The generated class would look like below
 
 ```csharp
     namespace PreloadedContent

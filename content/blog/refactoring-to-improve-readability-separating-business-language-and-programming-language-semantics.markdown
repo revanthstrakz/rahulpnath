@@ -20,9 +20,7 @@ If you follow the _One Level of Abstraction per Function Rule_ or the _Stepdown 
 
 Recently while fixing a bug in one of the applications that I am currently working on, I came across a code with the business and programming language semantics mixed together. This made it really hard to understand the code and fixing it. So I decided to refactor it a bit before fixing the bug.
 
- <a href="http://www.slideshare.net/kvg452/the-art-of-readable-code-31322040">
-<img class="center" src="../images/readable_code.jpg" alt="Code should be readable" />
-</a>
+[![Code should be readable](../images/readable_code.jpg)](http://www.slideshare.net/kvg452/the-art-of-readable-code-31322040)
 
 The application is a subscription based service for renting books, videos, games etc. and enabled customers to have different subscription plans and terms. Currently, we are migrating away from the custom built billing module that the application uses to a SAAS based billing provider to make invoicing and billing easy and manageable. In code, a _Subscription_ holds a list of _SubscriptionTerm_ items, that specifies the different terms that a customer has for the specific subscription. A term typically has a start date, an optional end date and a price for that specific term. A null end date indicates that the subscription term is valid throughout the customer lifetime in the system.
 

@@ -113,7 +113,7 @@ Before going into the details of the code, lets understand what this class is go
 
 ```
 
-That said lets see the  _IncremetnalSource_ class. It takes in the object type **_T _**and **_K._**The constructor takes in the url where the datasource can be found.The Func<T, IPagedResponse<K>> parameter represents a function that takes in the return type of the call to the url as a parameter and returns the PagedResponse type. In other words that function converts the paged request call type to the type that we use to represent it, IPagedResponse.See a sample below.
+That said lets see the  _IncremetnalSource_ class. It takes in the object type **_T _**and **_K._**The constructor takes in the url where the datasource can be found.The `Func<T, IPagedResponse<K>>` parameter represents a function that takes in the return type of the call to the url as a parameter and returns the PagedResponse type. In other words that function converts the paged request call type to the type that we use to represent it, IPagedResponse.See a sample below.
 
 ```csharp
 private PagedResponse<Photo> RootObjectResponse(RootObject rootObject)
@@ -124,16 +124,13 @@ private PagedResponse<Photo> RootObjectResponse(RootObject rootObject)
 
 Now we need to make the call to the datasource url. This might return us data in different formats, most popularly json or xml. So we would always want to abstract away the loading of data to another class so that we don’t get tied up with the data formats in _IncrementalSource._
 
-IPagedSource<T,K> will do this for us. A sample implementation of this is \_PagedSourceLoader \_that handles for json return type is below
+`IPagedSource<T,K>` will do this for us. A sample implementation of this is *PagedSourceLoader* that handles for json return type is below
 
 ```csharp
     public interface IPagedSource<R,K>
     {
         Task<IPagedResponse<K>> GetPage(string query, int pageIndex, int pageSize);
     }
-
-
-
 
     public class PagedSourceLoader<T,K> : IPagedSource<T,K>
         where T:class
@@ -162,7 +159,7 @@ IPagedSource<T,K> will do this for us. A sample implementation of this is \_Page
 
 ```
 
-As you see above the _PagedSourceLoader_ gets the json from the datasource url and converts to the type that we are interested in . You could always replace this class to use any other data format as you would want. Mostly you would just want one implementation for _IPagedSource<T,K>, \_as your data source would always return you the same data format. In case not you could inject that too into the \_IncrementalSource_ class.
+As you see above the _PagedSourceLoader_ gets the json from the datasource url and converts to the type that we are interested in . You could always replace this class to use any other data format as you would want. Mostly you would just want one implementation for `IPagedSource<T,K>`, as your data source would always return you the same data format. In case not you could inject that too into the _IncrementalSource_ class.
 
 I have a sample [here](http://sdrv.ms/RdPtdL) that incrementally loads the photos from a photo site [500px](http://500px.com/flow). You would need to register for an to get the consumer key,which should hardly take some time [here](http://500px.com/settings/applications?from=developers).
 

@@ -56,7 +56,7 @@ sqlBulk.WriteToServer(table);
 ```
 
 CSV file may have empty columns where the associated column in SQL table is NULLABLE.  SQLBulkCopy throws errors like below, depending on the column type and if the value is an empty string.
-*<span style='color:red'>The given value of type String from the data source cannot be converted to type \<TYPENAME> of the specified target column</span>*
+*<span style='color:red'>The given value of type String from the data source cannot be converted to type TYPENAME of the specified target column</span>*
 
 Explicitly marking the empty values as null (as in the code above) solves the problem.
 

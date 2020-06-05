@@ -13,7 +13,7 @@ Sometime back we had seen, how to [configure the unity container using code/conf
 
 The below image by [Mark Seemann](https://twitter.com/ploeh) sums it all up on when and how to use a Dependency Injection(DI) container and we were right at the bottom, where the whole purpose of a DI becomes pointless.
 
-<a href="http://bit.ly/1zLiq6p" class="center" title="Image By Mark Seemann, from http://bit.ly/1zLiq6p"><img src="../images/ioc_usefulness.png" class="center" alt="Image By Mark Seemann, from http://bit.ly/1zLiq6p"></a>
+[![](../images/ioc_usefulness.png)](http://bit.ly/1zLiq6p)
 
 ## Convention Over Configuration
 
@@ -42,7 +42,7 @@ For each of the type that is returned from the above method we get the list of i
 - _IFooBar_ : Has only one implementation
 - _IFoo_ : Has multiple implementations and should be resolved using _IFooFactory_
 - _IFooCustom_ : Has multiple implementations and needs to have a custom name (maybe for some reason you do not want the context information to be part of the class name). This is to be resolved using IFooCustomFactory.
-- _IFooGeneric<T>_ : This is a generic implementation and the type can be decided at runtime.
+- `IFooGeneric<T>` : This is a generic implementation and the type can be decided at runtime.
 
 The _GetInterfacesToBeRegistered_ function gets the interfaces that are to be registered for a given type. For this convention I want to [get only the direct interfaces](http://stackoverflow.com/questions/5318685/get-only-direct-interface-instead-of-all) that are on the given type and not all the interfaces. The check below for _isGenericType_ on an interface is for _IFooGeneric_ as for generic interfaces the [GetInterfaces does not return the full information required](http://stackoverflow.com/questions/3117090/getinterfaces-returns-generic-interface-type-with-fullname-null) and we need to use the _GetGenericTypeDefinition_ method instead.
 
@@ -87,4 +87,3 @@ IoCConvention.RegisterByConvention(unityContainer);
 ```
 
 This has really taken off a lot of work for all the developers in the team and registrations of dependencies works seamlessly. You can find the sample convention implementation [here](https://github.com/rahulpnath/Blog/tree/master/IocConventionRegistration). Are you using convention registrations in your applications? If not you should start using them.
-<a href="http://www.codeproject.com" style="display:none" rel="tag">CodeProject</a>

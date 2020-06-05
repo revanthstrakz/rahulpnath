@@ -12,7 +12,8 @@ description: A Pomodoro Timer for Windows which does one thing and that thing ri
 thumbnail: ../images/tomighty.png
 ---
 
-<a href="http://tomighty.org/"><img alt="Tomighty, Pomodoro Timer" src="../images/tomighty.png" /></a>
+
+[![Tomighty, Pomodoro Timer](../images/tomighty.png)](http://tomighty.org/)
 
 Over the past couple of weeks, I have been trying to improve my focus while working. With [running (3 _ 1.5 hours a week) and bodyweight training (3 _ 30 minutes a week)](http://www.rahulpnath.com/blog/how-i-lost-13-kilos-in-one-and-half-months/) taking a significant part of my [morning routine](http://www.rahulpnath.com/blog/morning_routine/), I have less time for [blogging, learning, and videos](http://www.rahulpnath.com/blog/2016-recap/). Though I have known [The Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) for a long time, I never practiced it regularly. With less time and more things to get done, I badly had to do something to get back on track with everything and thought of giving it a try.
 

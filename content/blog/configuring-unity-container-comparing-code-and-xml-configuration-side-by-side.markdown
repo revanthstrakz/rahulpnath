@@ -35,7 +35,7 @@ In the unity.config we need to specify the assemblies and namespaces that we wil
 </unity>
 ```
 
-Now that we have the basic infrastructure set up to start using the container, lets take a look at some common dependency injection scenarios that we come across. The [Unity Configuration Schema](http://msdn.microsoft.com/en-us/library/ff660914(v=pandp.20\).aspx) is worth taking a look, to understand about the configuration elements and their attributes.
+Now that we have the basic infrastructure set up to start using the container, lets take a look at some common dependency injection scenarios that we come across. The [Unity Configuration Schema](http://msdn.microsoft.com/en-us/library/ff660914) is worth taking a look, to understand about the configuration elements and their attributes.
 
 **Simple Class and Interface**
 
@@ -49,7 +49,7 @@ this.unityContainer.RegisterType<INormalInterface, NormalInterfaceImplementation
 <register type="INormalInterface" mapTo="NormalInterfaceImplementation" />
 ```
 
-Since we have only given the interface name while registering the type, specifying the assembly and namespace names of the type is important.Unity will look through these elements to find the type specified, whenever the specified type is not a full type name. This mechanism is also referred to as [Automatic Type Lookup](http://msdn.microsoft.com/en-us/library/ff660933(v=pandp.20\).aspx#_Automatic_Type_Lookup)
+Since we have only given the interface name while registering the type, specifying the assembly and namespace names of the type is important.Unity will look through these elements to find the type specified, whenever the specified type is not a full type name. This mechanism is also referred to as [Automatic Type Lookup](http://msdn.microsoft.com/en-us/library/ff660933/#automatic-type-lookup)
 
 **Generic Interface**
 
@@ -66,8 +66,8 @@ this.unityContainer.RegisterType(typeof(IGenericInterfaceWithTwoParameter<,>), t
 <register type="IGenericInterfaceWithTwoParameter[,]" mapTo="GenericInterfaceWithTwoParametersImplementation[,]" />
 ```
 
-As shown above registering [generic types](http://msdn.microsoft.com/en-us/library/ff660933(v=pandp.20\).aspx#_Generic_Types) in config can either use the CLR notation of `N, where N is the number of generic parameters or use square brackets with commas to indicate the number of parameters. Examples using one and two parameters are shown above.  
-For a generic interface, the parameters can have typed parameter associated with it, something like _IComplexGenericInterface<ComplexGenericClass<GenericClass>>_. In these cases we cannot directly register this using either of the notation above, as the configuration does not allow recursive formats of those notation. We can use [Aliases](http://msdn.microsoft.com/en-us/library/ff660933(v=pandp.20\).aspx#_Type_Aliases) for specifying the parameter type names and then refer the alias for registering the interface.
+As shown above registering [generic types](http://msdn.microsoft.com/en-us/library/ff660933/#generic-types) in config can either use the CLR notation of \`N, where N is the number of generic parameters or use square brackets with commas to indicate the number of parameters. Examples using one and two parameters are shown above.  
+For a generic interface, the parameters can have typed parameter associated with it, something like `IComplexGenericInterface<ComplexGenericClass<GenericClass>>`. In these cases we cannot directly register this using either of the notation above, as the configuration does not allow recursive formats of those notation. We can use [Aliases](http://msdn.microsoft.com/en-us/library/ff660933/#type-aliases) for specifying the parameter type names and then refer the alias for registering the interface.
 
 ```csharp
 this.unityContainer.RegisterType<IComplexGenericInterface<ComplexGenericClass<GenericClass>>, ComplexGenericInterfaceImplementation>();
@@ -111,4 +111,3 @@ this.unityContainer.RegisterType<IOverridableDependency, OverridableCodeImplemen
 As shown above we have a different mapping in code and config for the same interface and I am loading the configuration into the container after all the code registrations are done. In this case the dependency that is registered last will take precedence. So you could use this feature to override any dependencies specified in the code.
 
 There surely are a lot more cases that you would have come across while registering dependencies, do drop in a comment on the missing ones. The sample for this can be found [here](https://github.com/rahulpnath/Blog/tree/master/ConfiguringUnity)
-<a href="http://www.codeproject.com" style="display:none" rel="tag">CodeProject</a>

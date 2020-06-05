@@ -13,12 +13,7 @@ thumbnail: ../images/https_next.png
 
 Security is of more and more a concern these days and we [saw why it's important to move on to HTTPs](https://www.rahulpnath.com/blog/https-for-free-and-why-you-should-care/). Hope you have already moved on to HTTPS, If not right now is a perfect time - this is one of the things that you should not be putting off for later. Also, do check out the [HTTPS is Easy](https://httpsiseasy.com/) series by Troy Hunt on how simple it is to get onboard with HTTPS. Most of the things mentioned here, I started exploring after getting introduced to it by [Scott Helme](https://scotthelme.co.uk/) and [Troy Hunt](https://www.troyhunt.com/) at the [NDC Security conference](https://www.rahulpnath.com/blog/ndc-security-2018-overview-and-key-takeaways/).
 
-<a href="https://securityheaders.com/?q=rahulpnath.com&followRedirects=on">
-    <img
-        src="../images/https_next.png"
-        alt="Security Report Summary from SecurityHeaders.com"
-        class="center" />
-</a>
+[![Security Report Summary from SecurityHeaders.com](../images/https_next.png)](https://securityheaders.com/?q=rahulpnath.com&followRedirects=on)
 
 Once you have moved on to HTTPS you might be thinking is that it? Or is there still more that I need to be doing? An excellent place to start is [SecurityHeaders.com](https://securityheaders.com/), which analyses security headers on your website and provides a rating score for the site. The site also gives a short description of the various headers, appropriate links to explore more about them. Some of the headers are easy to add and immediately provides added security to your website.
 

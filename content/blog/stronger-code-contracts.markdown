@@ -13,9 +13,7 @@ thumbnail: ../images/strong_code_contracts.jpg
 
 How often have you gone into a class to see the implementation when consuming the class or an interface? I do this almost every other day and it's mostly to check how the code handles boundary conditions. What does it do when there is no value to return, does it need all parameters etc. Reading code is hard and time-consuming, even if it's a code that you yourself have written a few minutes back. Imagine every developer having to go into the implementation detail anytime they consume a class? Bertrand Meyer in connection with his design of the Eiffel programming language coined the term [Design By Contract](https://en.wikipedia.org/wiki/Design_by_contract), an approach for designing software. The central idea of Design By Contract is to improve the contracts shared between different components in the code base. In this post, we will see how we can improve our C# code and avoid unnecessary guard statements across out code base.
 
-<a href="http://nebula.wsimg.com/6e7b8057c7f32b90d4f144424c8a7ae1?AccessKeyId=00F174C5B1CCF865161D&disposition=0&alloworigin=1">
-<img style="box-shadow:none;" class="center" alt="Stronger Code Contracts" src="../images/strong_code_contracts.jpg"/>
-</a>
+[![Stronger Code Contracts](../images/strong_code_contracts.jpg)](http://nebula.wsimg.com/6e7b8057c7f32b90d4f144424c8a7ae1?AccessKeyId=00F174C5B1CCF865161D&disposition=0&alloworigin=1)
 
 ## Leaky Abstraction
 
@@ -54,7 +52,7 @@ match config with
 | Some c -> printgn "Valid config"
 ```
 
-Though C# does not have anything out of the box to define optional values, we can define one of our own. The [Maybe](https://github.com/ploeh/Booking/blob/master/BookingDomainModel/Maybe.cs) class is one such implementation of an optional concept. The name is influenced by the option type in Haskell, [Maybe](https://wiki.haskell.org/Maybe). There are also other implementations of Maybe but the concept remains the same - we can represent an optional type in C#. The code contracts are stronger using Maybe as a return type. If a function always returns a value, say a string, the function contract should remain as a string. If a function cannot return a value always and can return null/empty (assuming that these are invalid values) then it returns a _Maybe<string>_. This makes it clearer for consuming code on whether they should check for null/empty values.
+Though C# does not have anything out of the box to define optional values, we can define one of our own. The [Maybe](https://github.com/ploeh/Booking/blob/master/BookingDomainModel/Maybe.cs) class is one such implementation of an optional concept. The name is influenced by the option type in Haskell, [Maybe](https://wiki.haskell.org/Maybe). There are also other implementations of Maybe but the concept remains the same - we can represent an optional type in C#. The code contracts are stronger using Maybe as a return type. If a function always returns a value, say a string, the function contract should remain as a string. If a function cannot return a value always and can return null/empty (assuming that these are invalid values) then it returns a `Maybe<string>`. This makes it clearer for consuming code on whether they should check for null/empty values.
 
 ```csharp
 Maybe<string> config = repository.GetConfig();

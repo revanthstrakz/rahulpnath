@@ -13,8 +13,7 @@ thumbnail: ../images/sydney_trip_illawara.png
 
 Australia is known for its beaches, and there are a plenty of them all around. Sydney is no different for that, and it's known for some of the world famous beaches including the Bondi beach. But at times it's also good to try places other than beaches. Here is a list of such places around Sydney that is perfect for a day trip and not just limited to beaches.
 
-> [**TLDR;**](https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read)
-
+> [**TLDR;**](https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read)                 
 > - [Grand Pacific Drive](http://www.grandpacificdrive.com.au/)
 > - [Fitzroy Falls](http://www.visitnsw.com/destinations/country-nsw/southern-highlands/fitzroy-falls/attractions)
 > - [Kangaroo Valley](http://visitkangaroovalley.com.au/)
@@ -33,9 +32,7 @@ Australia is known for its beaches, and there are a plenty of them all around. S
 The Grand Pacific Drive makes a perfect day out with one of the best drives and perfect scenery along the route. It starts from Royal National Park through Wollongong, Shellharbour, Kiama, Shoalhaven, Southern Highlands, Eurobodalla and ending at Sapphire Coast. Each one of those places have things enough to spend a whole day. You can either choose to do the entire drive or do each of these places on separate day trips.
 The [Grand Pacific Drive](http://www.grandpacificdrive.com.au/) site has all the details that you need to plan your trip. It also has a trip planner that makes planning easier.
 
-<a href="http://www.grandpacificdrive.com.au/">
-    <img src="../images/sydney_trip_gpd.png" class="center" alt="Grand Pacific Drive" />
-</a>
+[![Grand Pacific Drive](../images/sydney_trip_gpd.png)](http://www.grandpacificdrive.com.au/)
 
 Do make it one day for the [sun rise at the Sea Cliff bridge](https://www.instagram.com/p/BUoLoKYj2B3/?taken-by=rahulpnath). It's amazing and worth waking up early enough to make it up there on time.
 

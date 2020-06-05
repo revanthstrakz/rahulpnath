@@ -18,7 +18,7 @@ In the previous post, we explored how to use [Postman for testing API endpoints]
 
 Postman supports the concept of [Collections](https://www.getpostman.com/docs/v6/postman/collections/creating_collections), which are nothing but a Folder to group of saved API requests/Specs. Collections support nesting which means you can add Folders within a collection to further group them. As you can see below the _MyApplication_ and _Postman Echo_ are collections, and there are subfolders inside them which in turn contains API requests. The multi-level hierarchy helps you to organize your requests the way you want to.
 
-<img src="../images/postman_collections.png" alt="Postman Collections" class ="center">
+<img src="../images/postman_collections.png" alt="Postman Collections" class ="center" />
 
 ### Sharing API Specs
 

@@ -12,7 +12,7 @@ description: Are you open to interruptions?
 thumbnail: ../images/headphone_rule.png
 ---
 
-<img src="../images/headphone_rule.png" class="center" alt="The Headphones Rule" >
+<img src="../images/headphone_rule.png" class="center" alt="The Headphones Rule" />
 
 '_I need some undistracted time_.'
 

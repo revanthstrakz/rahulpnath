@@ -13,8 +13,7 @@ thumbnail: ../images/port_macquarie.jpg
 
 A while back I had written about various [one-day trip options around Sydney](http://www.rahulpnath.com/blog/one-day-trips-around-sydney/). Here is a list of places that we traveled around Sydney during long weekend breaks with a day or two overnight stays.
 
-> [**TLDR;**](https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read)
-
+> [**TLDR;**](https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read)             
 > - [Coffs Harbour](http://www.rahulpnath.com/blog/three-day-trip-to-coffs-harbour-from-sydney/)
 > - [Port Macquarie](https://www.portmacquarieinfo.com.au/)
 > - [Grand Pacific Drive](http://www.grandpacificdrive.com.au/)
@@ -37,9 +36,7 @@ We headed off to Port Macquarie to celebrate Gauthams birthday. Gautham likes st
 
 The Grand Pacific Drive makes a great one day trip as well as a multi-day trip for those who want to take their time along this stretch of land. Starting from Royal National Park and stretching all the way to Sapphire Coast, this makes a great drive with beautiful scenery and also a lot of places to visit. The [Grand Pacific Drive](http://www.grandpacificdrive.com.au/) site has all the details that you need to plan your trip. It also has a trip planner that makes planning easier. If you want to cover most of the places along the way during a single trip, it is best to give it 2-3 days. During my trip, I stopped over at Wollongong and only made my way till Kiama.
 
-<a href="http://www.grandpacificdrive.com.au/">
-    <img src="../images/sydney_trip_gpd.png" class="center" alt="Grand Pacific Drive" />
-</a>
+[![Grand Pacific Drive](../images/sydney_trip_gpd.png)](http://www.grandpacificdrive.com.au/)
 
 ### [Blue Mountains](https://www.visitnsw.com/destinations/blue-mountains?nst=0)
 

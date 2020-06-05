@@ -12,7 +12,7 @@ description: The sane way to manage software on Windows.
 thumbnail: ../images/chocolatey.png
 ---
 
-<img src="../images/chocolatey.png" alt="Chocolatey - Package Manager for Windows" class="center" >
+<img src="../images/chocolatey.png" alt="Chocolatey - Package Manager for Windows" class="center" />
 
 [Chocolatey](https://chocolatey.org/) is a package manager for Windows. Chocolatey is a central store of applications, tools, and other packages. It allows you to install them on your computer from the command line. Let’s look at an example to make things more clear. Let’s say I want to install the Google Chrome Browser on my system. Below is how I would go about installing it.
 

@@ -68,7 +68,7 @@ After updating the package.json with the electron application main entry point, 
 
 Fire up two consoles and launch the react application in one using _npm start_ and the electron application in the other using _'set DEV_URL=http://localhost:3000 && electron .'_
 
-<img class="center" alt="Electron React" src="../images/electron_react.png">
+<img class="center" alt="Electron React" src="../images/electron_react.png" />
 
 ### Setting up for Deployment
 

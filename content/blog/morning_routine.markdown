@@ -15,9 +15,7 @@ Humans are [creatures of habit](https://www.youtube.com/watch?v=zdGbHY9VKVM) and
 
 > _If you are a late night person, you can read 'morning' as 'late night' - the focus here is routine!_
 
-<a href="https://www.pexels.com/photo/coffee-cup-notebook-pen-64775/">
-<img  alt="Win your day, create a morning routine" src="../images/morning_routine.jpg"/>
-</a>
+[![Win your day, create a morning routine](../images/morning_routine.jpg)](https://www.pexels.com/photo/coffee-cup-notebook-pen-64775/")
 
 A morning routine is nothing but a sequence of actions regularly followed. I have tried switching my routine too, to late in the night a few times but found that mornings work better for me. But this could be different for you, so stick to the time of day that works for you. Before going to how my morning routine looks like (which I just started a week back), I will explain how I made the plan for the routine.
 
@@ -45,9 +43,8 @@ Open Source Contribution
 Improving Writing Skills and Language
 ```
 
-> _The key is not to prioritize what’s on your schedule, but to schedule your priorities._
-
-> \*– **Stephen Covey\***
+> _The key is not to prioritize what’s on your schedule, but to schedule your priorities._             
+> –**Stephen Covey**
 
 Progressing towards all of these items on the list at the same time is not possible, as time available each day for achieving them is limited. I usually get around 2-3 hours a day of 'me time', provided I wake up at 4 in the morning (more on this shortly). The number of hours you have might differ, and you could choose those many items as you think you can fit in. But 3 is a good number to choose, as that helps to mix in a few different goals and gives the flexibility to shuffle around with them on a day. For me, it also means I roughly get around 40-60 minutes daily, for each item.
 
@@ -98,35 +95,7 @@ Having a morning routine has helped me focus more on things that matter and not 
 
 #### References
 
-<div>
-      <div class="row">
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <a href="http://amzn.to/2a3wpUc">
-            <img src="../images/books_powerofhabit.jpg" data-holder-rendered="true" style="display: block;" >
-             </a>
-          </div>
-        </div>
-       <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-          <a href="http://amzn.to/2ahrOcr" >
-            <img src="../images/books_gtd.jpg" data-holder-rendered="true" style="display: block;">
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-           <a href="http://amzn.to/2aek2R5" >
-            <img src="../images/books_warofart.jpg" data-holder-rendered="true" style="display: block;">
-            </a>
-          </div>
-        </div>
-     <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-           <a href="http://zenhabits.net/" >
-            <img src="../images/books_zenhabits.jpg" data-holder-rendered="true" style="display: block;">
-           </a>
-          </div>
-        </div>
-       </div>
-       </div>
+[![Power Of Habit](../images/books_powerofhabit.jpg)](http://amzn.to/2a3wpUc)
+[![Getting Things Done](../images/books_gtd.jpg)](http://amzn.to/2ahrOcr)
+[![War of Art](../images/books_warofart.jpg)](http://amzn.to/2aek2R5)
+[![Zen Habits](../images/books_zenhabits.jpg)](http://zenhabits.net/)

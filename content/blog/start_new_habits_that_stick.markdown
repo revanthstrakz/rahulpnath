@@ -17,9 +17,7 @@ thumbnail: ../images/habit.jpg
 
 The ability to pick on something and to make a habit of it is something that is always helpful. This skill helps to create new habits and also let go off old ones that are not doing any good to you. Part of letting of bad old habits might be creating new ones. When I wrote about [Couch to Half Marathon](http://www.rahulpnath.com/blog/three_months_to_a_half_marathon/), some of my readers asked how to keep up with the plan. How to do 'Couch to Street'; just getting out there.
 
-<a href= "https://quotefancy.com/quote/20375/Jim-Rohn-Motivation-is-what-gets-you-started-Habit-is-what-keeps-you-going">
-    <img alt="Motivation is what gets you started. Habit is what keeps you going" src="../images/habit.jpg" class="center" />
-</a>
+[![Motivation is what gets you started. Habit is what keeps you going](../images/habit.jpg)](https://quotefancy.com/quote/20375/Jim-Rohn-Motivation-is-what-gets-you-started-Habit-is-what-keeps-you-going)
 
 ## How Habits Work
 
@@ -64,22 +62,7 @@ I prefer automatic tracking with least manual entry, so the tracking happens in 
 [Eating Healthy, Exercise](http://www.rahulpnath.com/blog/how-i-lost-13-kilos-in-one-and-half-months/), [Blogging](http://www.rahulpnath.com/blog/maintaining-a-blogging-schedule/), [Waking up Early](http://www.rahulpnath.com/blog/waking-up-early-is-all-about-waking-up-to-an-alarm/), [Reducing time spent on Social Media, Reading](http://www.rahulpnath.com/blog/experimenting-with-pomodoro-technique/) and <strike>[Creating Videos](http://www.rahulpnath.com/blog/recording-my-first-screencast/)</strike> (looking to give this up) are some of the habits that I have formed following these techniques. The ability to decide on something and getting it to done is the most important of all. Once you have mastered the skill of forming new habits, it boils down to choosing good habits and wiring that into your life. I have heard about the [21-Day rule of habit formation](https://www.forbes.com/sites/jasonselk/2013/04/15/habit-formation-the-21-day-myth/) and similar myths. But I think all it takes to start a new habit is a moment - The moment where you decide on the new habit. The rest is process!
 
 **References:**
+[![Power Of Habit](../images/books_powerofhabit.jpg)](http://amzn.to/2gOYluc)
 
-<div>
-   <div class="row">
-      <div class="col-sm-6 col-md-3">
-         <div class="thumbnail">
-            <a href="http://amzn.to/2gOYluc" >
-            <img alt="Power Of Habit" src="../images/books_powerofhabit.jpg" data-holder-rendered="true" style="display: block;">
-            </a>
-         </div>
-      </div>
-      <div class="col-sm-6 col-md-3">
-         <div class="thumbnail">
-            <a href="http://amzn.to/2hmeokB">
-            <img alt="Superhuman by Habit" src="../images/books_superhumanbyhabit.jpg" data-holder-rendered="true" style="display: block;" >
-            </a>
-         </div>
-      </div>
-   </div>
-</div>
+[![Superhuman by Habit](../images/books_superhumanbyhabit.jpg)](http://amzn.to/2hmeokB)
+

@@ -14,7 +14,7 @@ thumbnail: ../images/fiddler.png
 
 [Fiddler](http://www.telerik.com/fiddler) is an HTTP debugging proxy server application and captures HTTP and HTTPS traffic. It is one of the tools in my [essential toolkit list](http://www.rahulpnath.com/blog/tools-that-I-use/). Fiddler allows debugging traffic from PC, MAC, Linux and mobile systems. It helps inspect the raw requests and responses between the client and the server.
 
-<img src="../images/fiddler_inspectors.png" alt="Fiddler" class="center" >
+<img src="../images/fiddler_inspectors.png" alt="Fiddler" class="center" />
 
 Some of the key features that I often use in Fiddler are
 

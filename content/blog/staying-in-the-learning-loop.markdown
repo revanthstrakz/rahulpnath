@@ -14,9 +14,7 @@ thumbnail: ../images/learning_continuosly.png
 
 The current state of the IT industry demands one to be constantly on the go and learning something new. New technologies, frameworks, languages etc. are getting released almost every other day. It is easy to get overwhelmed with all this information. The best way to keep up is to ignore most of it. But every now and then you would want to learn something new either because of project demands or out of personal interests. It is important to have a learning plan for yourself and stick through with it when wanting to learn something. If not it's easy to get distracted. These are some of the ways how I try to structure my learning.
 
-<a href="https://www.keele.ac.uk/media/keeleuniversity/lpdc/images/LPDC-Banner-Blue.jpg">
-<img  alt="Make writing a habit - write daily" src="../images/learning_continuosly.png"/>
-</a>
+[![Make writing a habit - write daily](../images/learning_continuosly.png)](https://www.keele.ac.uk/media/keeleuniversity/lpdc/images/LPDC-Banner-Blue.jpg")
 
 ### Choosing and Sticking to a Topic
 
