@@ -55,7 +55,7 @@ module.exports = {
 					site {
 						siteMetadata {
 							rssMetadata {
-								site_url
+                site_url
 								title
 								author
 								copyright
@@ -71,7 +71,7 @@ module.exports = {
                 ...locals,
                 ...locals.query.site.siteMetadata,
                 site_url: "https://www.rahulpnath.com/",
-                feed_url: "https://www.rahulpnath.com/rss.xml"
+                feed_url: "https://www.rahulpnath.com/index.xml"
               };
             },
             serialize: ({ query: { site, allMdx } }) => {
@@ -80,11 +80,11 @@ module.exports = {
                   description: edge.node.excerpt,
                   url:
                     site.siteMetadata.rssMetadata.site_url +
-                    edge.node.frontmatter.path,
+                    edge.node.fields.slug,
                   guid:
                     site.siteMetadata.rssMetadata.site_url +
                     edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                    custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
             },
@@ -96,7 +96,7 @@ module.exports = {
 								edges {
 									node {
 										excerpt
-                    body
+                    html
                     fields {
                       slug
                     }

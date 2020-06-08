@@ -80,6 +80,11 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     })
 
     createPage({
+      path: 'subscribe',
+      component: path.resolve('src/templates/subscribe.js')
+    })
+    
+    createPage({
       path: 'archives',
       component: path.resolve('src/templates/archive.js'),
       context: {
