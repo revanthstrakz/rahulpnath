@@ -9,8 +9,6 @@ popular: true
 date: 2020-06-05
 ---
 
-import { CardPost } from 'components/common'
-
 I am migrating my blogs again. It is not the first time, so it's no surprise. 
 
 I have migrated in the past from [Blogspot](rahulpnath.blogspot.com) to [Wordpress.com](rahulpnath.wordpress.com), then to [self-hosted Wordpress](https://www.rahulpnath.com/blog/azure-web-sites-moving-wordpress-to-cloud/). 
@@ -18,8 +16,6 @@ I have migrated in the past from [Blogspot](rahulpnath.blogspot.com) to [Wordpre
 It didn't end there. I moved again to a Static generator because I thought [that's all a blog needs](https://www.rahulpnath.com/blog/static-generator-is-all-a-blog-needs-moving-to-octopress/).
 
 No, not Hugo. Not there yet!
-
-<CardPost path="/" title="This is a Test" description="Again test"  />
 
 I moved it to [Octopress](https://www.rahulpnath.com/blog/static-generator-is-all-a-blog-needs-moving-to-octopress/) and from there finally to [Hugo](https://www.rahulpnath.com/blog/migrating-octopress-to-hugo/). 
 
@@ -124,5 +120,3 @@ Other than the analytics dip for two days, I have not found any issues after the
 You can now subscribe to this blog right here. Please do subscribe with your email below to be notified the next time I post!
 
 See you soon!
-
-
