@@ -1,7 +1,6 @@
 ---
 author: [Rahul Nath]
-title: "DefaultAzureCredential: Unifying How We Get Azure AD Token"
-  
+title: 'DefaultAzureCredential: Unifying How We Get Azure AD Token'
 date: 2020-03-23
 tags:
   - Azure

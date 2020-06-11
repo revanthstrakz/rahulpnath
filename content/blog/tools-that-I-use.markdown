@@ -2,7 +2,6 @@
 author: [Rahul Nath]
 title: 'Tools that I use'
 date: 2015-10-10 05:44:19
-  
 tags:
   - Tools
   - Productivity
