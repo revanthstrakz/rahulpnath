@@ -1,17 +1,19 @@
 a {
   text-decoration: none;
-  color: #823EB7;
+  color: #823eb7;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   text-decoration: none;
 }
 
 blockquote {
   margin-left: 2.03125rem;
-  color: hsla(0,0%,0%,0.9);
+  opacity: 0.9;
   font-style: italic;
-  border-left: 4px solid #823EB7;
+  color: inherit;
+  border-left: 4px solid #823eb7;
 }
 
 blockquote strong {
@@ -28,8 +30,8 @@ p {
 
 /* Carbon ADS */
 #carbonads {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial,
     sans-serif;
 }
 
