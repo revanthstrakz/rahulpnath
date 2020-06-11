@@ -1,7 +1,7 @@
 ---
 author: [Rahul Nath]
 title: 'Setting up DbUp in Azure Pipelines'
-  
+
 tags:
   - Azure DevOps
   - Programming
@@ -13,6 +13,8 @@ thumbnail: ../images/dbup_azure_pipelines_extract.jpg
 ---
 
 [Azure Pipelines](https://azure.microsoft.com/en-au/services/devops/pipelines/) is part of the [Azure Devops](https://azure.microsoft.com/en-au/services/devops/) offerings which enables you to continuously build test and deploy to any platform and cloud environments. It's been a while since this has been out and it's only recently that I have got a chance to play around with it at one of my clients. We use [DBUp](https://dbup.readthedocs.io/en/latest/), a .Net library to deploy schema changes to our SQL Server database. _It tracks which SQL scripts have been run already, and runs the change scripts that are needed to get your database up to date._
+
+`youtube:https://www.youtube.com/watch?v=Jm4C-WzAdls`
 
 Setting up DbUp is very easy, and you can use the script straight from the [docs](https://dbup.readthedocs.io/en/latest/) to get started. If you are using .Net core console application VS template to setup DbUp make sure to modify the return type of the main function to use int and to return the appropriate application exit codes (as from the script in the doc.) I made the mistake of removing the return statements, only to later realize that build scripts were successfully passing even though the DbUp scripts were failing.
 
