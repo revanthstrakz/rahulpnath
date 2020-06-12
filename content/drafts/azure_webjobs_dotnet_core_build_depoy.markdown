@@ -1,5 +1,5 @@
 ---
-title: 'Azure Web Jobs DevOps'
+title: 'How To Continuosly Deploy Your Azure Web Jobs'
 tags:
   - DevOps
   - Azure
