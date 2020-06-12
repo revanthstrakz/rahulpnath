@@ -6,34 +6,31 @@ name: Netlify Deploy
 # Trigger everyday at 2 UTC (for scheduled posts)
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   schedule:
-    - cron: "0 2 * * *"
+    - cron: '0 2 * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: "Checkout"
-      uses: actions/checkout@v2
-    
-    - name: "Setup Node.js"
-      uses: actions/setup-node@v1.4.2
-      with:
-        version: 12.x
-        
-    - name: "Build Site"
-      run: |
-        yarn install --production
-        yarn build
-        
-    - name: "Deploy to Netlify"
-      uses: netlify/actions/cli@master
-      with:
-        args: deploy --dir=public --message=${{ github.event.head_commit.message }}
-      env:
-        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-      
-      
-      
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+
+      - name: 'Setup Node.js'
+        uses: actions/setup-node@v1.4.2
+        with:
+          version: 12.x
+
+      - name: 'Build Site'
+        run: |
+          yarn install --production
+          yarn build
+
+      - name: 'Deploy to Netlify'
+        uses: netlify/actions/cli@master
+        with:
+          args: deploy --dir=public --message="${{ github.event.head_commit.message }}"
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
