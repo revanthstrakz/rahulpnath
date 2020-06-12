@@ -7,15 +7,13 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.rahulpnath.com',
-    rssMetadata: {
-      site_url: 'https://www.rahulpnath.com',
-      feed_url: `${config.url}${config.siteRss}`,
-      title: 'Rahul Nath',
-      description: config.defaultDescription,
-      image_url: 'https://www.rahulpnath.com/static/favicon/logo-512.png',
-      author: config.author,
-      copyright: `${config.defaultTitle} © ${new Date().getFullYear()}`,
-    },
+    site_url: 'https://www.rahulpnath.com',
+    feed_url: `${config.url}${config.siteRss}`,
+    title: 'Rahul Nath',
+    description: 'Recent content on Rahul Nath',
+    image_url: 'https://www.rahulpnath.com/static/favicon/logo-512.png',
+    author: config.author,
+    copyright: `${config.defaultTitle} © ${new Date().getFullYear()}`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -55,36 +53,25 @@ module.exports = {
         query: `{
 					site {
 						siteMetadata {
-							rssMetadata {
-                site_url
-								title
-								author
-								copyright
-								description
-							}
+              site_url
+              feed_url
+              image_url
+              title
+              author
+              copyright
+              description
 						}
 					}
 				}`,
         feeds: [
           {
-            setup: locals => {
-              return {
-                ...locals,
-                ...locals.query.site.siteMetadata,
-                site_url: 'https://www.rahulpnath.com/',
-                feed_url: 'https://www.rahulpnath.com/index.xml',
-              }
-            },
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
-                  url:
-                    site.siteMetadata.rssMetadata.site_url +
-                    edge.node.fields.slug,
-                  guid:
-                    site.siteMetadata.rssMetadata.site_url +
-                    edge.node.fields.slug,
+                  url: site.siteMetadata.site_url + edge.node.fields.slug,
+                  categories: edge.node.frontmatter.tags,
+                  author: 'Rahul Nath',
                 })
               })
             },
