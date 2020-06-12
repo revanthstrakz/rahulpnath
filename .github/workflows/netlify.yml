@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Netlify Deploy
 
 # Trigger on push to master
 # Trigger everyday at 2 UTC (for scheduled posts)
