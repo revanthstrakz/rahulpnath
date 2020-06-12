@@ -1,5 +1,5 @@
 ---
-title: "Camtasia To Adobe Premiere"
+title: 'Azure Web Jobs DevOps'
 tags:
   - DevOps
   - Azure
@@ -9,7 +9,7 @@ popular: false
 draft: true
 ---
 
-WebJobs is a feature of Azure App Service that enables you to run a program or script in the same instance as a web app, API app, or mobile app. Sicne this runs as part of the same instance as the Web App, there is no additional cost to use WebJobs. *WebJobs is not supported on a Linux App Service.*
+WebJobs is a feature of Azure App Service that enables you to run a program or script in the same instance as a web app, API app, or mobile app. Sicne this runs as part of the same instance as the Web App, there is no additional cost to use WebJobs. _WebJobs is not supported on a Linux App Service._
 
 The Azure WebJobs SDK simplifies the task of writing WebJobs. Version 3.x of WebJobs SDK supports both .NET Core and .NET Framework.
 
