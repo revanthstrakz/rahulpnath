@@ -39,7 +39,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-        endpoint: "https://rahulpnath.us4.list-manage.com/subscribe/post?u=0ce70a8674f4eeb34468f3f55&amp;id=38866b3761",
+        endpoint:
+          'https://rahulpnath.us4.list-manage.com/subscribe/post?u=0ce70a8674f4eeb34468f3f55&amp;id=38866b3761',
       },
     },
     {
@@ -70,9 +71,9 @@ module.exports = {
               return {
                 ...locals,
                 ...locals.query.site.siteMetadata,
-                site_url: "https://www.rahulpnath.com/",
-                feed_url: "https://www.rahulpnath.com/index.xml"
-              };
+                site_url: 'https://www.rahulpnath.com/',
+                feed_url: 'https://www.rahulpnath.com/index.xml',
+              }
             },
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.edges.map(edge => {
@@ -84,7 +85,6 @@ module.exports = {
                   guid:
                     site.siteMetadata.rssMetadata.site_url +
                     edge.node.fields.slug,
-                    custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
             },
@@ -95,8 +95,7 @@ module.exports = {
 							) {
 								edges {
 									node {
-										excerpt
-                    html
+										excerpt: excerpt(pruneLength: 260)
                     fields {
                       slug
                     }
@@ -110,7 +109,7 @@ module.exports = {
 						}`,
             output: config.siteRss,
             title: 'Rahul Nath',
-            link: 'https://feeds.feedburner.com/rahulpnath'
+            link: 'https://feeds.feedburner.com/rahulpnath',
           },
         ],
       },
@@ -145,11 +144,11 @@ module.exports = {
             },
           },
           {
-            resolve: "gatsby-remark-embed-youtube",
+            resolve: 'gatsby-remark-embed-youtube',
             options: {
               width: 800,
-              height: 400
-            }
+              height: 400,
+            },
           },
           {
             resolve: 'gatsby-remark-responsive-iframe',

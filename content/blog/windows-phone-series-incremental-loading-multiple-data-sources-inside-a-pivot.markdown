@@ -1,7 +1,5 @@
 ---
-  
 date: 2014-01-21 07:55:25+00:00
-
 slug: windows-phone-series-incremental-loading-multiple-data-sources-inside-a-pivot
 author: [Rahul Nath]
 title: Windows Phone Series – Incremental Loading multiple data sources inside a Pivot
