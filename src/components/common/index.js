@@ -1,4 +1,5 @@
 export * from './ArchivePost'
+export * from './Bookmark'
 export * from './Card'
 export * from './CardPost'
 export * from './Container'

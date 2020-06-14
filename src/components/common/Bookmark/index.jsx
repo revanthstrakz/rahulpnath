@@ -1,8 +1,18 @@
-import { graphql, useStaticQuery } from 'gatsby'
-import React from 'react'
-import { CardPost } from '../CardPost'
+import { graphql, Link, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+import { ThemeContext } from 'providers/ThemeProvider'
+import React, { useContext } from 'react'
+import {
+  ArticleContent,
+  ArticleImg,
+  ArticleTitle,
+  Item,
+  Paragraph,
+  Post,
+} from './styles'
 
 export const Bookmark = ({ slug, title, description }) => {
+  const { theme } = useContext(ThemeContext)
   const { posts } = useStaticQuery(graphql`
     query {
       posts: allMdx(filter: { fileAbsolutePath: { regex: "//blog//" } }) {
@@ -39,22 +49,32 @@ export const Bookmark = ({ slug, title, description }) => {
       }
     }
   `)
+  const path = `/blog/${slug}/`
   const {
     node: {
-      id,
       originalDescription,
       frontmatter: { originalTitle, thumbnail },
     },
-  } = posts.edges.find(p => p.node.fields.slug === slug)
-  console.log('I AM HERE')
-  console.log(thumbnail)
+  } = posts.edges.find(p => p.node.fields.slug === path)
+
+  const linkPath = `${path}?utm_source=site-bookmark`
   return (
-    <CardPost
-      id={id}
-      link={slug}
-      title={title || originalTitle}
-      thumbnail={thumbnail}
-      description={description || originalDescription}
-    />
+    <Link to={linkPath}>
+      <Item>
+        <Post theme={theme}>
+          <ArticleImg>
+            {thumbnail && thumbnail.childImageSharp && (
+              <Img fluid={thumbnail.childImageSharp.fluid} />
+            )}
+          </ArticleImg>
+          <ArticleContent>
+            <ArticleTitle theme={theme}>{title || originalTitle}</ArticleTitle>
+            <Paragraph theme={theme} path={linkPath}>
+              {description || originalDescription}
+            </Paragraph>
+          </ArticleContent>
+        </Post>
+      </Item>
+    </Link>
   )
 }
