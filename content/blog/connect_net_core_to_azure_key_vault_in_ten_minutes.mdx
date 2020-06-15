@@ -1,21 +1,24 @@
 ---
 author: [Rahul Nath]
-title: "Connect .Net Core To Azure Key Vault In Ten Minutes"
+title: 'Connect .Net Core To Azure Key Vault In Ten Minutes'
 description: Access secrets in Azure Key Vault from .Net Core and learn how to elegantly handle when rotating secrets.
-  
+
 date: 2020-04-28
 tags:
   - Azure Key Vault
   - .NET-Core
-videos: ["https://www.youtube.com/watch?v=6l_kpygO0Ic&feature=emb_title"]
+videos: ['https://www.youtube.com/watch?v=6l_kpygO0Ic&feature=emb_title']
 thumbnail: ../images/keyvault_secrets.jpg
 ---
+
+import { Bookmark } from 'components/common'
 
 Azure Key Vault is a cloud-hosted service for managing cryptographic keys and secrets like connection strings, API keys, and similar sensitive information. Key Vault provides centralized storage for application secrets. Check out my [posts on Key Vault ](https://www.rahulpnath.com/blog/category/azure-key-vault/) if you are new to Azure Key Vault and want to learn more.
 
 In this post, I will walk-through how to access Secrets in an Azure Key Vault from a .Net Core Web application. The Web Application has an API endpoint that drops a message to Azure Storage Queue. It uses a connection string in Azure Key Vault to connect to Azure Storage Queue. The application also gracefully handles rotating Secrets, retiring the old connection string, and replacing with a new one, without needing to restart the application.
 
 `youtube:https://www.youtube.com/embed/6l_kpygO0Ic`
+
 <br />
 
 The application uses an _AzureQueueSender_ to drop messages to the Storage Queue. Just like usual, it gets the Connection String value from the application configuration, using the .Net Core _IConfiguration_ library. Since the Connection String is sensitive information, you should keep this out of [source control](/blog/keeping-sensitive-configuration-data-out-of-source-control/). Usually, this would be by storing it as [User Secrets](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets) in the local environment and using Variable replacement in Azure DevOps for any deployed environment like dev, test or prod.
@@ -88,6 +91,12 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 ```
 
 The above code uses the _VaultName_ from the configuration file (which is not sensitive information and can be managed as [Release Variables for different environments](https://www.youtube.com/watch?v=OFr6Vkw0mq8)) and creates a KeyVaultClient instance. It uses [DefaultAzureCredential](/blog/defaultazurecredential_from_azure_sdk/) to retieve an Azure AD token, that is used to authenticate with Azure Key Vault. [DefaultAzureCredential](/blog/defaultazurecredential_from_azure_sdk/) unifies the way we retrieve an Azure AD token and works seamlessly on [local development environment as well](/blog/azure_managed_service_identity_and_local_development/).
+
+<Bookmark
+  slug="defaultazurecredential_from_azure_sdk"
+  title="Want To Learn More About DefaultAzureCredential?"
+  description="In the past, Azure had different ways to authenticate with the various resources. The Azure SDK’s is bringing this all under one roof and providing a more unified approach to developers when connecting to resources on Azure."
+/>
 
 When the application starts, it looks for all matching configuration names in the associated Vault and retrieves the Secrets and caches them. The IConfiguration provides the same interface over all the different scenarios and makes it possible for the application to have the same code just as if it was in the configuration file.
 
