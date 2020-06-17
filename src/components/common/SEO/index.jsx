@@ -1,5 +1,17 @@
 import Thumbnail from 'assets/me.jpg'
-import { address, author, contact, defaultDescription, defaultTitle, foundingDate, legalName, logo, social, socialLinks, url } from 'data/config'
+import {
+  address,
+  author,
+  contact,
+  defaultDescription,
+  defaultTitle,
+  foundingDate,
+  legalName,
+  logo,
+  social,
+  socialLinks,
+  url,
+} from 'data/config'
 import React from 'react'
 import Helmet from 'react-helmet'
 
@@ -7,7 +19,6 @@ export const SEO = ({
   title,
   type,
   description,
-  articleBody,
   datePublished,
   dateModified,
   cover,
@@ -17,13 +28,11 @@ export const SEO = ({
   const structuredDataArticle = `{
 		"@context": "http://schema.org",
 		"@type": "${type}",
-		"mainEntityOfPage": {
-			"@type": "WebPage",
-			"@id": "https://google.com/article"
-		},
-		"headline": "${description}",
+		"headline": "${title}",
 		"image": "${
-      cover ? `https://www.rahulpnath.com${cover}` : `https://www.rahulpnath.com${Thumbnail}`
+      cover
+        ? `https://www.rahulpnath.com${cover}`
+        : `https://www.rahulpnath.com${Thumbnail}`
     }",
 		"datePublished": "${datePublished}",
 		"dateModified": "${dateModified}",
@@ -31,17 +40,8 @@ export const SEO = ({
 			"@type": "Person",
 			"name": "${author}"
 		},
-		"articleBody": "${articleBody}",
-		"publisher": {
-			"@type": "Organization",
-			"name": "${author}",
-			"logo": {
-				"@type": "ImageObject",
-				"url": "${logo}"
-			}
-		},
 		"description": "${description}",
-		"url": "${url}${location}/?ref=rahulpnath.com"
+		"url": "${url}${location}"
 	}`
 
   const structuredDataOrganization = `{
@@ -86,10 +86,13 @@ export const SEO = ({
         content={cover ? `${url}${cover}` : `${url}${Thumbnail}`}
       />
 
-      <meta property="og:url" content={`${url}${location}/?ref=rahulpnath.com`} />
+      <meta
+        property="og:url"
+        content={`${url}${location}/?ref=rahulpnath.com`}
+      />
       <meta
         property="og:type"
-        content={type === 'NewsArticle' ? 'NewsArticle' : 'website'}
+        content={type === 'BlogPosting' ? 'blog' : 'website'}
       />
       <meta
         property="og:title"
@@ -122,22 +125,22 @@ export const SEO = ({
       />
       <meta name="p:domain_verify" content="8b98c12d91967ce1fde7230da80b3d2b" />
       <script type="application/ld+json">
-        {type === 'NewsArticle'
+        {type === 'BlogPosting'
           ? structuredDataArticle
           : structuredDataOrganization}
       </script>
       <link rel="publisher" href={socialLinks.google} />
       <title>{title ? `${title} | Rahul Nath` : defaultTitle}</title>
-      {type === 'NewsArticle' && (
+      {type === 'BlogPosting' && (
         <meta name="twitter:label1" value="Reading time" />
       )}
-      {type === 'NewsArticle' && (
+      {type === 'BlogPosting' && (
         <meta name="twitter:data1" value={`${readTime} min read`} />
       )}
-      {type === 'NewsArticle' && (
+      {type === 'BlogPosting' && (
         <meta name="author" content="Rahul Nath" data-react-helmet="true" />
       )}
-      {type === 'NewsArticle' && (
+      {type === 'BlogPosting' && (
         <meta
           name="article:published_time"
           content={datePublished}

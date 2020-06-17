@@ -7,7 +7,7 @@ export default ({ data: { post } }) => (
   <Layout>
     <SmallerContainer>
       <SEO
-        type="NewsArticle"
+        type="BlogPosting"
         title={post.frontmatter.title}
         articleBody={post.description}
         datePublished={post.frontmatter.normalDate}
@@ -16,7 +16,11 @@ export default ({ data: { post } }) => (
             ? post.frontmatter.edited
             : post.frontmatter.date
         }
-        cover={ (post.frontmatter.thumbnail && post.frontmatter.thumbnail.childImageSharp && post.frontmatter.thumbnail.childImageSharp.fluid.originalImg)}
+        cover={
+          post.frontmatter.thumbnail &&
+          post.frontmatter.thumbnail.childImageSharp &&
+          post.frontmatter.thumbnail.childImageSharp.fluid.originalImg
+        }
         location={post.fields.slug}
         description={post.description}
         readTime={post.timeToRead}
