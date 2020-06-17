@@ -57,7 +57,6 @@ module.exports = {
               feed_url
               image_url
               title
-              author
               copyright
               description
 						}
