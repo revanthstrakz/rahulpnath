@@ -3,6 +3,7 @@ import Disqus from 'disqus-react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { ThemeContext } from 'providers/ThemeProvider'
 import React, { useContext } from 'react'
+import LazyLoad from 'react-lazy-load'
 import { Ad, ArticleDate, ArticleWrapper, Comments, Flex, Tags } from './styles'
 
 export const Post = ({ body, frontmatter, timeToRead, fields }) => {
@@ -50,10 +51,12 @@ export const Post = ({ body, frontmatter, timeToRead, fields }) => {
       <MDXRenderer>{body}</MDXRenderer>
       <SocialShare title={frontmatter.title} path={fields.slug} />
       <Comments>
-        <Disqus.DiscussionEmbed
-          shortname={disqusShortName}
-          config={disqusConfig}
-        />
+        <LazyLoad offsetTop={400}>
+          <Disqus.DiscussionEmbed
+            shortname={disqusShortName}
+            config={disqusConfig}
+          />
+        </LazyLoad>
       </Comments>
     </ArticleWrapper>
   )
