@@ -147,6 +147,13 @@ export const SEO = ({
           data-react-helmet="true"
         />
       )}
+      {type === 'BlogPosting' && (
+        <meta
+          name="article:modified_time"
+          content={dateModified}
+          data-react-helmet="true"
+        />
+      )}
       <html lang="en" dir="ltr" />
     </Helmet>
   )

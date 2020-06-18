@@ -14,7 +14,7 @@ export default ({ data: { post } }) => (
         dateModified={
           post.frontmatter.edited
             ? post.frontmatter.edited
-            : post.frontmatter.date
+            : post.frontmatter.normalDate
         }
         cover={
           post.frontmatter.thumbnail &&
