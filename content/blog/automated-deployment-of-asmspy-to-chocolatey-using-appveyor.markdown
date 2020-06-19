@@ -1,7 +1,6 @@
 ---
 author: [Rahul Nath]
 title: 'Automated Deployment of AsmSpy to Chocolatey Using AppVeyor'
-  
 tags:
   - Open Source
   - Tools
@@ -15,7 +14,7 @@ Recently I have been trying to contribute to open source projects, to build the 
 
 > _AsmSpy is a Command line tool to view assembly references. It will output a list of all conflicting assembly references. That is where different assemblies in your bin folder reference different versions of the same assembly._
 
-<img class="center" alt="AsmSpy assembly conflicts" src="../images/asmspy.png" />
+![AsmSpy assembly conflicts](../images/asmspy.png)
 
 I started with an [easy issue](https://github.com/mikehadlow/AsmSpy/pull/20) to get familiar with the code and to confirm that the project owner, [Mike Hadlow](https://github.com/mikehadlow), accepts Pull Requests (PR). Mike was fast to approve and merge in the changes. There was a feature request to make AsmSpy available as [Chocolatey](https://chocolatey.org/) package. Chocolatey is a package manger for Windows, to automate software management. AsmSpy, being a tool that's not project specific, it makes sense to deliver this via Chocolatey and makes installation easier. Mike added me as a project [collaborator](https://help.github.com/articles/permission-levels-for-a-user-account-repository/), which gave better control over the repository.
 
@@ -23,7 +22,7 @@ I started with an [easy issue](https://github.com/mikehadlow/AsmSpy/pull/20) to 
 
 AsmSpy is currently distributed as a [zip package](http://static.mikehadlow.com/AsmSpy.zip). Chocolatey supports packaging from a URL with a PowerShell script [_Install-ChocolateyZipPackage_](https://github.com/chocolatey/choco/wiki/HelpersInstallChocolateyZipPackage). For the first release I [used this helper script to create the Chocolatey package](https://github.com/mikehadlow/AsmSpy/pull/22) and uploaded it to my account. After fixing a few review comments the [package got published](https://chocolatey.org/packages/asmspy/1.0.0).
 
-<img class="center" alt="choco install asmspy" src="../images/asmspy_choco.png" />
+![choco install asmspy](../images/asmspy_choco.png)
 
 ## Automating Chocolatey Releases
 
@@ -41,8 +40,8 @@ Since now I am a collaborator on the project, AppVeyor shows the AsmSpy GitHub r
 
 After playing around with different Appveyor project settings and build scripts, I noticed that AppVeyor was no longer triggering builds on commit pushes in the repository. I tried deleting and adding the AppVeyor project, but with no luck.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The <a href="https://twitter.com/appveyor">@appveyor</a> project suddenly stopped triggering auto builds on pushes.Deleted and added new project <a href="https://t.co/qfV8P2fmWN">https://t.co/qfV8P2fmWN</a> any thoughts?</p>&mdash; Rahul P Nath (@rahulpnath) <a href="https://twitter.com/rahulpnath/status/754764006976466944">July 17, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+> The @appveyor project suddenly stopped triggering auto builds on pushes.Deleted and added new project https://t.co/qfV8P2fmWN any thoughts?  
+> — Rahul P Nath (@rahulpnath) [_July 17, 2016_](https://twitter.com/rahulpnath/status/754764006976466944)
 
 The AppVeyor team was quick to respond and suggested a possible problem with the Webhook URL not configured under the GitHub repository. The Webhook URL for AppVeyor is available under the projects settings. Since I did not have access to the Settings page of the GitHub repository, I reached out to Mike, who promptly updated the Webhook URL for AppVeyor under GitHub project settings. This fixed the issue of builds not triggering automatically when commits are pushed to the GitHub repository.
 

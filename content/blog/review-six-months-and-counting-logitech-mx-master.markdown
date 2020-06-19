@@ -1,7 +1,6 @@
 ---
 author: [Rahul Nath]
 title: 'Review: Six Months and Counting - Logitech MX Master'
-  
 tags:
   - Review
   - Productivity
@@ -33,11 +32,11 @@ It's been six months with the [Logitech MX Master](http://amzn.to/2ddLmUf) mouse
 
 The mouse has an accompanying software that allows customizations of mouse buttons.
 
-<img  alt="Logitech MX Master Software" src="../images/logitech_mxmaster_software.png"/>
+![Logitech MX Master Software](../images/logitech_mxmaster_software.png)
 
 The software allows setting application specific actions for buttons. For e.g. I have the Gesture button to archive emails in Outlook, 'Navigate to Definition' in Visual Studio, close tab in Chrome etc. You can configure this to any action on applications of your choice (provided it supports keyboard shortcuts that can be linked to).
 
-<img  alt="Logitech MX Master Software customizations" src="../images/logitech_mxmaster_customize.png"/>
+![Logitech MX Master Software customizations](../images/logitech_mxmaster_customize.png)
 
 ### Issue
 
@@ -46,11 +45,6 @@ The only issue that I faced so long is with the Mouse scroll mode. The 'Ratchet'
 
 Other than the Ratchet mode issue, I have not found any other issues with the mouse.
 
-<div align="center">
-<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:41.712962963% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BC11BabgPpV/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Trying out the logitech mx master mouse. Liking it!</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Rahul P Nath (@rahulpnath) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-03-12T05:22:06+00:00">Mar 11, 2016 at 9:22pm PST</time></p></div></blockquote>
-<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-</div>
-<br />
 If you are looking for a new mouse and willing to spend a little more than usual, I recommend the [Logitech MX Master](http://amzn.to/2ddLmUf). What mouse do you use?
 
 \* _Amazon links are affiliated._

@@ -1,7 +1,7 @@
 ---
 author: [Rahul Nath]
 title: 'HTTPS For Free and Why You Should Care'
-  
+
 tags:
   - Blogging
   - Security
@@ -16,10 +16,8 @@ If you are here and reading this probably you have a website and is serving it o
 
 If you are not convinced check out [https://doesmysiteneedhttps.com/](https://doesmysiteneedhttps.com/). One of the main reasons that I have seen (including me) why people have shied away from having HTTPS on sites was cost. And this post explains how to get HTTPS for free. But make sure you are getting it for the correct reasons and you know exactly what you are getting
 
-<div class="center">
-    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">HTTPS &amp; SSL doesn&#39;t mean &quot;trust this.&quot; It means &quot;this is private.&quot; You may be having a private conversation with Satan.</p>&mdash; Scott Hanselman (@shanselman) <a href="https://twitter.com/shanselman/status/187572289724887041?ref_src=twsrc%5Etfw">April 4, 2012</a></blockquote>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
+> HTTPS & SSL doesn't mean "trust this." It means "this is private." You may be having a private conversation with Satan.  
+> — Scott Hanselman (@shanselman) [_April 4, 2012_](https://twitter.com/shanselman/status/187572289724887041?ref_src=twsrc%5Etfw)
 
 Depending on how you are hosting you could possibly take two routes to enable HTTPS on your site. Let's look at them in detail.
 
