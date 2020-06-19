@@ -154,6 +154,7 @@ module.exports = {
       options: {
         trackingId: config.googleAnalyticsID,
         head: true,
+        anonymize: true,
       },
     },
     {
