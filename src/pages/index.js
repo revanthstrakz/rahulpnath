@@ -4,7 +4,7 @@ import React from 'react'
 
 export default () => (
   <Layout>
-    <SEO title="Rahul Nath" type="Organization" />
+    <SEO type="Organization" />
     <Intro />
     <Work />
     <Popular />

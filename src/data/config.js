@@ -1,12 +1,12 @@
 module.exports = {
-  defaultTitle: 'Rahul Nath',
+  defaultTitle: 'Rahul Nath | Coder, Blogger, YouTuber, Runner',
   logo: 'https://www.rahulpnath.com/favicon/logo-48.png',
   author: 'Rahul Nath',
   url: 'https://www.rahulpnath.com',
   legalName: 'Rahul Nath',
   defaultDescription:
-    "I'm Rahul Nath.",
-    socialLinks: {
+    'Rahul Nath is a programmer, youtuber, writer, runner and more',
+  socialLinks: {
     twitter: 'http://www.twitter.com/rahulpnath',
     github: 'https://github.com/rahulpnath',
     linkedin: 'https://www.linkedin.com/in/rahulpnath',
