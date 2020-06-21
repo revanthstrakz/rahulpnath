@@ -14,3 +14,8 @@ export const Wrapper = styled.div`
     margin-right: unset;
   }
 `
+export const BuyMeACoffee = styled.a`
+  height: 45px;
+  width: 191px;
+  display: block;
+`
