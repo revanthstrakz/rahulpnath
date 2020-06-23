@@ -1,5 +1,4 @@
 ---
-  
 date: 2010-12-20 04:54:39+00:00
 
 slug: an-enterprise-it-project-experience
@@ -7,7 +6,7 @@ author: [Rahul Nath]
 title: An enterprise IT project experience
 wordpress_id: 154
 tags:
-  - .NET
+  - Dotnet
 ---
 
 It's not been that long that I've been into the IT servicing industry.But still the learning curve I've had during the  past few years has been dramatic.The first time I was put into a '_live client facing project_' was almost one year after my industry entry.

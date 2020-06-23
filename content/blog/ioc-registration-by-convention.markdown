@@ -2,9 +2,9 @@
 author: [Rahul Nath]
 title: 'IoC Registration by Convention'
 date: 2015-01-03 18:03:17
-  
+
 tags:
-  - .NET
+  - Dotnet
   - Dependency Injection
 thumbnail: ../images/ioc_usefulness.png
 ---

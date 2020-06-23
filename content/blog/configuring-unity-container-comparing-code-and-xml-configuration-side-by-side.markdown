@@ -2,9 +2,9 @@
 author: [Rahul Nath]
 title: 'Configuring Unity Container: Comparing Code and Xml Configuration Side by Side'
 date: 2014-10-19 11:42:54
-  
+
 tags:
-  - .NET
+  - Dotnet
   - Dependency Injection
 ---
 

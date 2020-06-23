@@ -1,10 +1,10 @@
 ---
 author: [Rahul Nath]
 title: 'Azure AD Custom Attributes and Optional Claims from an ASP.Net Application'
-  
+
 tags:
   - Azure
-  - .NET-Core
+  - Dotnet-Core
   - ASP.NET
 date: 2018-12-10
 completedDate: 2018-12-10 13:09:36 +1000

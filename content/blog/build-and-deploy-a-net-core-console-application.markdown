@@ -1,9 +1,9 @@
 ---
 author: [Rahul Nath]
 title: 'Setting up Build and Deploy Pipeline for a .NET Core Console Application'
-  
+
 tags:
-  - .NET-Core
+  - Dotnet-Core
   - Programming
 date: 2018-01-03
 completedDate: 2017-12-31 06:40:46 +1000

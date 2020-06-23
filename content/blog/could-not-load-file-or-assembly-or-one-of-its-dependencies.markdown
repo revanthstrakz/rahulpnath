@@ -1,10 +1,10 @@
 ---
 author: [Rahul Nath]
 title: "Web Application Occasionally Throwing 'Could not Load File or Assembly or one of its Dependencies' Exception"
-  
+
 tags:
   - Tools
-  - .NET
+  - Dotnet
 date: 2016-07-01 00:45:05
 keywords:
 description:

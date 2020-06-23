@@ -1,5 +1,4 @@
 ---
-  
 date: 2010-03-06 11:52:00+00:00
 
 slug: not-able-to-start-debugging-in-visual-studio
@@ -7,7 +6,7 @@ author: [Rahul Nath]
 title: Not Able to “Start Debugging” in Visual Studio
 wordpress_id: 14
 tags:
-  - .NET
+  - Dotnet
   - Programming
   - Tools
 thumbnail: ../images/vs_debug_not_working.png

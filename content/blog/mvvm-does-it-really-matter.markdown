@@ -1,5 +1,4 @@
 ---
-  
 date: 2013-04-08 05:12:07+00:00
 
 slug: mvvm-does-it-really-matter
@@ -7,7 +6,7 @@ author: [Rahul Nath]
 title: MVVM – Does it really matter?
 wordpress_id: 484
 tags:
-  - .NET
+  - Dotnet
   - Thoughts
   - Windows 8
   - Windows Phone

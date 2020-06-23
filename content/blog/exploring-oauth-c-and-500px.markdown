@@ -1,5 +1,4 @@
 ---
-  
 date: 2012-10-05 12:00:27+00:00
 
 slug: exploring-oauth-c-and-500px
@@ -7,7 +6,7 @@ author: [Rahul Nath]
 title: 'Windows 8 Series - Exploring OAuth: c# and 500px'
 wordpress_id: 358
 tags:
-  - .NET
+  - Dotnet
   - Windows 8
 thumbnail: ../images/oauth_500px_application_details.png
 ---

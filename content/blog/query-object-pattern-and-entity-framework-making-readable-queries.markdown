@@ -1,9 +1,9 @@
 ---
 author: [Rahul Nath]
 title: 'Query Object Pattern and Entity Framework - Making Readable Queries'
-  
+
 tags:
-  - .NET
+  - Dotnet
   - Programming
 date: 2018-12-20
 completedDate: 2018-12-17 08:40:44 +1000

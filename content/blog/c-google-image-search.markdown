@@ -1,5 +1,4 @@
 ---
-  
 date: 2010-10-24 06:29:00+00:00
 
 slug: c-google-image-search
@@ -7,7 +6,7 @@ author: [Rahul Nath]
 title: C# google image search
 wordpress_id: 95
 tags:
-  - .NET
+  - Dotnet
   - Tools
 ---
 

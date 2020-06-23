@@ -1,5 +1,4 @@
 ---
-  
 date: 2013-04-12 07:40:46+00:00
 
 slug: windows-phone-series-preloading-content
@@ -7,7 +6,7 @@ author: [Rahul Nath]
 title: Windows Phone Series – Preloading Content
 wordpress_id: 501
 tags:
-  - .NET
+  - Dotnet
   - Windows Phone
   - WP7
 thumbnail: ../images/preloaded_content_vs_refresh.png
@@ -78,7 +77,7 @@ In a T4 template it would be a mix of text and code, that would be used to gener
     }
 ```
 
-It just says to read the directory MyPreloadedContent and iterate to get all the files in that and writes it out by trimming of the absolute path and putting in only the relative path. Save the MyFiles.tt, and in Visual Studio right click on it and say “Run Custom Tool”. This would generate the cs file with an extension “.gen.cs” as we have mentioned in `<#@ output extension=".gen.cs" #>`.  **The generated class would look like below
+It just says to read the directory MyPreloadedContent and iterate to get all the files in that and writes it out by trimming of the absolute path and putting in only the relative path. Save the MyFiles.tt, and in Visual Studio right click on it and say “Run Custom Tool”. This would generate the cs file with an extension “.gen.cs” as we have mentioned in `<#@ output extension=".gen.cs" #>`.  \*\*The generated class would look like below
 
 ```csharp
     namespace PreloadedContent

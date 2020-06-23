@@ -1,5 +1,4 @@
 ---
-  
 date: 2012-08-22 06:38:11+00:00
 
 slug: getting-started-with-asp-net-web-api
@@ -7,7 +6,7 @@ author: [Rahul Nath]
 title: Getting Started with ASP.NET Web Api
 wordpress_id: 348
 tags:
-  - .NET
+  - Dotnet
   - ASP.NET
   - REST
 thumbnail: ../images/web_api_default_template_welcome_screen.png

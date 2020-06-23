@@ -1,5 +1,4 @@
 ---
-  
 date: 2010-07-01 15:41:00+00:00
 
 slug: synchronize-sql-server-database-objects
@@ -7,7 +6,7 @@ author: [Rahul Nath]
 title: Synchronize SQL Server database objects
 wordpress_id: 7
 tags:
-  - .NET
+  - Dotnet
   - Tools
 thumbnail: ../images/database_sync.jpg
 ---
@@ -19,11 +18,10 @@ When the very work I do is to automate peoples work,I felt perturbed seeing this
 Writing SQL scripts would be db expert way I guess.But I am no expert in that so decided to do it in my way.  
 The .Net way :)  
 Thanks to the whole concept of .Net and Microsoft for having exposed such complex functionalities in the most elegant way ..... [SMO](http://msdn.microsoft.com/en-us/library/ms162169.aspx)(SQL Server Management Objects).  
-You have to add a reference to Microsoft.SqlServer.Smo and a few other assemblies(Check the  source code for more details).  
-Rest everything the API provides.  
-  
+You have to add a reference to Microsoft.SqlServer.Smo and a few other assemblies(Check the source code for more details).  
+Rest everything the API provides.
+
 Code quality might not be that good.Just did it in an hour :)  
-A help is there within the app.  
-  
-Thanks to .Net once more :)  
-  
+A help is there within the app.
+
+Thanks to .Net once more :)

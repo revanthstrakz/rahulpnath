@@ -1,9 +1,9 @@
 ---
 author: [Rahul Nath]
 title: 'Protect Yourself Against Line Ending Issues when Using Environment.Newline to Split Text'
-  
+
 tags:
-  - .NET
+  - Dotnet
   - Programming
 date: 2016-07-11 05:45:31
 keywords:

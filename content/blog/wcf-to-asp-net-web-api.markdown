@@ -1,5 +1,4 @@
 ---
-  
 date: 2012-07-07 10:16:57+00:00
 
 slug: wcf-to-asp-net-web-api
@@ -7,7 +6,7 @@ author: [Rahul Nath]
 title: WCF to ASP.NET Web API
 wordpress_id: 328
 tags:
-  - .NET
+  - Dotnet
   - ASP.NET
   - WCF
 ---

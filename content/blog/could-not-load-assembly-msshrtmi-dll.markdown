@@ -1,9 +1,9 @@
 ---
 author: [Rahul Nath]
 title: 'Could Not Load Assembly msshrtmi.dll?'
-  
+
 tags:
-  - .NET
+  - Dotnet
   - Azure
 date: 2016-06-19 17:38:37
 keywords:

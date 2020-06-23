@@ -1,5 +1,4 @@
 ---
-  
 date: 2012-10-28 14:41:31+00:00
 
 slug: windows-8-series-incremental-loading
@@ -7,7 +6,7 @@ author: [Rahul Nath]
 title: Windows 8 Series - Incremental Loading
 wordpress_id: 392
 tags:
-  - .NET
+  - Dotnet
   - REST
   - Windows 8
 thumbnail: ../images/windows8_incremental_loading.png
@@ -124,7 +123,7 @@ private PagedResponse<Photo> RootObjectResponse(RootObject rootObject)
 
 Now we need to make the call to the datasource url. This might return us data in different formats, most popularly json or xml. So we would always want to abstract away the loading of data to another class so that we don’t get tied up with the data formats in _IncrementalSource._
 
-`IPagedSource<T,K>` will do this for us. A sample implementation of this is *PagedSourceLoader* that handles for json return type is below
+`IPagedSource<T,K>` will do this for us. A sample implementation of this is _PagedSourceLoader_ that handles for json return type is below
 
 ```csharp
     public interface IPagedSource<R,K>

@@ -6,3 +6,5 @@ https://rahulpnath.netlify.com/* https://www.rahulpnath.com/:splat 301!
 /blog/defaultAzureCredential_from_azure_sdk  /defaultazurecredential_from_azure_sdk 302
 /blog/tools-that-I-use  /blog/tools-that-i-use 302
 /blog/variable-snapshotting-in-Azure-DevOps-when-using-Azure-Key-Vault /blog/variable-snapshotting-in-azure-devops-when-using-azure-key-vault 302
+/blog/category/.net-core  /blog/category/dotnet-core 302
+/blog/category/.net  /blog/category/dotnet 302

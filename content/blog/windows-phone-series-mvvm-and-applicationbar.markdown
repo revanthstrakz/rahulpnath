@@ -1,5 +1,4 @@
 ---
-  
 date: 2013-04-17 11:04:01+00:00
 
 slug: windows-phone-series-mvvm-and-applicationbar
@@ -7,7 +6,7 @@ author: [Rahul Nath]
 title: Windows Phone Series – MVVM and ApplicationBar
 wordpress_id: 520
 tags:
-  - .NET
+  - Dotnet
   - Windows Phone
   - WP7
 thumbnail: ../images/wp_applicationbar_icon_mvvm.png

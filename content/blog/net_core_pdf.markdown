@@ -1,9 +1,9 @@
 ---
 author: [Rahul Nath]
-title: "Generating PDF: .Net Core and Azure Web Application"
-tags: 
- - .NET
- - Azure
+title: 'Generating PDF: .Net Core and Azure Web Application'
+tags:
+  - Dotnet
+  - Azure
 date: 2020-03-02
 description: Using NReco library to generate PDF files on Azure Web App running .Net Core.
 thumbnail: ../images/net_pdf.jpg
@@ -16,7 +16,6 @@ _How do I do this now?_
 Previously I had written about [dynamically generating a large PDF from website contents](/blog/generating-a-large-pdf-from-website-contents/). The PDF library I used that then, did have the limitation of not being able to run on Azure Web App. It was because of [Azure sandbox restrictions](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox#pdf-generation-from-html).
 
 `youtube:https://www.youtube.com/embed/fp-Rc3qNDdA`
-
 
 In this post we will look at how we can generate PDF in an Azure Web App and running .Net Core, what the limitations are and some tips and tricks to help with the development. I am using the [NReco HTML-to-PDF Generator for .Net](https://www.nrecosite.com/pdf_generator_net.aspx), which is a C# wrapper over [WkHtmlToPdf](https://wkhtmltopdf.org/).
 
