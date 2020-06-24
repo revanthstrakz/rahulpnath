@@ -8,3 +8,5 @@ https://rahulpnath.netlify.com/* https://www.rahulpnath.com/:splat 301!
 /blog/variable-snapshotting-in-Azure-DevOps-when-using-Azure-Key-Vault /blog/variable-snapshotting-in-azure-devops-when-using-azure-key-vault 302
 /blog/category/.net-core  /blog/category/dotnet-core 302
 /blog/category/.net  /blog/category/dotnet 302
+/blog/tag/.net-core  /blog/tag/dotnet-core 302
+/blog/tag/.net  /blog/tag/dotnet 302
