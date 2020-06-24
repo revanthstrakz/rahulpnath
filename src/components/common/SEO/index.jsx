@@ -28,20 +28,32 @@ export const SEO = ({
   const structuredDataArticle = `{
 		"@context": "http://schema.org",
 		"@type": "${type}",
-		"headline": "${title}",
+		"headline": ${JSON.stringify(title)},
 		"image": "${
       cover
         ? `https://www.rahulpnath.com${cover}`
         : `https://www.rahulpnath.com${Thumbnail}`
     }",
 		"datePublished": "${datePublished}",
-		"dateModified": "${dateModified}",
+    "dateModified": "${dateModified}",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Rahul Nath",
+      "logo":{
+         "@type":"ImageObject",
+          "url": "https://www.rahulpnath.com/favicon/logo-48.png"
+          }
+    },
 		"author": {
 			"@type": "Person",
 			"name": "${author}"
 		},
-		"description": "${description}",
-		"url": "${url}${location}"
+		"description": ${JSON.stringify(description)},
+    "url": "${url}${location}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "${url}${location}"
+   }
 	}`
 
   const structuredDataOrganization = `{
