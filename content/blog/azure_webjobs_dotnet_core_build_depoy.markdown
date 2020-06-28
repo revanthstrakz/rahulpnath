@@ -1,12 +1,12 @@
 ---
 title: How To Continuously Deploy Your .NET Core Azure WebJobs
 thumbnail: ../images/devops_webjob.jpg
+date: 2020-06-29
 tags:
-  - DevOps
+  - Azure DevOps
   - Azure
 description: New To Azure WebJobs? Learn how to get started and set up a build deploy pipeline in Azure DevOps.
-popular: false
-draft: true
+popular: true
 ---
 
 > WebJobs is a feature of Azure App Service that enables you to run a program or script in the same instance as a web app, API app, or mobile app. Since this runs as part of the same instance as the Web App, there is no additional cost to use WebJobs. _WebJobs is not supported on a Linux App Service._
@@ -127,7 +127,7 @@ For both the tasks we pass in a wildcard selector for the csproj, since we only 
 
 The 'publish' task, has a specific folder structure (_App_Data/jobs/continuous/YoutubeWebJob_) as the output folder. It is by convention, and Azure expects WebJobs to be in that folder structure in the webserver (IIS). Depending on whether the WebJob is continuous (App*Data/jobs/continuous) or triggered (App_Data/jobs/triggered), the build artifacts need to be placed appropriately. To enable multiple WebJobs under the same server, we can add them under a Folder inside the expected folder paths, like \_YoutubeWebJob* folder above.
 
-> **NOTE** The continuous or triggered folder is not related to the 'trigger' in QueueTrigger.
+> **NOTE:** The continuous or triggered folder is not related to the 'trigger' in QueueTrigger. Any job that is manually triggered or run based on a cron expression goes under the 'triggered' folder. All other WebJobs should be under the continuous folder.
 
 The trigger word with both the folder and the QueueTrigger (for example) can be slightly confusing. Any job that is manually triggered or run based on a cron expression goes under the 'triggered' folder. All other WebJobs should be under the continuous folder. In this example, since it is a QueueTrigger job, we need to keep running continuously and get triggered whenever a message is dropped in the queue. So it needs to be deployed under the continuous folder.
 
