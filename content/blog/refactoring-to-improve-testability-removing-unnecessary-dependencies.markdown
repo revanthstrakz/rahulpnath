@@ -1,7 +1,7 @@
 ---
 author: [Rahul Nath]
 title: 'Refactoring to Improve Testability: Removing Unnecessary Dependencies'
-  
+
 tags:
   - Testing
   - TDD
@@ -12,7 +12,7 @@ description:
 thumbnail: ../images\refactoring.jpg
 ---
 
-[![Refactoring](..\images\refactoring.jpg)](https://unsplash.com/photos/5Ntkpxqt54Y)
+[![Refactoring](../images/refactoring.jpg)](https://unsplash.com/photos/5Ntkpxqt54Y)
 
 Nowadays I am trying to stick to [TDD](http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd) (with the test first approach) and have found it to be of great help. One of the biggest reward doing TDD is that it helps me to [stay in the flow](https://vimeo.com/97419151) and regain speed faster after a distraction. This post explains how to refactor code to remove unnecessary dependencies, which is easily found when writing tests.
 

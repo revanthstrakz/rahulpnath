@@ -1,7 +1,7 @@
 ---
 author: [Rahul Nath]
 title: 'Refactoring Test Code: Removing Constructor Dependency'
-  
+
 tags:
   - Testing
   - TDD
@@ -12,7 +12,7 @@ description:
 thumbnail: ../images\testing.jpg
 ---
 
-[![Testing](..\images\testing.jpg)](https://www.flickr.com/photos/toomore/23066277453)
+[![Testing](../images/testing.jpg)](https://www.flickr.com/photos/toomore/23066277453)
 
 In the earlier post, [Removing Unnecessary Dependencies](http://rahulpnath.com/blog/refactoring-to-improve-testability-removing-unnecessary-dependencies/), we saw how having an unnecessary dependency hinders testability. In this post we will see how the test code changed by the refactoring we did for removing the unnecessary dependency and explore ways to control these changes.
 

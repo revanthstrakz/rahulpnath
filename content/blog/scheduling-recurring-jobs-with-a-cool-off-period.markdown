@@ -1,7 +1,7 @@
 ---
 author: [Rahul Nath]
 title: 'Scheduling Recurring Jobs With a Cool-Off Period'
-  
+
 tags:
   - Programming
 date: 2017-12-24
@@ -11,7 +11,7 @@ description: Scheduling jobs at different time intervals and pausing them in bet
 thumbnail: ../images/scheduling_jobs.jpg
 ---
 
-[![Scheduling](..\images\scheduling_jobs.jpg)](https://flic.kr/p/8ys6Hs)
+[![Scheduling](../images/scheduling_jobs.jpg)](https://flic.kr/p/8ys6Hs)
 
 At one of my clients, they had a requirement of scheduling various rules to sent our alert messages via SMS, Email, etc. A Rule consists of below and a few other properties
 

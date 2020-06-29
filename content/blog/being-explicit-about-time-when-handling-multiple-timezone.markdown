@@ -1,7 +1,7 @@
 ---
 author: [Rahul Nath]
 title: 'Being Explicit About Time when Handling Multiple Timezone'
-  
+
 tags:
   - Programming
   - Design
@@ -15,7 +15,7 @@ _This article is to put my thoughts together on a possible solution. Challenges 
 
 Handling date/time in application's that affect different time zones is tricky! The general recommendation is that all dates be saved in UTC time and convert them as required. This works well if developers make sure of converting all dates to UTC at application boundaries and keep it consistent throughout the application.
 
-[![Timezone](..\images\timezone.jpg)](https://unsplash.com/photos/yBzrPGLjMQw)
+[![Timezone](../images/timezone.jpg)](https://unsplash.com/photos/yBzrPGLjMQw)
 
 At one of my clients, we are facing similar issues with date time, with an application that deals with different [time zones](https://en.wikipedia.org/wiki/Time_zone). The client sells office spaces across the globe and the application is for their employees to manage their clients. It integrates with various back-end systems and provides a single point of access for everything, aggregating data across those different systems and itself. Some of the backend systems are in different locations and deal with times local to them. This increases the challenge when sending and retrieving data from them. The application has defined a set of locations, identified by, three-letter codes (_SYD, TRV, SEA_), and these locations fall under different time zones. Office spaces are at these locations and the application allows to manage those from anywhere.
 

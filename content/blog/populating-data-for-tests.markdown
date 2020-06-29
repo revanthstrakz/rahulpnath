@@ -1,7 +1,7 @@
 ---
 author: [Rahul Nath]
 title: 'Populating Data for Tests'
-  
+
 tags:
   - TDD
   - Testing
@@ -14,8 +14,7 @@ thumbnail: ../images/test_data.gif
 
 Populating data for tests is the section of the test that usually ends up making tests more coupled with the code that it is testing. Coupling makes tests more fragile and refactoring code harder because of breaking tests. We should try to avoid coupling with the implementation details when writing tests. Let us see a few options that we have to populate test data and constructing object graphs (chain of objects branched off from the root object). I use [xUnit.net](https://xunit.github.io/) as my test framework, but you can use these techniques in your choice of framework.
 
-
-[![Populating Test Data](..\images\test_data.gif)](http://xunitpatterns.com/Data-Driven%20Test.html)
+[![Populating Test Data](../images/test_data.gif)](http://xunitpatterns.com/Data-Driven%20Test.html)
 
 Let's start with some simple tests on a Customer class shown below.
 
