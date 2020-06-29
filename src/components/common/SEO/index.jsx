@@ -166,6 +166,9 @@ export const SEO = ({
           data-react-helmet="true"
         />
       )}
+      {type === 'BlogPosting' && (
+        <meta name="monetization" content="$ilp.uphold.com/LkiUJERNhFEK"></meta>
+      )}
       <html lang="en" dir="ltr" />
     </Helmet>
   )
