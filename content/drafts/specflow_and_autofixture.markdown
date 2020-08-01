@@ -1,0 +1,233 @@
+---
+title: 'How To Easily Generate Data For SpecFlow Tests'
+tags:
+  - Testing
+description: Automatically generate data using AutoFixture when writing specflow tests.
+thumbnail: ../images/random_data.jpg
+popular: false
+draft: true
+---
+
+I have been playing around with SpecFlow for writing tests at one of my recent client. I am still learning how to write effecttive tests with SpecFlow. Do drop in the comments if you find anything that can be improved in the examples below.
+
+> [SpecFlow](https://specflow.org/) is a .NET open source framework for [Behavior Driven Development](https://specflow.org/bdd/) (BDD). BDD aims to create a shared understansing of how an application must behave.
+
+The [Getting Started section](https://specflow.org/getting-started/) in the official documentation helped me set up the SpecFlow test project and get started with my first tests. If you new make sure to check it.
+
+Populating data is an integral part of writing tests. Most of the time we are forced to set up much more data than we care about for a test. This might be because of a validation on an API endpoint, a [constructor forcing you to give valid values for all the properties](TDK). Setting up these unnecessary data pollutes the tests, makes writing tests less enjoyable. It also makes the tests tightly coupled and [hard to refactor](TDK).
+
+In this post, lets look at a simple test written in SpecFlow and how we can progressively improve it by removing explicit test data set up.
+
+So without much delay lets..
+
+## Writing the First Test
+
+Let's look at an API with a Customer endpoint, which takes in a Customer object and adds to a datasource. In the example code I use an InMemorySource, which could easily be replaced to use an external store like a database.
+
+> _The full source code for sample is [available here](TDK). Check out each commit, if you want to go through each refactoring step as shown in this post._
+
+To set up the SpecFlow test project, I created a .Net Core project and added the below NuGet packages.
+
+```powershell
+Install-Package SpecFlow
+Install-Package  SpecFlow.Tools.MsBuild.Generation
+Install-Package SpecFlow.xunit
+Install-Package  xunit.runner.visualstudio
+Install-Package  Microsoft.AspNetCore.Mvc.Testing
+Install-Package Microsoft.NET.Test.Sdk
+Install-Package Shouldly -Prerelease
+```
+
+It installs SpecFlow, xunit and [Shouldly](TDK) (for test assertions) and other related packages to get it all working together and allow tests to be run from the Visual Studio Test Explorer.
+
+With the project all set up, let's get to out first test.
+
+Below is a sample test for my API. As expected with BDD tests, it does not need much explanation on what it is going on.
+
+```bdd
+@subcutaneous
+Scenario: Add a Customer
+	Given I POST a valid customer to the API
+	When I GET the customer using  the API
+	Then the result should be the customer
+```
+
+The test does use the same API twice (POST and a GET), which is not the best. One definite issue is when the test fails, you cannot tell whether it is the POST or the GET that is broken (unless we go digging in). To break that dependency, the customer can be written into the backend store directly by using the repository class. But lets move on with this.
+
+Below are the step defintiions for the test.
+
+```csharp
+class CustomerSteps {
+	private readonly TestContextFixture testContextFixture;
+	private readonly ScenarioContext context;
+	private readonly Customer customer;
+
+	public CustomerSteps(
+	TestContextFixture testContextFixture, ScenarioContext context) {
+		this.testContextFixture = testContextFixture;
+		this.context = context;
+		this.customer = new Customer() {
+			Id = Guid.NewGuid(),
+			Age = 27,
+			FirstName = "John",
+			LastName = "Doe",
+			Address = "101 Street, Unknown, 4444"
+		};
+	}
+
+	[Given(@"I POST a valid customer to the API")]
+	public async Task GivenIPOSTAValidCustomerToTheAPI() {
+		using(var client = testContextFixture.CreateClient()) {
+			await client.SendJsonContent("/customer", HttpMethod.Post, customer);
+		}
+	}
+
+	[When(@"I GET the customer using  the API")]
+	public async Task WhenIGETTheCustomerUsingTheAPI() {
+		using(var client = testContextFixture.CreateClient()) {
+			var actual = await client.GetJsonResult < Customer > ($ "/customer/{customer.Id}");
+			context.AddActual(actual.Result);
+		}
+	}
+
+	[Then(@"the result should be the customer")]
+	public void ThenTheResultShouldBeTheCustomer() {
+		var actual = context.GetActual < Customer > ();
+		actual.ShouldBeEquivalentTo(customer);
+	}
+}
+```
+
+The steps class uses the `TestContextFixture`, which provides us with a [in-memory test server for the Web Api application](https://docs.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-3.1) and a `ScenarioContext`. These are dependency injected and is suppored out of the box with SpecFlow. SpecFlow by default comes with a simple dependency framework, [BoDi](https://github.com/gasparnagy/BoDi) specifically created for SpecFlow.
+
+I have defined a few extension methods like `SendJsonContent`, `GetJsonResult`, `AddActual` etc to abstract away some of the code. Make sure to check out the full source code for more details.
+
+The Customer class is a Data Transfer Object (DTO) class with a few properties for Name, Address, Age etc. For the purpose of this test, I actually don't care the values for these properties. All I care is that I have a fully populated customer object so that I can make a post to the API.
+
+I create the Customer class instance in the constructor of this Steps class explicitly and giving in all the dummy data. But if I need the same Customer class elsewhere (in a different Step definition class), I will have to duplicate it there. Now this could extracted into a helper class and reused, but still I have to update this class everytime a new property is added to the Customer class.
+
+## Injecting Test Data Through Constructor
+
+It would be nice if the fully populated Customer class can be injected into the Steps class just like the `TestContextFixture` and `ScenarionContext` is in the code above. This is possible with SpecFlow using the [BeforeScenario hook](https://docs.specflow.org/projects/specflow/en/latest/Bindings/Hooks.html). The BeforeScenario hook runs before executing each scenario. [Follow here](https://docs.specflow.org/projects/specflow/en/latest/Bindings/Context-Injection.html#advanced-options) for more details.
+
+```csharp
+[Binding]
+public class SpecFlowDomainDataHook {
+	private readonly IObjectContainer objectContainer;
+
+	public SpecFlowDomainDataHook(IObjectContainer objectContainer) {
+		this.objectContainer = objectContainer;
+	}
+
+	[BeforeScenario]
+	public void SetupDomainData() {
+		this.objectContainer.RegisterFactoryAs(a => SetupCustomer());
+	}
+
+	private Customer SetupCustomer() {
+		return new Customer() {
+			Id = Guid.NewGuid(),
+			Age = 27,
+			FirstName = "John",
+			LastName = "Doe",
+			Address = "101 Street, Unknown, 4444"
+		};
+	}
+}
+```
+
+The IObjectContriner is the default BoDi container that SpecFlow uses to create the Steps instances when running the test. Since the container now has a registered instance of the Customer class that is fully populated, the Steps class can simply ask for a Customer object.
+
+```csharp
+public CustomerSteps(
+    TestContextFixture testContextFixture,
+    ScenarioContext context,
+    Customer customer)
+{
+    this.testContextFixture = testContextFixture;
+    this.context = context;
+    this.customer = customer;
+}
+```
+
+We don't have to create a Customer class explicitly again!
+
+### Auto-Generate Test Data
+
+In the BeforeScenario hook, we are still manually creating the Customer object and forced to specify all the dummy values. If a new property is added, we still need to update it here. We have only been able to move away the problem to some where else, the problem still exists.
+
+> [AutoFixture](https://github.com/AutoFixture/AutoFixture) is an Open Source Library, that helps automate test data generation. It offers a generic implementation of the Test Data Builder Pattern.
+
+[TDK BOOKMARK PLUG FOR AUTOFIXTURE CATEGORY]
+
+To setup AutoFixture let's add the AutoFixture NuGet package to our test library. We can now start using it to generate dummy data for us.
+
+```csharp
+private Customer SetupCustomer() {
+  var fixture = new Fixture(); // AutoFixture object
+	return fixture.Create <Customer>();
+}
+```
+
+The `SetupCustomer` method can be rewritten like above to use AutoFixture. We no longer need to setup the data explicitly, AutoFixture will generate it automatically for us. Below is a sample data that AutoFixture generated for one of the test run.
+
+```json
+{
+  "Id": "32b024d9-ffc9-4ff7-b0bb-1b8b108ef1cf",
+  "FirstName": "FirstName16db62fe-430f-4821-80ad-49fc19eb0d33",
+  "LastName": "LastName6a6a4778-43a8-40a7-bafb-dbb8f2a473a2",
+  "Address": "Address106a627a-491b-43b7-b99e-c3bd38896843",
+  "Age": 207
+}
+```
+
+This is exactly what we want - dummy data! We don't care the actual values for the properties for these tests.
+
+Now you might ask, at times I actually do care of some of these property values.
+
+_What do I do in that case?_ - Don't worry, I will show you exactly how later below.
+
+## Automating Data Generation for All Models & Entities
+
+Are we not done yet?
+
+Now I am able to automatically generate test data (in this example Customer) and inject it into out Steps classes. But let's say we have a new controller - Order.
+
+I need to add in a `SetupOrder` method to explicitly register the Order instance in the `SpecFlowDomainDataHook`. This is a pain
+
+```csharp
+[BeforeScenario]
+public void SetupDomainData() {
+	this.objectContainer.RegisterFactoryAs(a => SetupCustomer());
+  this.objectContainer.RegisterFactoryAs(a => SetupOrder());
+}
+```
+
+So let's see how we can fix this, so that I don't have to explicitly register each type.
+
+Before we make any changes, lets understand what is going on here. We are telling the objectContainer (the default BoDi DI container) the object to use when anyone asks for a Customer or Order object.
+So to remove this, what We need is a generic way to specify instances generated from AutoFixture whenever it's asked for a DTO or a Model or an Entity class. The default DI container shipped with SpecFlow has limited functionality and I did not find a nice intergaraion point to do this.
+
+### Setting up AutoFac As SpecFlow DI Container
+
+[Autofac](https://autofac.org/) is a popular Inversion of Control container for .NET and provides a lot of features. SpecFlow does have official support for Autofac using [SpecFlow.Autofac](https://github.com/gasparnagy/SpecFlow.Autofac) NuGet package. Once installed [setting up is straight forward](https://github.com/gasparnagy/SpecFlow.Autofac#usage). We need to add a public statid method anywhere in the SpecFlow test project that returns an Autofac `ContainerBuilder` and tag the method with `[ScenarioDependencies]`
+
+```csharp
+public class SpecFlowContainerBuilder { [ScenarioDependencies]
+	public static ContainerBuilder CreateContainerBuilder() {
+		var builder = new ContainerBuilder();
+		var stepDefinitions = typeof(SpecFlowContainerBuilder).Assembly.GetTypes()
+      .Where(t = >Attribute.IsDefined(t, typeof(BindingAttribute))).ToArray();
+		builder.RegisterTypes(stepDefinitions).SingleInstance();
+
+		builder.RegisterSource(
+      new AnyConcreteTypeNotAlreadyRegisteredSource(type = >!type.IsModelOrEntity()));
+		// For Models and Entities let AutoFixture generate the object
+		builder.RegisterSource(new DomainDataAutoPopulatedSource());
+
+		return builder;
+	}
+}
+```
+
+https://github.com/rahulpnath/Blog/tree/master/SpecFlow.AutoFixture
