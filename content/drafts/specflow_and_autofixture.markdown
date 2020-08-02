@@ -212,8 +212,12 @@ So to remove this, what We need is a generic way to specify instances generated 
 
 [Autofac](https://autofac.org/) is a popular Inversion of Control container for .NET and provides a lot of features. SpecFlow does have official support for Autofac using [SpecFlow.Autofac](https://github.com/gasparnagy/SpecFlow.Autofac) NuGet package. Once installed [setting up is straight forward](https://github.com/gasparnagy/SpecFlow.Autofac#usage). We need to add a public statid method anywhere in the SpecFlow test project that returns an Autofac `ContainerBuilder` and tag the method with `[ScenarioDependencies]`
 
+The `SpecFlowContainerBuilder` container class below registers Autofac as the container for SpecFlow. It registers all the step definitions into the container/
+
 ```csharp
-public class SpecFlowContainerBuilder { [ScenarioDependencies]
+public class SpecFlowContainerBuilder
+{
+	[ScenarioDependencies]
 	public static ContainerBuilder CreateContainerBuilder() {
 		var builder = new ContainerBuilder();
 		var stepDefinitions = typeof(SpecFlowContainerBuilder).Assembly.GetTypes()
@@ -230,4 +234,105 @@ public class SpecFlowContainerBuilder { [ScenarioDependencies]
 }
 ```
 
-https://github.com/rahulpnath/Blog/tree/master/SpecFlow.AutoFixture
+It also registers two [registration sources](https://autofaccn.readthedocs.io/en/latest/advanced/registration-sources.html).
+
+> A registration source is a way to dynamically feed registrations into an Autofac component context (e.g., container or lifetime scope).
+
+- `AnyConcreteTypeNotAlreadyRegisteredSource` - This is a registration source that Autofac ships with that allows to resolve any concrete type from the container. Types need not be explicitly registered. (This just makes it easy to resolve any normal types that I want like the TestContextFixture etc.). You can also explicitly register if that's what you prefer.  
+  **Any types that matches the `IsModelOrEntity` condition is excluded from being resolved by this source.**
+
+- `DomainDataAutoPopulatedSource` - This Source helps resolve any domain/model types from AutoFixture.
+
+```csharp
+public class DomainDataAutoPopulatedSource : IRegistrationSource
+{
+    public bool IsAdapterForIndividualComponents => false;
+
+    public IEnumerable<IComponentRegistration> RegistrationsFor(
+        Service service, Func<Service, IEnumerable<IComponentRegistration>> registrationAccessor)
+    {
+        var swt = service as IServiceWithType;
+        if (swt == null || !swt.ServiceType.IsModelOrEntity())
+            return Enumerable.Empty<IComponentRegistration>();
+
+        object instance = null;
+        try
+        {
+			var fixture = new Fixture();
+            instance = new SpecimenContext(fixture).Resolve(swt.ServiceType);
+        }
+        catch (Exception)
+        {
+            return Enumerable.Empty<IComponentRegistration>();
+        }
+
+        return new[] { RegistrationBuilder.ForDelegate(swt.ServiceType, (c, p) => instance).CreateRegistration() };
+    }
+
+    public static bool IsModelOrEntity(Type type)
+    {
+        return type.IsModelOrEntity() || type.IsGenericModelOrEntity();
+    }
+}
+```
+
+Any time a request comes to Autofac to resolve a type that fits the `IsModelOrEntity` condition, it resolves the object instace from AutoFixture. AutoFixture will make sure to populate the object with dummy data and return that instance.
+
+The `IsModelOrEntity` and `IsGenericModelOrEntity` are custom extension methods on type. All it does is check if the type is in the Model namespace in this example. You can extend this to match Assemblies or what ever type conditions you have based on where you have your DTO/Model/Entities defined.
+
+```csharp
+public static class TypeExtensions
+{
+    public static bool IsModelOrEntity(this Type type)
+    {
+        if (type == null) return false;
+
+        return type.Namespace == typeof(Customer).Namespace;
+    }
+
+    public static bool IsGenericModelOrEntity(this Type type)
+    {
+        if (type == null) return false;
+
+        return type.IsGenericType &&
+            type.GenericTypeArguments.Any(a => a.IsModelOrEntity());
+    }
+}
+```
+
+With this set up, any time you add a DTO/Model dependency in your SpecFlow steps class as part of the constructor, it will automatically resolve it from AutoFixture and inject with dummy data populated. So if you want an Order for your test all you need to do now is ask for it in the step contructor and you will have it!
+
+## Overriding Auto Populated Data
+
+For some tests you might be interested in a subset of the objects properties. Let's say for example the below test
+
+```csharp
+@unit
+Scenario: Full Name is First Name plus Last Name
+	Given I have a valid customer
+	When I set First name as 'Rahul' and Last name as 'Nath'
+	Then the FullName must be 'Rahul Nath'
+```
+
+For the above test, I need a customer object, but I am interested in explicitly setting the `FirstName` and `LastName` to test the `FullName` property.
+
+```csharp
+[When(@"I set First name as '(.*)' and Last name as '(.*)'")]
+public void WhenISetFirstNameAsAndLastNameAs(string firstName, string lastName)
+{
+    customer.FirstName = firstName;
+    customer.LastName = lastName;
+}
+
+[Then(@"the FullName must be '(.*)'")]
+public void ThenTheFullNameMustBe(string expected)
+{
+    customer.FullName.ShouldBe(expected);
+}
+```
+
+I can still have the Customer instance injected in via the constructor and override just the FirstName and LastName properties, as shown above. AutoFixture [allows a lot of customization and extensions](https://www.rahulpnath.com/blog/populating-data-for-tests/) that you can use to configure how objects get created. You can take advantage of it with SpecFlow as well, by overriding the fixture used in the `DomainDataAutoPopulatedSource` class.
+
+Setting up test data is no more a pain when writing SpecFlow tests. Hope this helps you easily set up test data for your tests as well.
+
+Find the [full source code used in this post here](https://github.com/rahulpnath/Blog/tree/master/SpecFlow.AutoFixture)
