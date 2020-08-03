@@ -1,10 +1,11 @@
 ---
 author: [Rahul Nath]
 title: 'Semantic Comparison: Improve Test Assertions'
-  
+
 tags:
   - TDD
   - Testing
+  - AutoFixture
 date: 2017-06-20
 completedDate: 2017-06-04 06:09:45 +1000
 keywords:

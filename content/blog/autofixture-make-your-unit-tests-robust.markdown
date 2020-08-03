@@ -5,6 +5,7 @@ title: 'Tip of the Week: AutoFixture - Make Your Unit Tests Robust'
 tags:
   - TipOW
   - Testing
+  - AutoFixture
   - TDD
 date: 2017-04-06
 completedDate: 2017-04-06 04:22:03 +1000

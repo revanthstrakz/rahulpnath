@@ -5,6 +5,7 @@ title: 'Use Tests As A Feedback Tool To Improve Code'
 tags:
   - TDD
   - Testing
+  - AutoFixture
 date: 2017-06-01
 completedDate: 2017-04-10 16:12:50 +1000
 keywords:
