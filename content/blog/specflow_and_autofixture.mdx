@@ -6,8 +6,8 @@ tags:
   - AutoFixture
 description: Automatically generate data using AutoFixture when writing SpecFlow tests.
 thumbnail: ../images/random_data.jpg
-popular: false
-draft: true
+popular: true
+date: 2020-08-04
 ---
 
 import { Bookmark } from 'components/common'
@@ -100,17 +100,17 @@ class CustomerSteps {
 }
 ```
 
-The steps class uses the `TestContextFixture`, which provides us with a [in-memory test server for the Web API application](https://docs.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-3.1) and a `ScenarioContext`. These are dependency injected and is supported out of the box with SpecFlow. SpecFlow, by default, comes with a simple dependency framework, [BoDi](https://github.com/gasparnagy/BoDi), created specifically for SpecFlow.
+The steps class uses the `TestContextFixture`, which provides us with a [in-memory test server for the Web API application](https://docs.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-3.1) and a `ScenarioContext`. These are dependency injected and is supported out of the box with SpecFlow. SpecFlow, by default, comes with a simple dependency framework, [BoDi](https://github.com/gasparnagy/BoDi), created specifically for it.
 
-I have defined a few extension methods like `SendJsonContent`, `GetJsonResult`, `AddActual`, etc., to abstract away some of the code. Make sure to check out the full source code for more details.
+I have defined a [few extension methods](https://github.com/rahulpnath/Blog/blob/master/SpecFlow.AutoFixture/SpecFlow.AutoFixture.Tests/HttpClientExtensions.cs) like `SendJsonContent`, `GetJsonResult`, `AddActual`, etc., to abstract away some of the code. Make sure to check out the full source code for more details.
 
 The Customer class is a Data Transfer Object (DTO) class with a few properties for Name, Address, Age, etc. For this test, I don't care about the values of these properties. All I care about is that I have a fully populated customer object to make a post to the API.
 
-I create the Customer class instance in the constructor of this Steps class explicitly and giving in all the dummy data. But if I need the same Customer class elsewhere (in a different Step definition class), I will have to duplicate it there. Now, this could be extracted into a helper class and reused, But still, I have to update this class every time a new property is added to the Customer class.
+I create the Customer class instance in the constructor of this Steps class explicitly and giving in all the dummy data. But if I need the same Customer class elsewhere (in a different Step definition class), I will have to duplicate it there. Now, this could be extracted into a helper class and reused, But still, I have to [update this class every time a new property is added](/blog/refactoring-test-code-removing-constructor-dependency/) to the Customer class.
 
 ## Injecting Test Data Through Constructor
 
-It would be nice if the fully populated Customer class can be injected into the Steps class just like the `TestContextFixture` and `ScenarionContext` is in the code above. It is possible with SpecFlow using the [BeforeScenario hook](https://docs.specflow.org/projects/specflow/en/latest/Bindings/Hooks.html). The BeforeScenario hook runs before executing each scenario. [Follow here](https://docs.specflow.org/projects/specflow/en/latest/Bindings/Context-Injection.html#advanced-options) for more details.
+It would be nice if the fully populated Customer class can be injected into the Steps class just like the `TestContextFixture` and `ScenarionContext` is in the code above. It is possible with SpecFlow using the [BeforeScenario hook](https://docs.specflow.org/projects/specflow/en/latest/Bindings/Hooks.html). The BeforeScenario hook runs before executing each scenario. [See here](https://docs.specflow.org/projects/specflow/en/latest/Bindings/Context-Injection.html#advanced-options) for more details.
 
 ```csharp
 [Binding]
@@ -138,7 +138,7 @@ public class SpecFlowDomainDataHook {
 }
 ```
 
-The IObjectContriner is the default BoDi container that SpecFlow uses to create the Steps instances when running the test. Since the container now has a registered instance of the Customer class that is fully populated, the Steps class can simply ask for a Customer object.
+The IObjectContainer is the default BoDi container that SpecFlow uses to create the Steps instances when running the test. Since the container now has a registered instance of the Customer class that is fully populated, the Steps class can simply ask for a Customer object.
 
 ```csharp
 public CustomerSteps(
@@ -156,7 +156,7 @@ We don't have to create a Customer class explicitly again!
 
 ### Auto-Generate Test Data
 
-In the BeforeScenario hook, we are still manually creating the Customer object and forced to specify all the dummy values. If a new property is added, we still need to update it here. We have only been able to move away from the problem somewhere else; the problem still exists.
+In the BeforeScenario hook, we are still manually creating the Customer object and forced to specify all the dummy values. If a new property is added, we still need to update it here. We have only been able to move the problem to a different place; the problem still exists.
 
 > [AutoFixture](https://github.com/AutoFixture/AutoFixture) is an Open Source Library that helps automate test data generation. It offers a generic implementation of the Test Data Builder Pattern.
 
@@ -206,7 +206,7 @@ I need to add a `SetupOrder` method to register the Order instance in the `SpecF
 ```csharp
 [BeforeScenario]
 public void SetupDomainData() {
-    this.objectContainer.RegisterFactoryAs(a => SetupCustomer());
+  this.objectContainer.RegisterFactoryAs(a => SetupCustomer());
   this.objectContainer.RegisterFactoryAs(a => SetupOrder());
 }
 ```
@@ -214,13 +214,13 @@ public void SetupDomainData() {
 Let's see how we can fix this so that I don't have to register each type explicitly.
 
 Before we make any changes, let's understand what is going on here. We are telling the objectContainer (the default BoDi DI container) the object to use when anyone asks for a Customer or Order object.
-So to remove this, what We need is a generic way to specify instances generated from AutoFixture whenever it's asked for a DTO or a Model or an Entity class. The default DI container shipped with SpecFlow has limited functionality, and I did not find an integration point for this.
+So to remove this, what we need is a generic way to specify instances (generated from AutoFixture) whenever it's asked for a DTO, Model or an Entity class. The default DI container shipped with SpecFlow has limited functionality, and I did not find an integration point for this.
 
 ### Setting up AutoFac As SpecFlow DI Container
 
 [Autofac](https://autofac.org/) is a popular Inversion of Control container for .NET and provides a lot of features. SpecFlow does have official support for Autofac using [SpecFlow.Autofac](https://github.com/gasparnagy/SpecFlow.Autofac) NuGet package. Once installed, [setting up is straight forward](https://github.com/gasparnagy/SpecFlow.Autofac#usage). We need to add a public static method anywhere in the SpecFlow test project that returns an Autofac `ContainerBuilder` and tag the method with `[ScenarioDependencies]`
 
-The `SpecFlowContainerBuilder` container class below registers Autofac as the container for SpecFlow. It registers all the step definitions into the container/
+The `SpecFlowContainerBuilder` container class below registers Autofac as the container for SpecFlow. It registers all the step definitions into the container.
 
 ```csharp
 public class SpecFlowContainerBuilder
@@ -246,7 +246,8 @@ It also registers two [registration sources](https://autofaccn.readthedocs.io/en
 
 > A registration source is a way to feed registrations into an Autofac component context dynamically (e.g., container or lifetime scope).
 
-- `AnyConcreteTypeNotAlreadyRegisteredSource` - This is a registration source that Autofac ships with that allow us to resolve any concrete type from the container. Types need not be explicitly registered. (This just makes it easy to resolve any normal types that I want, like the TestContextFixture, etc.). You can also explicitly register if that's what you prefer.  
+- `AnyConcreteTypeNotAlreadyRegisteredSource` - This is a registration source that Autofac ships with that allow us to resolve any concrete type from the container. Types need not be explicitly registered. (This just makes it easy to resolve any normal types that the tests need, like the TestContextFixture, etc.). You can also explicitly register if that's what you prefer.
+
   **Any type that matches the `IsModelOrEntity` condition is excluded from being resolved by this source.**
 
 - `DomainDataAutoPopulatedSource` - This Source helps resolve any domain/model types from AutoFixture.
@@ -309,7 +310,9 @@ public static class TypeExtensions
 ```
 
 With this setup, any time you add a DTO/Model dependency in your SpecFlow steps class as part of the constructor, it will automatically resolve it from AutoFixture and
-inject it with dummy data populated. So if you want an Order for your test, all you need to do now is ask for it in the step contructor, and you will have it!
+inject it with dummy data populated.
+
+So if you want an Order for your test, all you need to do now is ask for it in the step contructor, and you will have it!
 
 ## Overriding Auto Populated Data
 
@@ -344,4 +347,4 @@ I can still have the Customer instance injected via the constructor and override
 
 Setting up test data is no more cumbersome when writing SpecFlow tests. I hope this helps you easily set up test data for your tests as well.
 
-Find the [full source code used in this post here](https://github.com/rahulpnath/Blog/tree/master/SpecFlow.AutoFixture)
+_You can find the [example source code used in this post here](https://github.com/rahulpnath/Blog/tree/master/SpecFlow.AutoFixture)_
