@@ -17,7 +17,7 @@ export const Footer = () => {
             <li>
               <Brand as={Link} to="/">
                 {/* <StyledLogo as={Logo} color="#fff" strokeWidth="2" />  */}
-                Rahul Nath  
+                Rahul Nath
               </Brand>
             </li>
           </List>
@@ -26,13 +26,16 @@ export const Footer = () => {
               <Link to="/about/">About</Link>
             </li>
             <li>
-              <Link to="/contact/">Contact</Link>
-            </li>
-            <li>
               <Link to="/blog/">Blog</Link>
             </li>
             <li>
-              <Link to="https://www.youtube.com/user/rahulnathp/">YouTube</Link>
+              <a
+                href="https://www.youtube.com/user/rahulnathp/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                YouTube
+              </a>
             </li>
           </List>
           <List>
