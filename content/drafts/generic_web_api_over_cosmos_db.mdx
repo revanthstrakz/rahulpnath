@@ -1,0 +1,68 @@
+---
+title: 'Generic WEB API Over CosmosDb'
+tags:
+  - Azure
+  - Dotnet-Core
+  - ASP.NET
+keywords:
+description: How to expose
+thumbnail: ../images/happy_new_year.png
+popular: false
+draft: true
+---
+
+- Introduction
+
+What we aim to do
+- We want a generic API that can handle CRUD to data in CosmosDB. 
+## Generic Controller
+
+Let's first set up our Controller endpoint that will allow us to read/write from the CosmosDB.
+The Controller is dynamic and hence accepts a type T, to determine the object type.
+It also takes in a repository of type T that will allow us to write to CosmosDB.
+
+Below is how the controller looks with the GET and POST Method. You can find the full source code at the end of the post.
+
+```csharp
+[ApiController]
+[Route("api/{resourceType}/{resourceId}/{modelType}")]
+public class GenericController<T> : ControllerBase
+{
+    public IRepository<T> Repository { get; }
+    public GenericController(IRepository<T> repository)
+    {
+        Repository = repository;
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<T>> Get(
+        string id, string resourceId, string? modelType)
+    {
+        modelType ??= GetModelType();
+        var form = await Repository
+            .Get(id, resourceId, modelType);
+        return Ok(form);
+    }
+    [HttpPost]
+    public async Task<ActionResult> Create(
+        string resourceId, T data, string? modelType)
+    {
+        modelType ??= GetModelType();
+        await Repository
+              .Add(data, resourceId, modelType);
+        return NoContent();
+    }
+
+    ...
+
+    private string GetModelType()
+    {
+        return ControllerContext
+            .ActionDescriptor
+            .Properties["ModelType"].ToString();
+    }
+}
+```
+
+- Generic Cosmos Repository
+- Controller Routes
