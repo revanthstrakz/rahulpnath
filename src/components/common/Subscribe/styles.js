@@ -4,9 +4,15 @@ export const FormWrapper = styled.div`
   text-align: center;
   padding-top: 3rem;
 `
-
+export const Frame = styled.iframe`
+  border: none;
+  height: 320px;
+  width: 100%;
+  background: white;
+  margin-bottom: 0px;
+`
 export const StyledForm = styled.div`
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
   background: #fff;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
@@ -14,7 +20,6 @@ export const StyledForm = styled.div`
   border-radius: 5px;
   position: relative;
   margin-bottom: -12rem;
-  padding: 2rem;
 
   @media (max-width: 960px) {
     padding: 2rem 1rem;
@@ -94,7 +99,7 @@ export const Fields = styled.div`
 
 export const Input = styled.input`
   padding: 0.5rem;
-  border: 2px solid #823EB7;
+  border: 2px solid #823eb7;
   border-radius: 7px;
   flex: 2;
 

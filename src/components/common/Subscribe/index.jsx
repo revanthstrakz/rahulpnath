@@ -1,19 +1,10 @@
-import React, { useContext } from 'react'
+import { Container } from 'components/common'
+import { withFormik } from 'formik'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
-import { withFormik, Form, Field } from 'formik'
-import * as Yup from 'yup'
-import { Container, CustomButton } from 'components/common'
 import { ThemeContext } from 'providers/ThemeProvider'
-import {
-  FormWrapper,
-  StyledForm,
-  Subtitle,
-  Title,
-  Message,
-  Error,
-  Fields,
-  Input,
-} from './styles'
+import React, { useContext } from 'react'
+import * as Yup from 'yup'
+import { FormWrapper, Frame, StyledForm } from './styles'
 
 const Wrapper = ({
   errors,
@@ -27,42 +18,11 @@ const Wrapper = ({
   return (
     <FormWrapper as={Container}>
       <StyledForm theme={theme}>
-        <Form>
-          <Title theme={theme}>Subscribe to rahulpnath.com</Title>
-          <Subtitle theme={theme}>
-            And get the latest articles delivered right to your inbox!
-          </Subtitle>
-          {touched.email && errors.email && <Error>{errors.email}</Error>}
-          <Fields>
-            <Field
-              component={Input}
-              aria-label="please insert your email"
-              placeholder="youremail@example.com"
-              onBlur={handleBlur('email')}
-              onChange={handleChange('email')}
-              type="email"
-              name="email"
-              error={errors.email}
-            />
-            <CustomButton type="submit" subscribe disabled={isSubmitting}>
-              Subscribe
-            </CustomButton>
-          </Fields>
-          {values.status === 'success' && (
-            <Message>
-              Thank you! You will receive your first email shortly
-              <span
-                role="img"
-                aria-label="successfully subscribed to news letter"
-              >
-                🎉
-              </span>
-            </Message>
-          )}
-          {values.status === 'error' && (
-            <Error server dangerouslySetInnerHTML={{ __html: values.msg }} />
-          )}
-        </Form>
+        <Frame
+          src="https://rahulpnath.substack.com/embed"
+          frameborder="0"
+          scrolling="no"
+        ></Frame>
       </StyledForm>
     </FormWrapper>
   )
